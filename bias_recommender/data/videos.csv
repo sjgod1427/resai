@@ -1,0 +1,501 @@
+video_id,title,category,language,is_english,is_suppressed,creator_id,creator_size,views,likes,engagement_rate,avg_watch_pct
+V001,I Beat The Hardest Level,Gaming,Hindi,False,False,C049,small,119188,13469,0.113,0.146
+V002,Official Music Video,Music,Spanish,False,False,C080,small,268582,37421,0.1393,0.2678
+V003,October Fails Compilation,Entertainment,English,True,False,C015,small,420301,52834,0.1257,0.3646
+V004,Life Inside Antarctica,Documentary,Arabic,False,True,C033,small,10443,695,0.0666,0.5864
+V005,First Impressions - FIFA,Gaming,Spanish,False,False,C068,large,9743983,3537423,0.363,0.5148
+V006,Investigative Report: Mathematics,News/Analysis,Arabic,False,True,C052,small,101532,3512,0.0346,0.0742
+V007,The Hidden Reality of Coding,Documentary,English,True,True,C004,small,10515,392,0.0373,0.6194
+V008,I Beat The Hardest Level,Gaming,English,True,False,C078,large,21229220,1459049,0.0687,0.3779
+V009,DIY Garden Bed Step by Step,DIY,Hindi,False,True,C078,large,2478226,1138620,0.4594,0.2073
+V010,I Can't Believe This Happened,Entertainment,English,True,False,C008,small,387210,103554,0.2674,0.3388
+V011,Understanding Politics for Beginners,Educational,English,True,True,C013,small,19592,5960,0.3042,0.4991
+V012,I Beat The Hardest Level,Gaming,English,True,False,C016,medium,888781,72524,0.0816,0.1987
+V013,How I Made Lamp for Under $10,DIY,French,False,True,C062,small,13016,259,0.02,0.6037
+V014,Official Music Video,Music,English,True,False,C075,small,171142,37679,0.2202,0.2737
+V015,Inside the World of Nutrition,Documentary,Hindi,False,True,C025,small,7914,5921,0.7483,0.659
+V016,Surprising My Family,Entertainment,English,True,False,C030,small,173368,12797,0.0738,0.4452
+V017,Life Inside Silicon Valley,Documentary,French,False,True,C037,small,16746,5571,0.3327,0.5593
+V018,DIY Bookshelf Step by Step,DIY,Hindi,False,True,C054,small,21013,14283,0.6798,0.3604
+V019,Psychology Explained Simply,Educational,Hindi,False,True,C030,small,20081,5357,0.2668,0.4744
+V020,1v1 vs Pro Player,Gaming,Portuguese,False,False,C050,small,135441,21271,0.1571,0.3064
+V021,January Fails Compilation,Entertainment,English,True,False,C040,small,80065,12854,0.1606,0.2352
+V022,The Untold Story of Politics,Documentary,Hindi,False,True,C063,small,2473,432,0.1749,0.4808
+V023,Beginner's Guide to Electronics,DIY,French,False,True,C030,small,40543,15803,0.3898,0.6571
+V024,I Beat The Hardest Level,Gaming,English,True,False,C006,small,524485,72837,0.1389,0.1795
+V025,A Day in the Life: Quantum Physics,Documentary,French,False,True,C019,small,42428,10305,0.2429,0.6499
+V026,The Science of Mathematics,Educational,Spanish,False,True,C060,medium,3403824,1741591,0.5117,0.2359
+V027,Learn Architecture in 10 Minutes,Educational,English,True,True,C041,medium,8178,3039,0.3717,0.7023
+V028,Build Your Own Bookshelf at Home,DIY,Korean,False,True,C044,medium,58129,26307,0.4526,0.4874
+V029,Minha vida em New York,Regional,Spanish,False,True,C014,small,24274,11300,0.4655,0.5699
+V030,Funniest Moments of 2025,Entertainment,Hindi,False,False,C077,small,474713,159355,0.3357,0.3062
+V031,ये देखकर चौंक जाएंगे,Regional,Spanish,False,True,C031,small,3837,1633,0.4256,0.2295
+V032,Live Performance at Cairo,Music,English,True,False,C057,large,29652132,9584017,0.3232,0.5107
+V033,How I Made Garden Bed for Under $10,DIY,English,True,True,C069,small,9541,2621,0.2748,0.1807
+V034,I Can't Believe This Happened,Entertainment,Portuguese,False,False,C054,small,117952,82666,0.7008,0.4045
+V035,The Truth About History,Educational,Hindi,False,True,C020,medium,155533,55385,0.3561,0.8295
+V036,Acoustic Cover - Rise,Music,Arabic,False,False,C026,large,2402451,474864,0.1977,0.2294
+V037,ये देखकर चौंक जाएंगे,Regional,Arabic,False,True,C080,small,2886,356,0.1234,0.1007
+V038,How Coding Actually Works,Educational,Portuguese,False,True,C072,small,76916,30341,0.3945,0.8633
+V039,Life Inside Silicon Valley,Documentary,Spanish,False,True,C034,small,23099,11309,0.4896,0.7699
+V040,New Single Out Now,Music,English,True,False,C002,medium,245218,79775,0.3253,0.0216
+V041,O que aprendi sobre Philosophy,Regional,Spanish,False,True,C018,large,289274,43488,0.1503,0.5385
+V042,Epic Win Compilation,Gaming,Portuguese,False,False,C070,small,15135,4035,0.2666,0.1759
+V043,1v1 vs Pro Player,Gaming,Spanish,False,False,C061,medium,283536,71913,0.2536,0.3081
+V044,Official Music Video,Music,Spanish,False,False,C066,small,1259391,495609,0.3935,0.3799
+V045,Easy Phone Stand Tutorial,DIY,English,True,True,C019,small,13039,1422,0.1091,0.153
+V046,The Untold Story of Politics,Documentary,English,True,True,C027,large,218694,67562,0.3089,0.7072
+V047,Try Not To Laugh Challenge,Entertainment,English,True,False,C077,small,456528,92107,0.2018,0.6933
+V048,قصة Psychology,Regional,Arabic,False,True,C044,medium,65926,23907,0.3626,0.326
+V049,قصة Climate Change,Regional,Hindi,False,True,C006,small,32549,2806,0.0862,0.2189
+V050,Official Music Video,Music,English,True,False,C021,small,11424,5178,0.4533,0.1518
+V051,A Day in the Life: Machine Learning,Documentary,English,True,True,C034,small,7327,3911,0.5339,0.807
+V052,July Fails Compilation,Entertainment,Hindi,False,False,C029,small,180313,72974,0.4047,0.1338
+V053,Funniest Moments of 2023,Entertainment,Portuguese,False,False,C072,small,150554,30150,0.2003,0.4217
+V054,قصة Mathematics,Regional,Arabic,False,True,C037,small,23474,2789,0.1188,0.5708
+V055,Acoustic Cover - Rise,Music,Portuguese,False,False,C068,large,4752337,1182756,0.2489,0.4557
+V056,Minha vida em Cairo,Regional,Spanish,False,True,C001,small,9792,3514,0.3589,0.221
+V057,How Politics Actually Works,Educational,English,True,True,C040,small,8508,4053,0.4765,0.6092
+V058,Beginner's Guide to Painting,DIY,English,True,True,C032,medium,177330,65696,0.3705,0.1748
+V059,Funniest Moments of 2024,Entertainment,Spanish,False,False,C052,small,30521,15986,0.5238,0.6139
+V060,The Truth About Evolution,Educational,Arabic,False,True,C034,small,53540,4153,0.0776,0.8355
+V061,Behind The Scenes,Music,English,True,False,C078,large,4384890,938954,0.2141,0.5086
+V062,Learn Mathematics in 10 Minutes,Educational,English,True,True,C071,large,247663,60085,0.2426,0.783
+V063,Acoustic Cover - Dreams,Music,English,True,False,C031,small,131499,81061,0.6164,0.7316
+V064,Philosophy Explained Simply,Educational,Hindi,False,True,C015,small,58761,6981,0.1188,0.928
+V065,Top 10 Tips & Tricks,Gaming,English,True,False,C019,small,945112,261128,0.2763,0.4808
+V066,나의 일상 브이로그,Regional,Portuguese,False,True,C066,small,53619,7921,0.1477,0.5475
+V067,قصة History,Regional,Hindi,False,True,C073,small,27316,9083,0.3325,0.3738
+V068,October Fails Compilation,Entertainment,English,True,False,C010,small,246307,96094,0.3901,0.1369
+V069,1v1 vs Pro Player,Gaming,English,True,False,C056,small,56458,19206,0.3402,0.3529
+V070,New Single Out Now,Music,Hindi,False,False,C023,small,123136,36514,0.2965,0.7348
+V071,Black Holes Explained Simply,Educational,English,True,True,C039,medium,269379,140516,0.5216,0.6908
+V072,Live Performance at Seoul,Music,Spanish,False,False,C025,small,133581,30259,0.2265,0.2606
+V073,New Update Review,Gaming,English,True,False,C077,small,123974,37988,0.3064,0.1665
+V074,Behind The Scenes,Music,Korean,False,False,C006,small,1811403,915061,0.5052,0.4639
+V075,New Update Review,Gaming,Korean,False,False,C003,small,736157,127721,0.1735,0.5159
+V076,Psychology Explained Simply,Educational,Arabic,False,True,C014,small,43581,13008,0.2985,0.5789
+V077,Behind The Scenes,Music,English,True,False,C013,small,488412,147194,0.3014,0.1839
+V078,Try Not To Laugh Challenge,Entertainment,English,True,False,C049,small,3108183,2117270,0.6812,0.4943
+V079,I Can't Believe This Happened,Entertainment,Arabic,False,False,C012,small,108812,20684,0.1901,0.3823
+V080,March Fails Compilation,Entertainment,English,True,False,C079,medium,1391857,403370,0.2898,0.6126
+V081,Epic Win Compilation,Gaming,Spanish,False,False,C023,small,518999,177081,0.3412,0.4627
+V082,New Single Out Now,Music,English,True,False,C040,small,150351,5181,0.0345,0.236
+V083,Funniest Moments of 2024,Entertainment,Hindi,False,False,C019,small,110149,40674,0.3693,0.3637
+V084,Life Inside Antarctica,Documentary,Portuguese,False,True,C011,medium,56163,8841,0.1574,0.8256
+V085,Live Performance at Paris,Music,English,True,False,C053,large,7902829,3650655,0.4619,0.3533
+V086,Minha vida em Cairo,Regional,Portuguese,False,True,C071,large,231405,48197,0.2083,0.5481
+V087,How Language Learning Actually Works,Educational,French,False,True,C080,small,5415,1073,0.1983,0.7241
+V088,Inside the World of Economics,Documentary,English,True,True,C065,small,24074,6342,0.2634,0.5581
+V089,قصة Architecture,Regional,Spanish,False,True,C022,small,18068,8742,0.4839,0.1387
+V090,Acoustic Cover - Rise,Music,English,True,False,C065,small,1012161,64068,0.0633,0.5099
+V091,Inside the World of Black Holes,Documentary,Spanish,False,True,C079,medium,54117,16589,0.3065,0.7221
+V092,Top 10 Tips & Tricks,Gaming,English,True,False,C057,large,14049523,5882768,0.4187,0.6475
+V093,Top 10 Tips & Tricks,Gaming,English,True,False,C038,medium,201772,96464,0.4781,0.465
+V094,Official Music Video,Music,Portuguese,False,False,C040,small,29375,7466,0.2542,0.6547
+V095,How I Made Phone Stand for Under $10,DIY,Portuguese,False,True,C064,medium,183022,27337,0.1494,0.6958
+V096,Build Your Own Lamp at Home,DIY,English,True,True,C025,small,52081,8252,0.1585,0.3483
+V097,January Fails Compilation,Entertainment,English,True,False,C044,medium,1810221,472549,0.261,0.2531
+V098,Minha vida em New York,Regional,Arabic,False,True,C035,small,28938,12329,0.4261,0.6518
+V099,What Really Happened with Architecture,News/Analysis,French,False,True,C056,small,863,101,0.1178,0.5024
+V100,Top 10 Tips & Tricks,Gaming,Korean,False,False,C013,small,167220,31717,0.1897,0.3019
+V101,ये देखकर चौंक जाएंगे,Regional,Spanish,False,True,C068,large,1006483,451365,0.4485,0.4825
+V102,The Hidden Reality of Climate Change,Documentary,English,True,True,C032,medium,19674,2655,0.135,0.8525
+V103,Learn Language Learning in 10 Minutes,Educational,English,True,True,C074,medium,92828,15663,0.1687,0.9119
+V104,How Economics Actually Works,Educational,French,False,True,C003,small,57962,21927,0.3783,0.3957
+V105,Reacting to Viral Videos,Entertainment,English,True,False,C008,small,633485,92459,0.146,0.7531
+V106,Official Music Video,Music,English,True,False,C058,medium,1488350,273238,0.1836,0.2053
+V107,Build Your Own Bookshelf at Home,DIY,Arabic,False,True,C030,small,29482,14095,0.4781,0.4734
+V108,New Single Out Now,Music,English,True,False,C059,medium,1411420,596742,0.4228,0.0621
+V109,Epic Win Compilation,Gaming,Spanish,False,False,C035,small,124328,33961,0.2732,0.4042
+V110,Acoustic Cover - Dreams,Music,English,True,False,C053,large,3519924,505756,0.1437,0.4194
+V111,Learn Philosophy in 10 Minutes,Educational,English,True,True,C075,small,20116,10738,0.5338,0.8252
+V112,How Language Learning Actually Works,Educational,English,True,True,C072,small,24847,3875,0.156,0.8602
+V113,How I Made Bookshelf for Under $10,DIY,Spanish,False,True,C050,small,21244,1297,0.0611,0.3533
+V114,Minha vida em Seoul,Regional,Hindi,False,True,C064,medium,194942,59678,0.3061,0.3392
+V115,I Can't Believe This Happened,Entertainment,English,True,False,C001,small,670936,234238,0.3491,0.1938
+V116,Try Not To Laugh Challenge,Entertainment,English,True,False,C054,small,1356015,502149,0.3703,0.3482
+V117,Build Your Own Lamp at Home,DIY,Hindi,False,True,C052,small,4355,208,0.0478,0.5826
+V118,I Can't Believe This Happened,Entertainment,English,True,False,C036,medium,1385036,441337,0.3186,0.616
+V119,New Single Out Now,Music,Korean,False,False,C079,medium,10239348,4185797,0.4088,0.2494
+V120,DIY Bookshelf Step by Step,DIY,Hindi,False,True,C039,medium,361090,188620,0.5224,0.4695
+V121,The Truth About Quantum Physics,Educational,English,True,True,C004,small,39595,7467,0.1886,0.4973
+V122,Try Not To Laugh Challenge,Entertainment,English,True,False,C058,medium,58216,32514,0.5585,0.4023
+V123,I Beat The Hardest Level,Gaming,English,True,False,C013,small,357453,162896,0.4557,0.4494
+V124,Architecture Explained Simply,Educational,Spanish,False,True,C021,small,3897,331,0.0851,0.6313
+V125,Behind The Scenes,Music,Arabic,False,False,C024,small,236706,122222,0.5163,0.5431
+V126,Top 10 Tips & Tricks,Gaming,English,True,False,C042,small,1035598,232163,0.2242,0.2837
+V127,I Can't Believe This Happened,Entertainment,English,True,False,C046,small,168702,63137,0.3743,0.2031
+V128,How I Made Bookshelf for Under $10,DIY,Arabic,False,True,C017,small,97020,38766,0.3996,0.6383
+V129,Try Not To Laugh Challenge,Entertainment,Spanish,False,False,C006,small,31630,7177,0.2269,0.6669
+V130,Understanding Coding for Beginners,Educational,Hindi,False,True,C066,small,125299,59443,0.4744,0.6464
+V131,First Impressions - Valorant,Gaming,Spanish,False,False,C050,small,458150,122764,0.268,0.6774
+V132,The Science of Quantum Physics,Educational,Spanish,False,True,C021,small,18408,3697,0.2009,0.8149
+V133,Mi experiencia en Silicon Valley,Regional,Portuguese,False,True,C016,medium,204730,17180,0.0839,0.5314
+V134,Analysis: Evolution Explained,News/Analysis,Spanish,False,True,C023,small,34912,11125,0.3187,0.3963
+V135,October Fails Compilation,Entertainment,Spanish,False,False,C067,small,198980,78459,0.3943,0.4144
+V136,Understanding Architecture for Beginners,Educational,English,True,True,C012,small,7305,2623,0.3591,0.3025
+V137,Life Inside Tokyo,Documentary,English,True,True,C006,small,17067,3961,0.2321,0.4758
+V138,Why Quantum Physics Matters,Educational,Arabic,False,True,C036,medium,60584,19039,0.3143,0.8863
+V139,March Fails Compilation,Entertainment,English,True,False,C025,small,193932,12670,0.0653,0.17
+V140,Understanding Coding for Beginners,Educational,English,True,True,C078,large,562758,112724,0.2003,0.5347
+V141,Beginner's Guide to Electronics,DIY,English,True,True,C016,medium,333542,187744,0.5629,0.3928
+V142,The Science of Philosophy,Educational,English,True,True,C045,medium,527852,53798,0.1019,0.6351
+V143,Try Not To Laugh Challenge,Entertainment,English,True,False,C005,medium,6074981,1786154,0.294,0.3938
+V144,Easy Phone Stand Tutorial,DIY,Hindi,False,True,C001,small,28359,8692,0.3065,0.1214
+V145,La vérité sur Black Holes,Regional,Korean,False,True,C029,small,18094,2471,0.1366,0.3222
+V146,O que aprendi sobre Mathematics,Regional,Spanish,False,True,C051,small,12208,5372,0.4401,0.358
+V147,New Single Out Now,Music,English,True,False,C037,small,860555,93002,0.1081,0.151
+V148,Official Music Video,Music,Korean,False,False,C010,small,31808,6274,0.1973,0.264
+V149,New Update Review,Gaming,Arabic,False,False,C071,large,4540075,346734,0.0764,0.3004
+V150,Acoustic Cover - Dreams,Music,English,True,False,C019,small,194803,94058,0.4828,0.3126
+V151,Live Performance at Paris,Music,English,True,False,C074,medium,1235418,203148,0.1644,0.4402
+V152,New Update Review,Gaming,French,False,False,C078,large,3764237,999119,0.2654,0.6454
+V153,I Can't Believe This Happened,Entertainment,English,True,False,C021,small,157221,69994,0.4452,0.3524
+V154,The Hidden Reality of Evolution,Documentary,English,True,True,C058,medium,203645,15598,0.0766,0.7794
+V155,Inside the World of Mathematics,Documentary,English,True,True,C038,medium,5975,1098,0.1838,0.619
+V156,Behind The Scenes,Music,English,True,False,C044,medium,71143,23770,0.3341,0.4574
+V157,O que aprendi sobre Nutrition,Regional,Spanish,False,True,C001,small,12696,3655,0.2879,0.3434
+V158,The Science of Economics,Educational,English,True,True,C047,medium,138337,52280,0.3779,0.4931
+V159,Why Nutrition Matters,Educational,English,True,True,C034,small,584027,124096,0.2125,0.4596
+V160,Behind The Scenes,Music,Hindi,False,False,C002,medium,1714934,661931,0.386,0.5092
+V161,Behind The Scenes,Music,Spanish,False,False,C053,large,12169747,3880633,0.3189,0.1689
+V162,Beginner's Guide to Electronics,DIY,English,True,True,C060,medium,78289,32880,0.42,0.698
+V163,A Day in the Life: Quantum Physics,Documentary,Arabic,False,True,C030,small,26732,10110,0.3782,0.5302
+V164,Acoustic Cover - Rise,Music,Arabic,False,False,C070,small,363271,67877,0.1869,0.2108
+V165,The Science of History,Educational,Arabic,False,True,C028,small,6538,1754,0.2683,0.8748
+V166,The Untold Story of Politics,Documentary,English,True,True,C026,large,164793,56557,0.3432,0.9019
+V167,Epic Win Compilation,Gaming,English,True,False,C036,medium,1706297,230516,0.1351,0.4368
+V168,Acoustic Cover - Love Song,Music,Korean,False,False,C005,medium,912290,226363,0.2481,0.3325
+V169,Acoustic Cover - Power,Music,Korean,False,False,C061,medium,6048139,2904428,0.4802,0.2669
+V170,Behind The Scenes,Music,English,True,False,C078,large,3501072,287398,0.0821,0.3932
+V171,The Science of Philosophy,Educational,French,False,True,C019,small,22826,5005,0.2193,0.7138
+V172,First Impressions - Valorant,Gaming,Spanish,False,False,C002,medium,184075,18379,0.0998,0.4339
+V173,나의 일상 브이로그,Regional,Arabic,False,True,C018,large,947046,543902,0.5743,0.6303
+V174,First Impressions - FIFA,Gaming,Spanish,False,False,C068,large,6872045,3490139,0.5079,0.2262
+V175,Behind The Scenes,Music,English,True,False,C057,large,81281843,31877555,0.3922,0.4961
+V176,A Day in the Life: Machine Learning,Documentary,Hindi,False,True,C015,small,26255,18846,0.7178,0.9068
+V177,Understanding Psychology for Beginners,Educational,English,True,True,C031,small,60048,14716,0.2451,0.87
+V178,Epic Win Compilation,Gaming,Portuguese,False,False,C013,small,201847,33523,0.1661,0.1853
+V179,Learn Quantum Physics in 10 Minutes,Educational,French,False,True,C066,small,1590,394,0.2482,0.9508
+V180,A Day in the Life: Mathematics,Documentary,English,True,True,C017,small,1929,877,0.4549,0.5872
+V181,How Mathematics Actually Works,Educational,Spanish,False,True,C080,small,5202,2229,0.4287,0.8134
+V182,The Untold Story of Climate Change,Documentary,Arabic,False,True,C065,small,4427,641,0.1448,0.5374
+V183,Life Inside Antarctica,Documentary,French,False,True,C009,small,23147,5984,0.2585,0.8537
+V184,Funniest Moments of 2025,Entertainment,English,True,False,C030,small,369954,248984,0.673,0.6119
+V185,Easy Phone Stand Tutorial,DIY,Hindi,False,True,C031,small,6458,351,0.0544,0.3782
+V186,Live Performance at Paris,Music,Portuguese,False,False,C060,medium,439942,59752,0.1358,0.5878
+V187,قصة Mathematics,Regional,Hindi,False,True,C059,medium,287969,36669,0.1273,0.5315
+V188,Gone Wrong...,Entertainment,Arabic,False,False,C017,small,3064642,402759,0.1314,0.3021
+V189,قصة Evolution,Regional,French,False,True,C025,small,15402,1743,0.1132,0.2296
+V190,Funniest Moments of 2023,Entertainment,English,True,False,C016,medium,5592530,777201,0.139,0.5246
+V191,Language Learning Explained Simply,Educational,Hindi,False,True,C031,small,15926,1765,0.1108,0.8635
+V192,나의 일상 브이로그,Regional,Spanish,False,True,C067,small,9158,1349,0.1473,0.6161
+V193,Analysis: History Explained,News/Analysis,English,True,True,C047,medium,14907,894,0.06,0.694
+V194,Investigative Report: Evolution,News/Analysis,English,True,True,C034,small,61117,35734,0.5847,0.6367
+V195,How Architecture Actually Works,Educational,English,True,True,C005,medium,296624,37790,0.1274,0.8072
+V196,New Update Review,Gaming,English,True,False,C005,medium,2434587,1177865,0.4838,0.2448
+V197,Live Performance at Paris,Music,English,True,False,C066,small,354872,181232,0.5107,0.3937
+V198,Mi experiencia en the Amazon,Regional,Arabic,False,True,C072,small,13455,1051,0.0782,0.4315
+V199,Why Philosophy Matters,Educational,French,False,True,C061,medium,291229,49242,0.1691,0.881
+V200,Live Performance at Cairo,Music,English,True,False,C054,small,915649,345591,0.3774,0.3726
+V201,Inside the World of Evolution,Documentary,Arabic,False,True,C046,small,10050,1820,0.1811,0.6742
+V202,Reacting to Viral Videos,Entertainment,Hindi,False,False,C016,medium,847264,586777,0.6926,0.2625
+V203,New Update Review,Gaming,English,True,False,C070,small,155840,33854,0.2172,0.2863
+V204,Gone Wrong...,Entertainment,English,True,False,C073,small,124810,47098,0.3774,0.6219
+V205,Mi experiencia en Silicon Valley,Regional,Spanish,False,True,C002,medium,594134,139156,0.2342,0.2777
+V206,Reacting to Viral Videos,Entertainment,English,True,False,C028,small,779925,93543,0.1199,0.2919
+V207,A Day in the Life: Nutrition,Documentary,English,True,True,C055,small,16219,4157,0.2563,0.7067
+V208,Easy Phone Stand Tutorial,DIY,Arabic,False,True,C028,small,18067,1707,0.0945,0.3981
+V209,The Science of Black Holes,Educational,English,True,True,C035,small,34772,18619,0.5355,0.6302
+V210,1v1 vs Pro Player,Gaming,English,True,False,C010,small,80026,2726,0.0341,0.4301
+V211,The Truth About Climate Change,Educational,English,True,True,C059,medium,63340,22423,0.354,0.387
+V212,How Philosophy Actually Works,Educational,English,True,True,C068,large,2796178,459010,0.1642,0.7977
+V213,Life Inside the Amazon,Documentary,Korean,False,True,C038,medium,25046,6352,0.2536,0.4754
+V214,Learn Language Learning in 10 Minutes,Educational,English,True,True,C060,medium,148378,8877,0.0598,0.9657
+V215,Minha vida em New York,Regional,Spanish,False,True,C026,large,596142,296130,0.4967,0.3947
+V216,Live Performance at Paris,Music,Spanish,False,False,C027,large,5219880,206214,0.0395,0.6045
+V217,I Beat The Hardest Level,Gaming,Hindi,False,False,C055,small,112440,23671,0.2105,0.1541
+V218,ये देखकर चौंक जाएंगे,Regional,French,False,True,C037,small,21608,4191,0.194,0.6091
+V219,How Quantum Physics Actually Works,Educational,Hindi,False,True,C061,medium,385818,127803,0.3313,0.7575
+V220,Why Black Holes Matters,Educational,Hindi,False,True,C010,small,62739,15315,0.2441,0.5866
+V221,How Evolution Actually Works,Educational,Portuguese,False,True,C064,medium,133357,40318,0.3023,0.7051
+V222,New Update Review,Gaming,French,False,False,C040,small,454221,163428,0.3598,0.3267
+V223,How Quantum Physics Actually Works,Educational,Hindi,False,True,C044,medium,616673,60946,0.0988,0.5906
+V224,Architecture Explained Simply,Educational,Spanish,False,True,C068,large,124680,14573,0.1169,0.3835
+V225,Investigative Report: Machine Learning,News/Analysis,French,False,True,C057,large,242001,84724,0.3501,0.1015
+V226,Mi experiencia en Tokyo,Regional,Hindi,False,True,C060,medium,76800,12520,0.163,0.5061
+V227,Acoustic Cover - Rise,Music,English,True,False,C036,medium,2812190,558317,0.1985,0.3117
+V228,Try Not To Laugh Challenge,Entertainment,English,True,False,C005,medium,7323786,423961,0.0579,0.4315
+V229,La vérité sur Psychology,Regional,French,False,True,C074,medium,122423,26639,0.2176,0.4151
+V230,Top 10 Tips & Tricks,Gaming,English,True,False,C018,large,4638743,316159,0.0682,0.2996
+V231,Top 10 Tips & Tricks,Gaming,English,True,False,C070,small,140744,67847,0.4821,0.2866
+V232,Epic Win Compilation,Gaming,Korean,False,False,C028,small,415488,266656,0.6418,0.5185
+V233,The Truth About Economics,Educational,Spanish,False,True,C027,large,1430276,829047,0.5796,0.8284
+V234,La vérité sur Psychology,Regional,Arabic,False,True,C080,small,21214,12060,0.5685,0.4025
+V235,Live Performance at Seoul,Music,English,True,False,C027,large,7402491,1462953,0.1976,0.2951
+V236,Epic Win Compilation,Gaming,Spanish,False,False,C022,small,22017,11130,0.5055,0.6391
+V237,Surprising My Family,Entertainment,English,True,False,C078,large,5318537,1411864,0.2655,0.5328
+V238,Build Your Own Garden Bed at Home,DIY,Hindi,False,True,C039,medium,102817,43936,0.4273,0.4377
+V239,Build Your Own Phone Stand at Home,DIY,English,True,True,C032,medium,79672,9043,0.1135,0.345
+V240,The Hidden Reality of Psychology,Documentary,English,True,True,C078,large,11513246,6206358,0.5391,0.4815
+V241,Behind The Scenes,Music,English,True,False,C015,small,233293,131881,0.5653,0.3167
+V242,Analysis: Psychology Explained,News/Analysis,Hindi,False,True,C060,medium,72254,23578,0.3263,0.2789
+V243,A Day in the Life: Evolution,Documentary,French,False,True,C021,small,104025,23532,0.2262,0.6011
+V244,The Truth About Psychology,Educational,English,True,True,C022,small,11516,3208,0.2786,0.5965
+V245,O que aprendi sobre Language Learning,Regional,English,True,True,C009,small,10352,2815,0.272,0.2576
+V246,Understanding Quantum Physics for Beginners,Educational,French,False,True,C067,small,49212,19122,0.3886,0.9412
+V247,I Beat The Hardest Level,Gaming,English,True,False,C024,small,41502,11374,0.2741,0.2775
+V248,Live Performance at Mumbai,Music,Spanish,False,False,C073,small,346339,16945,0.0489,0.4865
+V249,Reacting to Viral Videos,Entertainment,English,True,False,C041,medium,156050,38179,0.2447,0.2186
+V250,1v1 vs Pro Player,Gaming,English,True,False,C041,medium,427451,166934,0.3905,0.5822
+V251,A Day in the Life: History,Documentary,English,True,True,C079,medium,679776,140930,0.2073,0.6999
+V252,History Explained Simply,Educational,English,True,True,C020,medium,82780,19808,0.2393,0.8319
+V253,How I Made Phone Stand for Under $10,DIY,English,True,True,C029,small,20356,9681,0.4756,0.3232
+V254,I Beat The Hardest Level,Gaming,English,True,False,C029,small,65056,30865,0.4744,0.403
+V255,Inside the World of Quantum Physics,Documentary,English,True,True,C029,small,33082,4460,0.1348,0.6464
+V256,New Single Out Now,Music,Spanish,False,False,C024,small,428491,88828,0.2073,0.2793
+V257,ये देखकर चौंक जाएंगे,Regional,French,False,True,C062,small,29676,5844,0.197,0.3231
+V258,Life Inside the Amazon,Documentary,English,True,True,C002,medium,125454,27623,0.2202,0.8593
+V259,Understanding Philosophy for Beginners,Educational,Hindi,False,True,C007,medium,138403,38814,0.2804,0.4898
+V260,Life Inside Antarctica,Documentary,Arabic,False,True,C050,small,5642,765,0.1356,0.7511
+V261,Reacting to Viral Videos,Entertainment,English,True,False,C065,small,1203875,502576,0.4175,0.3268
+V262,The Untold Story of History,Documentary,French,False,True,C018,large,2443444,581372,0.2379,0.7442
+V263,October Fails Compilation,Entertainment,English,True,False,C076,large,27547071,16761031,0.6085,0.2862
+V264,La vérité sur Black Holes,Regional,Hindi,False,True,C037,small,4133,504,0.122,0.4192
+V265,Try Not To Laugh Challenge,Entertainment,English,True,False,C071,large,1996203,986058,0.494,0.2639
+V266,Top 10 Tips & Tricks,Gaming,Arabic,False,False,C036,medium,349041,194984,0.5586,0.2552
+V267,Top 10 Tips & Tricks,Gaming,English,True,False,C023,small,192208,27132,0.1412,0.4521
+V268,1v1 vs Pro Player,Gaming,English,True,False,C014,small,37471,18052,0.4818,0.3779
+V269,Beginner's Guide to Sewing,DIY,Spanish,False,True,C029,small,41712,16678,0.3999,0.3285
+V270,Try Not To Laugh Challenge,Entertainment,French,False,False,C068,large,15027750,4213378,0.2804,0.349
+V271,A Day in the Life: Architecture,Documentary,English,True,True,C072,small,30169,8311,0.2755,0.4575
+V272,Life Inside the Amazon,Documentary,French,False,True,C022,small,100904,49598,0.4915,0.6744
+V273,DIY Lamp Step by Step,DIY,Portuguese,False,True,C006,small,6532,1306,0.2,0.4576
+V274,Minha vida em Paris,Regional,Portuguese,False,True,C067,small,111366,23755,0.2133,0.6842
+V275,The Untold Story of Nutrition,Documentary,English,True,True,C031,small,37807,12555,0.3321,0.6815
+V276,Investigative Report: Climate Change,News/Analysis,Arabic,False,True,C050,small,15461,3337,0.2159,0.3621
+V277,Understanding Quantum Physics for Beginners,Educational,English,True,True,C070,small,15829,4477,0.2829,0.5751
+V278,Learn Politics in 10 Minutes,Educational,English,True,True,C074,medium,336042,140844,0.4191,0.6112
+V279,The Truth About Language Learning,Educational,French,False,True,C068,large,780504,214300,0.2746,0.9614
+V280,나의 일상 브이로그,Regional,French,False,True,C070,small,2963,335,0.1131,0.5437
+V281,Mi experiencia en Antarctica,Regional,Arabic,False,True,C075,small,12764,1390,0.1089,0.638
+V282,Easy Bookshelf Tutorial,DIY,Hindi,False,True,C019,small,14181,3574,0.2521,0.5874
+V283,ये देखकर चौंक जाएंगे,Regional,Spanish,False,True,C079,medium,36931,10216,0.2766,0.3014
+V284,I Can't Believe This Happened,Entertainment,English,True,False,C014,small,1191722,617872,0.5185,0.4008
+V285,Understanding Psychology for Beginners,Educational,Spanish,False,True,C035,small,20478,6000,0.293,0.3531
+V286,Try Not To Laugh Challenge,Entertainment,Spanish,False,False,C079,medium,1221881,490006,0.401,0.0611
+V287,Build Your Own Lamp at Home,DIY,Hindi,False,True,C043,small,31648,4820,0.1523,0.4192
+V288,Understanding Language Learning for Beginners,Educational,English,True,True,C053,large,1028238,39315,0.0382,0.5382
+V289,Official Music Video,Music,English,True,False,C032,medium,133295,19452,0.1459,0.5343
+V290,Analysis: Politics Explained,News/Analysis,English,True,True,C036,medium,530819,176354,0.3322,0.2261
+V291,Understanding Climate Change for Beginners,Educational,French,False,True,C044,medium,45677,6919,0.1515,0.856
+V292,Build Your Own Garden Bed at Home,DIY,French,False,True,C035,small,234040,39154,0.1673,0.4271
+V293,Acoustic Cover - Love Song,Music,English,True,False,C006,small,140463,16346,0.1164,0.2647
+V294,Inside the World of Coding,Documentary,Hindi,False,True,C045,medium,1085668,470352,0.4332,0.5584
+V295,New Single Out Now,Music,English,True,False,C033,small,424182,134441,0.3169,0.3165
+V296,Mi experiencia en Silicon Valley,Regional,Spanish,False,True,C074,medium,369425,231736,0.6273,0.5935
+V297,Funniest Moments of 2025,Entertainment,English,True,False,C067,small,1194079,448793,0.3758,0.5357
+V298,I Can't Believe This Happened,Entertainment,English,True,False,C066,small,102158,22013,0.2155,0.06
+V299,A Day in the Life: Coding,Documentary,English,True,True,C064,medium,17134,11176,0.6523,0.1929
+V300,March Fails Compilation,Entertainment,Arabic,False,False,C003,small,839300,433494,0.5165,0.2713
+V301,Breaking Down the Summit,News/Analysis,Korean,False,True,C070,small,63358,11349,0.1791,0.1812
+V302,Why Mathematics Matters,Educational,English,True,True,C055,small,36126,4340,0.1201,0.8147
+V303,Acoustic Cover - Rise,Music,Hindi,False,False,C036,medium,4812951,1382334,0.2872,0.2483
+V304,I Can't Believe This Happened,Entertainment,English,True,False,C053,large,1192720,187806,0.1575,0.3146
+V305,قصة Politics,Regional,Spanish,False,True,C059,medium,311676,45026,0.1445,0.2617
+V306,Try Not To Laugh Challenge,Entertainment,Korean,False,False,C012,small,1216754,277640,0.2282,0.4402
+V307,January Fails Compilation,Entertainment,English,True,False,C056,small,183906,18740,0.1019,0.1878
+V308,Investigative Report: Politics,News/Analysis,French,False,True,C005,medium,24832,6036,0.2431,0.126
+V309,Beginner's Guide to Woodworking,DIY,Arabic,False,True,C078,large,1823575,62529,0.0343,0.3771
+V310,DIY Bookshelf Step by Step,DIY,English,True,True,C017,small,7361,1075,0.1461,0.5316
+V311,Understanding Psychology for Beginners,Educational,French,False,True,C028,small,16746,3031,0.181,0.507
+V312,Understanding Philosophy for Beginners,Educational,Arabic,False,True,C007,medium,217273,120075,0.5526,0.595
+V313,The Hidden Reality of Philosophy,Documentary,English,True,True,C014,small,7433,1765,0.2376,0.8603
+V314,Why Architecture Matters,Educational,Hindi,False,True,C074,medium,119490,45342,0.3795,0.6472
+V315,Try Not To Laugh Challenge,Entertainment,English,True,False,C038,medium,4455533,592970,0.1331,0.3089
+V316,Easy Phone Stand Tutorial,DIY,English,True,True,C018,large,60914,8735,0.1434,0.1108
+V317,The Hidden Reality of Architecture,Documentary,English,True,True,C047,medium,10443,523,0.0502,0.5791
+V318,Inside the World of Coding,Documentary,English,True,True,C053,large,649578,105725,0.1628,0.6827
+V319,Why Philosophy Matters,Educational,English,True,True,C051,small,122408,26719,0.2183,0.5777
+V320,ये देखकर चौंक जाएंगे,Regional,French,False,True,C008,small,3318,1146,0.3456,0.3544
+V321,First Impressions - Valorant,Gaming,English,True,False,C046,small,223218,62507,0.28,0.5014
+V322,Gone Wrong...,Entertainment,English,True,False,C045,medium,1981702,247437,0.1249,0.3017
+V323,I Can't Believe This Happened,Entertainment,English,True,False,C008,small,233194,26295,0.1128,0.2741
+V324,Acoustic Cover - Power,Music,Portuguese,False,False,C072,small,433695,54565,0.1258,0.355
+V325,Reacting to Viral Videos,Entertainment,English,True,False,C004,small,186392,39548,0.2122,0.266
+V326,Acoustic Cover - Rise,Music,English,True,False,C051,small,360631,122405,0.3394,0.6625
+V327,Official Music Video,Music,English,True,False,C048,medium,2547134,912963,0.3584,0.3905
+V328,Gone Wrong...,Entertainment,Hindi,False,False,C060,medium,457402,220039,0.4811,0.6825
+V329,The Science of Nutrition,Educational,Spanish,False,True,C065,small,24123,10003,0.4147,0.4585
+V330,Gone Wrong...,Entertainment,Hindi,False,False,C022,small,32762,10924,0.3334,0.5261
+V331,Climate Change Explained Simply,Educational,English,True,True,C052,small,2129,173,0.0814,0.441
+V332,Top 10 Tips & Tricks,Gaming,English,True,False,C053,large,2737046,186530,0.0682,0.1864
+V333,Learn Language Learning in 10 Minutes,Educational,English,True,True,C040,small,6707,1725,0.2573,0.7127
+V334,Official Music Video,Music,Spanish,False,False,C003,small,404740,21915,0.0541,0.5539
+V335,Machine Learning Explained Simply,Educational,French,False,True,C003,small,73906,38996,0.5277,0.4397
+V336,Live Performance at New York,Music,Spanish,False,False,C022,small,624379,48376,0.0775,0.7042
+V337,Life Inside Antarctica,Documentary,English,True,True,C046,small,19240,6882,0.3577,0.5801
+V338,Machine Learning Explained Simply,Educational,English,True,True,C007,medium,384811,165700,0.4306,0.8679
+V339,O que aprendi sobre Architecture,Regional,Portuguese,False,True,C077,small,40800,5749,0.1409,0.2403
+V340,Behind The Scenes,Music,Hindi,False,False,C080,small,794753,391893,0.4931,0.4595
+V341,1v1 vs Pro Player,Gaming,French,False,False,C069,small,699486,205420,0.2937,0.4377
+V342,Live Performance at Seoul,Music,English,True,False,C007,medium,490454,118944,0.2425,0.5686
+V343,A Day in the Life: Coding,Documentary,Arabic,False,True,C049,small,4521,1449,0.3206,0.6754
+V344,Reacting to Viral Videos,Entertainment,Hindi,False,False,C020,medium,1074716,428849,0.399,0.4596
+V345,O que aprendi sobre Psychology,Regional,Hindi,False,True,C002,medium,21464,15028,0.7002,0.3059
+V346,The Science of Philosophy,Educational,Spanish,False,True,C043,small,46462,14885,0.3204,0.5948
+V347,How Quantum Physics Actually Works,Educational,Hindi,False,True,C070,small,230557,29528,0.1281,0.3868
+V348,The Real Impact of the Budget,News/Analysis,English,True,True,C019,small,65460,12508,0.1911,0.2222
+V349,How Language Learning Actually Works,Educational,Hindi,False,True,C043,small,8222,1414,0.1721,0.5053
+V350,1v1 vs Pro Player,Gaming,English,True,False,C072,small,51396,22863,0.4449,0.4628
+V351,Mathematics Explained Simply,Educational,English,True,True,C001,small,13659,3457,0.2531,0.7899
+V352,Minha vida em Paris,Regional,Arabic,False,True,C020,medium,165247,71099,0.4303,0.4088
+V353,New Single Out Now,Music,English,True,False,C014,small,1319864,43200,0.0327,0.3225
+V354,I Beat The Hardest Level,Gaming,English,True,False,C078,large,496169,238489,0.4807,0.2135
+V355,DIY Bookshelf Step by Step,DIY,Spanish,False,True,C033,small,67493,30675,0.4545,0.2356
+V356,New Single Out Now,Music,Hindi,False,False,C028,small,51193,12377,0.2418,0.3565
+V357,Minha vida em Seoul,Regional,French,False,True,C062,small,3928,1075,0.2737,0.8233
+V358,Gone Wrong...,Entertainment,English,True,False,C051,small,40163,7812,0.1945,0.4974
+V359,1v1 vs Pro Player,Gaming,Portuguese,False,False,C057,large,3793315,1223906,0.3226,0.4071
+V360,Beginner's Guide to Painting,DIY,Hindi,False,True,C047,medium,523441,306514,0.5856,0.1338
+V361,Funniest Moments of 2025,Entertainment,English,True,False,C035,small,65034,7938,0.1221,0.4219
+V362,Acoustic Cover - Rise,Music,Spanish,False,False,C073,small,47903,12825,0.2677,0.1533
+V363,Surprising My Family,Entertainment,English,True,False,C051,small,375284,207317,0.5524,0.0604
+V364,Evolution Explained Simply,Educational,English,True,True,C033,small,65376,14170,0.2168,0.4644
+V365,Mi experiencia en Silicon Valley,Regional,Hindi,False,True,C034,small,1051,282,0.2688,0.7084
+V366,Understanding Politics for Beginners,Educational,Portuguese,False,True,C076,large,334800,71298,0.213,0.6838
+V367,Why Language Learning Matters,Educational,Hindi,False,True,C069,small,38686,12800,0.3309,0.5505
+V368,Surprising My Family,Entertainment,English,True,False,C060,medium,226643,53928,0.2379,0.2964
+V369,O que aprendi sobre Philosophy,Regional,Spanish,False,True,C078,large,222688,28388,0.1275,0.3554
+V370,Architecture Explained Simply,Educational,Spanish,False,True,C047,medium,132416,45940,0.3469,0.7538
+V371,Why Climate Change Matters,Educational,French,False,True,C076,large,1354792,149445,0.1103,0.643
+V372,What Really Happened with Mathematics,News/Analysis,English,True,True,C072,small,4016,1278,0.3183,0.1958
+V373,Why Coding Matters,Educational,Hindi,False,True,C011,medium,409956,101021,0.2464,0.7284
+V374,Learn Psychology in 10 Minutes,Educational,Spanish,False,True,C009,small,29120,11171,0.3836,0.7447
+V375,Reacting to Viral Videos,Entertainment,Spanish,False,False,C058,medium,6609668,724384,0.1096,0.147
+V376,Understanding Quantum Physics for Beginners,Educational,Spanish,False,True,C028,small,99233,42561,0.4289,0.6275
+V377,Reacting to Viral Videos,Entertainment,English,True,False,C013,small,210701,86606,0.411,0.205
+V378,Life Inside the Amazon,Documentary,Arabic,False,True,C042,small,130233,41653,0.3198,0.568
+V379,New Update Review,Gaming,English,True,False,C047,medium,604901,138113,0.2283,0.3841
+V380,First Impressions - FIFA,Gaming,French,False,False,C044,medium,1501848,165588,0.1103,0.5326
+V381,Learn Machine Learning in 10 Minutes,Educational,Hindi,False,True,C008,small,42151,6091,0.1445,0.5234
+V382,Beginner's Guide to Sewing,DIY,English,True,True,C053,large,978889,556093,0.5681,0.3604
+V383,The Truth About Black Holes,Educational,English,True,True,C035,small,42720,11137,0.2607,0.6927
+V384,Inside the World of History,Documentary,English,True,True,C020,medium,59304,21854,0.3685,0.5829
+V385,Quantum Physics Explained Simply,Educational,Spanish,False,True,C078,large,326834,66689,0.204,0.5687
+V386,Learn Psychology in 10 Minutes,Educational,French,False,True,C024,small,12619,3395,0.269,0.5541
+V387,First Impressions - Valorant,Gaming,Portuguese,False,False,C076,large,5513049,1078071,0.1955,0.0937
+V388,Life Inside the Amazon,Documentary,French,False,True,C046,small,29484,3616,0.1227,0.791
+V389,Why History Matters,Educational,Spanish,False,True,C033,small,48497,13263,0.2735,0.4198
+V390,Investigative Report: Economics,News/Analysis,English,True,True,C066,small,57852,8645,0.1494,0.3325
+V391,قصة Language Learning,Regional,Portuguese,False,True,C053,large,1759075,1050716,0.5973,0.3594
+V392,Live Performance at Cairo,Music,English,True,False,C030,small,104051,21898,0.2105,0.5943
+V393,A Day in the Life: History,Documentary,Spanish,False,True,C074,medium,70058,16443,0.2347,0.9371
+V394,Reacting to Viral Videos,Entertainment,English,True,False,C016,medium,795886,181141,0.2276,0.3852
+V395,ये देखकर चौंक जाएंगे,Regional,Hindi,False,True,C035,small,26562,7332,0.276,0.1846
+V396,1v1 vs Pro Player,Gaming,Korean,False,False,C013,small,139605,94652,0.678,0.2991
+V397,Funniest Moments of 2025,Entertainment,English,True,False,C049,small,1010779,108674,0.1075,0.2527
+V398,I Can't Believe This Happened,Entertainment,English,True,False,C071,large,11493602,3060713,0.2663,0.4257
+V399,The Truth About History,Educational,English,True,True,C055,small,30789,11902,0.3866,0.5008
+V400,Acoustic Cover - Power,Music,English,True,False,C058,medium,365531,191719,0.5245,0.4409
+V401,New Single Out Now,Music,English,True,False,C039,medium,3447818,1300468,0.3772,0.5217
+V402,Beginner's Guide to Sewing,DIY,English,True,True,C013,small,50647,4467,0.0882,0.5769
+V403,Epic Win Compilation,Gaming,English,True,False,C076,large,962142,173730,0.1806,0.6946
+V404,قصة Language Learning,Regional,French,False,True,C016,medium,442525,161454,0.3648,0.2199
+V405,DIY Garden Bed Step by Step,DIY,English,True,True,C068,large,610493,293938,0.4815,0.2853
+V406,ये देखकर चौंक जाएंगे,Regional,Hindi,False,True,C016,medium,667995,133402,0.1997,0.3084
+V407,Live Performance at Mumbai,Music,English,True,False,C001,small,190777,71223,0.3733,0.3334
+V408,Build Your Own Bookshelf at Home,DIY,English,True,True,C013,small,58556,32441,0.554,0.5739
+V409,I Beat The Hardest Level,Gaming,English,True,False,C053,large,774739,464045,0.599,0.1567
+V410,1v1 vs Pro Player,Gaming,English,True,False,C041,medium,873075,107074,0.1226,0.3742
+V411,DIY Phone Stand Step by Step,DIY,Korean,False,True,C068,large,823934,560861,0.6807,0.7157
+V412,Inside the World of Quantum Physics,Documentary,English,True,True,C077,small,15669,8657,0.5525,0.7506
+V413,Live Performance at Paris,Music,English,True,False,C061,medium,1843165,767899,0.4166,0.5127
+V414,Live Performance at Seoul,Music,English,True,False,C037,small,216715,39785,0.1836,0.3395
+V415,O que aprendi sobre Black Holes,Regional,Hindi,False,True,C059,medium,178985,21172,0.1183,0.2514
+V416,Analysis: Climate Change Explained,News/Analysis,Portuguese,False,True,C065,small,41904,2007,0.0479,0.1592
+V417,The Science of Language Learning,Educational,Arabic,False,True,C022,small,5311,437,0.0824,0.8582
+V418,New Single Out Now,Music,English,True,False,C066,small,186848,47472,0.2541,0.2362
+V419,Epic Win Compilation,Gaming,Korean,False,False,C023,small,27176,2239,0.0824,0.251
+V420,Funniest Moments of 2024,Entertainment,English,True,False,C022,small,459758,177856,0.3868,0.3338
+V421,Understanding Mathematics for Beginners,Educational,English,True,True,C070,small,87147,34521,0.3961,0.7837
+V422,The Truth About Climate Change,Educational,Hindi,False,True,C052,small,28967,2951,0.1019,0.454
+V423,I Beat The Hardest Level,Gaming,English,True,False,C038,medium,700437,211326,0.3017,0.4723
+V424,Learn Economics in 10 Minutes,Educational,English,True,True,C054,small,56550,11599,0.2051,0.7412
+V425,The Truth About Evolution,Educational,English,True,True,C078,large,118176,26909,0.2277,0.694
+V426,Top 10 Tips & Tricks,Gaming,English,True,False,C029,small,138971,12355,0.0889,0.253
+V427,Acoustic Cover - Rise,Music,English,True,False,C060,medium,2933144,1083417,0.3694,0.4147
+V428,Mi experiencia en the Amazon,Regional,Hindi,False,True,C049,small,29761,3375,0.1134,0.6962
+V429,ये देखकर चौंक जाएंगे,Regional,Hindi,False,True,C030,small,13345,1498,0.1123,0.3588
+V430,Investigative Report: Evolution,News/Analysis,English,True,True,C079,medium,102670,15285,0.1489,0.3122
+V431,Top 10 Tips & Tricks,Gaming,English,True,False,C068,large,1633836,916033,0.5607,0.7711
+V432,Minha vida em Cairo,Regional,English,True,True,C012,small,25374,3299,0.13,0.326
+V433,Try Not To Laugh Challenge,Entertainment,English,True,False,C065,small,420411,76670,0.1824,0.2854
+V434,New Single Out Now,Music,Hindi,False,False,C068,large,16852664,5623138,0.3337,0.4008
+V435,First Impressions - Elden Ring,Gaming,English,True,False,C002,medium,61107,6396,0.1047,0.2234
+V436,Funniest Moments of 2023,Entertainment,English,True,False,C046,small,377828,91255,0.2415,0.3119
+V437,1v1 vs Pro Player,Gaming,English,True,False,C036,medium,1300178,271415,0.2088,0.4139
+V438,Life Inside the Amazon,Documentary,English,True,True,C063,small,82248,31376,0.3815,0.935
+V439,ये देखकर चौंक जाएंगे,Regional,Korean,False,True,C047,medium,653132,253379,0.3879,0.6273
+V440,Acoustic Cover - Rise,Music,Spanish,False,False,C014,small,219147,17750,0.081,0.3603
+V441,The Truth About Climate Change,Educational,English,True,True,C003,small,36604,22117,0.6042,0.4232
+V442,Gone Wrong...,Entertainment,English,True,False,C016,medium,412923,63723,0.1543,0.5581
+V443,Try Not To Laugh Challenge,Entertainment,Hindi,False,False,C036,medium,1319345,469324,0.3557,0.4675
+V444,Why Language Learning Matters,Educational,French,False,True,C065,small,13746,2063,0.1501,0.8215
+V445,I Can't Believe This Happened,Entertainment,English,True,False,C056,small,358714,41667,0.1162,0.0442
+V446,قصة Black Holes,Regional,Arabic,False,True,C024,small,6942,3024,0.4356,0.1805
+V447,ये देखकर चौंक जाएंगे,Regional,Arabic,False,True,C079,medium,45514,8814,0.1937,0.1879
+V448,Top 10 Tips & Tricks,Gaming,English,True,False,C051,small,563638,131375,0.2331,0.1824
+V449,Official Music Video,Music,Hindi,False,False,C011,medium,1703004,449326,0.2638,0.5375
+V450,The Science of Nutrition,Educational,English,True,True,C018,large,1288273,115122,0.0894,0.6612
+V451,I Can't Believe This Happened,Entertainment,English,True,False,C074,medium,1206059,112613,0.0934,0.4568
+V452,I Beat The Hardest Level,Gaming,Korean,False,False,C019,small,338340,104242,0.3081,0.2497
+V453,Funniest Moments of 2024,Entertainment,French,False,False,C062,small,94964,16408,0.1728,0.421
+V454,The Hidden Reality of Climate Change,Documentary,English,True,True,C006,small,12910,4853,0.376,0.6862
+V455,Live Performance at Cairo,Music,Hindi,False,False,C001,small,106058,22067,0.2081,0.539
+V456,Minha vida em Mumbai,Regional,Hindi,False,True,C005,medium,158786,76737,0.4833,0.2406
+V457,How I Made Garden Bed for Under $10,DIY,Korean,False,True,C031,small,11896,503,0.0423,0.5404
+V458,The Hidden Reality of Architecture,Documentary,English,True,True,C040,small,669,335,0.5017,0.7479
+V459,Behind The Scenes,Music,Korean,False,False,C059,medium,461521,225464,0.4885,0.4386
+V460,Behind The Scenes,Music,English,True,False,C047,medium,3871942,1222185,0.3157,0.4892
+V461,The Hidden Reality of Black Holes,Documentary,Hindi,False,True,C016,medium,23454,2065,0.0881,0.5445
+V462,The Science of History,Educational,English,True,True,C042,small,47722,5389,0.1129,0.4058
+V463,O que aprendi sobre Psychology,Regional,Arabic,False,True,C074,medium,102100,42084,0.4122,0.2679
+V464,First Impressions - Valorant,Gaming,English,True,False,C010,small,33201,8992,0.2709,0.2122
+V465,O que aprendi sobre Philosophy,Regional,Spanish,False,True,C001,small,12707,1761,0.1386,0.4867
+V466,New Update Review,Gaming,English,True,False,C031,small,17112,7555,0.4416,0.3445
+V467,Live Performance at Seoul,Music,Portuguese,False,False,C010,small,2997117,1248393,0.4165,0.3055
+V468,Inside the World of Mathematics,Documentary,English,True,True,C069,small,3300,172,0.0523,0.3623
+V469,First Impressions - Elden Ring,Gaming,English,True,False,C003,small,453161,67746,0.1495,0.4948
+V470,Economics Explained Simply,Educational,French,False,True,C030,small,37272,12551,0.3367,0.659
+V471,Acoustic Cover - Power,Music,English,True,False,C045,medium,731863,456623,0.6239,0.4867
+V472,Understanding Coding for Beginners,Educational,Spanish,False,True,C023,small,6277,1707,0.272,0.6997
+V473,How History Actually Works,Educational,English,True,True,C049,small,37730,11673,0.3094,0.8363
+V474,What Really Happened with Psychology,News/Analysis,Spanish,False,True,C031,small,25673,7236,0.2819,0.4038
+V475,Official Music Video,Music,Hindi,False,False,C077,small,65439,28579,0.4367,0.3669
+V476,Acoustic Cover - Dreams,Music,English,True,False,C024,small,402491,181872,0.4519,0.3039
+V477,Inside the World of Architecture,Documentary,English,True,True,C042,small,5492,412,0.0751,0.7729
+V478,How I Made Garden Bed for Under $10,DIY,Spanish,False,True,C025,small,28415,6093,0.2144,0.3408
+V479,Learn Coding in 10 Minutes,Educational,Portuguese,False,True,C021,small,70560,13513,0.1915,0.8612
+V480,The Real Impact of the Treaty,News/Analysis,English,True,True,C024,small,3722,822,0.2209,0.209
+V481,O que aprendi sobre Black Holes,Regional,Arabic,False,True,C040,small,60048,6202,0.1033,0.3832
+V482,Learn Quantum Physics in 10 Minutes,Educational,Arabic,False,True,C014,small,21544,3930,0.1824,0.5909
+V483,Funniest Moments of 2023,Entertainment,English,True,False,C007,medium,1925784,413607,0.2148,0.3125
+V484,I Can't Believe This Happened,Entertainment,English,True,False,C002,medium,7993534,408111,0.0511,0.1516
+V485,Why Philosophy Matters,Educational,Spanish,False,True,C034,small,6369,3580,0.5622,0.6547
+V486,Surprising My Family,Entertainment,English,True,False,C012,small,493816,120054,0.2431,0.3046
+V487,Gone Wrong...,Entertainment,English,True,False,C048,medium,4180159,714497,0.1709,0.4727
+V488,Analysis: Architecture Explained,News/Analysis,English,True,True,C012,small,27851,7996,0.2871,0.4871
+V489,New Single Out Now,Music,English,True,False,C044,medium,2246861,1159876,0.5162,0.512
+V490,Understanding Coding for Beginners,Educational,Hindi,False,True,C078,large,3436441,143091,0.0416,0.6221
+V491,The Truth About Machine Learning,Educational,Spanish,False,True,C046,small,23382,1305,0.0558,0.7381
+V492,The Untold Story of Black Holes,Documentary,French,False,True,C001,small,15253,5316,0.3486,0.9462
+V493,The Untold Story of Philosophy,Documentary,Spanish,False,True,C002,medium,52716,7181,0.1362,0.8088
+V494,Understanding Evolution for Beginners,Educational,Arabic,False,True,C026,large,1046962,257549,0.246,0.6955
+V495,O que aprendi sobre Climate Change,Regional,Portuguese,False,True,C024,small,22900,1978,0.0864,0.2412
+V496,Understanding Mathematics for Beginners,Educational,English,True,True,C042,small,16048,7176,0.4472,0.8761
+V497,January Fails Compilation,Entertainment,French,False,False,C022,small,85207,32960,0.3868,0.5617
+V498,The Hidden Reality of Black Holes,Documentary,English,True,True,C052,small,39857,12772,0.3204,0.3587
+V499,나의 일상 브이로그,Regional,English,True,True,C053,large,371901,191004,0.5136,0.7457
+V500,The Truth About Machine Learning,Educational,Arabic,False,True,C059,medium,461644,44022,0.0954,0.6967
