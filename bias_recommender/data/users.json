@@ -1,0 +1,5915 @@
+[
+  {
+    "user_id": "U01",
+    "name": "Priya",
+    "description": "Priya is a 22-year-old art and design student. She loves DIY craft tutorials, documentaries about artists and designers, and occasionally music videos. She never watches gaming or mainstream entertainment.",
+    "preferred_genres": {
+      "DIY": 0.45,
+      "Documentary": 0.3,
+      "Music": 0.15,
+      "Educational": 0.1
+    },
+    "preferred_languages": [
+      "English",
+      "Hindi"
+    ],
+    "interactions": [
+      {
+        "video_id": "r1l3cYVRlnc",
+        "genre": "DIY",
+        "language": "Hindi",
+        "title": "10 DIY Weird Makeup Ideas / Funny Makeup Pranks",
+        "rating": 4,
+        "watch_pct": 0.43
+      },
+      {
+        "video_id": "r1x0X5PCYak",
+        "genre": "DIY",
+        "language": "English",
+        "title": "EXTREME HOLIDAY GLAM TRANSFORMATION!",
+        "rating": 4,
+        "watch_pct": 0.63
+      },
+      {
+        "video_id": "WJ_9PSzvroo",
+        "genre": "DIY",
+        "language": "English",
+        "title": "27 POPULAR KITCHEN MISTAKES THAT MAKE OUR LIVES HARDER",
+        "rating": 3,
+        "watch_pct": 0.42
+      },
+      {
+        "video_id": "we5djgQwK9w",
+        "genre": "DIY",
+        "language": "English",
+        "title": "Whats In My HUGE Fridge?",
+        "rating": 5,
+        "watch_pct": 0.54
+      },
+      {
+        "video_id": "GAAkHpwQA6Q",
+        "genre": "DIY",
+        "language": "Hindi",
+        "title": "24 à¤®à¤¾à¤°à¥à¤ à¤¨à¤µà¤°à¤¾à¤¤à¥à¤°à¤¿ à¤¬à¤¡à¤¼à¤¾ à¤¶à¤¨à¤¿à¤µà¤¾à",
+        "rating": 3,
+        "watch_pct": 0.52
+      },
+      {
+        "video_id": "pgGFtL3tfE4",
+        "genre": "DIY",
+        "language": "Hindi",
+        "title": "32 CRAZY YET BRILLIANT CLOTHING HACKS FOR GIRLS",
+        "rating": 3,
+        "watch_pct": 0.39
+      },
+      {
+        "video_id": "9fNvbeBLwGc",
+        "genre": "DIY",
+        "language": "English",
+        "title": "HOLIDAY 2017 âï¸ COLLECTION & SKIN FROST PALETTE REVEAL | Jeffree Star",
+        "rating": 4,
+        "watch_pct": 0.22
+      },
+      {
+        "video_id": "uz7DycAvLtU",
+        "genre": "DIY",
+        "language": "Hindi",
+        "title": "8 DIY Edible Phone Cases / Edible Pranks",
+        "rating": 3,
+        "watch_pct": 0.38
+      },
+      {
+        "video_id": "vQDx8vo-5D8",
+        "genre": "DIY",
+        "language": "Hindi",
+        "title": "à¤°à¤¾à¤¤ à¤®à¥à¤ 2 à¤®à¤¿à¤¨à¤ à¤à¤¸à¥ à¤²à¤à¤¾ à¤²à¥ à¤¸à¥à¤¬à¤¹ à¤à",
+        "rating": 3,
+        "watch_pct": 0.49
+      },
+      {
+        "video_id": "bvhBIsmzhwE",
+        "genre": "DIY",
+        "language": "English",
+        "title": "17 Weird Ways To Sneak Makeup Into Class / Back To School Pranks",
+        "rating": 3,
+        "watch_pct": 0.28
+      },
+      {
+        "video_id": "uOfwFxG0yO8",
+        "genre": "DIY",
+        "language": "English",
+        "title": "How To Untangle Headphones",
+        "rating": 4,
+        "watch_pct": 0.42
+      },
+      {
+        "video_id": "PAczA2saYWM",
+        "genre": "DIY",
+        "language": "English",
+        "title": "Ty Burrell Fears Sudden Death While Eating Spicy Wings | Hot Ones",
+        "rating": 4,
+        "watch_pct": 0.28
+      },
+      {
+        "video_id": "_7QuvSK-A5E",
+        "genre": "DIY",
+        "language": "English",
+        "title": "BADGAL BANG! MASCARA VS. ROLLERLASH MASCARA",
+        "rating": 3,
+        "watch_pct": 0.46
+      },
+      {
+        "video_id": "dYXaxeJBj5k",
+        "genre": "DIY",
+        "language": "English",
+        "title": "Life-Changing Gift Wrapping Hacks",
+        "rating": 3,
+        "watch_pct": 0.5
+      },
+      {
+        "video_id": "lR-oJvKJyUY",
+        "genre": "DIY",
+        "language": "English",
+        "title": "Cheese Expert Guesses Cheap vs Expensive Cheeses | Epicurious",
+        "rating": 3,
+        "watch_pct": 0.41
+      },
+      {
+        "video_id": "i31kP_hMGDc",
+        "genre": "DIY",
+        "language": "Hindi",
+        "title": "27 INGENIOUS STATIONERY HACKS",
+        "rating": 3,
+        "watch_pct": 0.67
+      },
+      {
+        "video_id": "TTB2X9DzF5g",
+        "genre": "Documentary",
+        "language": "Hindi",
+        "title": "LIVE STREAMING | Raikot (Ludhiana) | Day 1 | 22 May 2018 | Dhadrianwal",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "nEkWlXGdWKA",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Ozzy Osbourne mocks Olivia Newton John's scam drink, Sharon pretends t",
+        "rating": 3,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "mn1-mtmO0Cg",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Toronto Zoo White Rhino Calf Nursing From Mom Zohari",
+        "rating": 3,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "dGM_E8T1t_E",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Pasteur GrÃ©gory Toussaint | La Vie de Dieu dans Votre MinistÃ¨re Nuit",
+        "rating": 2,
+        "watch_pct": 0.32
+      },
+      {
+        "video_id": "ENDfYD-4giE",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "April 2018 General Conference - Sunday Session",
+        "rating": 3,
+        "watch_pct": 0.32
+      },
+      {
+        "video_id": "doqFLMEUVXc",
+        "genre": "Documentary",
+        "language": "Hindi",
+        "title": "à¨à¨µà¨¿à¨¤à¨¾ | à¨¦à©±à¨¸ à¨¨à© à¨¹à¨µà¨¾à¨, à¨à©à¨ à¨¦à© à¨¨à©à¨ à¨¸",
+        "rating": 2,
+        "watch_pct": 0.26
+      },
+      {
+        "video_id": "DRmTq_HFY50",
+        "genre": "Documentary",
+        "language": "Hindi",
+        "title": "Connect to Reconnect with Gurudev",
+        "rating": 2,
+        "watch_pct": 0.21
+      },
+      {
+        "video_id": "TPKujwGWtZo",
+        "genre": "Documentary",
+        "language": "Hindi",
+        "title": "LIVE NOW | Vill.Tasouli (Mohali) | Day 3 | 20 May 2018 | Dhadrianwale",
+        "rating": 2,
+        "watch_pct": 0.43
+      },
+      {
+        "video_id": "eUicRyx0ySg",
+        "genre": "Documentary",
+        "language": "Hindi",
+        "title": "à¨à¨®à¨°à©à¨ à¨¸à¨¿à©°à¨ à¨à¨à¨¨à¨¾à¨²à¨¾ à¨à¨¤à© à¨à¨¥à©à¨¦à¨¾à¨° à¨à",
+        "rating": 3,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "AsCPBuuguTQ",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Pasteur GrÃ©gory Toussaint | 12 Nuits d'Adoration 2017 | Lavi Bondye N",
+        "rating": 3,
+        "watch_pct": 0.25
+      },
+      {
+        "video_id": "LVAsRO4QxXU",
+        "genre": "Music",
+        "language": "Hindi",
+        "title": "Missing Official Trailer | Tabu | Manoj Bajpayee | Annu Kapoor | Mukul",
+        "rating": 2,
+        "watch_pct": 0.22
+      },
+      {
+        "video_id": "Qvd43XKY-f0",
+        "genre": "Music",
+        "language": "English",
+        "title": "Baaghi 2 : O Saathi Video Song | Tiger Shroff | Disha Patani | Arko | ",
+        "rating": 2,
+        "watch_pct": 0.26
+      },
+      {
+        "video_id": "M4vnmgZLA8s",
+        "genre": "Music",
+        "language": "English",
+        "title": "Justin Timberlake - Supplies (Official Video)",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "jaGZNgosNpk",
+        "genre": "Music",
+        "language": "Hindi",
+        "title": "SOHNEYA (Full Song) Guri Feat. Sukhe | Parmish Verma | latest Punjabi ",
+        "rating": 2,
+        "watch_pct": 0.27
+      },
+      {
+        "video_id": "ubawFigGGGU",
+        "genre": "Music",
+        "language": "Hindi",
+        "title": "Baari (Full Video) Elly Mangat I Gurlez Akhtar I Latest Punjabi Songs ",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "qgUmGmIge9E",
+        "genre": "Educational",
+        "language": "Hindi",
+        "title": "Tech Talks #417 - U19 WC, Alexa Printer, Vivo X30, Indian Army AI, Jio",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "ZeCg9DrUx1U",
+        "genre": "Educational",
+        "language": "Hindi",
+        "title": "à¤¨à¤µà¤°à¤¾à¤¤à¥à¤°à¤¿ à¤®à¥à¤ à¤¦à¤¿à¤à¥ à¤¯à¤¹ 2 à¤¸à¤à¤à¥à¤¤ à¤¤à¥",
+        "rating": 2,
+        "watch_pct": 0.26
+      },
+      {
+        "video_id": "A1li901UC70",
+        "genre": "Educational",
+        "language": "Hindi",
+        "title": "28 à¤®à¤¾à¤°à¥à¤ à¤¬à¤¡à¤¼à¤¾ à¤¬à¥à¤§à¤µà¤¾à¤° à¤¬à¤¸ 7 à¤¸à¤¾à¤¬à¥à¤",
+        "rating": 2,
+        "watch_pct": 0.22
+      },
+      {
+        "video_id": "HL6ECWZ8G1s",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Why Is It So Hard To Fall Asleep?",
+        "rating": 2,
+        "watch_pct": 0.2
+      }
+    ]
+  },
+  {
+    "user_id": "U02",
+    "name": "Raj",
+    "description": "Raj is a 28-year-old software engineer. He watches coding tutorials, tech explainers, and science documentaries almost exclusively. He is deeply engaged with educational content and follows tech news.",
+    "preferred_genres": {
+      "Educational": 0.5,
+      "Documentary": 0.2,
+      "News/Analysis": 0.2,
+      "Gaming": 0.1
+    },
+    "preferred_languages": [
+      "English"
+    ],
+    "interactions": [
+      {
+        "video_id": "nc99ccSXST0",
+        "genre": "Educational",
+        "language": "English",
+        "title": "5 Ice Cream Gadgets put to the Test",
+        "rating": 4,
+        "watch_pct": 0.68
+      },
+      {
+        "video_id": "8cxfxujQI2s",
+        "genre": "Educational",
+        "language": "English",
+        "title": "COMMENT SE FABRIQUE UN DIAMANT ? Vrai ou Faux #72",
+        "rating": 4,
+        "watch_pct": 0.69
+      },
+      {
+        "video_id": "BRUvbiWLwFI",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Google I/O 2018 keynote in 14 minutes",
+        "rating": 2,
+        "watch_pct": 0.6
+      },
+      {
+        "video_id": "kqnvrjgyEMc",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Faster Internet for FREE in 30 seconds - No... Seriously",
+        "rating": 4,
+        "watch_pct": 0.46
+      },
+      {
+        "video_id": "rzwYrLX7ask",
+        "genre": "Educational",
+        "language": "English",
+        "title": "DES CRISTAUX EN OR ?",
+        "rating": 4,
+        "watch_pct": 0.26
+      },
+      {
+        "video_id": "7X_WvGAhMlQ",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Yanny vs Laurel video: which name do you hear? â- audio",
+        "rating": 4,
+        "watch_pct": 0.54
+      },
+      {
+        "video_id": "_4P9XjKt7qg",
+        "genre": "Educational",
+        "language": "English",
+        "title": "OBSERVONS Lâ'INTÃRIEUR D'UN CERVEAU AU MICROSCOPE !",
+        "rating": 5,
+        "watch_pct": 0.44
+      },
+      {
+        "video_id": "Vdo1yz6Y8Qc",
+        "genre": "Educational",
+        "language": "English",
+        "title": "OUVRIR DES GÃODES AVEC SQUEEZIE !",
+        "rating": 4,
+        "watch_pct": 0.44
+      },
+      {
+        "video_id": "C-DfipidnOE",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Dear Snapchat!",
+        "rating": 5,
+        "watch_pct": 0.54
+      },
+      {
+        "video_id": "jAq9RV3k9Qc",
+        "genre": "Educational",
+        "language": "English",
+        "title": "The Almost All-Screen Smartphone...",
+        "rating": 4,
+        "watch_pct": 0.56
+      },
+      {
+        "video_id": "9GqohosViw4",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Dope Tech of CES 2018! [Part 2]",
+        "rating": 4,
+        "watch_pct": 0.62
+      },
+      {
+        "video_id": "USXoINPEhoA",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Let's Talk About Google Duplex!",
+        "rating": 4,
+        "watch_pct": 0.46
+      },
+      {
+        "video_id": "3g5O-kT9m8k",
+        "genre": "Educational",
+        "language": "English",
+        "title": "$1000 Survival Kit in a Case",
+        "rating": 4,
+        "watch_pct": 0.32
+      },
+      {
+        "video_id": "8udNOTFiqUs",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Why It's Almost Impossible to Throw a 110 MPH Fastball | WIRED",
+        "rating": 4,
+        "watch_pct": 0.53
+      },
+      {
+        "video_id": "9O5PhuW927w",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Driving a Tesla Model 3! [Auto Focus Ep. 1]",
+        "rating": 4,
+        "watch_pct": 0.47
+      },
+      {
+        "video_id": "lkfpqGWzHCE",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Searching for Gender Equality â- International Womenâ's Day",
+        "rating": 3,
+        "watch_pct": 0.45
+      },
+      {
+        "video_id": "yvawgYe1hkk",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Lâ'OBJET SATISFAISANT ULTIME, LE VORTECON !",
+        "rating": 4,
+        "watch_pct": 0.4
+      },
+      {
+        "video_id": "fL30bWrGrfE",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Apple Admits Slowing Down Old iPhones? Ask MKBHD V23!",
+        "rating": 4,
+        "watch_pct": 0.55
+      },
+      {
+        "video_id": "RrW47fEYrwo",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "InHaiti | Haiti Fille D'Abraham | 07 Janvier 2018",
+        "rating": 3,
+        "watch_pct": 0.22
+      },
+      {
+        "video_id": "47j4fifbaiY",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "â Judge â¢ Judy Â· November â â§ 259",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "pwGbwYAfSmg",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "5 books worth reading this summer",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "QvwTGiB9aLQ",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Pasteur GrÃ©gory Toussaint | 12 Nuits d'Adoration 2017 | Lavi Bondye N",
+        "rating": 2,
+        "watch_pct": 0.5
+      },
+      {
+        "video_id": "Dk9uitzdGXQ",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "DNC LAWSUIT #AntiSchool #QAnon April 20 2018",
+        "rating": 2,
+        "watch_pct": 0.24
+      },
+      {
+        "video_id": "4x4CMDvVI78",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Pasteur GrÃ©gory Toussaint | 12 Nuits d'Adoration 2017 | Lavi Bondye N",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "obRG-2jurz0",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Does saving more lives lead to overpopulation?",
+        "rating": 2,
+        "watch_pct": 0.29
+      },
+      {
+        "video_id": "kpTsHXbnmaQ",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "Ray Diaz EXPOSES JAKE PAUL! (INTERVIEW) #DramaAlert & Responds to Lore",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "F9sH-3AoF88",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "We Need To Talk About The Nazi Pug Guilty Verdict, New Undercover Vide",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "HbYhXMY3VV8",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "Feminist Speaker Boycott, Logan Paul Dropped, Cambridge Analytica Shut",
+        "rating": 2,
+        "watch_pct": 0.46
+      },
+      {
+        "video_id": "gIDht-wr3zc",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "The PewDiePie CollabDRM Alinity Copyright Abuse Scandal, Laurel vs Yan",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "_yD3yLlHRr0",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "Why Is YouTube Shutting Down These Channels, Kelly Sadler Backlash, PG",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "t3oULMth3Iw",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "Meghan & Kate dazzled while the Queen giggled on balcony as they atten",
+        "rating": 2,
+        "watch_pct": 0.21
+      },
+      {
+        "video_id": "Aqx41JrNTSw",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "ê¹ë³´ë¦ ì§ì¬ì¼ë¡ ì¬ê³¼ëë¦½ëë¤..ê²°êµ ëë¬¼ë¡ ì¬ì£ (ê¸°ìíê²¬ íìì) / SBS ",
+        "rating": 2,
+        "watch_pct": 0.26
+      },
+      {
+        "video_id": "B9nVxg3DqAM",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Developer Update | Happy Year of the Dog! | Overwatch",
+        "rating": 2,
+        "watch_pct": 0.29
+      },
+      {
+        "video_id": "IoAEvo_BNW8",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Full Broadcast: FaZe Fnatic | SK Misfits - Semifinals - ESL Pro League",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "km5FAAQLUT8",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "LEEROY JENKINS ANIMATED",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "uVcvhKTVZ8g",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Clash Royale: CLAN WARS IS HERE!",
+        "rating": 2,
+        "watch_pct": 0.26
+      }
+    ]
+  },
+  {
+    "user_id": "U03",
+    "name": "Maria",
+    "description": "Maria is a 25-year-old lifestyle blogger from Mexico. She watches Spanish-language vlogs, regional entertainment, and Latin music. She prefers Spanish content and rarely watches English channels.",
+    "preferred_genres": {
+      "Regional": 0.5,
+      "Music": 0.3,
+      "Entertainment": 0.2
+    },
+    "preferred_languages": [
+      "Spanish"
+    ],
+    "interactions": [
+      {
+        "video_id": "osgnc2jNvL8",
+        "genre": "Regional",
+        "language": "Spanish",
+        "title": "BAILANDO SCOOBY DOO PA PA EN LA CALLE / JUKILOP",
+        "rating": 3,
+        "watch_pct": 0.52
+      },
+      {
+        "video_id": "pOHQdIDds6s",
+        "genre": "Regional",
+        "language": "Spanish",
+        "title": "Jake Paul - It's Everyday Bro (Remix) [feat. Gucci Mane]",
+        "rating": 4,
+        "watch_pct": 0.59
+      },
+      {
+        "video_id": "Wq9dpFTp9IU",
+        "genre": "Regional",
+        "language": "Spanish",
+        "title": "Cazzu DESCONTROLO a Bad Bunny con Loca Remix en el Luna Park",
+        "rating": 3,
+        "watch_pct": 0.34
+      },
+      {
+        "video_id": "TOzhGyYkVGE",
+        "genre": "Regional",
+        "language": "Spanish",
+        "title": "Bomba EstÃ©reo - To My Love (Tainy Remix)[Audio] Parodia/Parody ft. Gi",
+        "rating": 4,
+        "watch_pct": 0.54
+      },
+      {
+        "video_id": "JQb3ICATNTM",
+        "genre": "Regional",
+        "language": "Spanish",
+        "title": "Manchester United vs Newcastle 4-1 - Highlights & Goals - 18 November ",
+        "rating": 4,
+        "watch_pct": 0.54
+      },
+      {
+        "video_id": "5QAJFfUChj8",
+        "genre": "Regional",
+        "language": "Spanish",
+        "title": "Real Madrid 3 Liverpool 1 I Real Madrid vs Liverpool I Final Champions",
+        "rating": 4,
+        "watch_pct": 0.53
+      },
+      {
+        "video_id": "gEm06b55CT8",
+        "genre": "Regional",
+        "language": "Spanish",
+        "title": "Roman Reigns Vs Brock Lesnar at WWE Greatest Royal Rumble Highlights 2",
+        "rating": 4,
+        "watch_pct": 0.41
+      },
+      {
+        "video_id": "pC9dViGfJ2Q",
+        "genre": "Regional",
+        "language": "Spanish",
+        "title": "Atletico Madrid vs Real Madrid 0-0 - Extended Match Highlights - La Li",
+        "rating": 5,
+        "watch_pct": 0.56
+      },
+      {
+        "video_id": "AsYtGhsCaUo",
+        "genre": "Regional",
+        "language": "Spanish",
+        "title": "TOP 10 | LA JUVENTUD MEXICANA ESTA EN P3L1GR0 RECOPILACION ABRIL 2018 ",
+        "rating": 3,
+        "watch_pct": 0.58
+      },
+      {
+        "video_id": "0XBRTu5Goho",
+        "genre": "Regional",
+        "language": "Spanish",
+        "title": "Diablo GuardiÃ¡n Trailer | Amazon Prime Video",
+        "rating": 3,
+        "watch_pct": 0.59
+      },
+      {
+        "video_id": "gDXwhHm4GhM",
+        "genre": "Regional",
+        "language": "Spanish",
+        "title": "Everything Wrong With Thor Ragnarok In 15 Minutes Or Less",
+        "rating": 5,
+        "watch_pct": 0.4
+      },
+      {
+        "video_id": "ssXatmC1dv0",
+        "genre": "Regional",
+        "language": "Spanish",
+        "title": "Los IncreÃbles II, de Disneyâ¢Pixar â- Primer TrÃ¡iler",
+        "rating": 5,
+        "watch_pct": 0.55
+      },
+      {
+        "video_id": "HtmVePtxh-Q",
+        "genre": "Regional",
+        "language": "Spanish",
+        "title": "Ralph el Demoledor 2: Wifi Ralph Disney Trailer Oficial #2 EspaÃ±ol La",
+        "rating": 4,
+        "watch_pct": 0.73
+      },
+      {
+        "video_id": "pefGcGvkStI",
+        "genre": "Regional",
+        "language": "Spanish",
+        "title": "Barcelona vs Espanyol 2-0 - All Goals & Extended Highlights - La Copa ",
+        "rating": 4,
+        "watch_pct": 0.41
+      },
+      {
+        "video_id": "5j6qj-S7rGg",
+        "genre": "Regional",
+        "language": "Spanish",
+        "title": "ImÃ¡genes impactantes del rÃo de lava que arrasa con todo en Hawaii",
+        "rating": 3,
+        "watch_pct": 0.4
+      },
+      {
+        "video_id": "67sy68U5Gx0",
+        "genre": "Regional",
+        "language": "Spanish",
+        "title": "Germany vs Brazil 1-5 - All Goals & Extended Highlights RÃSUMÃ & GOLES",
+        "rating": 4,
+        "watch_pct": 0.54
+      },
+      {
+        "video_id": "w1RT_dhcJno",
+        "genre": "Regional",
+        "language": "Spanish",
+        "title": "ENG 2-1 NGA - All Goals & Extended Highlights - 02/06/2018 HD",
+        "rating": 4,
+        "watch_pct": 0.6
+      },
+      {
+        "video_id": "vkA1rFrNLWs",
+        "genre": "Regional",
+        "language": "Spanish",
+        "title": "do you know how big my mousepad is?",
+        "rating": 4,
+        "watch_pct": 0.67
+      },
+      {
+        "video_id": "kton-qrKNLc",
+        "genre": "Music",
+        "language": "Spanish",
+        "title": "Meghan Trainor - No Excuses",
+        "rating": 2,
+        "watch_pct": 0.63
+      },
+      {
+        "video_id": "gT4IVJRjw4w",
+        "genre": "Music",
+        "language": "Spanish",
+        "title": "Cali Y El Dandee - Sirena",
+        "rating": 3,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "fGqdIPer-ms",
+        "genre": "Music",
+        "language": "Spanish",
+        "title": "Migos - Walk It Talk It ft. Drake",
+        "rating": 2,
+        "watch_pct": 0.36
+      },
+      {
+        "video_id": "TyHvyGVs42U",
+        "genre": "Music",
+        "language": "Spanish",
+        "title": "Luis Fonsi, Demi Lovato - Ãchame La Culpa",
+        "rating": 2,
+        "watch_pct": 0.39
+      },
+      {
+        "video_id": "oWw1BcFhk-k",
+        "genre": "Music",
+        "language": "Spanish",
+        "title": "Liam Payne & J Balvin - Familiar (Official Video)",
+        "rating": 3,
+        "watch_pct": 0.29
+      },
+      {
+        "video_id": "tstKpwNCkWM",
+        "genre": "Music",
+        "language": "Spanish",
+        "title": "Maluma - Ojos Que No Ven (Audio)",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "rsEne1ZiQrk",
+        "genre": "Music",
+        "language": "Spanish",
+        "title": "The Weeknd - Call Out My Name (Official Audio)",
+        "rating": 2,
+        "watch_pct": 0.4
+      },
+      {
+        "video_id": "xYtsL9znopI",
+        "genre": "Music",
+        "language": "Spanish",
+        "title": "Khalid & Normani - Love Lies (Official Video)",
+        "rating": 3,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "Yu0l56_8Egs",
+        "genre": "Music",
+        "language": "Spanish",
+        "title": "Dimelo - Paulo Londra (Adelanto Produccion)",
+        "rating": 3,
+        "watch_pct": 0.35
+      },
+      {
+        "video_id": "eque7FLe-5U",
+        "genre": "Music",
+        "language": "Spanish",
+        "title": "Carlos Rivera - Me Muero",
+        "rating": 2,
+        "watch_pct": 0.32
+      },
+      {
+        "video_id": "Qy5Y8CgBnw0",
+        "genre": "Entertainment",
+        "language": "Spanish",
+        "title": "Las 7 cosas que nunca jamÃ¡s debes buscar en Google",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "1FJD7jZqZEk",
+        "genre": "Entertainment",
+        "language": "Spanish",
+        "title": "Jurassic World: Fallen Kingdom - Final Trailer [HD]",
+        "rating": 2,
+        "watch_pct": 0.27
+      },
+      {
+        "video_id": "zMrB-X7kfI4",
+        "genre": "Entertainment",
+        "language": "Spanish",
+        "title": "âº Mi Lujosa Fiesta de 30 AÃ±os | Vino Todo YouTube",
+        "rating": 2,
+        "watch_pct": 0.33
+      },
+      {
+        "video_id": "sqFVrfinlYk",
+        "genre": "Entertainment",
+        "language": "Spanish",
+        "title": "MARVEL INFINITY WARS DISINTEGRATION MEME MAKES ME HAHA",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "fVUVevR48C8",
+        "genre": "Entertainment",
+        "language": "Spanish",
+        "title": "El Cura Y El Narco",
+        "rating": 2,
+        "watch_pct": 0.26
+      },
+      {
+        "video_id": "K45mFsyZxtU",
+        "genre": "Entertainment",
+        "language": "Spanish",
+        "title": "Fox & Friends Cold Open - SNL",
+        "rating": 2,
+        "watch_pct": 0.66
+      },
+      {
+        "video_id": "RKjk0ECXjiQ",
+        "genre": "Entertainment",
+        "language": "Spanish",
+        "title": "Corporate Taxes: Last Week Tonight with John Oliver (HBO)",
+        "rating": 2,
+        "watch_pct": 0.34
+      }
+    ]
+  },
+  {
+    "user_id": "U04",
+    "name": "Ahmed",
+    "description": "Ahmed is a 35-year-old political journalist. He consumes heavy volumes of news analysis, political documentaries, and investigative journalism. He watches in English and Arabic.",
+    "preferred_genres": {
+      "News/Analysis": 0.55,
+      "Documentary": 0.3,
+      "Educational": 0.15
+    },
+    "preferred_languages": [
+      "English"
+    ],
+    "interactions": [
+      {
+        "video_id": "UzEyHb4mvkk",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "MrBeast Fake Videos? #DramaAlert MrBeast (INTERVIEW!) Deji Interrupts!",
+        "rating": 5,
+        "watch_pct": 0.63
+      },
+      {
+        "video_id": "GsexKH-Ubnw",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "Groom Miraculously Walks Down Aisle After Being Paralyzed",
+        "rating": 4,
+        "watch_pct": 0.64
+      },
+      {
+        "video_id": "_fVUX6-7VKE",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "7.9 earthquake hits near Kodiak, AK",
+        "rating": 4,
+        "watch_pct": 0.52
+      },
+      {
+        "video_id": "PlSwgM4PTNI",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "Diane Black EXPOSES The Real Problem, Roseanne Fallout Gets Weirder, &",
+        "rating": 4,
+        "watch_pct": 0.56
+      },
+      {
+        "video_id": "bV5YNCsY66Y",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "INFINITY WAR Breakdown! Easter Eggs & Details You Missed (FULL MOVIE)",
+        "rating": 5,
+        "watch_pct": 0.33
+      },
+      {
+        "video_id": "y4bAULTwAJU",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "Banfield slams Ansari accuser in open letter",
+        "rating": 5,
+        "watch_pct": 0.36
+      },
+      {
+        "video_id": "kpTsHXbnmaQ",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "Ray Diaz EXPOSES JAKE PAUL! (INTERVIEW) #DramaAlert & Responds to Lore",
+        "rating": 4,
+        "watch_pct": 0.68
+      },
+      {
+        "video_id": "C7xDzYnst34",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "New YouTube Crackdown Incoming, Things Could Get Bad Real Quick For Us",
+        "rating": 4,
+        "watch_pct": 0.42
+      },
+      {
+        "video_id": "g_t9cLKM9GA",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "CNN Live - Times Square Ball Drop Countdown | New Year's Eve 2018 LIVE",
+        "rating": 4,
+        "watch_pct": 0.63
+      },
+      {
+        "video_id": "Ut7C9IEHW1E",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "[íì´ë¼ì´í¸] 2018 ë¨ë¶ì ìíë´ (Inter-Korean Summit)",
+        "rating": 4,
+        "watch_pct": 0.58
+      },
+      {
+        "video_id": "R-CJpDqby1Q",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "Jake Paul vs Deji (FOOTAGE) #DramaAlert RiceGum BANNED! Logan Paul Sav",
+        "rating": 4,
+        "watch_pct": 0.47
+      },
+      {
+        "video_id": "HqXKEgTYZBQ",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "How the end of net neutrality could change the internet",
+        "rating": 5,
+        "watch_pct": 0.63
+      },
+      {
+        "video_id": "QtOHEuiZINw",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "Royal Wedding special: The marriage of Harry & Meghan",
+        "rating": 3,
+        "watch_pct": 0.57
+      },
+      {
+        "video_id": "UHh6kJ-HWYw",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "Rapper 21 Savage Has Some Money Tips For Broke People | Think | NBC Ne",
+        "rating": 4,
+        "watch_pct": 0.65
+      },
+      {
+        "video_id": "HbYhXMY3VV8",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "Feminist Speaker Boycott, Logan Paul Dropped, Cambridge Analytica Shut",
+        "rating": 4,
+        "watch_pct": 0.54
+      },
+      {
+        "video_id": "ncU5beK8kro",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "ÙÙ ÙÙØ¨ ÙÙØ²Ù Ø§ÙØªÙÙÙØ°Ø© Ø§ÙÙÙ Ø¹Ø±Ø§ÙØ§ Ø´Ø§Ø¨ Ø¨Ø¬ÙØ§Ø¹Ø© Ø¨ÙØ´Ø§Ù",
+        "rating": 5,
+        "watch_pct": 0.65
+      },
+      {
+        "video_id": "z7BOWQihC7M",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "CNN's Anthony Bourdain dead at 61",
+        "rating": 4,
+        "watch_pct": 0.51
+      },
+      {
+        "video_id": "1XokkMj-tYI",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "Enfant sauvÃ© d'une chute: lâ'intÃ©gralitÃ© du tÃ©moignage de Mamoudou",
+        "rating": 4,
+        "watch_pct": 0.47
+      },
+      {
+        "video_id": "D7plDibrP1U",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "Father on worst nightmare of daughter trapped in school during shootin",
+        "rating": 5,
+        "watch_pct": 0.6
+      },
+      {
+        "video_id": "WA0Ek8RT20s",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "ÐÐµÐ¼ÐµÑÐ¾Ð²Ð¾: ÑÑÐ¾ ÑÐ»ÑÑÐ¸Ð»Ð¾ÑÑ Ð¸ ÐºÑÐ¾ Ð²Ð¸Ð½Ð¾Ð²Ð°Ñ",
+        "rating": 2,
+        "watch_pct": 0.41
+      },
+      {
+        "video_id": "UQYzXS-S1KQ",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "â Judge â¢ Judy â¢ January 2018 â â§7",
+        "rating": 4,
+        "watch_pct": 0.42
+      },
+      {
+        "video_id": "ENDfYD-4giE",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "April 2018 General Conference - Sunday Session",
+        "rating": 2,
+        "watch_pct": 0.24
+      },
+      {
+        "video_id": "hV23YfxzTMA",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Pastor Gregory Toussaint I 7 Nights of Dominion I Representing the Kin",
+        "rating": 3,
+        "watch_pct": 0.22
+      },
+      {
+        "video_id": "RrW47fEYrwo",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "InHaiti | Haiti Fille D'Abraham | 07 Janvier 2018",
+        "rating": 3,
+        "watch_pct": 0.39
+      },
+      {
+        "video_id": "47j4fifbaiY",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "â Judge â¢ Judy Â· November â â§ 259",
+        "rating": 2,
+        "watch_pct": 0.29
+      },
+      {
+        "video_id": "OH2R9ObnnRA",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Pastor Gregory Toussaint I 7 Nights of Dominion I Dominion in Governme",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "Ed3wQVhyJUc",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Pastor Gregory Toussaint I 7 Nights of Dominion I Arts Culture and Com",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "TaEXgTyBtsU",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "#LIGHT: Q Assures Dark Days Ending! #FS1649 FBI Slush Fund, Plus C60/L",
+        "rating": 3,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "zwxWKnUzRq0",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Pastor Gregory Toussaint I 7 Nights of Dominion I The Kingdom of Heave",
+        "rating": 2,
+        "watch_pct": 0.32
+      },
+      {
+        "video_id": "8udNOTFiqUs",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Why It's Almost Impossible to Throw a 110 MPH Fastball | WIRED",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "QbDuBTWrU-o",
+        "genre": "Educational",
+        "language": "English",
+        "title": "My House Burned Down",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "ItYOdWRo0JY",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Selling My iPhone X To a Machine at Walmart",
+        "rating": 2,
+        "watch_pct": 0.21
+      },
+      {
+        "video_id": "wGxT2tg4It0",
+        "genre": "Educational",
+        "language": "English",
+        "title": "This is iPhone X",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "Hi2tjMLVpdQ",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Which Smartphone Do They ACTUALLY Use? --- MKBHD, Austin Evans, Linus ",
+        "rating": 2,
+        "watch_pct": 0.2
+      }
+    ]
+  },
+  {
+    "user_id": "U05",
+    "name": "Yuki",
+    "description": "Yuki is a 19-year-old student in Tokyo. She watches Japanese gaming streams, K-pop performances, and anime-related content. Her viewing is almost entirely in Japanese and Korean.",
+    "preferred_genres": {
+      "Gaming": 0.4,
+      "Music": 0.35,
+      "Regional": 0.25
+    },
+    "preferred_languages": [
+      "Japanese",
+      "Korean"
+    ],
+    "interactions": [
+      {
+        "video_id": "6H83ezxc6cE",
+        "genre": "Gaming",
+        "language": "Korean",
+        "title": "íì´ì¤ë¶ íì... ì´ë»ê² í ê¹ì?",
+        "rating": 3,
+        "watch_pct": 0.48
+      },
+      {
+        "video_id": "XUsv0zVWUiQ",
+        "genre": "Gaming",
+        "language": "Korean",
+        "title": "ì´ ì ìê° ê°ë¥í¨?? ë¼ì´ë ì´ê³ ìë¤ ë¤ ëª¨ì´ì¼!! [ RIDER ] - [íëtv,Tedtv]",
+        "rating": 4,
+        "watch_pct": 0.25
+      },
+      {
+        "video_id": "Jjmgwrq15NM",
+        "genre": "Gaming",
+        "language": "Korean",
+        "title": "[ì¤ë²ìì¹] ì ê· ìì ë±ê¸ 5ì¢ ì¤í¨ ë° ìë¡ì´ íì¡°ì ë£¨ìì° ì¤í¨ ê³µê°! / 24",
+        "rating": 4,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "Uku6dPXd9FY",
+        "genre": "Gaming",
+        "language": "Korean",
+        "title": "ëëìê´ LIVE] í¸ë¬ ì¤ë¸ ë¥ / ì ¤ë¤ì ì ì¤ ì¼ì¨ / ëª¬ì¤í¸ë¼ - ê³µí¬ê²ì 3/1",
+        "rating": 3,
+        "watch_pct": 0.47
+      },
+      {
+        "video_id": "9crmkjvnfs8",
+        "genre": "Gaming",
+        "language": "Japanese",
+        "title": "ãã³ãã³ãã¼Switchã«ã¹ããã©ãçºè¡¨ãããç¬éã®å¤å½äººã®åã³ãããåããã¦åæ°ã§ã",
+        "rating": 3,
+        "watch_pct": 0.33
+      },
+      {
+        "video_id": "Dz32jguCILw",
+        "genre": "Gaming",
+        "language": "Korean",
+        "title": "ì¤ì¹ëê³¼ ì ìê° ë¶ìë¤! ê³¼ì° ì¹ìë ëêµ¬ì¼ê¹??! íµ ê¾¸ë¥´ë¥´ë¥´ë¥´ì¼ ìì¬ì",
+        "rating": 3,
+        "watch_pct": 0.34
+      },
+      {
+        "video_id": "TdjSPoS27KQ",
+        "genre": "Gaming",
+        "language": "Japanese",
+        "title": "3/31(å·¨äºº)ä¸å å®ç§ãªãªãªã¼ãã»(ããã)äºä¸ 2æå¸é£çºï¼ä»æ¥ã®ããéç",
+        "rating": 3,
+        "watch_pct": 0.5
+      },
+      {
+        "video_id": "luh7RLYn1Bw",
+        "genre": "Gaming",
+        "language": "Japanese",
+        "title": "Marvel's Spider-Man - Pre-Order Video | PS4",
+        "rating": 3,
+        "watch_pct": 0.32
+      },
+      {
+        "video_id": "kfNGkHLlwuA",
+        "genre": "Gaming",
+        "language": "Japanese",
+        "title": "ãFGOã2é¨ãµã¼ã´ã¡ã³ãï¼£ï¼ãã©ã³ãµã¼&ã¢ã«ã¿ã¼ã¨ã´ã4é±é£ç¶æ°ãµã¼ã´ã¡ã³ãï¼£",
+        "rating": 4,
+        "watch_pct": 0.44
+      },
+      {
+        "video_id": "l6BqUY55bJA",
+        "genre": "Gaming",
+        "language": "Korean",
+        "title": "âì ë°ë°° ì«ë©´ìë¦¬ëíâ ìívsìµ¸ì° ì¹ìë?! - ë°ë¡ê·¸ - [ì ë°]",
+        "rating": 4,
+        "watch_pct": 0.48
+      },
+      {
+        "video_id": "1SrBPvZQlJg",
+        "genre": "Gaming",
+        "language": "Japanese",
+        "title": "ãå£°çä¼¼ãèª°ãä¸çªãããã«ä¼¼ã¦ããé¸ææ¨©ï½ï½ï½",
+        "rating": 3,
+        "watch_pct": 0.33
+      },
+      {
+        "video_id": "K_tLfhXO5as",
+        "genre": "Gaming",
+        "language": "Japanese",
+        "title": "ã¤ããºãã¦ã©ã¼ã«ã¼Vol.10ãã¤ããºãã¤ã¬ãã³ ã¯ãªã¨ã¤ã¿ã¼ãºã",
+        "rating": 4,
+        "watch_pct": 0.47
+      },
+      {
+        "video_id": "NANKPYGTK9M",
+        "genre": "Gaming",
+        "language": "Korean",
+        "title": "ì£ì¡í©ëë¤ ì¬ë¬ë¶. ì¸ì°í°ê³ ëìëë¤.",
+        "rating": 3,
+        "watch_pct": 0.41
+      },
+      {
+        "video_id": "PPWDwBrUNyY",
+        "genre": "Gaming",
+        "language": "Japanese",
+        "title": "YouTube Live at E3 2018: Monday with Ninja, Marshmello, PlayStation, U",
+        "rating": 4,
+        "watch_pct": 0.33
+      },
+      {
+        "video_id": "XIVpETgWE1M",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "ê¹íì¨ ì¼ë¯¸ëë¨¸ë6 ì§ììì ã·ã·ã·",
+        "rating": 3,
+        "watch_pct": 0.33
+      },
+      {
+        "video_id": "xrTewO4e-Uc",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "SEVENTEEN - ê³ ë§ë¤ (THANKS) MV TEASER 2",
+        "rating": 3,
+        "watch_pct": 0.48
+      },
+      {
+        "video_id": "Q48VduIflPk",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "[STATION] SMTOWN 'Dear My Family (Live Concert Ver.)' MV",
+        "rating": 3,
+        "watch_pct": 0.45
+      },
+      {
+        "video_id": "BRT_eNETD2U",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "à¸à¸¹à¹à¸ªà¸²à¸§à¸à¸²à¹à¸¥à¸²à¸° à¹à¸à¸à¸°à¸à¸´à¸à¸à¸µà¹à¸¡à¸¹à¸à¸§à¸µ",
+        "rating": 4,
+        "watch_pct": 0.35
+      },
+      {
+        "video_id": "wQ_POfToaVY",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "TWICEãCandy PopãMusic Video",
+        "rating": 3,
+        "watch_pct": 0.31
+      },
+      {
+        "video_id": "N3GvO6oRw7E",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "Marshmello & Anne-Marie - FRIENDS ( cover by J.Fla )",
+        "rating": 3,
+        "watch_pct": 0.33
+      },
+      {
+        "video_id": "xWNP4dygs_8",
+        "genre": "Music",
+        "language": "Japanese",
+        "title": "ãªã¯ã¨ã¹ããå³èã§å¼¾ãèªãã¾ãï¼ï¼ï¼",
+        "rating": 3,
+        "watch_pct": 0.42
+      },
+      {
+        "video_id": "LgmxMuW6Fsc",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "OK Go - Obsession - Official Video",
+        "rating": 2,
+        "watch_pct": 0.6
+      },
+      {
+        "video_id": "tSBPUP3MQ2I",
+        "genre": "Music",
+        "language": "Japanese",
+        "title": "MOMOLANDãBBoom BBoom -Japanese ver.-ãMusic Video",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "ZkntmSgI2Ag",
+        "genre": "Music",
+        "language": "Japanese",
+        "title": "ãªã¯ã¨ã¹ããå³èã§å¼¾ãèªãã¾ãï¼ï¼ï¼",
+        "rating": 3,
+        "watch_pct": 0.44
+      },
+      {
+        "video_id": "fC8gutkCu1c",
+        "genre": "Music",
+        "language": "Japanese",
+        "title": "[OFFICIAL VIDEO] New Rules x Are You That Somebody? - Pentatonix",
+        "rating": 3,
+        "watch_pct": 0.43
+      },
+      {
+        "video_id": "EAGhzuitLXU",
+        "genre": "Music",
+        "language": "Japanese",
+        "title": "Ed Sheeran - Supermarket Flowers [Live from the BRITs 2018]",
+        "rating": 3,
+        "watch_pct": 0.24
+      },
+      {
+        "video_id": "djnXRrw1h6g",
+        "genre": "Regional",
+        "language": "Japanese",
+        "title": "ãNHKãããã¼ã«ããå®æ³ãªããçç¬ï¼ãã§ã«ãã³ãã¹ã®ã¨ãã·ãã·ã§ã³ï¼ãã§ã³ãã£ã³ï¼",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "DIBw9dSVKdU",
+        "genre": "Regional",
+        "language": "Korean",
+        "title": "Ralph Breaks The Internet: Wreck-It Ralph 2 Official Teaser Trailer",
+        "rating": 3,
+        "watch_pct": 0.23
+      },
+      {
+        "video_id": "nw_1_OBEqFE",
+        "genre": "Regional",
+        "language": "Japanese",
+        "title": "Xem Táºn Máº¯t MÃ Váº«n MÃ©o Thá» Tin Ná»i Ná»¯a .",
+        "rating": 2,
+        "watch_pct": 0.21
+      },
+      {
+        "video_id": "CoxWUST4kf4",
+        "genre": "Regional",
+        "language": "Japanese",
+        "title": "Leicester vs Chelsea 1-2 - All Goals & Extended Highlights - FA Cup 18",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "fAIX12F6958",
+        "genre": "Regional",
+        "language": "Korean",
+        "title": "Bumblebee (2018) - Official Teaser Trailer - Paramount Pictures",
+        "rating": 2,
+        "watch_pct": 0.28
+      },
+      {
+        "video_id": "A7S5_-NBPSQ",
+        "genre": "Regional",
+        "language": "Korean",
+        "title": "ìì¦ ì ë¤ì´ ìê²½ì ì°ë ì´ì",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "Ss-UyOdxFOs",
+        "genre": "Regional",
+        "language": "Japanese",
+        "title": "ãå ±åãè³ã®çºééå®³ã¨è¨ºæããã¾ãã",
+        "rating": 2,
+        "watch_pct": 0.28
+      },
+      {
+        "video_id": "sDSoVJHVXCU",
+        "genre": "Regional",
+        "language": "Japanese",
+        "title": "Anh Äá»©c má» tá»· sá» vÃ o lÆ°á»i Jordan sau pha táº¥n cÃ´ng Äáº¹p má",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "CNlKYoE7b-k",
+        "genre": "Regional",
+        "language": "Korean",
+        "title": "Golden State Warriors vs Cleveland Cavaliers Full Game Highlights | Ga",
+        "rating": 2,
+        "watch_pct": 0.22
+      }
+    ]
+  },
+  {
+    "user_id": "U06",
+    "name": "Emma",
+    "description": "Emma is a 31-year-old homeowner passionate about home improvement. She watches DIY renovation tutorials, woodworking projects, and gardening guides. She prefers practical, step-by-step content.",
+    "preferred_genres": {
+      "DIY": 0.65,
+      "Educational": 0.2,
+      "Documentary": 0.15
+    },
+    "preferred_languages": [
+      "English"
+    ],
+    "interactions": [
+      {
+        "video_id": "N39uwTykTQk",
+        "genre": "DIY",
+        "language": "English",
+        "title": "THE BICYCLE OF SPRINGS",
+        "rating": 5,
+        "watch_pct": 0.83
+      },
+      {
+        "video_id": "OylDdm-6ZH0",
+        "genre": "DIY",
+        "language": "English",
+        "title": "I TRIED FOLLOWING A SIMPLY NAILOGICAL MAKEUP TUTORIAL... WOW!",
+        "rating": 5,
+        "watch_pct": 0.63
+      },
+      {
+        "video_id": "PpVFsdCZNXM",
+        "genre": "DIY",
+        "language": "English",
+        "title": "DIY LIFE HACKS ! How To Get TRENDY With These Awesome DIY Hacks ! Hack",
+        "rating": 5,
+        "watch_pct": 0.53
+      },
+      {
+        "video_id": "xBiB4CIq9FE",
+        "genre": "DIY",
+        "language": "English",
+        "title": "100-Layer Lasagna Challenge: Behind Tasty",
+        "rating": 5,
+        "watch_pct": 0.62
+      },
+      {
+        "video_id": "Ej9hjQvaPAk",
+        "genre": "DIY",
+        "language": "English",
+        "title": "VIRAL CUT CREASE STAMP TESTED! Girl... IM SHOOK!",
+        "rating": 5,
+        "watch_pct": 0.55
+      },
+      {
+        "video_id": "h3aGMCgtT3s",
+        "genre": "DIY",
+        "language": "English",
+        "title": "12 Weird Ways To Sneak Food Into Class / School Lunch Ideas!",
+        "rating": 5,
+        "watch_pct": 0.83
+      },
+      {
+        "video_id": "uMvdDQi9NOQ",
+        "genre": "DIY",
+        "language": "English",
+        "title": "37 RECYCLING HACKS AND IDEAS YOU CAN'T MISS",
+        "rating": 5,
+        "watch_pct": 0.7
+      },
+      {
+        "video_id": "33eOAeFXL6k",
+        "genre": "DIY",
+        "language": "English",
+        "title": "7 DIY Giant Candy vs Miniature Candy / Funny Pranks!",
+        "rating": 5,
+        "watch_pct": 0.6
+      },
+      {
+        "video_id": "o46dpa3NPzc",
+        "genre": "DIY",
+        "language": "English",
+        "title": "10 DIY Giant vs Miniature Gadgets / School Pranks!",
+        "rating": 5,
+        "watch_pct": 0.65
+      },
+      {
+        "video_id": "HuWLoCF9rWQ",
+        "genre": "DIY",
+        "language": "English",
+        "title": "DISNEYLAND PROPOSAL?",
+        "rating": 5,
+        "watch_pct": 0.56
+      },
+      {
+        "video_id": "KYpbw8ImDVs",
+        "genre": "DIY",
+        "language": "English",
+        "title": "COLOR CHANGING HEAT-ACTIVATED HIGHLIGHTER??",
+        "rating": 5,
+        "watch_pct": 0.71
+      },
+      {
+        "video_id": "MYmQlBpF5e0",
+        "genre": "DIY",
+        "language": "English",
+        "title": "UK vs JAPAN School Lunches! with Dan and Phil",
+        "rating": 5,
+        "watch_pct": 0.77
+      },
+      {
+        "video_id": "xNp5yIGHD2g",
+        "genre": "DIY",
+        "language": "English",
+        "title": "DIY Giant Squishy / 11 Giant vs Miniature Stress Relievers recipes",
+        "rating": 5,
+        "watch_pct": 0.56
+      },
+      {
+        "video_id": "_7QuvSK-A5E",
+        "genre": "DIY",
+        "language": "English",
+        "title": "BADGAL BANG! MASCARA VS. ROLLERLASH MASCARA",
+        "rating": 5,
+        "watch_pct": 0.67
+      },
+      {
+        "video_id": "iKI6z9dcjMg",
+        "genre": "DIY",
+        "language": "English",
+        "title": "I Tried To Re-Create This Giant Ramen",
+        "rating": 5,
+        "watch_pct": 0.55
+      },
+      {
+        "video_id": "Ws2GusRt5IY",
+        "genre": "DIY",
+        "language": "English",
+        "title": "Super Cool Clothing Revamps and More Life Hacks by Blossom",
+        "rating": 5,
+        "watch_pct": 0.58
+      },
+      {
+        "video_id": "L29S0JPOrV0",
+        "genre": "DIY",
+        "language": "English",
+        "title": "BEYONCE'S MAKEUP ARTIST DOES MY MAKEUP! | ft. Sir John",
+        "rating": 4,
+        "watch_pct": 0.59
+      },
+      {
+        "video_id": "3SIsA96P1zA",
+        "genre": "DIY",
+        "language": "English",
+        "title": "20 TOTALLY AMAZING GLUE GUN HACKS AND CRAFTS ANYONE CAN MAKE",
+        "rating": 5,
+        "watch_pct": 0.67
+      },
+      {
+        "video_id": "mAfkkgw_-68",
+        "genre": "DIY",
+        "language": "English",
+        "title": "We Tried To Re-Create This Giant Cinnamon Roll",
+        "rating": 5,
+        "watch_pct": 0.88
+      },
+      {
+        "video_id": "23bqSayhGgA",
+        "genre": "DIY",
+        "language": "English",
+        "title": "11 DIY Weird School Supplies You Need To Try / 11 School Pranks!",
+        "rating": 5,
+        "watch_pct": 0.58
+      },
+      {
+        "video_id": "yKVAhDbSito",
+        "genre": "DIY",
+        "language": "English",
+        "title": "BLOOD SUGAR â¤ï¸ PALETTE & LOVE SICK COLLECTION REVEAL | Jeffree Star ",
+        "rating": 5,
+        "watch_pct": 0.71
+      },
+      {
+        "video_id": "ddvX9eaUSgc",
+        "genre": "DIY",
+        "language": "English",
+        "title": "25 AWESOME CRAFTING LIFE HACKS & CREATIVE IDEAS",
+        "rating": 4,
+        "watch_pct": 0.87
+      },
+      {
+        "video_id": "6i2cebTn0nc",
+        "genre": "DIY",
+        "language": "English",
+        "title": "NEW HOUSE TOUR!!",
+        "rating": 5,
+        "watch_pct": 0.59
+      },
+      {
+        "video_id": "7P56QEcFUuE",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Why is EVERYONE Buying this TV??",
+        "rating": 2,
+        "watch_pct": 0.36
+      },
+      {
+        "video_id": "4L-BPQVZYXM",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Razer Phone Review: The Real Deal!",
+        "rating": 2,
+        "watch_pct": 0.35
+      },
+      {
+        "video_id": "EqeIRzY7hIU",
+        "genre": "Educational",
+        "language": "English",
+        "title": "6 Cheese Gadgets put to the Test!",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "YS2y_12IWlA",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Jet Engine VS FACE (Flying Like Iron Man Update)",
+        "rating": 2,
+        "watch_pct": 0.21
+      },
+      {
+        "video_id": "mfReTpBQkc8",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Doomfist Destroys ALL with 2600 POUND PUNCH",
+        "rating": 2,
+        "watch_pct": 0.27
+      },
+      {
+        "video_id": "aMQbRpxgFvs",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Smartphone Awards 2017!",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "wjtEYIj3zL8",
+        "genre": "Educational",
+        "language": "English",
+        "title": "APRIL 18TH, 2018. WHAT WILL HAPPEN?",
+        "rating": 2,
+        "watch_pct": 0.26
+      },
+      {
+        "video_id": "CYebJBcLZHA",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "In Disaster There is Opportunity - Finding a Path Through Paralysis | ",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "UOAWps8djuQ",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Pastor Gregory Toussaint I 7 Nights of Dominion I Representing the Kin",
+        "rating": 2,
+        "watch_pct": 0.3
+      },
+      {
+        "video_id": "LlrXVkl4VTE",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Pastor Gregory Toussaint I 7 Nights of Dominion I Kingdom Principle fo",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "Pc1Obe1BWhc",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Nina Dobrev Wants to Save Sharks (30s)",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "rbRoZyuOijk",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "ÐÐ²Ð¾ÑÐµÑ, Ð½Ð° ÐºÐ¾ÑÐ¾ÑÑÐ¹ Ð·Ð°Ð¿ÑÐµÑÐµÐ½Ð¾ ÑÐ¼Ð¾ÑÑÐµÑÑ",
+        "rating": 2,
+        "watch_pct": 0.2
+      }
+    ]
+  },
+  {
+    "user_id": "U07",
+    "name": "Carlos",
+    "description": "Carlos is a 27-year-old musician from Spain. He watches Latin music videos, behind-the-scenes artist documentaries, and music theory tutorials. He strongly prefers Spanish-language content.",
+    "preferred_genres": {
+      "Music": 0.55,
+      "Documentary": 0.25,
+      "Educational": 0.2
+    },
+    "preferred_languages": [
+      "Spanish",
+      "English"
+    ],
+    "interactions": [
+      {
+        "video_id": "EBt_88nxG4c",
+        "genre": "Music",
+        "language": "English",
+        "title": "P!nk - Beautiful Trauma (Official Video)",
+        "rating": 5,
+        "watch_pct": 0.76
+      },
+      {
+        "video_id": "_eDpH4hMW1o",
+        "genre": "Music",
+        "language": "Spanish",
+        "title": "A$AP Rocky - Praise The Lord (Da Shine) (Audio) ft. Skepta",
+        "rating": 4,
+        "watch_pct": 0.67
+      },
+      {
+        "video_id": "1gXx_WVk_SE",
+        "genre": "Music",
+        "language": "English",
+        "title": "Karol G, Shaggy - Tu Pum Pum ft. El Capitaan, Sekuence",
+        "rating": 5,
+        "watch_pct": 0.71
+      },
+      {
+        "video_id": "rxmtHVSVjdo",
+        "genre": "Music",
+        "language": "English",
+        "title": "Troye Sivan - Bloom (Lyric Video)",
+        "rating": 4,
+        "watch_pct": 0.63
+      },
+      {
+        "video_id": "31OMf1H5Rk0",
+        "genre": "Music",
+        "language": "Spanish",
+        "title": "Matt Hunter, Lele Pons - Dicen",
+        "rating": 5,
+        "watch_pct": 0.34
+      },
+      {
+        "video_id": "OfrbxBevn44",
+        "genre": "Music",
+        "language": "Spanish",
+        "title": "DUKI, Ysy A, C.R.O - Hijo de la Noche",
+        "rating": 4,
+        "watch_pct": 0.31
+      },
+      {
+        "video_id": "tjA7nAHOAww",
+        "genre": "Music",
+        "language": "Spanish",
+        "title": "LSD - Audio ft. Sia, Diplo, Labrinth",
+        "rating": 4,
+        "watch_pct": 0.64
+      },
+      {
+        "video_id": "gA-NDZb29I4",
+        "genre": "Music",
+        "language": "English",
+        "title": "Justin Timberlake - Filthy (Official Video)",
+        "rating": 5,
+        "watch_pct": 0.56
+      },
+      {
+        "video_id": "5GHXEGz3PJg",
+        "genre": "Music",
+        "language": "English",
+        "title": "Florence + The Machine - Hunger",
+        "rating": 5,
+        "watch_pct": 0.38
+      },
+      {
+        "video_id": "rxmtHVSVjdo",
+        "genre": "Music",
+        "language": "Spanish",
+        "title": "Troye Sivan - Bloom (Lyric Video)",
+        "rating": 3,
+        "watch_pct": 0.54
+      },
+      {
+        "video_id": "_hMQe2U4c6w",
+        "genre": "Music",
+        "language": "English",
+        "title": "The Chainsmokers - You Owe Me",
+        "rating": 5,
+        "watch_pct": 0.55
+      },
+      {
+        "video_id": "l884wKofd54",
+        "genre": "Music",
+        "language": "English",
+        "title": "Enrique Iglesias - MOVE TO MIAMI (Official Video) ft. Pitbull",
+        "rating": 3,
+        "watch_pct": 0.54
+      },
+      {
+        "video_id": "_I_D_8Z4sJE",
+        "genre": "Music",
+        "language": "Spanish",
+        "title": "Nicky Jam x J. Balvin - X (EQUIS) | Video Oficial | Prod. Afro Bros & ",
+        "rating": 4,
+        "watch_pct": 0.63
+      },
+      {
+        "video_id": "NV-3s2wwC8c",
+        "genre": "Music",
+        "language": "English",
+        "title": "BlocBoy JB & Drake Look Alive Prod By: Tay Keith (Official Music Video",
+        "rating": 5,
+        "watch_pct": 0.44
+      },
+      {
+        "video_id": "VY1eFxgRR-k",
+        "genre": "Music",
+        "language": "English",
+        "title": "Selena Gomez - Back To You",
+        "rating": 4,
+        "watch_pct": 0.42
+      },
+      {
+        "video_id": "wQ_POfToaVY",
+        "genre": "Music",
+        "language": "English",
+        "title": "TWICEãCandy PopãMusic Video",
+        "rating": 4,
+        "watch_pct": 0.66
+      },
+      {
+        "video_id": "iWZmdoY1aTE",
+        "genre": "Music",
+        "language": "Spanish",
+        "title": "Ed Sheeran - Happier (Official Video)",
+        "rating": 4,
+        "watch_pct": 0.61
+      },
+      {
+        "video_id": "LsoLEjrDogU",
+        "genre": "Music",
+        "language": "English",
+        "title": "Bruno Mars - Finesse (Remix) [Feat. Cardi B] [Official Video]",
+        "rating": 4,
+        "watch_pct": 0.45
+      },
+      {
+        "video_id": "0AUFyFEt35g",
+        "genre": "Music",
+        "language": "Spanish",
+        "title": "NCT U ììí° ì 'BOSS' MV",
+        "rating": 4,
+        "watch_pct": 0.43
+      },
+      {
+        "video_id": "hV23YfxzTMA",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Pastor Gregory Toussaint I 7 Nights of Dominion I Representing the Kin",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "17lCaAaADN4",
+        "genre": "Documentary",
+        "language": "Spanish",
+        "title": "Vigilia Pascual en Sabado de Gloria 31 de Marzo 2018 Trasmision en Viv",
+        "rating": 3,
+        "watch_pct": 0.25
+      },
+      {
+        "video_id": "02TPXePusX0",
+        "genre": "Documentary",
+        "language": "Spanish",
+        "title": "Yamilet TerminÃ³ Discutiendo con Federico Muy Mal",
+        "rating": 2,
+        "watch_pct": 0.28
+      },
+      {
+        "video_id": "1RLTQrzhjzU",
+        "genre": "Documentary",
+        "language": "Spanish",
+        "title": "ExatlÃ³n Colombia Capitulo 1 Programa Completo en HD .Suscribete",
+        "rating": 2,
+        "watch_pct": 0.22
+      },
+      {
+        "video_id": "nr7WqjI1Swg",
+        "genre": "Documentary",
+        "language": "Spanish",
+        "title": "Hanser se le DeclarÃ³ a Alexia y Tendran Cita con Ultimatum",
+        "rating": 2,
+        "watch_pct": 0.34
+      },
+      {
+        "video_id": "o9EXoKb7el4",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Two Canadas: My story of generosity and systemic racism | Honourable A",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "l-7LXaCtPec",
+        "genre": "Documentary",
+        "language": "Spanish",
+        "title": "AsÃ MuriÃ³ Mr Yosie Lokote 2018 Exclusivo!!!",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "l1-oTxaM2OQ",
+        "genre": "Documentary",
+        "language": "Spanish",
+        "title": "Carmen Furiosa CorriÃ³ a Shirly por Grosera",
+        "rating": 2,
+        "watch_pct": 0.41
+      },
+      {
+        "video_id": "5s5ypahzb2E",
+        "genre": "Documentary",
+        "language": "Spanish",
+        "title": "Rocio DemostrÃ³ que Quiere Todo con Adrian Cue",
+        "rating": 3,
+        "watch_pct": 0.22
+      },
+      {
+        "video_id": "QffQUYjOyuA",
+        "genre": "Educational",
+        "language": "Spanish",
+        "title": "Nuevas AnomalÃas Descubiertas en el Cerro Uritorco",
+        "rating": 2,
+        "watch_pct": 0.24
+      },
+      {
+        "video_id": "w3HpeLVHIzI",
+        "genre": "Educational",
+        "language": "English",
+        "title": "January 31, 2018 Total Lunar Eclipse",
+        "rating": 3,
+        "watch_pct": 0.33
+      },
+      {
+        "video_id": "eDCWFnDO0Po",
+        "genre": "Educational",
+        "language": "Spanish",
+        "title": "11 preguntas curiosas sobre el cielo y la atmÃ³sfera - CuriosaMente 10",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "cZxOvNxbi7U",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Annie Leibovitz Teaches Photography | Official Trailer",
+        "rating": 2,
+        "watch_pct": 0.22
+      },
+      {
+        "video_id": "L-ixmHzXl3w",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Si vous voyez ceci en forÃªt, courez vite et demandez de l'aide!",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "mJcRzOfLRvI",
+        "genre": "Educational",
+        "language": "Spanish",
+        "title": "Â¿HallÃ³ Rusia vida extraterrestre en la Luna?",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "nDDfFws3BfA",
+        "genre": "Educational",
+        "language": "English",
+        "title": "10,000 YEARS INTO THE FUTURE IN 10 MINUTES",
+        "rating": 3,
+        "watch_pct": 0.31
+      }
+    ]
+  },
+  {
+    "user_id": "U08",
+    "name": "Fatima",
+    "description": "Fatima is a 29-year-old researcher from Morocco. She watches science documentaries, educational lectures, and news analysis in Arabic, French, and English.",
+    "preferred_genres": {
+      "Documentary": 0.4,
+      "Educational": 0.4,
+      "News/Analysis": 0.2
+    },
+    "preferred_languages": [
+      "French",
+      "English"
+    ],
+    "interactions": [
+      {
+        "video_id": "Qrl3bU1-vvE",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Curious? The 2018 Church of Scientology Super Bowl Ad Commercial",
+        "rating": 3,
+        "watch_pct": 0.58
+      },
+      {
+        "video_id": "0WNUtD7uSIo",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "LA LDNA ( AFRODEBAT part 2 ) Avec OUSMANE BADARA ex ALPHA 5.20 & RISMO",
+        "rating": 3,
+        "watch_pct": 0.3
+      },
+      {
+        "video_id": "ESRAQtXVQL0",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Homeless little boy gets a bed for Christmas",
+        "rating": 4,
+        "watch_pct": 0.46
+      },
+      {
+        "video_id": "ft0j1pNe7HE",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "Chapelet du 15 mars 2018",
+        "rating": 3,
+        "watch_pct": 0.38
+      },
+      {
+        "video_id": "sBOMoIWK8zM",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "WRC - Rallye Monte-Carlo 2018 SÃ©bastien Ogier change une roue Ã Chabo",
+        "rating": 3,
+        "watch_pct": 0.23
+      },
+      {
+        "video_id": "aLSG3178eD4",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Tell Hollywood to stand with immigrants",
+        "rating": 4,
+        "watch_pct": 0.63
+      },
+      {
+        "video_id": "ZYKUXMAou3Q",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Rose McGowan Shares Her Thoughts On 'Time's Up' Movement | The View",
+        "rating": 2,
+        "watch_pct": 0.47
+      },
+      {
+        "video_id": "9RBxRru9VN8",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "Chapelet du 23 novembre 2017",
+        "rating": 3,
+        "watch_pct": 0.34
+      },
+      {
+        "video_id": "7_7UUESN4_g",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "Ð¥Ð¾ÑÑ Ð¾Ð±ÑÐ°ÑÐ¸ÑÑÑÑ Ðº Ð´Ð°Ð³ÐµÑÑÐ°Ð½ÑÐ°Ð¼-Ð¿Ð°ÑÐ°Ð½Ð°Ð¼",
+        "rating": 3,
+        "watch_pct": 0.3
+      },
+      {
+        "video_id": "lQCtjOnB9Yg",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "Kisabac Lusamutner eter 05.03.18 Ansharj Lrutyun",
+        "rating": 3,
+        "watch_pct": 0.3
+      },
+      {
+        "video_id": "-4lgt0xQgYA",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "2017 First Presidencyâ's Christmas Devotional",
+        "rating": 3,
+        "watch_pct": 0.39
+      },
+      {
+        "video_id": "lxc8zsHqsS4",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "Chapelet du 28 novembre 2017",
+        "rating": 3,
+        "watch_pct": 0.29
+      },
+      {
+        "video_id": "o9EXoKb7el4",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Two Canadas: My story of generosity and systemic racism | Honourable A",
+        "rating": 3,
+        "watch_pct": 0.49
+      },
+      {
+        "video_id": "xrKrdOUKUDo",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "Chapelet du 4 janvier 2018",
+        "rating": 4,
+        "watch_pct": 0.28
+      },
+      {
+        "video_id": "QbDuBTWrU-o",
+        "genre": "Educational",
+        "language": "English",
+        "title": "My House Burned Down",
+        "rating": 3,
+        "watch_pct": 0.49
+      },
+      {
+        "video_id": "S-W0NX97DB0",
+        "genre": "Educational",
+        "language": "French",
+        "title": "Le Jeu de la Vie â-Â Science Ã©tonnante #49",
+        "rating": 2,
+        "watch_pct": 0.47
+      },
+      {
+        "video_id": "eDZKgSZ9V0Q",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Youtube Sent Me Mystery Box!?",
+        "rating": 3,
+        "watch_pct": 0.47
+      },
+      {
+        "video_id": "QnojPHHM5-4",
+        "genre": "Educational",
+        "language": "French",
+        "title": "Je retrouve mes Objets volÃ©s !",
+        "rating": 3,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "eVR_VIRSMLM",
+        "genre": "Educational",
+        "language": "French",
+        "title": "Ok Google ! Quels sont ces Objets ?",
+        "rating": 2,
+        "watch_pct": 0.41
+      },
+      {
+        "video_id": "-latwhVTUSI",
+        "genre": "Educational",
+        "language": "French",
+        "title": "MES ESCLAVES HIGH-TECH !",
+        "rating": 3,
+        "watch_pct": 0.29
+      },
+      {
+        "video_id": "AOPFpGfIVuM",
+        "genre": "Educational",
+        "language": "French",
+        "title": "Et Si Harry Potter Avait ÃtÃ© Ã Serpentard ? (en 360s)",
+        "rating": 4,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "D9_HxoW_CYk",
+        "genre": "Educational",
+        "language": "French",
+        "title": "RICHES VS PAUVRES - Les Loisirs au Moyen-Ãge - Nota Bene #25",
+        "rating": 3,
+        "watch_pct": 0.25
+      },
+      {
+        "video_id": "632LbR9k7TU",
+        "genre": "Educational",
+        "language": "French",
+        "title": "4 FAILS MILITAIRES les plus CHERS de l'HISTOIRE",
+        "rating": 3,
+        "watch_pct": 0.41
+      },
+      {
+        "video_id": "QtwiEGHo98Q",
+        "genre": "Educational",
+        "language": "French",
+        "title": "Lâ'Ãtrange Cas dâ'un Couple KidnappÃ© par des Aliens (BULLE : Couple H",
+        "rating": 3,
+        "watch_pct": 0.35
+      },
+      {
+        "video_id": "sTyOtjJyjsg",
+        "genre": "Educational",
+        "language": "English",
+        "title": "What's inside Apple HomePod?",
+        "rating": 4,
+        "watch_pct": 0.33
+      },
+      {
+        "video_id": "iDtWHVpd_Cc",
+        "genre": "Educational",
+        "language": "French",
+        "title": "SE BRÃLER LES EMPREINTES DIGITALES ? Vrai ou Faux #56",
+        "rating": 4,
+        "watch_pct": 0.26
+      },
+      {
+        "video_id": "zT1avZJB-_M",
+        "genre": "Educational",
+        "language": "French",
+        "title": "Pourquoi y a-t-il des gauchers ? â- Science Ã©tonnante #51",
+        "rating": 4,
+        "watch_pct": 0.57
+      },
+      {
+        "video_id": "D7wmMZmMinM",
+        "genre": "Educational",
+        "language": "English",
+        "title": "The Greatest Keyboard of All Time.. Reborn",
+        "rating": 2,
+        "watch_pct": 0.3
+      },
+      {
+        "video_id": "AGVW9Z4RcUc",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "Jon Stewart: I Was â'Shockedâ' At Sexual Misconduct Accusations Agains",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "TpyqXoagW28",
+        "genre": "News/Analysis",
+        "language": "French",
+        "title": "Ø§ÙØ´ÙØ®Ø© ØªØ³ÙÙØ§ÙÙ ÙÙ ÙÙØµ Ø§ÙØ§ØªÙØ§Ù .. Ø§ÙØÙÙØ© Ø§ÙÙØ§ÙÙØ©",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "xHYnFJ3l5jw",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "Why People Are Freaking Out About Chris Pratt, Huge Supreme Court Ruli",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "0yIWz1XEeyc",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "Jake Paul Says Alissa Violet CHEATED with LOGAN PAUL! #DramaAlert Team",
+        "rating": 2,
+        "watch_pct": 0.23
+      },
+      {
+        "video_id": "UVOToc_P8k8",
+        "genre": "News/Analysis",
+        "language": "French",
+        "title": "Ø¬Ø¯ÙØ¯ Ø§ÙÙÙØ§Ø·Ø¹Ø© : ØªÙØ±Ø¬ ØØªÙ ÙØ§Ø®Ø±",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "SAUjD-DAAek",
+        "genre": "News/Analysis",
+        "language": "French",
+        "title": "TOTAL VA DÃTRUIRE LE RECIF DE L'AMAZONE",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "gwM9-DzHimw",
+        "genre": "News/Analysis",
+        "language": "French",
+        "title": "Ø¹ÙØ§Ø¡ ØµØ§Ø¯Ù ÙØªØ£ÙÙ Ø¨ØªØÙÙÙ Ø§ØµÙØ§Ø¨ÙÙ ÙØÙØ¯ ØµÙØ§Ø ÙØªØ¹ÙÙØ¯ Ø±",
+        "rating": 2,
+        "watch_pct": 0.2
+      }
+    ]
+  },
+  {
+    "user_id": "U09",
+    "name": "James",
+    "description": "James is a 23-year-old casual viewer. He watches comedy clips, entertainment highlights, and gaming streams. He has no strong niche and follows whatever is trending.",
+    "preferred_genres": {
+      "Entertainment": 0.55,
+      "Gaming": 0.3,
+      "Music": 0.15
+    },
+    "preferred_languages": [
+      "English"
+    ],
+    "interactions": [
+      {
+        "video_id": "bG9v4nMyl80",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "PELICULA Coco COMPLETA HD EspaÃ±ol latino 2018",
+        "rating": 5,
+        "watch_pct": 0.8
+      },
+      {
+        "video_id": "qUmfriZoMw0",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "Westworld Season 2 | Official Super Bowl LII Ad | HBO",
+        "rating": 5,
+        "watch_pct": 0.51
+      },
+      {
+        "video_id": "NNJKWVmK-GM",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "Tourism Australia Dundee Super Bowl Ad 2018 w/ Chris Hemsworth and Dan",
+        "rating": 5,
+        "watch_pct": 0.5
+      },
+      {
+        "video_id": "knaCsR6dr58",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "Agnyaathavaasi Official Teaser | Pawan Kalyan | Trivikram | Anirudh",
+        "rating": 3,
+        "watch_pct": 0.43
+      },
+      {
+        "video_id": "WAwRrtH-4Lg",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "My Horibal Speling",
+        "rating": 3,
+        "watch_pct": 0.51
+      },
+      {
+        "video_id": "ZJDMWVZta3M",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "Incredibles 2 Official Teaser Trailer",
+        "rating": 4,
+        "watch_pct": 0.75
+      },
+      {
+        "video_id": "-rdMnKwHlfE",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "Baaghi 2 a. fool..movi...",
+        "rating": 5,
+        "watch_pct": 0.52
+      },
+      {
+        "video_id": "0-7wMD5ISIs",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "ABANDONED MALL TURNED INTO WINTER WONDERLAND",
+        "rating": 5,
+        "watch_pct": 0.28
+      },
+      {
+        "video_id": "zxwfDlhJIpw",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "kanye west / charlamagne interview",
+        "rating": 5,
+        "watch_pct": 0.64
+      },
+      {
+        "video_id": "xBht9TG7ySw",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "Race 3 | Official Trailer | Salman Khan | Remo Dsouza | Releasing on 1",
+        "rating": 4,
+        "watch_pct": 0.69
+      },
+      {
+        "video_id": "6ZfuNTqbHE8",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "Marvel Studios' Avengers: Infinity War Official Trailer",
+        "rating": 5,
+        "watch_pct": 0.5
+      },
+      {
+        "video_id": "BgR_HJ7aGDY",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "[MV]SEVENTEEN - CALL CALL CALL! MV",
+        "rating": 5,
+        "watch_pct": 0.82
+      },
+      {
+        "video_id": "g2orJgNOpnU",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "BB Ki Vines- | Alvida Dost |",
+        "rating": 5,
+        "watch_pct": 0.58
+      },
+      {
+        "video_id": "pVxOVlm_lE8",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "Marvel Studiosâ' Avengers: Infinity War - Big Game Spot",
+        "rating": 4,
+        "watch_pct": 0.45
+      },
+      {
+        "video_id": "Q5KmA3Xbmqo",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "The Spider and The Butterfly - Animated Short",
+        "rating": 5,
+        "watch_pct": 0.45
+      },
+      {
+        "video_id": "Am6NHDbj6XA",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "Donald Glover on This is America Music Video",
+        "rating": 4,
+        "watch_pct": 0.49
+      },
+      {
+        "video_id": "iN8zmmCRqUA",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "$3 Fries Vs. $100 Fries",
+        "rating": 5,
+        "watch_pct": 0.59
+      },
+      {
+        "video_id": "PALcJ0HW1-I",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "WALK IN THE WOODS WITH A LOGAN PAUL MEME",
+        "rating": 5,
+        "watch_pct": 0.49
+      },
+      {
+        "video_id": "vn9mMeWcgoM",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "Jurassic World: Fallen Kingdom - Official Trailer [HD]",
+        "rating": 4,
+        "watch_pct": 0.43
+      },
+      {
+        "video_id": "uHRwMmwbFnA",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Super Smash Bros. Ultimate - Everyone is Here Trailer (E3 2018)",
+        "rating": 2,
+        "watch_pct": 0.35
+      },
+      {
+        "video_id": "acQMtIRygK0",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "WORLD RECORD - DEVIL EXPERT SPEEDRUN - FIRST TRY - NO DAMAGE - NO FUCK",
+        "rating": 3,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "9gpI7H-GR2c",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Ball In The Family Episode 5 | Season 2 | Ball Family Reality Show HD",
+        "rating": 3,
+        "watch_pct": 0.46
+      },
+      {
+        "video_id": "rG7fLWcvv-4",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Developer Update | Overwatch Archives | Overwatch",
+        "rating": 3,
+        "watch_pct": 0.53
+      },
+      {
+        "video_id": "nIwCVaYR-HU",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Battle Royale Dev Update #8 - Jetpack Info & Supply Llamas",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "i1AHCaokqhg",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "4-2: The History of Super Mario Bros.' Most Infamous Level",
+        "rating": 2,
+        "watch_pct": 0.48
+      },
+      {
+        "video_id": "_Amf7iNB3rs",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "AN INSANE GULLIT GOAL! (Ruud To Glory #3)",
+        "rating": 3,
+        "watch_pct": 0.29
+      },
+      {
+        "video_id": "bK0TEqDtkK4",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Ghost Pepper: Day 2",
+        "rating": 3,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "0bXCbVGb04A",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Game Theory: FNAF, The Theory That Changed EVERYTHING!! (FNAF 6 Ultima",
+        "rating": 4,
+        "watch_pct": 0.32
+      },
+      {
+        "video_id": "toS9OiU-y0k",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Fallout 76 Full Reveal | Microsoft Xbox E3 2018 Press Conference",
+        "rating": 2,
+        "watch_pct": 0.39
+      },
+      {
+        "video_id": "IlkBLwl4aBM",
+        "genre": "Music",
+        "language": "English",
+        "title": "Shawn Mendes In My Blood (Audio)",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "3h4thS-Hcrk",
+        "genre": "Music",
+        "language": "English",
+        "title": "Raid | Official Trailer | Ajay Devgn | Ileana D'Cruz | Raj Kumar Gupta",
+        "rating": 2,
+        "watch_pct": 0.21
+      },
+      {
+        "video_id": "64UX1npgRkI",
+        "genre": "Music",
+        "language": "English",
+        "title": "Sanju: Kar Har Maidaan Fateh | Ranbir Kapoor | Rajkumar Hirani | Sukhw",
+        "rating": 2,
+        "watch_pct": 0.31
+      },
+      {
+        "video_id": "SA7AIQw-7Ms",
+        "genre": "Music",
+        "language": "English",
+        "title": "G-Eazy & Halsey - Him & I (with Halsey) (Official Video)",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "i0p1bmr0EmE",
+        "genre": "Music",
+        "language": "English",
+        "title": "TWICE What is Love? M/V",
+        "rating": 2,
+        "watch_pct": 0.2
+      }
+    ]
+  },
+  {
+    "user_id": "U10",
+    "name": "Ananya",
+    "description": "Ananya is a 26-year-old Bollywood fan from Mumbai. She watches Hindi entertainment serials, Bollywood music videos, and celebrity vlogs. Almost all her content is in Hindi.",
+    "preferred_genres": {
+      "Regional": 0.45,
+      "Music": 0.35,
+      "Entertainment": 0.2
+    },
+    "preferred_languages": [
+      "Hindi"
+    ],
+    "interactions": [
+      {
+        "video_id": "9dHLFD_Jveo",
+        "genre": "Regional",
+        "language": "Hindi",
+        "title": "Mr. McMahon suspends Roman Reigns: Raw, March 12, 2018",
+        "rating": 4,
+        "watch_pct": 0.58
+      },
+      {
+        "video_id": "IiD-hBGmTIs",
+        "genre": "Regional",
+        "language": "Hindi",
+        "title": "Hyper Aadi, Raising Raju Performance | Jabardasth | 3rd May 2018 | ETV",
+        "rating": 3,
+        "watch_pct": 0.63
+      },
+      {
+        "video_id": "hFRWNMIf03Q",
+        "genre": "Regional",
+        "language": "Hindi",
+        "title": "Hyper Aadi, Raijing Raju Performance | Jabardasth | 7th December 2017 ",
+        "rating": 4,
+        "watch_pct": 0.4
+      },
+      {
+        "video_id": "qjQhlwQg6rM",
+        "genre": "Regional",
+        "language": "Hindi",
+        "title": "Girls Buying Condoms - Part 2 feat. Captain Nick | Girliyapa",
+        "rating": 3,
+        "watch_pct": 0.25
+      },
+      {
+        "video_id": "UvkhLm19n-0",
+        "genre": "Regional",
+        "language": "Hindi",
+        "title": "Chammak Chandra Performance | Extra Jabardasth | 26th January 2018 | E",
+        "rating": 4,
+        "watch_pct": 0.46
+      },
+      {
+        "video_id": "M7od26BQnvM",
+        "genre": "Regional",
+        "language": "Hindi",
+        "title": "Hungama Unlimited (2018) New Released Full Hindi Dubbed Movie | Full H",
+        "rating": 3,
+        "watch_pct": 0.29
+      },
+      {
+        "video_id": "VJHaIJPf-ss",
+        "genre": "Regional",
+        "language": "Hindi",
+        "title": "India U19s - the need for speed!",
+        "rating": 3,
+        "watch_pct": 0.65
+      },
+      {
+        "video_id": "PrOrmzAiFhI",
+        "genre": "Regional",
+        "language": "Hindi",
+        "title": "Sudigaali Sudheer Performance | Extra Jabardasth | 17th November 2017 ",
+        "rating": 3,
+        "watch_pct": 0.27
+      },
+      {
+        "video_id": "TChlrkoxEkc",
+        "genre": "Regional",
+        "language": "Hindi",
+        "title": "KHESARI LAL YADAV SUPERHIT MOVIE ( HD 2018 ) | BHOJPURI SUPERHIT FULL ",
+        "rating": 3,
+        "watch_pct": 0.42
+      },
+      {
+        "video_id": "DNRhS8F5Jds",
+        "genre": "Regional",
+        "language": "Hindi",
+        "title": "Real Betis Vs Barcelona 0-5 - All Goals & Highlights - Resumen y Goles",
+        "rating": 2,
+        "watch_pct": 0.44
+      },
+      {
+        "video_id": "IIEuvbfiu-8",
+        "genre": "Regional",
+        "language": "Hindi",
+        "title": "Chammak Chandra Performance | Extra Jabardasth | 19th January 2018 | E",
+        "rating": 3,
+        "watch_pct": 0.53
+      },
+      {
+        "video_id": "4ZW46kW7mG8",
+        "genre": "Regional",
+        "language": "Hindi",
+        "title": "Harjeeta - Official Trailer | Ammy Virk | In Cinemas 18th May 2018",
+        "rating": 5,
+        "watch_pct": 0.59
+      },
+      {
+        "video_id": "DsMp2NZYIog",
+        "genre": "Regional",
+        "language": "Hindi",
+        "title": "Pyaar Lafzon Mein Kahan Episode 56",
+        "rating": 3,
+        "watch_pct": 0.32
+      },
+      {
+        "video_id": "mMCEvr3VWqQ",
+        "genre": "Regional",
+        "language": "Hindi",
+        "title": "Kaala (Tamil) - Official Trailer | Rajinikanth | Pa Ranjith | Dhanush ",
+        "rating": 5,
+        "watch_pct": 0.46
+      },
+      {
+        "video_id": "7LnZEmi6KXA",
+        "genre": "Regional",
+        "language": "Hindi",
+        "title": "'Fox & Friends' Couldn't Get Trump Off The Phone",
+        "rating": 4,
+        "watch_pct": 0.45
+      },
+      {
+        "video_id": "iN8zmmCRqUA",
+        "genre": "Regional",
+        "language": "Hindi",
+        "title": "$3 Fries Vs. $100 Fries",
+        "rating": 4,
+        "watch_pct": 0.43
+      },
+      {
+        "video_id": "kuKF1WICu2M",
+        "genre": "Music",
+        "language": "Hindi",
+        "title": "JILA CHAMPARAN - Superhit FULL HD Bhojpuri Movie 2018 - Khesari Lal Ya",
+        "rating": 2,
+        "watch_pct": 0.28
+      },
+      {
+        "video_id": "Vk8UEWHYfEg",
+        "genre": "Music",
+        "language": "Hindi",
+        "title": "PewDiePie Hej Monika Remix by Party In Backyard",
+        "rating": 3,
+        "watch_pct": 0.28
+      },
+      {
+        "video_id": "yWiKFBLafJA",
+        "genre": "Music",
+        "language": "Hindi",
+        "title": "Hiriye Song Teaser - Movie Race 3 | Salman Khan, Jacqueline Fernandez ",
+        "rating": 2,
+        "watch_pct": 0.36
+      },
+      {
+        "video_id": "ZtFjx3-gRkY",
+        "genre": "Music",
+        "language": "Hindi",
+        "title": "Koi Vi Nahi (Full Video) | Shirley Setia | Gurnazar | Rajat Nagpal Lat",
+        "rating": 3,
+        "watch_pct": 0.53
+      },
+      {
+        "video_id": "iWZmdoY1aTE",
+        "genre": "Music",
+        "language": "Hindi",
+        "title": "Ed Sheeran - Happier (Official Video)",
+        "rating": 2,
+        "watch_pct": 0.48
+      },
+      {
+        "video_id": "EN32N-HlGtE",
+        "genre": "Music",
+        "language": "Hindi",
+        "title": "Sunn Le Zara | 1921 | Zareen Khan & Karan Kundrra | Arnab Dutta | Hari",
+        "rating": 4,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "6YkK1fTSzss",
+        "genre": "Music",
+        "language": "Hindi",
+        "title": "Vachaadayyo Saami Lyrical - Bharat Ane Nenu Songs - Mahesh Babu, Korat",
+        "rating": 3,
+        "watch_pct": 0.31
+      },
+      {
+        "video_id": "59mSWKsw-S0",
+        "genre": "Music",
+        "language": "Hindi",
+        "title": "Raazi - Title Track | Alia Bhatt | Arijit Singh | Shankar Ehsaan Loy |",
+        "rating": 2,
+        "watch_pct": 0.26
+      },
+      {
+        "video_id": "xZsONNB3gXU",
+        "genre": "Music",
+        "language": "Hindi",
+        "title": "LAKH LAAHNTA - RAVNEET (Full Song) Gupz Sehra | Mawin Singh | Latest P",
+        "rating": 2,
+        "watch_pct": 0.56
+      },
+      {
+        "video_id": "D5dZ8_OCJV8",
+        "genre": "Music",
+        "language": "Hindi",
+        "title": "Gitaz Bindrakhia Doesn't Matter (Full Song) Snappy | Rav Hanjra | Late",
+        "rating": 3,
+        "watch_pct": 0.5
+      },
+      {
+        "video_id": "3TtxYU7oKOI",
+        "genre": "Music",
+        "language": "Hindi",
+        "title": "HASEENA - KULBIR JHINJER (Full Song) Deep Jandu | Sukh Sanghera | Punj",
+        "rating": 3,
+        "watch_pct": 0.21
+      },
+      {
+        "video_id": "3n3L428I8MQ",
+        "genre": "Music",
+        "language": "Hindi",
+        "title": "Irumbuthirai Official Trailer | Vishal, Arjun, Samantha | Yuvan Shanka",
+        "rating": 2,
+        "watch_pct": 0.41
+      },
+      {
+        "video_id": "DwHPlawAJ2Y",
+        "genre": "Entertainment",
+        "language": "Hindi",
+        "title": "Ananda Vikatan Cinema Awards 2017 | Part 16",
+        "rating": 2,
+        "watch_pct": 0.29
+      },
+      {
+        "video_id": "sueMmTm-M4Y",
+        "genre": "Entertainment",
+        "language": "Hindi",
+        "title": "Rangasthalam Theatrical Trailer | Ram Charan | Samantha | Aadhi | DSP ",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "JBDWIGpKnwM",
+        "genre": "Entertainment",
+        "language": "Hindi",
+        "title": "Dude vs. Wild - Nevada Mountains",
+        "rating": 2,
+        "watch_pct": 0.25
+      },
+      {
+        "video_id": "b-4zZROZ-GQ",
+        "genre": "Entertainment",
+        "language": "Hindi",
+        "title": "Dad Goa aur Permission | Ashish Chanchlani",
+        "rating": 2,
+        "watch_pct": 0.34
+      },
+      {
+        "video_id": "MFII4q-QSXg",
+        "genre": "Entertainment",
+        "language": "Hindi",
+        "title": "The Blackmailing Brother",
+        "rating": 2,
+        "watch_pct": 0.27
+      },
+      {
+        "video_id": "UbFo4U43e5g",
+        "genre": "Entertainment",
+        "language": "Hindi",
+        "title": "TSP's Ganju | Sanju Trailer Spoof",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "LPVXV5YSANY",
+        "genre": "Entertainment",
+        "language": "Hindi",
+        "title": "Anushka and Virat Kohli's Wedding Reception Best Moments | Bollywood C",
+        "rating": 2,
+        "watch_pct": 0.2
+      }
+    ]
+  },
+  {
+    "user_id": "U11",
+    "name": "Lukas",
+    "description": "Lukas is a 33-year-old sports coach from Germany. He watches German football analysis, sports fitness tutorials, and sports documentaries in German.",
+    "preferred_genres": {
+      "Regional": 0.4,
+      "Educational": 0.3,
+      "Documentary": 0.3
+    },
+    "preferred_languages": [
+      "German"
+    ],
+    "interactions": [
+      {
+        "video_id": "tqqGzn2YWX4",
+        "genre": "Regional",
+        "language": "German",
+        "title": "Cleveland Cavaliers vs Boston Celtics Full Game Highlights / Game 2 / ",
+        "rating": 4,
+        "watch_pct": 0.38
+      },
+      {
+        "video_id": "AcS2aoeSSKg",
+        "genre": "Regional",
+        "language": "German",
+        "title": "SÃ¶z | 47.BÃ¶lÃ¼m",
+        "rating": 3,
+        "watch_pct": 0.53
+      },
+      {
+        "video_id": "ulNswX3If6U",
+        "genre": "Regional",
+        "language": "German",
+        "title": "Selena Gomez - Back To You (Lyric Video)",
+        "rating": 3,
+        "watch_pct": 0.23
+      },
+      {
+        "video_id": "Jb8RX8b3b30",
+        "genre": "Regional",
+        "language": "German",
+        "title": "Golden State Warriors vs Houston Rockets Full Game Highlights / Game 7",
+        "rating": 2,
+        "watch_pct": 0.47
+      },
+      {
+        "video_id": "zTspzONOomw",
+        "genre": "Regional",
+        "language": "German",
+        "title": "Fastest People in Slow Motion",
+        "rating": 2,
+        "watch_pct": 0.61
+      },
+      {
+        "video_id": "wb49-oV0F78",
+        "genre": "Regional",
+        "language": "German",
+        "title": "Mission: Impossible - Fallout (2018) - Official Trailer - Paramount Pi",
+        "rating": 2,
+        "watch_pct": 0.6
+      },
+      {
+        "video_id": "pOHQdIDds6s",
+        "genre": "Regional",
+        "language": "German",
+        "title": "Jake Paul - It's Everyday Bro (Remix) [feat. Gucci Mane]",
+        "rating": 3,
+        "watch_pct": 0.39
+      },
+      {
+        "video_id": "4V38pzhWwCo",
+        "genre": "Regional",
+        "language": "German",
+        "title": "Post Malone Discusses Lil Peep's Death",
+        "rating": 3,
+        "watch_pct": 0.45
+      },
+      {
+        "video_id": "Pkh8EVkJJBs",
+        "genre": "Regional",
+        "language": "German",
+        "title": "ð´[Live Full HD]Trá»±c tiáº¿p U23 Viá»t Nam - U23 Qatar 23/01/2018 | B",
+        "rating": 3,
+        "watch_pct": 0.53
+      },
+      {
+        "video_id": "H0hHUVi1Oo4",
+        "genre": "Regional",
+        "language": "German",
+        "title": "ÙÙØ®Øµ ÙØ¨Ø§Ø±Ø§Ù Ø¨Ø±Ø´ÙÙÙØ© ÙØ±ÙØ§Ù Ø³ÙØ³ÙØ¯Ø§Ø¯ 4-2 - ÙÙØ³Ù ÙÙÙ Ø§Ù",
+        "rating": 3,
+        "watch_pct": 0.42
+      },
+      {
+        "video_id": "cngUnh7EMKo",
+        "genre": "Regional",
+        "language": "German",
+        "title": "[LIVE] BTS 'FAKE LOVE' - 2018 Billboard Music Awards",
+        "rating": 3,
+        "watch_pct": 0.39
+      },
+      {
+        "video_id": "bT-88WsKIS8",
+        "genre": "Regional",
+        "language": "German",
+        "title": "Ø±Ø¯Ù ÙØ¹Ù ÙØºØ¶Ø¨ ÙØÙØ¯ Ø§Ø¨Ù ØªØ±ÙÙÙ ÙÙ ØªØ¹ÙØ¯ Ø³ÙØ±Ø¬ÙÙÙ, ÙÙÙ Ø±Ø§",
+        "rating": 3,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "z5wiZRlV9I4",
+        "genre": "Regional",
+        "language": "German",
+        "title": "Cleveland Cavaliers vs Golden State Warriors Full Game Highlights / We",
+        "rating": 2,
+        "watch_pct": 0.49
+      },
+      {
+        "video_id": "ycuMyyqBWQY",
+        "genre": "Regional",
+        "language": "German",
+        "title": "Interviewing the Head of YouTube Business",
+        "rating": 3,
+        "watch_pct": 0.38
+      },
+      {
+        "video_id": "ulCdoCfw-bY",
+        "genre": "Educational",
+        "language": "German",
+        "title": "The Black Hole Bomb and Black Hole Civilizations",
+        "rating": 2,
+        "watch_pct": 0.34
+      },
+      {
+        "video_id": "EDhIYaCL704",
+        "genre": "Educational",
+        "language": "German",
+        "title": "7 Kitchen Gadgets put to the Test - Part 22",
+        "rating": 2,
+        "watch_pct": 0.21
+      },
+      {
+        "video_id": "-WRcZ9xHMuE",
+        "genre": "Educational",
+        "language": "German",
+        "title": "Samsung Galaxy S9 hands-on",
+        "rating": 3,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "OGfOmbzinc0",
+        "genre": "Educational",
+        "language": "German",
+        "title": "The $12 Smart Watch - Does It Suck?",
+        "rating": 3,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "jQF5Q3773uk",
+        "genre": "Educational",
+        "language": "German",
+        "title": "Apple HomePod review",
+        "rating": 3,
+        "watch_pct": 0.36
+      },
+      {
+        "video_id": "BPQHG-LevZM",
+        "genre": "Educational",
+        "language": "German",
+        "title": "CRS-14 Mission",
+        "rating": 3,
+        "watch_pct": 0.42
+      },
+      {
+        "video_id": "mpqtq0OVcS0",
+        "genre": "Educational",
+        "language": "German",
+        "title": "INCREDIBLE AND INGENIOUS Hidden Rooms AND SECRET Furniture",
+        "rating": 3,
+        "watch_pct": 0.42
+      },
+      {
+        "video_id": "Ev9rOA2Yjs0",
+        "genre": "Educational",
+        "language": "German",
+        "title": "5 McDonald's Gadgets put to the Test!",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "XYvcEFe3uO4",
+        "genre": "Educational",
+        "language": "German",
+        "title": "iMac Pro 18-Core Desk Setup!",
+        "rating": 2,
+        "watch_pct": 0.3
+      },
+      {
+        "video_id": "r7pqc26TWAg",
+        "genre": "Educational",
+        "language": "German",
+        "title": "My 10 Year Old Chiller WORKS! -20C on THREADRIPPER!",
+        "rating": 3,
+        "watch_pct": 0.21
+      },
+      {
+        "video_id": "-hIDNgsc2-s",
+        "genre": "Documentary",
+        "language": "German",
+        "title": "Stop a Douchebag - Immigrant, Terminator and Calamity",
+        "rating": 3,
+        "watch_pct": 0.21
+      },
+      {
+        "video_id": "xbI6KTY0vdg",
+        "genre": "Documentary",
+        "language": "German",
+        "title": "20 Millionen BÃ¤ume gepflanzt!",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "LWfH6oSRE6M",
+        "genre": "Documentary",
+        "language": "German",
+        "title": "21. Spieltag FC Energie Cottbus - Vfb Auerbach 10.02.2018 13:30 Uhr",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "sXVH0CaiiE0",
+        "genre": "Documentary",
+        "language": "German",
+        "title": "Ð¤Ð°Ð»ÑÑÐ¸Ð²Ð°Ñ Ð¿Ð¾Ð¿ÑÐ»ÑÑÐ½Ð¾ÑÑÑ ÐÑÑÐ¸Ð½Ð°. ÐÐ¾ÐºÐ°Ð·Ð°ÑÐµÐ»ÑÑÑÐ²Ð°",
+        "rating": 2,
+        "watch_pct": 0.43
+      },
+      {
+        "video_id": "y41cR4dl5Mc",
+        "genre": "Documentary",
+        "language": "German",
+        "title": "Tagesenergie Spezial mit alexanders Antwort zur eigentlich 111.",
+        "rating": 2,
+        "watch_pct": 0.62
+      },
+      {
+        "video_id": "A6GPdezZSsE",
+        "genre": "Documentary",
+        "language": "German",
+        "title": "Endzeit-News [30] â¤ Der Heilige Krieg um Jerusalem | Das Gericht Gott",
+        "rating": 3,
+        "watch_pct": 0.32
+      },
+      {
+        "video_id": "yTV6dGEOU5w",
+        "genre": "Documentary",
+        "language": "German",
+        "title": "ÐÐ°Ðº Ð¼Ñ Ð´Ð»Ñ Ð£ÑÐ¼Ð°Ð½Ð¾Ð²Ð° Ð°ÐºÑÐ¸Ð¸ Ð¤ÐµÐ¹ÑÐ±ÑÐºÐ° Ð¿Ð¾ÐºÑÐ¿Ð°Ð»",
+        "rating": 2,
+        "watch_pct": 0.38
+      },
+      {
+        "video_id": "eKy_5DHi6X4",
+        "genre": "Documentary",
+        "language": "German",
+        "title": "Als Umar weinte á´´á´° â Emotionale Geschichte â BDI",
+        "rating": 2,
+        "watch_pct": 0.31
+      },
+      {
+        "video_id": "2pBCmGFPXDU",
+        "genre": "Documentary",
+        "language": "German",
+        "title": "Die Wahrheit Ã¼ber Trymacs - Teil 2",
+        "rating": 4,
+        "watch_pct": 0.29
+      },
+      {
+        "video_id": "c8fBm3aZ_ms",
+        "genre": "Documentary",
+        "language": "German",
+        "title": "Endzeit-News [33] â¤ Daniel 8 erfÃ¼llt sich | TÃ¼rkei und Iran gegen E",
+        "rating": 3,
+        "watch_pct": 0.22
+      }
+    ]
+  },
+  {
+    "user_id": "U12",
+    "name": "Sophie",
+    "description": "Sophie is a 24-year-old philosophy student from Paris. She watches French educational videos, science documentaries, and intellectual debates. She strongly prefers slow, thoughtful content.",
+    "preferred_genres": {
+      "Educational": 0.45,
+      "Documentary": 0.35,
+      "News/Analysis": 0.2
+    },
+    "preferred_languages": [
+      "French",
+      "English"
+    ],
+    "interactions": [
+      {
+        "video_id": "IQM_s2NKguk",
+        "genre": "Educational",
+        "language": "French",
+        "title": "CHRIS : 6 Livres TrÃ¨s Bizarres",
+        "rating": 4,
+        "watch_pct": 0.66
+      },
+      {
+        "video_id": "6N-HHiyE0uw",
+        "genre": "Educational",
+        "language": "French",
+        "title": "ÙØ·Ø¨Ø® Ø§Ù ÙÙÙØ¯ ØºØ±Ø§ØªØ§Ù Ø§ÙØ¯Ø¬Ø§Ø¬ Ù Ø§ÙØ®Ø¶Ø± Ø§ÙØ³Ø±ÙØ¹",
+        "rating": 3,
+        "watch_pct": 0.67
+      },
+      {
+        "video_id": "vXBfwgwT1nQ",
+        "genre": "Educational",
+        "language": "English",
+        "title": "ARCADE SCAM SCIENCE (not clickbait)",
+        "rating": 4,
+        "watch_pct": 0.38
+      },
+      {
+        "video_id": "XyIKZl7-EEQ",
+        "genre": "Educational",
+        "language": "French",
+        "title": "Ø´Ø§ÙØ¯ Ø§Ø¹ÙØ§Ù Ø²ÙÙ Ø±ÙØ¶Ø§Ù 2018 |Ø³ÙØ¯Ù Ø§ÙØ±Ø¦ÙØ³",
+        "rating": 4,
+        "watch_pct": 0.57
+      },
+      {
+        "video_id": "XHpEJRsHefM",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Sprint Super Bowl Commercial 2018: Evelyn",
+        "rating": 4,
+        "watch_pct": 0.26
+      },
+      {
+        "video_id": "Jkz5GSLPbPI",
+        "genre": "Educational",
+        "language": "French",
+        "title": "Le 1er Exorcisme FilmÃ© de Lâ'histoire (BULLE : Les Warrens)",
+        "rating": 3,
+        "watch_pct": 0.42
+      },
+      {
+        "video_id": "AF2O4l1JprI",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Stop Charging your Phone Overnight!",
+        "rating": 4,
+        "watch_pct": 0.52
+      },
+      {
+        "video_id": "2VxpRal7wJE",
+        "genre": "Educational",
+        "language": "French",
+        "title": "The Big Bang Theory - Amy meets George and Missy",
+        "rating": 4,
+        "watch_pct": 0.29
+      },
+      {
+        "video_id": "D7wmMZmMinM",
+        "genre": "Educational",
+        "language": "English",
+        "title": "The Greatest Keyboard of All Time.. Reborn",
+        "rating": 4,
+        "watch_pct": 0.52
+      },
+      {
+        "video_id": "OBSfullrLFk",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Real Doctor Reacts to CODE BLACK | Medical Drama Review | Doctor Mike",
+        "rating": 4,
+        "watch_pct": 0.58
+      },
+      {
+        "video_id": "xmFH2Dw1h38",
+        "genre": "Educational",
+        "language": "French",
+        "title": "5 THEORIES SUR LES ABYSSES (#58)",
+        "rating": 4,
+        "watch_pct": 0.51
+      },
+      {
+        "video_id": "wbSwFU6tY1c",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Falcon Heavy Test Flight",
+        "rating": 4,
+        "watch_pct": 0.25
+      },
+      {
+        "video_id": "X-UC9Ku37lo",
+        "genre": "Educational",
+        "language": "French",
+        "title": "Jâ'offre un Cadeau Tech insolite Ã ma Copine !",
+        "rating": 4,
+        "watch_pct": 0.47
+      },
+      {
+        "video_id": "9QT8fNKL20E",
+        "genre": "Educational",
+        "language": "French",
+        "title": "MON NOUVEAU PC GAMER !",
+        "rating": 4,
+        "watch_pct": 0.3
+      },
+      {
+        "video_id": "UjtOGPJ0URM",
+        "genre": "Educational",
+        "language": "French",
+        "title": "Why Alien Life Would be our Doom - The Great Filter",
+        "rating": 3,
+        "watch_pct": 0.58
+      },
+      {
+        "video_id": "5_-NKRVn7IQ",
+        "genre": "Educational",
+        "language": "French",
+        "title": "Samsung Galaxy S9 and S9+: Official Introduction",
+        "rating": 4,
+        "watch_pct": 0.53
+      },
+      {
+        "video_id": "6vsOXjO6Ubk",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "Chapelet en direct de Medjugorje avec Soeur Emmanuel",
+        "rating": 3,
+        "watch_pct": 0.35
+      },
+      {
+        "video_id": "npYLF6hYwQE",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "Une myopathe dÃ©nonce la rÃ©alitÃ© du TÃ©lÃ©thon",
+        "rating": 3,
+        "watch_pct": 0.29
+      },
+      {
+        "video_id": "sleY5vIIE7M",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "Chapelet du 25 novembre 2017",
+        "rating": 3,
+        "watch_pct": 0.29
+      },
+      {
+        "video_id": "PGnsiru6GiE",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Pasteur GrÃ©gory Toussaint | 12 Nuits d'Adoration 2017 | Lavi Bondye N",
+        "rating": 3,
+        "watch_pct": 0.31
+      },
+      {
+        "video_id": "56HAcg4TNlQ",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "Chapelet du 13 janvier 2018",
+        "rating": 3,
+        "watch_pct": 0.29
+      },
+      {
+        "video_id": "ssLc5Vnos-A",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "Chapelet du 15 novembre 2017",
+        "rating": 4,
+        "watch_pct": 0.24
+      },
+      {
+        "video_id": "f3wRwra4Ogc",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "Chapelet du 23 janvier 2018",
+        "rating": 3,
+        "watch_pct": 0.3
+      },
+      {
+        "video_id": "UQniNh_6LOY",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Embracing your expiry date | Jeremie Saunders | TEDxToronto",
+        "rating": 4,
+        "watch_pct": 0.37
+      },
+      {
+        "video_id": "kB5TC2KhhF0",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "Evil League : l'ultime menace",
+        "rating": 3,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "3EFd0mG4ABo",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "Kisabac Lusamutner eter 25.12.17 Hor Koghqin",
+        "rating": 3,
+        "watch_pct": 0.46
+      },
+      {
+        "video_id": "GkLIib-KFN4",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "Chapelet du 27 novembre 2017",
+        "rating": 3,
+        "watch_pct": 0.48
+      },
+      {
+        "video_id": "Dk9uitzdGXQ",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "DNC LAWSUIT #AntiSchool #QAnon April 20 2018",
+        "rating": 2,
+        "watch_pct": 0.52
+      },
+      {
+        "video_id": "O6BODAJVYc8",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "2017, in 7 minutes",
+        "rating": 3,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "FtDQnvVghKY",
+        "genre": "News/Analysis",
+        "language": "French",
+        "title": "ÙÙØ§Ø´ Ø³ÙÙØ§Ø®Ù Ù ÙØ«ÙÙØ± Ø¹ÙÙ ÙÙØ§Ø© ÙØ±ÙØ³ÙØ© Ø¨Ø¹Ø¯ ØªØµØ±ÙØ Ø§ÙÙØ",
+        "rating": 2,
+        "watch_pct": 0.37
+      },
+      {
+        "video_id": "ABpOHBTtulk",
+        "genre": "News/Analysis",
+        "language": "French",
+        "title": "ØªÙØ§ØµÙÙ ØªÙÙÙÙ Ø§ÙØ´Ø§Ø¨ ÙÙ Ø¹Ø±Ø§ ØªÙÙÙØ°Ø© Ø¨ÙÙØ±ÙØ± ( ÙØ§Ø´ ÙØ§Ø¹",
+        "rating": 3,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "su06jkoadTE",
+        "genre": "News/Analysis",
+        "language": "French",
+        "title": "Ø¹Ø§Ø¯Ù Ø§ÙÙÙÙÙØ¯Ù ÙÙØºÙÙ ØØªØ§ ÙÙÙØª ÙÙ ØªØ¨ØºÙÙÙ Ø¹Ø§Ø¯ Ø¬Ø§ÙØ© ØªØ³",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "MSpcdzwBatg",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "Logan Paul ROASTED by Dolan Twins! #DramaAlert RiceGum , PewDiePie , J",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "z7BOWQihC7M",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "CNN's Anthony Bourdain dead at 61",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "uA8GdJJqz_s",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "Physicist Stephen Hawking has died",
+        "rating": 2,
+        "watch_pct": 0.23
+      }
+    ]
+  },
+  {
+    "user_id": "U13",
+    "name": "Marcus",
+    "description": "Marcus is a 21-year-old esports player. He watches competitive gaming tournaments, game reviews, and streamer highlights almost exclusively. He is fully embedded in gaming culture.",
+    "preferred_genres": {
+      "Gaming": 0.8,
+      "Entertainment": 0.2
+    },
+    "preferred_languages": [
+      "English"
+    ],
+    "interactions": [
+      {
+        "video_id": "8O-ZUXGcuWU",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Nintendo @ E3 2018: Day 2",
+        "rating": 5,
+        "watch_pct": 0.68
+      },
+      {
+        "video_id": "FQsrTuzahpI",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "THE SIMULACRA! | Simulacra - Part 5 (END)",
+        "rating": 5,
+        "watch_pct": 0.77
+      },
+      {
+        "video_id": "Rz2SNm8VguE",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Subnautica Cinematic Trailer",
+        "rating": 5,
+        "watch_pct": 0.88
+      },
+      {
+        "video_id": "9u4oyarcc4I",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Destiny 2: Forsaken â- Official Reveal",
+        "rating": 5,
+        "watch_pct": 0.85
+      },
+      {
+        "video_id": "FchkqXEg0qs",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Nintendo @ E3 2018: Day 1",
+        "rating": 5,
+        "watch_pct": 0.86
+      },
+      {
+        "video_id": "zhousYMIpYY",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Battlefield V Reveal - IGN Live",
+        "rating": 5,
+        "watch_pct": 1.0
+      },
+      {
+        "video_id": "Js04hvdVUA8",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Madden NFL 19 â- Official Reveal Trailer",
+        "rating": 5,
+        "watch_pct": 0.74
+      },
+      {
+        "video_id": "XT-oNdvs2Xg",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Markiplier's Public Discord",
+        "rating": 5,
+        "watch_pct": 0.73
+      },
+      {
+        "video_id": "w9AWvi82uDw",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Game Theory: Doki Doki Decoded! (Doki Doki Literature Club)",
+        "rating": 5,
+        "watch_pct": 0.94
+      },
+      {
+        "video_id": "Mr8fVT_Ds4Q",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Tetris Effect - E3 2018 Announce Trailer | PS4",
+        "rating": 5,
+        "watch_pct": 0.73
+      },
+      {
+        "video_id": "ffvg7cR68-Q",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Official Call of DutyÂ®: Black Ops 4 Zombies â- Voyage of Despair",
+        "rating": 5,
+        "watch_pct": 0.86
+      },
+      {
+        "video_id": "SysqCTEsq7Y",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "The MYSTERY GUN CHALLENGE! Fortnite: Battle Royale",
+        "rating": 5,
+        "watch_pct": 0.88
+      },
+      {
+        "video_id": "igczJLuaelg",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "#boogiedown CONTEST WINNERS ANNOUNCED",
+        "rating": 5,
+        "watch_pct": 0.62
+      },
+      {
+        "video_id": "f_a3tmkTSzk",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Logan Paul Finds Something In The Woods !",
+        "rating": 5,
+        "watch_pct": 1.0
+      },
+      {
+        "video_id": "tn_uI57AMuE",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "FORTNITE PRO-AM TOURNAMENT *CRINGEY* & FUNNY MOMENTS (NINJA, MYTH, POK",
+        "rating": 5,
+        "watch_pct": 0.75
+      },
+      {
+        "video_id": "pHxlZ4dTXug",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Is it ðð¼ð¸ð¹ð¸ð ðð¸ð¾ð» yet?",
+        "rating": 5,
+        "watch_pct": 0.84
+      },
+      {
+        "video_id": "0e7TcOFfGKs",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "LET ME GO: A Granny Song (live action musical)",
+        "rating": 5,
+        "watch_pct": 1.0
+      },
+      {
+        "video_id": "l5JXt9ZELPY",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "CLICK HERE TO CHANGE YOUR LIFE | Will You Press The Button? #6",
+        "rating": 5,
+        "watch_pct": 0.7
+      },
+      {
+        "video_id": "CG9EGStW-nE",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "ON REGARDE LES 1ÃRES VIDÃOS DE LA CHAÃNE",
+        "rating": 5,
+        "watch_pct": 0.71
+      },
+      {
+        "video_id": "BqfT9dkrN0s",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Rainbow Six Siege: Outbreak - Ashâ's Briefing | Trailer | Ubisoft [US]",
+        "rating": 5,
+        "watch_pct": 1.0
+      },
+      {
+        "video_id": "JMgzvpqzdTU",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "[NEW SEASONAL MISSION] Retribution | Overwatch",
+        "rating": 5,
+        "watch_pct": 0.83
+      },
+      {
+        "video_id": "uxQecWTLkbU",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "ECS CS:GO S4 Finals Day 3: Semi Finals & Grand Final",
+        "rating": 5,
+        "watch_pct": 0.94
+      },
+      {
+        "video_id": "TOD6qKu8nxQ",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "SEE THE MINI GUN HERE FIRST! (Fortnite Battle Royale)",
+        "rating": 5,
+        "watch_pct": 0.74
+      },
+      {
+        "video_id": "UrLey-pX7Bc",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "The DEADLY Physics of the Halo Rings! | The SCIENCE!... of Halo",
+        "rating": 5,
+        "watch_pct": 0.93
+      },
+      {
+        "video_id": "SXku5U0X0YE",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Try Not To Laugh Challenge Reacting to Amazon CoryxKenshin (TEARS)",
+        "rating": 5,
+        "watch_pct": 1.0
+      },
+      {
+        "video_id": "2EPi1R9oZIw",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "WHAT WENT . . . . . WRONG?",
+        "rating": 5,
+        "watch_pct": 0.76
+      },
+      {
+        "video_id": "tJv-xtxKkQY",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Official Call of DutyÂ®: Black Ops 4 Teaser",
+        "rating": 5,
+        "watch_pct": 0.93
+      },
+      {
+        "video_id": "A_Z3AokMwWI",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "MINECON Earth 2017 Livestream",
+        "rating": 5,
+        "watch_pct": 0.86
+      },
+      {
+        "video_id": "glglLFPtef4",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "à¤¶à¥à¤°à¥à¤¦à¥à¤µà¥ à¤à¥ à¤®à¥à¤¤ à¤à¥ à¤¸à¤, à¤à¤®à¤¿à¤¤à¤¾à¤ à¤¬à¤à",
+        "rating": 2,
+        "watch_pct": 0.34
+      },
+      {
+        "video_id": "1Drha8HZN_c",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "Rangasthalam Official Teaser | Ram Charan | Samantha | Aadhi | DSP | S",
+        "rating": 2,
+        "watch_pct": 0.28
+      },
+      {
+        "video_id": "TI5bEf-BULU",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "How Michael B. Jordan's Black Panther Makeup Was Done â- Exclusive Beh",
+        "rating": 2,
+        "watch_pct": 0.22
+      },
+      {
+        "video_id": "7iQn-toQp6A",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "Benjamin Glaze Auditions for American Idol With Nick Jonas' Levels - A",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "u9Mv98Gr5pY",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "VENOM - Official Trailer (HD)",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "4HU6Z7anycw",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "Lucas the Spider - Polar Bear",
+        "rating": 2,
+        "watch_pct": 0.35
+      },
+      {
+        "video_id": "I7B0z_2EZmQ",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "Regarding the rumors about me today",
+        "rating": 2,
+        "watch_pct": 0.21
+      }
+    ]
+  },
+  {
+    "user_id": "U14",
+    "name": "Kenji",
+    "description": "Kenji is a 20-year-old K-pop fan from South Korea. He watches Korean music show performances, idol vlogs, and Korean variety entertainment shows. Almost all content is in Korean.",
+    "preferred_genres": {
+      "Music": 0.5,
+      "Regional": 0.4,
+      "Entertainment": 0.1
+    },
+    "preferred_languages": [
+      "Korean"
+    ],
+    "interactions": [
+      {
+        "video_id": "LsoLEjrDogU",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "Bruno Mars - Finesse (Remix) [Feat. Cardi B] [Official Video]",
+        "rating": 3,
+        "watch_pct": 0.59
+      },
+      {
+        "video_id": "VYOjWnS4cMY",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "Childish Gambino - This Is America (Official Video)",
+        "rating": 4,
+        "watch_pct": 0.76
+      },
+      {
+        "video_id": "TPDv9hgJ3ZI",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "Neo Culture Tech on my mind",
+        "rating": 4,
+        "watch_pct": 0.53
+      },
+      {
+        "video_id": "SPcDPoaouO0",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "Red Velvet ë ëë²¨ë²³ Comeback Stage 'í¼ì¹´ë¶ (Peek-A-Boo)' KBS MUSIC B",
+        "rating": 4,
+        "watch_pct": 0.69
+      },
+      {
+        "video_id": "OVYwirPwmgU",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "Bruno Mars,Charlie Puth,Ed Sheeran Best Christmas Songs,Greatest Hits ",
+        "rating": 4,
+        "watch_pct": 0.53
+      },
+      {
+        "video_id": "AC2r3ZgYOWs",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "Frozen - Let It Go ( cover by J.Fla )",
+        "rating": 4,
+        "watch_pct": 0.52
+      },
+      {
+        "video_id": "zQ0q6-aw7qk",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "ëª¨ë ê·¸ë£¹ì´ ì¢ìíë ì£¼ì´ ëì¤ (EXO,êµ¬êµ¬ë¨, ì¸ë¸í´.JBJ)ëª¨ëª¨ëë@17111",
+        "rating": 4,
+        "watch_pct": 0.52
+      },
+      {
+        "video_id": "pmMjkMtpnTc",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "Wanna One (ìëì) - 'BOOMERANG (ë¶ë©ë)' M/V",
+        "rating": 5,
+        "watch_pct": 0.38
+      },
+      {
+        "video_id": "IrircflFHzw",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "[MV] ì°ì£¼ìë(WJSN) - ê¿ê¾¸ë ë§ìì¼ë¡(Dreams Come True)",
+        "rating": 4,
+        "watch_pct": 0.42
+      },
+      {
+        "video_id": "QLOT92uIITo",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "Saada Time | Dhira Gill | Maha Film | Full Video | Latest Punjabi Song",
+        "rating": 5,
+        "watch_pct": 0.32
+      },
+      {
+        "video_id": "p8npDG2ulKQ",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "BTS (ë°©íìëë¨) LOVE YOURSELF è½ Tear 'Singularity' Comeback Trailer",
+        "rating": 4,
+        "watch_pct": 0.55
+      },
+      {
+        "video_id": "onGqNkiAcjY",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "Twenty One Pilots - Stressed Out ( cover by J.Fla )",
+        "rating": 5,
+        "watch_pct": 0.49
+      },
+      {
+        "video_id": "T9VHwphYcpc",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "à¸à¸à¹à¸à¸¢à¹à¸à¹ - à¸à¸±à¹à¸à¹à¸à¸ à¸à¸¥à¸à¸² ãLYRIC VIDEOã",
+        "rating": 4,
+        "watch_pct": 0.73
+      },
+      {
+        "video_id": "5orrZxSjLQA",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "Charlie Puth - The Way I Am [Official Lyric Video]",
+        "rating": 3,
+        "watch_pct": 0.24
+      },
+      {
+        "video_id": "JzWHWh9Sck8",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "171121 ë ëë²¨ë²³ í¼ì¹´ë¶",
+        "rating": 4,
+        "watch_pct": 0.44
+      },
+      {
+        "video_id": "lOf16ZQDDdE",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "BTS (ë°©íìëë¨) - Anpanman @BTS COMEBACK SHOW",
+        "rating": 3,
+        "watch_pct": 0.59
+      },
+      {
+        "video_id": "CmMxoSlypus",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "TWICE What is Love? M/V TEASER",
+        "rating": 4,
+        "watch_pct": 0.43
+      },
+      {
+        "video_id": "6CigQPn9jPc",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "Bruno Mars,Charlie Puth,Ed Sheeran Best Christmas Songs,Greatest Hits ",
+        "rating": 3,
+        "watch_pct": 0.6
+      },
+      {
+        "video_id": "i4X4z8OutYI",
+        "genre": "Regional",
+        "language": "Korean",
+        "title": "ì·ì ë²ê² ë§ëë ì´ë¥ë ¥ì¼ë¡ ê³ ë±íêµì ê° ì¬ì",
+        "rating": 4,
+        "watch_pct": 0.39
+      },
+      {
+        "video_id": "wQBL4R0Tj-o",
+        "genre": "Regional",
+        "language": "Korean",
+        "title": "ëë·ìì´ ë²ì´ì§ ì¹ìí ë²¤ì¹í´ë¦¬ì´ë§",
+        "rating": 4,
+        "watch_pct": 0.27
+      },
+      {
+        "video_id": "1LQPojL8V_4",
+        "genre": "Regional",
+        "language": "Korean",
+        "title": "U23 Viá»t Nam - U23 Uzbekistan - HIá»P PHá»¤ | Full mÃ n hÃ¬nh",
+        "rating": 2,
+        "watch_pct": 0.32
+      },
+      {
+        "video_id": "qNdEO5tto_o",
+        "genre": "Regional",
+        "language": "Korean",
+        "title": "ê°ë¶ìì ìë ê´´ìë¬¼ì ì ì²´ë?",
+        "rating": 3,
+        "watch_pct": 0.43
+      },
+      {
+        "video_id": "zhrYe9s8EyE",
+        "genre": "Regional",
+        "language": "Korean",
+        "title": "ëì´ì¡ë¤ê³ ë¹ìë¤ê° '1ë±'í íêµ ì¼í¸í¸ëì 'ë©ë¶'ì¨ ì¼ë³¸ì¸ë¤",
+        "rating": 3,
+        "watch_pct": 0.44
+      },
+      {
+        "video_id": "B9QftLujhNE",
+        "genre": "Regional",
+        "language": "Korean",
+        "title": "[ ì¬ìì¹êµ¬ ] ìíë 'ë°¤'ì ì²« íì´ë°ì ì´ë»ê² ì¡ìê¹??? // ì ë¹ëì ë¹íëë¤",
+        "rating": 2,
+        "watch_pct": 0.57
+      },
+      {
+        "video_id": "iqZsIqMH2gw",
+        "genre": "Regional",
+        "language": "Korean",
+        "title": "íë²ëìë¤ì ë°ë³´ë¡ ë§ë ê³ ì¡¸",
+        "rating": 3,
+        "watch_pct": 0.53
+      },
+      {
+        "video_id": "N25fWFNp5PY",
+        "genre": "Regional",
+        "language": "Korean",
+        "title": "Xem Láº¡i Nhá»¯ng Pha Ghi BÃ n Cá»§a U23 Viá»t Nam ÄÃ£ Láº¥y Äi HÃ ng ",
+        "rating": 3,
+        "watch_pct": 0.45
+      },
+      {
+        "video_id": "tihKvn6OiAo",
+        "genre": "Regional",
+        "language": "Korean",
+        "title": "Cleveland Cavaliers vs Denver Nuggets Full Game Highlights / March 7 /",
+        "rating": 4,
+        "watch_pct": 0.45
+      },
+      {
+        "video_id": "skIfzl96Gc0",
+        "genre": "Regional",
+        "language": "Korean",
+        "title": "BLACKPINK - 'SO HOT' (THEBLACKLABEL Remix) in 2017 SBS Gayodaejun",
+        "rating": 4,
+        "watch_pct": 0.56
+      },
+      {
+        "video_id": "X1XiLoNI8C4",
+        "genre": "Regional",
+        "language": "Korean",
+        "title": "Golden State Warriors vs San Antonio Spurs Full Game Highlights / Game",
+        "rating": 3,
+        "watch_pct": 0.49
+      },
+      {
+        "video_id": "qCRhteWhEtQ",
+        "genre": "Regional",
+        "language": "Korean",
+        "title": "Chelsea vs Barcelona 1-1 All Goals & Highlights 20/02/2018 HD",
+        "rating": 3,
+        "watch_pct": 0.57
+      },
+      {
+        "video_id": "zLlWRB_ou5I",
+        "genre": "Regional",
+        "language": "Korean",
+        "title": "SNSìì ëë¦¬ë íì°½ì¬ë¦¼í½ ì¤ìì¤íì ë¹µí°ì§ë ëª¨ìµë¤",
+        "rating": 3,
+        "watch_pct": 0.62
+      },
+      {
+        "video_id": "eZFqlNYU5QM",
+        "genre": "Regional",
+        "language": "Korean",
+        "title": "The Best Of Avicii Songs | RIP Thank you for your music ð¤",
+        "rating": 3,
+        "watch_pct": 0.23
+      },
+      {
+        "video_id": "Hg-lX8j1_q0",
+        "genre": "Entertainment",
+        "language": "Korean",
+        "title": "365ì¼ ì´ì¬íë ê°ì¡±! ê¸¸ ìì ì¶ì ì íí ë¶ë¶ì ì¬ì°ì? [ì§ìë§¨ | ë¤ìë³´ê¸°]",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "MKxsnYX4z00",
+        "genre": "Entertainment",
+        "language": "Korean",
+        "title": "'ì¥ìì íì í©ìì½ë¼ë ã·ã·ã·', ë¨ìë¤ì´ ì¢ìí ë§í ì§¤ ëª¨ì",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "NdQf-JuBjp0",
+        "genre": "Entertainment",
+        "language": "Korean",
+        "title": "THE MASK SINGER à¸«à¸à¹à¸²à¸à¸²à¸à¸à¸±à¸à¸£à¹à¸à¸ 3 | EP.09 | SEMI FIN",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "GpoebDZfsJQ",
+        "genre": "Entertainment",
+        "language": "Korean",
+        "title": "ThÃ¡ch thá»©c danh hÃ i 4 | táºp 14 full: Tráº¥n ThÃ nh khoÃ¡i chÃ khi",
+        "rating": 2,
+        "watch_pct": 0.2
+      }
+    ]
+  },
+  {
+    "user_id": "U15",
+    "name": "Amara",
+    "description": "Amara is a 30-year-old biology teacher from Nigeria. She watches science and nature documentaries, biology lectures, and educational explainers. She prefers English content.",
+    "preferred_genres": {
+      "Documentary": 0.5,
+      "Educational": 0.4,
+      "News/Analysis": 0.1
+    },
+    "preferred_languages": [
+      "English"
+    ],
+    "interactions": [
+      {
+        "video_id": "YGtzcZsthos",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "InHaiti | Pour une Nouvelle Haiti (6 Pour 6) | 12 Janvier 2018",
+        "rating": 3,
+        "watch_pct": 0.59
+      },
+      {
+        "video_id": "j1oMVG1ZMlA",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "March For Our Lives - Washington, DC",
+        "rating": 4,
+        "watch_pct": 0.55
+      },
+      {
+        "video_id": "EW3KD4kqqug",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Rose McGowan Talks Alleged Sexual Misconduct By Harvey Weinstein | The",
+        "rating": 3,
+        "watch_pct": 0.49
+      },
+      {
+        "video_id": "47j4fifbaiY",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "â Judge â¢ Judy Â· November â â§ 259",
+        "rating": 4,
+        "watch_pct": 0.36
+      },
+      {
+        "video_id": "QvwTGiB9aLQ",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Pasteur GrÃ©gory Toussaint | 12 Nuits d'Adoration 2017 | Lavi Bondye N",
+        "rating": 5,
+        "watch_pct": 0.61
+      },
+      {
+        "video_id": "OxN0qnqaYx0",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Avengers: Infinity War cast plays 'Friends For Infinity'",
+        "rating": 4,
+        "watch_pct": 0.5
+      },
+      {
+        "video_id": "cp63c52SOhY",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Pasteur Gregory Toussaint | Nuit de Shekinah I Lavi Bondye Nan Maryaj ",
+        "rating": 4,
+        "watch_pct": 0.25
+      },
+      {
+        "video_id": "Ed3wQVhyJUc",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Pastor Gregory Toussaint I 7 Nights of Dominion I Arts Culture and Com",
+        "rating": 4,
+        "watch_pct": 0.42
+      },
+      {
+        "video_id": "mn1-mtmO0Cg",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Toronto Zoo White Rhino Calf Nursing From Mom Zohari",
+        "rating": 3,
+        "watch_pct": 0.47
+      },
+      {
+        "video_id": "eIns8Y0xegE",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Unrigged Live! with Jennifer Lawrence, Tig Notaro, Richard Painter, an",
+        "rating": 5,
+        "watch_pct": 0.58
+      },
+      {
+        "video_id": "6dIjeUB51-s",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Ð Ð°ÑÐ¿Ð°ÐºÐ¾Ð²ÐºÐ° Ð³Ð°Ð´Ð¶ÐµÑÐ° Ð·Ð° 10 Ð¼Ð»ÑÐ´ ÑÑÐ±Ð»ÐµÐ¹",
+        "rating": 4,
+        "watch_pct": 0.57
+      },
+      {
+        "video_id": "nEkWlXGdWKA",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Ozzy Osbourne mocks Olivia Newton John's scam drink, Sharon pretends t",
+        "rating": 5,
+        "watch_pct": 0.61
+      },
+      {
+        "video_id": "UQniNh_6LOY",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Embracing your expiry date | Jeremie Saunders | TEDxToronto",
+        "rating": 4,
+        "watch_pct": 0.42
+      },
+      {
+        "video_id": "UOAWps8djuQ",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Pastor Gregory Toussaint I 7 Nights of Dominion I Representing the Kin",
+        "rating": 4,
+        "watch_pct": 0.55
+      },
+      {
+        "video_id": "p1DAEZNyJ8E",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Avengers: Infinity War | Marvel Family Feud",
+        "rating": 5,
+        "watch_pct": 0.58
+      },
+      {
+        "video_id": "-4lgt0xQgYA",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "2017 First Presidencyâ's Christmas Devotional",
+        "rating": 5,
+        "watch_pct": 0.44
+      },
+      {
+        "video_id": "wWIz28q4miE",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Clinton Investigation!! | Peace In Korea | #AntiSchool April 18 2018",
+        "rating": 5,
+        "watch_pct": 0.52
+      },
+      {
+        "video_id": "mt22NvsTRG0",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "The Obama Presidential Center: Where We Are Now",
+        "rating": 5,
+        "watch_pct": 0.42
+      },
+      {
+        "video_id": "8udNOTFiqUs",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Why It's Almost Impossible to Throw a 110 MPH Fastball | WIRED",
+        "rating": 4,
+        "watch_pct": 0.42
+      },
+      {
+        "video_id": "XU69_u7eXa0",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Google Pixel 2 Revisited: Android P Beta!",
+        "rating": 3,
+        "watch_pct": 0.34
+      },
+      {
+        "video_id": "3t2jdkDBfPc",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Switching to the iPhone X...",
+        "rating": 3,
+        "watch_pct": 0.45
+      },
+      {
+        "video_id": "U1RASlbIIVc",
+        "genre": "Educational",
+        "language": "English",
+        "title": "TERRIBLE $900 Party Trick â- Jibo Review",
+        "rating": 4,
+        "watch_pct": 0.33
+      },
+      {
+        "video_id": "o6T9mUq9Vgo",
+        "genre": "Educational",
+        "language": "English",
+        "title": "The Weirdest Phones In The World...",
+        "rating": 3,
+        "watch_pct": 0.66
+      },
+      {
+        "video_id": "7OsFH1XBUG8",
+        "genre": "Educational",
+        "language": "English",
+        "title": "What Will Fire Crackers Do in Gasoline?",
+        "rating": 4,
+        "watch_pct": 0.45
+      },
+      {
+        "video_id": "MeNR0guNn70",
+        "genre": "Educational",
+        "language": "English",
+        "title": "ä¸çã§ä¸çªåãããã¹ã¿ã®åä¸ãä½ãããï¼",
+        "rating": 3,
+        "watch_pct": 0.41
+      },
+      {
+        "video_id": "SQsPvrev_bQ",
+        "genre": "Educational",
+        "language": "English",
+        "title": "435",
+        "rating": 4,
+        "watch_pct": 0.28
+      },
+      {
+        "video_id": "IX6gYfA6l88",
+        "genre": "Educational",
+        "language": "English",
+        "title": "What's inside a Microwave Popcorn Bag?",
+        "rating": 3,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "Nsm8l89x2H4",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Freezing Acetone in Liquid Nitrogen",
+        "rating": 3,
+        "watch_pct": 0.48
+      },
+      {
+        "video_id": "vorkmWa7He8",
+        "genre": "Educational",
+        "language": "English",
+        "title": "We Stole Tampons from the Cashier-less Amazon Go Store",
+        "rating": 3,
+        "watch_pct": 0.59
+      },
+      {
+        "video_id": "w3HpeLVHIzI",
+        "genre": "Educational",
+        "language": "English",
+        "title": "January 31, 2018 Total Lunar Eclipse",
+        "rating": 2,
+        "watch_pct": 0.22
+      },
+      {
+        "video_id": "OtBYXxnJvEQ",
+        "genre": "Educational",
+        "language": "English",
+        "title": "CE QUE JE VAIS VOUS MONTRER EST FOU !",
+        "rating": 3,
+        "watch_pct": 0.53
+      },
+      {
+        "video_id": "8cxfxujQI2s",
+        "genre": "Educational",
+        "language": "English",
+        "title": "COMMENT SE FABRIQUE UN DIAMANT ? Vrai ou Faux #72",
+        "rating": 4,
+        "watch_pct": 0.34
+      },
+      {
+        "video_id": "0fNy_tWYkd4",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "Dramatic moment North Korean soldier makes mad-dash defection across D",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "kUlOrqb01Hw",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "Trump supporters weigh in on 'shithole' remark",
+        "rating": 2,
+        "watch_pct": 0.21
+      },
+      {
+        "video_id": "4hbm0XspKIU",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "'Roseanne' Cancelled After Roseanne Barr's Racist Tweet | The View",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "ObvUP5YxAKg",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "7th-grader shoots himself at Jackson Memorial Middle School in Stark C",
+        "rating": 2,
+        "watch_pct": 0.27
+      }
+    ]
+  },
+  {
+    "user_id": "U16",
+    "name": "Ivan",
+    "description": "Ivan is a 38-year-old journalist from Russia. He watches Russian news analysis, political commentary, and sports coverage almost entirely in Russian.",
+    "preferred_genres": {
+      "News/Analysis": 0.5,
+      "Regional": 0.35,
+      "Entertainment": 0.15
+    },
+    "preferred_languages": [
+      "Russian"
+    ],
+    "interactions": [
+      {
+        "video_id": "zS7b64V5fo8",
+        "genre": "News/Analysis",
+        "language": "Russian",
+        "title": "ÐEÎAÎ¡Ð£CÐ¬ ÎÐÐªÐ¯BÎÐ¯EÐ¢ B0ÐÎÐ£ Ð£ÎÎ¡ÐÐÎÐ â- ÐÐ»ÐµÐºÑÐ°Ð½Ð´Ñ ÐÑÐºÐ°ÑÐ",
+        "rating": 4,
+        "watch_pct": 0.55
+      },
+      {
+        "video_id": "8oX3HLj0Ujs",
+        "genre": "News/Analysis",
+        "language": "Russian",
+        "title": "ÐÐµÑÑÐ²Ð°Ð¼Ð¸ Ð¿Ð¾Ð¶Ð°ÑÐ° Ð² Ð¢Ð¦ Ð² ÐÐµÐ¼ÐµÑÐ¾Ð²Ð¾ ÑÑÐ°Ð»Ð¸ 37 ÑÐµÐ»Ð",
+        "rating": 4,
+        "watch_pct": 0.53
+      },
+      {
+        "video_id": "eHQrrnlscPk",
+        "genre": "News/Analysis",
+        "language": "Russian",
+        "title": "ÐÎCÎ¤PEÎÎÎÎ 3AÐ¯BÎÎHÐÎ ÐÐÐÐÐ ÐÐ Ð£ÐÐÐÐÐÐ ÐÐ ÎÎ¤ÐÐ ÐÐ£Ð¢ÐÐÐ â- 4.02.201",
+        "rating": 4,
+        "watch_pct": 0.42
+      },
+      {
+        "video_id": "kAhPWDAA4n8",
+        "genre": "News/Analysis",
+        "language": "Russian",
+        "title": "Ð Ð¾ÑÑÐ¸Ð¹ÑÐºÐ¸Ðµ ÑÐ¾ÐºÐºÐµÐ¸ÑÑÑ Ð²Ð·ÑÐ»Ð¸ ÐÐÐÐÐ¢Ð Ð½Ð° ÐÐ»Ð¸Ð¼Ð¿Ð¸Ð°Ð",
+        "rating": 4,
+        "watch_pct": 0.64
+      },
+      {
+        "video_id": "e5TbYF7jZ7M",
+        "genre": "News/Analysis",
+        "language": "Russian",
+        "title": "ÐÑÐ¾ÑÑÐ¸ÑÐµ Ð½Ð°Ñ, Ð´ÐµÑÐ¸ - ÑÑÐ°ÑÑÐ½ÑÐµ ÑÐµÑÑÐ²Ð¸Ñ Ð¿Ð¾ Ð¿Ð¾Ð³Ð¸Ð±ÑÐ¸",
+        "rating": 4,
+        "watch_pct": 0.46
+      },
+      {
+        "video_id": "X_RgHMOFVeg",
+        "genre": "News/Analysis",
+        "language": "Russian",
+        "title": "LIVE: Protests in Kemerovo over lack of safety after shopping centre f",
+        "rating": 4,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "BXSXzNhk4OM",
+        "genre": "News/Analysis",
+        "language": "Russian",
+        "title": "Ð¤Ð»Ð°Ð³ Ð Ð¾ÑÑÐ¸Ð¸ Ð½Ð° Ð¾ÑÐºÑÑÑÐ¸Ð¸ ÐÐ»Ð¸Ð¼Ð¿Ð¸Ð°Ð´Ñ 2018 Ð² ÐÑÐµÐ½Ñ",
+        "rating": 5,
+        "watch_pct": 0.29
+      },
+      {
+        "video_id": "yPOMfBBY8PQ",
+        "genre": "News/Analysis",
+        "language": "Russian",
+        "title": "ÙØ³ÙØ³Ù ÙÙØ¨Ø´| Ø§ÙØ¬Ø²Ø¡ Ø§ÙØ«Ø§ÙÙ â- Ø§ÙØÙÙØ© Ø§ÙØ®Ø§ÙØ³Ø© (Ù¥)| (Ka",
+        "rating": 4,
+        "watch_pct": 0.37
+      },
+      {
+        "video_id": "nKk-H_bjVn4",
+        "genre": "News/Analysis",
+        "language": "Russian",
+        "title": "ÐÐµÐ¼ÐµÑÐ¾Ð²Ð¾ Ð¿Ð¾Ð¶Ð°Ñ Ð¢Ð¦ ÐÐ¸Ð¼Ð½ÑÑ Ð²Ð¸ÑÐ½Ñ ÐÐ¸Ð´ÐµÐ¾",
+        "rating": 3,
+        "watch_pct": 0.64
+      },
+      {
+        "video_id": "JTAN6CdBYc4",
+        "genre": "News/Analysis",
+        "language": "Russian",
+        "title": "ÐÐµÑÑÐºÐ¸Ð¹ ÑÐ°Ð·Ð³Ð¾Ð½ Ð¼Ð¸ÑÐ¸Ð½Ð³Ð° Ð¿ÑÐ¾ÑÐ¸Ð² ÐÑÑÐ¸Ð½Ð° Ð² ÐÐ¾ÑÐºÐ²",
+        "rating": 4,
+        "watch_pct": 0.54
+      },
+      {
+        "video_id": "41DNXzjxmkQ",
+        "genre": "News/Analysis",
+        "language": "Russian",
+        "title": "ÕÖÕ²Õ«Õ² Õ´Õ«Õ¡ÖÕ¸ÖÕ´ ÕÕ¡Õ¶ÖÕ¡ÕºÕ¥Õ¿Õ¸ÖÕ©ÕµÕ¡Õ¶ Õ°ÖÕ¡ÕºÕ¡ÖÕ¡Õ¯Õ«Ö",
+        "rating": 4,
+        "watch_pct": 0.56
+      },
+      {
+        "video_id": "IX-CgSFtB7g",
+        "genre": "News/Analysis",
+        "language": "Russian",
+        "title": "ÐÑÐµÑ ÑÑÐµÑ ÑÐ³Ð¾ÑÐµÐ²ÑÐ¸Ñ Ð² ÐÐµÐ¼ÐµÑÐ¾Ð²Ð¾ Ð´ÐµÑÐµÐ¹ ÑÐ°ÑÑÐºÐ°Ð·Ð°Ð»",
+        "rating": 4,
+        "watch_pct": 0.35
+      },
+      {
+        "video_id": "ZsRNcWPSXRU",
+        "genre": "News/Analysis",
+        "language": "Russian",
+        "title": "ÐÐ¸ÑÐ¸Ð½Ð¾Ð²ÑÐºÐ¸Ð¹ Ð¾ ÑÑÐ°Ð³ÐµÐ´Ð¸Ð¸ Ð² ÐÐµÐ¼ÐµÑÐ¾Ð²Ðµ: Ð²Ð¾ Ð²ÑÐµÐ¼ ",
+        "rating": 5,
+        "watch_pct": 0.44
+      },
+      {
+        "video_id": "hDWELrZoHpQ",
+        "genre": "News/Analysis",
+        "language": "Russian",
+        "title": "ÐÐÐ¡ÐÐÐ®ÐÐÐ! ÐÐ³Ð¾ ÐÐÐÐÐÐÐ Ð½Ðµ Ð¿ÑÑÑÑÑ Ð²Ð¾ Ð²Ð»Ð°ÑÑÑ! ÐÑÑÐ´Ð¸Ð½Ð¸Ð½ ",
+        "rating": 3,
+        "watch_pct": 0.45
+      },
+      {
+        "video_id": "3XS55W42-p4",
+        "genre": "News/Analysis",
+        "language": "Russian",
+        "title": "CÐ¾Ð²ÐÐµÐ· 00H Ð² Ð¨0ÐÐ!!! 16.04.18 - ÐÐÐÐÐ3Ð¯ Ð Ð3ÐÐ3ÐÐ ÐÐ0Ð£Ð0Ð Ð¡.Ð",
+        "rating": 5,
+        "watch_pct": 0.6
+      },
+      {
+        "video_id": "SZov3EM5Vik",
+        "genre": "News/Analysis",
+        "language": "Russian",
+        "title": "ÐÑÐ°ÐºÐ° ÐÐ¾ÑÐºÐ¸Ð½Ð° Ð¸ Ð¡ÑÐ²Ð¾ÑÐ¾Ð²Ð° Ð² Ð¿ÑÑÐ¼Ð¾Ð¼ ÑÑÐ¸ÑÐµ ÑÐ¾Ðº ÑÐ",
+        "rating": 4,
+        "watch_pct": 0.46
+      },
+      {
+        "video_id": "snfLyCk7cT4",
+        "genre": "News/Analysis",
+        "language": "Russian",
+        "title": "ÐÐµÑÐµÑ Ñ ÐÐ»Ð°Ð´Ð¸Ð¼Ð¸ÑÐ¾Ð¼ Ð¡Ð¾Ð»Ð¾Ð²ÑÐµÐ²ÑÐ¼ Ð¾Ñ 14.04.18",
+        "rating": 4,
+        "watch_pct": 0.75
+      },
+      {
+        "video_id": "SSFBxHtHvZM",
+        "genre": "News/Analysis",
+        "language": "Russian",
+        "title": "ÐÐ¼Ð¸ÑÑÐ¸Ð¹ ÐÐ¾ÑÐ°Ð¿ÐµÐ½ÐºÐ¾: ÐÐ¾ÑÐµÐ¼Ñ Ð±ÑÐ» Ð¿ÑÐ¾Ð´Ð°Ð½ ÐÐ°Ð³Ð½Ð¸Ñ Ð",
+        "rating": 4,
+        "watch_pct": 0.55
+      },
+      {
+        "video_id": "iN8zmmCRqUA",
+        "genre": "Regional",
+        "language": "Russian",
+        "title": "$3 Fries Vs. $100 Fries",
+        "rating": 3,
+        "watch_pct": 0.38
+      },
+      {
+        "video_id": "jgsTejuD7X4",
+        "genre": "Regional",
+        "language": "Russian",
+        "title": "Ð¢ÐµÐ»ÐµÐ²Ð¸Ð·Ð¾Ñ Ð·Ð° 1.2Ð¼Ð»Ð½ ÑÑÐ±Ð»ÐµÐ¹ Ð¸ Ð½Ð¾Ð²Ð°Ñ ÑÑÑÐ´Ð¸Ñ!",
+        "rating": 3,
+        "watch_pct": 0.33
+      },
+      {
+        "video_id": "0LQU-AmdRcA",
+        "genre": "Regional",
+        "language": "Russian",
+        "title": "Ãukur 21. BÃ¶lÃ¼m",
+        "rating": 3,
+        "watch_pct": 0.35
+      },
+      {
+        "video_id": "dGygy30_Evw",
+        "genre": "Regional",
+        "language": "Russian",
+        "title": "Ð£ÐÐÐÐÐ ÐÐÐÐ¯: Ð½Ð°ÑÐ¾Ð¶Ñ Ð ÑÑÐ»Ð°Ð½Ð° ÑÑÐµÐ´Ð¸ Ð¿Ð°ÑÐ½ÐµÐ¹ + ÐÐ°Ð¾Ð±Ð",
+        "rating": 3,
+        "watch_pct": 0.36
+      },
+      {
+        "video_id": "ZGFbwB0A_8I",
+        "genre": "Regional",
+        "language": "Russian",
+        "title": "Ãukur 28. BÃ¶lÃ¼m",
+        "rating": 3,
+        "watch_pct": 0.34
+      },
+      {
+        "video_id": "udm5jUA-2bs",
+        "genre": "Regional",
+        "language": "Russian",
+        "title": "The Meg Official Trailer #1 (2018) Jason Statham, Ruby Rose Megalodon ",
+        "rating": 3,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "F5AyNaECXvo",
+        "genre": "Regional",
+        "language": "Russian",
+        "title": "ÐÐ¾Ð¶Ð°Ñ Ð² ÐÐµÐ¼ÐµÑÐ¾Ð²Ð¾: ÑÐ°Ð·Ð¾Ð±Ð»Ð°ÑÐµÐ½Ð¸Ðµ ÑÐµÐ¹ÐºÐ¾Ð²",
+        "rating": 3,
+        "watch_pct": 0.39
+      },
+      {
+        "video_id": "uBYzYji4rmE",
+        "genre": "Regional",
+        "language": "Russian",
+        "title": "Honest Trailers - Black Panther",
+        "rating": 3,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "nqMIMQP0uoE",
+        "genre": "Regional",
+        "language": "Russian",
+        "title": "ÐÐ¸Ð» 600ÑÐ¸Ð». ÐÑÐ¿ÑÑÑÐ²Ð°ÐµÐ¼ Ð´Ð¾ Ð¾ÑÐºÐ°Ð·Ð°.",
+        "rating": 4,
+        "watch_pct": 0.33
+      },
+      {
+        "video_id": "5JpCR7qJHqI",
+        "genre": "Regional",
+        "language": "Russian",
+        "title": "Ð Ð°Ð·Ð¾Ð±ÑÐ°Ð»Ð¸ Ð£ÐÐ 300 ÑÐ¸Ð» ÑÑÐ¾Ð±Ñ Ð²ÐµÑÐ½ÑÑÑ Ð¿Ð¾Ð»Ð½ÑÐ¹ Ð¿ÑÐ¸Ð",
+        "rating": 3,
+        "watch_pct": 0.23
+      },
+      {
+        "video_id": "854JGIkfM2c",
+        "genre": "Regional",
+        "language": "Russian",
+        "title": "ÐÐ»ÐµÐ´Ð½ÑÐ¹ - Ð½Ð°ÑÐºÐ¾ÑÐ°, ÑÐ¼ÐµÑÑÑ, ÑÐ¿Ð°ÑÐµÐ½Ð¸Ðµ / Ð²ÐÑÐ´Ñ",
+        "rating": 3,
+        "watch_pct": 0.22
+      },
+      {
+        "video_id": "KJXuZfgrOAs",
+        "genre": "Regional",
+        "language": "Russian",
+        "title": "ÐÐ°Ðº Ñ Ð²ÑÑÑÑÐ» Ñ ÐÐ¾Ð»Ð³Ð¾Ð¹. ÐÑÐ±Ð¸ÑÐ°ÐµÐ¼ ÑÑÐ´ÑÐ±Ñ Ð¿ÑÐ¾ÐµÐºÑÐ°.",
+        "rating": 2,
+        "watch_pct": 0.58
+      },
+      {
+        "video_id": "usam5OmPswc",
+        "genre": "Entertainment",
+        "language": "Russian",
+        "title": "ÐÐµÐ¿Ð¾ÑÑÐµÐ´ÑÑÐ²ÐµÐ½Ð½Ð¾ ÐÐ°ÑÐ° -- ÐÐ¾Ð»ÑÐ¾ÑÑ ÑÑÑÑÑÐ¸ 4 ÑÐµÐ·Ð¾Ð½ 8 Ñ",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "Ml9v3wHLuWI",
+        "genre": "Entertainment",
+        "language": "Russian",
+        "title": "Will Smith Tries Online Dating",
+        "rating": 2,
+        "watch_pct": 0.21
+      },
+      {
+        "video_id": "9GGxBht3m7M",
+        "genre": "Entertainment",
+        "language": "Russian",
+        "title": "Ð ÐÐ¾ÑÐºÐ²Ñ...Ð·Ð°Ð±Ð¸ÑÐ°ÑÑ ÑÐ²Ð¾Ðµ.Ð¡Ð¼Ð¾ÑÑÐ¸ ÑÐµÑÐ¸Ð°Ð»ãÐÐ½Ðµ Ð¸Ð³ÑÑ",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "w5gbHSfbiK4",
+        "genre": "Entertainment",
+        "language": "Russian",
+        "title": "15 YEAR OLD CRIES OVER NOT GETTING $231,000",
+        "rating": 3,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "dNW0B0HsvVs",
+        "genre": "Entertainment",
+        "language": "Russian",
+        "title": "Solo: A Star Wars Story Official Teaser",
+        "rating": 2,
+        "watch_pct": 0.28
+      }
+    ]
+  },
+  {
+    "user_id": "U17",
+    "name": "David",
+    "description": "David is a 45-year-old news junkie from the UK. He watches news from multiple countries, political analysis, and investigative documentaries in English, French, and Spanish.",
+    "preferred_genres": {
+      "News/Analysis": 0.6,
+      "Documentary": 0.3,
+      "Educational": 0.1
+    },
+    "preferred_languages": [
+      "English",
+      "French",
+      "Spanish"
+    ],
+    "interactions": [
+      {
+        "video_id": "rwYd2kIZxk4",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "HERO Johnnie Langendorff Fires Back at Sutherland Springs Shooter!",
+        "rating": 5,
+        "watch_pct": 0.74
+      },
+      {
+        "video_id": "5JEI0sjJs8c",
+        "genre": "News/Analysis",
+        "language": "French",
+        "title": "Frances McDormand wins best actress at the 2018 Oscars",
+        "rating": 5,
+        "watch_pct": 0.46
+      },
+      {
+        "video_id": "ppaFUcop750",
+        "genre": "News/Analysis",
+        "language": "Spanish",
+        "title": "UNA EVA Y DOS RUFIANES (DE MORENA) - EL PULSO DE LA REPÃBLICA",
+        "rating": 5,
+        "watch_pct": 0.46
+      },
+      {
+        "video_id": "Aqx41JrNTSw",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "ê¹ë³´ë¦ ì§ì¬ì¼ë¡ ì¬ê³¼ëë¦½ëë¤..ê²°êµ ëë¬¼ë¡ ì¬ì£ (ê¸°ìíê²¬ íìì) / SBS ",
+        "rating": 5,
+        "watch_pct": 0.51
+      },
+      {
+        "video_id": "veS1AePOYg0",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "What Trump Pulling Out Of Iran Deal Shows Us, Eric Schneiderman, Cop C",
+        "rating": 5,
+        "watch_pct": 0.64
+      },
+      {
+        "video_id": "y3niFzo5VLI",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "ð´ LIVE: Starman Driving in Space after Successful Heavy Falcon Launch",
+        "rating": 5,
+        "watch_pct": 0.65
+      },
+      {
+        "video_id": "mnV70SGVk4s",
+        "genre": "News/Analysis",
+        "language": "French",
+        "title": "Mamoudou Gassama Mali spiderman to be made French Citizen after rescui",
+        "rating": 5,
+        "watch_pct": 0.65
+      },
+      {
+        "video_id": "BeCXjE6l2jE",
+        "genre": "News/Analysis",
+        "language": "Spanish",
+        "title": "AsÃ fue la fiesta tras la boda real",
+        "rating": 5,
+        "watch_pct": 0.72
+      },
+      {
+        "video_id": "4wJwHLWDHUw",
+        "genre": "News/Analysis",
+        "language": "French",
+        "title": "Prince Harry and Meghan Markle's wedding cake",
+        "rating": 5,
+        "watch_pct": 0.45
+      },
+      {
+        "video_id": "cdrxhyhEAXc",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "Bhad Bhabie vs Woahh Vicky! (FOOTAGE) #DramaAlert Logan Paul vs KSI! B",
+        "rating": 5,
+        "watch_pct": 0.68
+      },
+      {
+        "video_id": "_2cN7nDvcPI",
+        "genre": "News/Analysis",
+        "language": "French",
+        "title": "ÕÖÕ²Õ«Õ² Õ´Õ«Õ¡ÖÕ¸ÖÕ´ ÔµÖÖÕ¡Õ¶Õ«Ö | LIVE from Yerevan | ÐÑÑÐ¼aÑ ÑÑÐ°Ð½",
+        "rating": 5,
+        "watch_pct": 0.77
+      },
+      {
+        "video_id": "ol5_X4BoI6w",
+        "genre": "News/Analysis",
+        "language": "Spanish",
+        "title": "Margarita Zavala renuncia a candidatura en Tercer Grado",
+        "rating": 5,
+        "watch_pct": 0.62
+      },
+      {
+        "video_id": "0fNy_tWYkd4",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "Dramatic moment North Korean soldier makes mad-dash defection across D",
+        "rating": 5,
+        "watch_pct": 0.6
+      },
+      {
+        "video_id": "Nyl4PFvo7Zg",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "Lil Tay INTERVIEW with GMA BAD! #DramaAlert Jake Paul ROASTED by TEACH",
+        "rating": 4,
+        "watch_pct": 0.43
+      },
+      {
+        "video_id": "oNpzeIdOtlk",
+        "genre": "News/Analysis",
+        "language": "English",
+        "title": "Who Was the YouTube Shooter? | NYT News",
+        "rating": 5,
+        "watch_pct": 0.5
+      },
+      {
+        "video_id": "lKLj4_eswNo",
+        "genre": "News/Analysis",
+        "language": "French",
+        "title": "Ø¨Ø£ÙØ§ÙØ± ÙÙ Ø§ÙÙÙÙ ÙØÙØ¯ Ø§ÙØ³Ø§Ø¯Ø³ ÙÙØÙÙØ´Ù Ø´ÙÙÙ Ø§Ø´ Ø¹Ø·Ø§Ù ÙÙÙ",
+        "rating": 4,
+        "watch_pct": 0.34
+      },
+      {
+        "video_id": "2zmDey-L654",
+        "genre": "News/Analysis",
+        "language": "Spanish",
+        "title": "Guatemala, la tragedia del dÃa despuÃ©s",
+        "rating": 4,
+        "watch_pct": 0.44
+      },
+      {
+        "video_id": "yO-jJuNp2_M",
+        "genre": "News/Analysis",
+        "language": "French",
+        "title": "ErdoÄan'a karakol komutanÄ± bÃ¶yle tekmil verdi",
+        "rating": 5,
+        "watch_pct": 0.72
+      },
+      {
+        "video_id": "O6BODAJVYc8",
+        "genre": "News/Analysis",
+        "language": "Spanish",
+        "title": "2017, in 7 minutes",
+        "rating": 4,
+        "watch_pct": 0.87
+      },
+      {
+        "video_id": "TdIeQVTUoFI",
+        "genre": "News/Analysis",
+        "language": "French",
+        "title": "ÙØ¯ÙØ© Ø¶Ø®ÙØ© ÙÙ ÙØ¯Ù Ø³Ø¹Ø¯ ÙØºØ²Ù Ø§Ø¨ÙØ© Ø¯ÙÙØ§ Ø¨Ø·ÙØ©",
+        "rating": 5,
+        "watch_pct": 0.56
+      },
+      {
+        "video_id": "pSJLTe11YU4",
+        "genre": "News/Analysis",
+        "language": "Spanish",
+        "title": "NOTICIAS DE HOY, 17 DE ABRIL DEL 2018, NOTICIERO DEL DÃA, HOY 17 DE AB",
+        "rating": 3,
+        "watch_pct": 0.87
+      },
+      {
+        "video_id": "BqD0umu1mRA",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "Ð§ÑÐ¾ Ð¿ÑÐ¾Ð¸Ð·Ð¾ÑÐ»Ð¾ Ð² ÐÑÐ¼ÐµÐ½Ð¸Ð¸ Ð¸ ÑÑÐ¾ Ð½ÑÐ¶Ð½Ð¾ Ð´ÐµÐ»Ð°ÑÑ Ð½",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "B9k61MtlJi4",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "Vaincre ton plus grand ennemi : la chair ! - JÃ©rÃ©my Sourdril",
+        "rating": 3,
+        "watch_pct": 0.59
+      },
+      {
+        "video_id": "6VAtKIPiOa0",
+        "genre": "Documentary",
+        "language": "Spanish",
+        "title": "La tropa preparan una gran sorpresa para Alicia",
+        "rating": 3,
+        "watch_pct": 0.37
+      },
+      {
+        "video_id": "Dk9uitzdGXQ",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "DNC LAWSUIT #AntiSchool #QAnon April 20 2018",
+        "rating": 3,
+        "watch_pct": 0.4
+      },
+      {
+        "video_id": "JPvQZYZ3nJA",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "Pouvons-nous encore apprendre ? | Fabien Olicard | TEDxÃcoleCentraleLy",
+        "rating": 3,
+        "watch_pct": 0.33
+      },
+      {
+        "video_id": "qJh0d-XuKLI",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "Kisabac Lusamutner eter 07.12.17 Ter U Hnazand",
+        "rating": 2,
+        "watch_pct": 0.29
+      },
+      {
+        "video_id": "tF-_-EoBg5M",
+        "genre": "Documentary",
+        "language": "Spanish",
+        "title": "LESIONADO POR ARMA DE FUEGO EN EL METRO DE LA CIUDAD DE MÃXICO ESTACIÃ",
+        "rating": 2,
+        "watch_pct": 0.27
+      },
+      {
+        "video_id": "W2syGlSp2tM",
+        "genre": "Documentary",
+        "language": "Spanish",
+        "title": "Alexia y Oski Anunciaron su Separacion Definitiva e Irrevocable",
+        "rating": 2,
+        "watch_pct": 0.29
+      },
+      {
+        "video_id": "gZqtwecQehw",
+        "genre": "Documentary",
+        "language": "Spanish",
+        "title": "Domingo de Ramos (2018)",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "BqD0umu1mRA",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Ð§ÑÐ¾ Ð¿ÑÐ¾Ð¸Ð·Ð¾ÑÐ»Ð¾ Ð² ÐÑÐ¼ÐµÐ½Ð¸Ð¸ Ð¸ ÑÑÐ¾ Ð½ÑÐ¶Ð½Ð¾ Ð´ÐµÐ»Ð°ÑÑ Ð½",
+        "rating": 3,
+        "watch_pct": 0.47
+      },
+      {
+        "video_id": "4v_QYSrVHXM",
+        "genre": "Educational",
+        "language": "Spanish",
+        "title": "Especie evoluciona ante nuestros ojos | Noticias 4/12/2017",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "YSksKgBGoUI",
+        "genre": "Educational",
+        "language": "English",
+        "title": "SE FAIRE CRYOGENISER POUR VIVRE ETERNELLEMENT ? Vrai ou Faux #55",
+        "rating": 2,
+        "watch_pct": 0.21
+      },
+      {
+        "video_id": "ExjMqZYfXls",
+        "genre": "Educational",
+        "language": "Spanish",
+        "title": "MIRA COMO BAJARA EL PRECIO DE LA GASOLINA, Tiene Sentido!",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "VL5XfQQq99Y",
+        "genre": "Educational",
+        "language": "Spanish",
+        "title": "CuÃ¡nto resiste el BALON QUE NO SE PINCHA y QuÃ© Hay Dentro?",
+        "rating": 2,
+        "watch_pct": 0.2
+      }
+    ]
+  },
+  {
+    "user_id": "U18",
+    "name": "Lin",
+    "description": "Lin is a 22-year-old mathematics student from China studying in France. She watches math and physics tutorials, coding videos, and science explainers in English and French.",
+    "preferred_genres": {
+      "Educational": 0.7,
+      "Documentary": 0.2,
+      "News/Analysis": 0.1
+    },
+    "preferred_languages": [
+      "English",
+      "French"
+    ],
+    "interactions": [
+      {
+        "video_id": "CJRw18MtRPg",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Whats inside a Mexican Jumping Bean?",
+        "rating": 5,
+        "watch_pct": 0.54
+      },
+      {
+        "video_id": "fRj34o4hN4I",
+        "genre": "Educational",
+        "language": "French",
+        "title": "What's new, Atlas?",
+        "rating": 5,
+        "watch_pct": 0.74
+      },
+      {
+        "video_id": "m7Ege1M5Pag",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Cooking Steak with Molten Salt",
+        "rating": 5,
+        "watch_pct": 0.75
+      },
+      {
+        "video_id": "h9O-JH4DtiQ",
+        "genre": "Educational",
+        "language": "French",
+        "title": "Delta IV NROL-47 Live Launch Broadcast (Jan. 12, 2018)",
+        "rating": 5,
+        "watch_pct": 0.77
+      },
+      {
+        "video_id": "QnojPHHM5-4",
+        "genre": "Educational",
+        "language": "French",
+        "title": "Je retrouve mes Objets volÃ©s !",
+        "rating": 5,
+        "watch_pct": 0.86
+      },
+      {
+        "video_id": "qkNlfMC1lzE",
+        "genre": "Educational",
+        "language": "English",
+        "title": "iPhone Bendgate Was Real After All...",
+        "rating": 5,
+        "watch_pct": 0.65
+      },
+      {
+        "video_id": "IK2CXyLfS1w",
+        "genre": "Educational",
+        "language": "French",
+        "title": "ÃnantiosÃ©mie - digression #02",
+        "rating": 5,
+        "watch_pct": 0.77
+      },
+      {
+        "video_id": "w3WFJcC4XU0",
+        "genre": "Educational",
+        "language": "French",
+        "title": "5 ÃPÃES les plus FASCINANTES DE L'HISTOIRE",
+        "rating": 5,
+        "watch_pct": 0.7
+      },
+      {
+        "video_id": "32A8-QQIkns",
+        "genre": "Educational",
+        "language": "French",
+        "title": "Va-t-on devoir tous devenir Vegan ?",
+        "rating": 5,
+        "watch_pct": 0.62
+      },
+      {
+        "video_id": "VbbOoYR-5z4",
+        "genre": "Educational",
+        "language": "English",
+        "title": "A Couple Hide A Big Secret Behind This Garage Door Until The Authoriti",
+        "rating": 5,
+        "watch_pct": 0.91
+      },
+      {
+        "video_id": "Tk338VXcb24",
+        "genre": "Educational",
+        "language": "French",
+        "title": "Falcon Heavy Animation",
+        "rating": 5,
+        "watch_pct": 0.62
+      },
+      {
+        "video_id": "xe5tXZs-iWw",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Pressing Non-Newtonian Fluid Through Small Holes with Hydraulic Press ",
+        "rating": 5,
+        "watch_pct": 0.81
+      },
+      {
+        "video_id": "5_-NKRVn7IQ",
+        "genre": "Educational",
+        "language": "English",
+        "title": "Samsung Galaxy S9 and S9+: Official Introduction",
+        "rating": 5,
+        "watch_pct": 0.85
+      },
+      {
+        "video_id": "r-3iathMo7o",
+        "genre": "Educational",
+        "language": "English",
+        "title": "The ULTIMATE $30,000 Gaming PC Setup",
+        "rating": 5,
+        "watch_pct": 0.73
+      },
+      {
+        "video_id": "swubzlp8FLM",
+        "genre": "Educational",
+        "language": "French",
+        "title": "HACKER QUIZ ! feat. Micode",
+        "rating": 5,
+        "watch_pct": 0.96
+      },
+      {
+        "video_id": "mBoQL6OHeoU",
+        "genre": "Educational",
+        "language": "French",
+        "title": "Ø¨Ø§ÙØµÙØª Ø§Ø®Ø± ÙØ§ ÙØ§ÙÙ ÙØ§Ø¦Ø¯ Ø§ÙØ·Ø§Ø¦Ø±Ø© Ø§ÙØ¹Ø³ÙØ±ÙØ© Ø§ÙØ¬Ø",
+        "rating": 5,
+        "watch_pct": 0.74
+      },
+      {
+        "video_id": "O5GhCbhGWQ0",
+        "genre": "Educational",
+        "language": "English",
+        "title": "8 Kitchen Gadgets put to the Test - Part 24",
+        "rating": 5,
+        "watch_pct": 0.75
+      },
+      {
+        "video_id": "5cTzHSx8Gxo",
+        "genre": "Educational",
+        "language": "French",
+        "title": "CHRIS : 4 Illusions & Cie Pour Tromper Vos Yeux",
+        "rating": 5,
+        "watch_pct": 0.68
+      },
+      {
+        "video_id": "BbM6BByOotg",
+        "genre": "Educational",
+        "language": "French",
+        "title": "ÙØ·Ø¨Ø® Ø§Ù ÙÙÙØ¯ Ø§Ø¨Ø³Ø· Ù Ø§Ø³ÙÙ Ø·Ø±ÙÙØ© ÙØ¹ÙÙ ÙÙØ¨ Ø§ÙÙÙØ²",
+        "rating": 5,
+        "watch_pct": 0.68
+      },
+      {
+        "video_id": "pijvFtCXCKQ",
+        "genre": "Educational",
+        "language": "French",
+        "title": "Comment CrÃ©er un Philtre d'Amour du Moyen-Ãge (TUTO)",
+        "rating": 5,
+        "watch_pct": 0.97
+      },
+      {
+        "video_id": "cDZfh5IjGv8",
+        "genre": "Educational",
+        "language": "English",
+        "title": "NCIX Bankruptcy Auction - Day 2 FINALE",
+        "rating": 5,
+        "watch_pct": 0.54
+      },
+      {
+        "video_id": "WDEDJplU39Y",
+        "genre": "Educational",
+        "language": "French",
+        "title": "ÙØ·Ø§Ø¦Ø±Ø§ÙØ®Ø¨ÙØ²Ø§Øª ÙØØ´ÙØ© ÙÙÙØ·ÙØ± Ø¹ÙÙ Ø§ÙØ·Ø±ÙÙØ© Ø§ÙØªØ±ÙÙØ© ",
+        "rating": 5,
+        "watch_pct": 1.0
+      },
+      {
+        "video_id": "kgaO45SyaO4",
+        "genre": "Educational",
+        "language": "French",
+        "title": "The New SpotMini",
+        "rating": 5,
+        "watch_pct": 0.9
+      },
+      {
+        "video_id": "jQNazsWnQKU",
+        "genre": "Educational",
+        "language": "French",
+        "title": "Tyler, The Creator - OKRA",
+        "rating": 5,
+        "watch_pct": 0.63
+      },
+      {
+        "video_id": "aLSG3178eD4",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Tell Hollywood to stand with immigrants",
+        "rating": 2,
+        "watch_pct": 0.4
+      },
+      {
+        "video_id": "CYebJBcLZHA",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "In Disaster There is Opportunity - Finding a Path Through Paralysis | ",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "SEjg8wgGZl4",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "Chapelet du 7 dÃ©cembre 2017",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "qVi92t54nns",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "InHaiti | Le Grand Secret de la DÃ©livrance d' Haiti | 10 Janvier 2018",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "TaEXgTyBtsU",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "#LIGHT: Q Assures Dark Days Ending! #FS1649 FBI Slush Fund, Plus C60/L",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "Dk9uitzdGXQ",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "DNC LAWSUIT #AntiSchool #QAnon April 20 2018",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "kIu566N3lsw",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "Kisabac Lusamutner eter 02.04.18 Het Ari",
+        "rating": 2,
+        "watch_pct": 0.3
+      },
+      {
+        "video_id": "5JEI0sjJs8c",
+        "genre": "News/Analysis",
+        "language": "French",
+        "title": "Frances McDormand wins best actress at the 2018 Oscars",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "ogHVbf3dEyk",
+        "genre": "News/Analysis",
+        "language": "French",
+        "title": "Mamoudou Gassama, le sauveur de l'enfant suspendu Ã un balcon",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "p9gs0OKP7Jg",
+        "genre": "News/Analysis",
+        "language": "French",
+        "title": "Michael Avenatti: Two More Women Claim President Donald Trump's Hush D",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "V75pZsSMjYs",
+        "genre": "News/Analysis",
+        "language": "French",
+        "title": "Ø´Ø§ÙØ¯ ÙØ§ÙØ§ÙÙ Ø£Ø´ÙØ§Ø¦ÙØ§ Ø§ÙÙØµØ±ÙÙÙ Ø¹Ù ØªØ¹ÙÙÙ Ø§ÙØ¯Ø±ÙÙ Ø§ÙÙØº",
+        "rating": 2,
+        "watch_pct": 0.2
+      }
+    ]
+  },
+  {
+    "user_id": "U19",
+    "name": "Sara",
+    "description": "Sara is a 28-year-old music producer. She watches music videos across all genres and languages, music theory content, and artist documentaries. She has the broadest language preference of any user.",
+    "preferred_genres": {
+      "Music": 0.6,
+      "Documentary": 0.25,
+      "Educational": 0.15
+    },
+    "preferred_languages": [
+      "English",
+      "Spanish",
+      "French",
+      "Korean",
+      "Japanese"
+    ],
+    "interactions": [
+      {
+        "video_id": "hLf6yZPJyvM",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "BTS (ë°©íìëë¨) - Magic Shop (Color Coded Lyrics Han/Rom/Eng)",
+        "rating": 5,
+        "watch_pct": 0.61
+      },
+      {
+        "video_id": "rRzxEiBLQCA",
+        "genre": "Music",
+        "language": "English",
+        "title": "TWICE Heart Shaker M/V",
+        "rating": 5,
+        "watch_pct": 0.49
+      },
+      {
+        "video_id": "zCpJ9Irw4EQ",
+        "genre": "Music",
+        "language": "Japanese",
+        "title": "Thuá»³ Chi - MÃ¬nh CÃ¹ng Nhau ÄÃ³ng BÄng (Official M/V)",
+        "rating": 5,
+        "watch_pct": 0.43
+      },
+      {
+        "video_id": "J75enyWdbBM",
+        "genre": "Music",
+        "language": "English",
+        "title": "David Guetta & Sia - Flames (Official Video)",
+        "rating": 5,
+        "watch_pct": 0.49
+      },
+      {
+        "video_id": "VyqV-fRB3Yo",
+        "genre": "Music",
+        "language": "Japanese",
+        "title": "TWICE What is Love? M/V TEASER 5",
+        "rating": 4,
+        "watch_pct": 0.75
+      },
+      {
+        "video_id": "OK3GJ0WIQ8s",
+        "genre": "Music",
+        "language": "French",
+        "title": "j-hope 'Daydream (ë°±ì¼ëª½)' MV",
+        "rating": 5,
+        "watch_pct": 0.67
+      },
+      {
+        "video_id": "rsEne1ZiQrk",
+        "genre": "Music",
+        "language": "English",
+        "title": "The Weeknd - Call Out My Name (Official Audio)",
+        "rating": 4,
+        "watch_pct": 0.56
+      },
+      {
+        "video_id": "AE5PqQ_6V5Y",
+        "genre": "Music",
+        "language": "Spanish",
+        "title": "CNCO - Mi Medicina (Official Video)",
+        "rating": 5,
+        "watch_pct": 0.62
+      },
+      {
+        "video_id": "pDTOQdCgD00",
+        "genre": "Music",
+        "language": "Spanish",
+        "title": "CNCO - SÃ³lo Yo (Official Video)",
+        "rating": 5,
+        "watch_pct": 0.65
+      },
+      {
+        "video_id": "d1D1SJ-KqaQ",
+        "genre": "Music",
+        "language": "Japanese",
+        "title": "WINNER - â'EVERYDAYâ' M/V",
+        "rating": 5,
+        "watch_pct": 0.56
+      },
+      {
+        "video_id": "dDeewpPQOK0",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "[ê³ ë±ëí¼2 íëíì Part 3] ê¹íì¨ (HAON), ì´ë³ì¬ (Vinxen) - ë°ì½ë (Bar cod",
+        "rating": 5,
+        "watch_pct": 0.58
+      },
+      {
+        "video_id": "jcWmC1oa4KQ",
+        "genre": "Music",
+        "language": "French",
+        "title": "Veysel Mutlu - Vay DelikanlÄ± GÃ¶nlÃ¼m - (Official Video)",
+        "rating": 5,
+        "watch_pct": 0.71
+      },
+      {
+        "video_id": "TPDv9hgJ3ZI",
+        "genre": "Music",
+        "language": "Japanese",
+        "title": "Neo Culture Tech on my mind",
+        "rating": 4,
+        "watch_pct": 0.44
+      },
+      {
+        "video_id": "R-ceLUo4fgs",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "[EPISODE] BTS @2017 SBS ê°ìëì",
+        "rating": 4,
+        "watch_pct": 0.66
+      },
+      {
+        "video_id": "nQySbNGu4g0",
+        "genre": "Music",
+        "language": "English",
+        "title": "[CHOREOGRAPHY] BTS (ë°©íìëë¨) 'FAKE LOVE' Dance Practice",
+        "rating": 4,
+        "watch_pct": 0.34
+      },
+      {
+        "video_id": "elwTgpHlty0",
+        "genre": "Music",
+        "language": "English",
+        "title": "[OFFICIAL VIDEO] Havana - Pentatonix",
+        "rating": 5,
+        "watch_pct": 0.9
+      },
+      {
+        "video_id": "gh8HtJAdc_E",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "J.Fla Vlog ( 8 Million subscribers! )",
+        "rating": 5,
+        "watch_pct": 0.7
+      },
+      {
+        "video_id": "c9X4B0xK2Xs",
+        "genre": "Music",
+        "language": "Korean",
+        "title": "iKON - â'ìì²´ì ì iKON TVâ' EP.1-2",
+        "rating": 5,
+        "watch_pct": 0.59
+      },
+      {
+        "video_id": "acqy66AuwKI",
+        "genre": "Music",
+        "language": "Spanish",
+        "title": "Jorge, Monserrat y Juanse cantaron en la SÃºper Batalla de Yatra | La ",
+        "rating": 5,
+        "watch_pct": 0.57
+      },
+      {
+        "video_id": "5-WYE1oVBuQ",
+        "genre": "Music",
+        "language": "Japanese",
+        "title": "ãªã§ãªã§ -N.Edit-ï¼feat.ç½éªé¢¨ç(cv:ããã¬)",
+        "rating": 5,
+        "watch_pct": 0.64
+      },
+      {
+        "video_id": "H3h5BjUpUvo",
+        "genre": "Music",
+        "language": "Japanese",
+        "title": "CHáº Y NGAY ÄI | SÆ N TÃNG M-TP - Official Trailer",
+        "rating": 4,
+        "watch_pct": 0.72
+      },
+      {
+        "video_id": "oWjxSkJpxFU",
+        "genre": "Documentary",
+        "language": "Spanish",
+        "title": "Suicide: Be Here Tomorrow.",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "Y3PmqW8ZSiE",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "Chapelet du 27 dÃ©cembre 2017",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "oKd5ZtYBAWM",
+        "genre": "Documentary",
+        "language": "Spanish",
+        "title": "Mi Estilo Tu Estilo Latinoamerica CELINA y PAULA Mellizas",
+        "rating": 2,
+        "watch_pct": 0.25
+      },
+      {
+        "video_id": "eIns8Y0xegE",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "Unrigged Live! with Jennifer Lawrence, Tig Notaro, Richard Painter, an",
+        "rating": 3,
+        "watch_pct": 0.31
+      },
+      {
+        "video_id": "mt22NvsTRG0",
+        "genre": "Documentary",
+        "language": "English",
+        "title": "The Obama Presidential Center: Where We Are Now",
+        "rating": 2,
+        "watch_pct": 0.35
+      },
+      {
+        "video_id": "yOcVgSDYtpE",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "Direct du 3 Avril 2018 depuis Medjugorje",
+        "rating": 3,
+        "watch_pct": 0.32
+      },
+      {
+        "video_id": "VX1geS-D3oU",
+        "genre": "Documentary",
+        "language": "Spanish",
+        "title": "Que hacer ante la MILITARIZACIÃN DE MÃXICO- Gilberto Lozano",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "MvZRHnWgQOU",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "Chapelet du 26 novembre 2017",
+        "rating": 2,
+        "watch_pct": 0.21
+      },
+      {
+        "video_id": "ssLc5Vnos-A",
+        "genre": "Documentary",
+        "language": "French",
+        "title": "Chapelet du 15 novembre 2017",
+        "rating": 2,
+        "watch_pct": 0.23
+      },
+      {
+        "video_id": "kF1_qecmP4Y",
+        "genre": "Educational",
+        "language": "French",
+        "title": "Et tout le monde s'en fout #17 - Le pouvoir -",
+        "rating": 2,
+        "watch_pct": 0.21
+      },
+      {
+        "video_id": "DENH5my-Big",
+        "genre": "Educational",
+        "language": "English",
+        "title": "LES ANIMAUX PEUVENT PARLER NOTRE LANGUE ? Vrai ou Faux #58",
+        "rating": 2,
+        "watch_pct": 0.21
+      },
+      {
+        "video_id": "pSRvA_tyQak",
+        "genre": "Educational",
+        "language": "Spanish",
+        "title": "6 Snowball Gadgets put to the Test",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "k48yLc6NZ-4",
+        "genre": "Educational",
+        "language": "Spanish",
+        "title": "La PirÃ¡mide Negra Desaparecida",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "YDliobzEsL4",
+        "genre": "Educational",
+        "language": "Spanish",
+        "title": "Â¿Se borroÌ el VIDEO original del alunizaje?",
+        "rating": 2,
+        "watch_pct": 0.22
+      }
+    ]
+  },
+  {
+    "user_id": "U20",
+    "name": "Tom",
+    "description": "Tom is a 19-year-old casual viewer with no strong preferences. He watches whatever is trending — entertainment clips, gaming highlights, and popular music. He is a pure engagement-driven user.",
+    "preferred_genres": {
+      "Entertainment": 0.5,
+      "Gaming": 0.3,
+      "Music": 0.2
+    },
+    "preferred_languages": [
+      "English"
+    ],
+    "interactions": [
+      {
+        "video_id": "JwAnH6PLimo",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "Young Thug - Anybody (ft. Nicki Minaj) [Official Sign Video]",
+        "rating": 5,
+        "watch_pct": 0.65
+      },
+      {
+        "video_id": "gR0pSSISaVk",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "Ronda Rousey helps Natalya fend off Absolution: Raw, April 16, 2018",
+        "rating": 4,
+        "watch_pct": 0.68
+      },
+      {
+        "video_id": "xZNBFcwd7zc",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "Deadpool, Meet Cable",
+        "rating": 4,
+        "watch_pct": 0.46
+      },
+      {
+        "video_id": "Q3jege0p0dQ",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "Marc Spelmann gets the first Golden Buzzer of 2018 | Auditions Week 1 ",
+        "rating": 4,
+        "watch_pct": 0.46
+      },
+      {
+        "video_id": "g2orJgNOpnU",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "BB Ki Vines- | Alvida Dost |",
+        "rating": 4,
+        "watch_pct": 0.52
+      },
+      {
+        "video_id": "dzxFdtWmjto",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "VENOM - Official Teaser Trailer (HD)",
+        "rating": 4,
+        "watch_pct": 0.5
+      },
+      {
+        "video_id": "KM38OFDKU20",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "Do you hear Yanny or Laurel?",
+        "rating": 4,
+        "watch_pct": 0.64
+      },
+      {
+        "video_id": "9m9oO84Q2fk",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "Giant Darts Battle | Dude Perfect",
+        "rating": 5,
+        "watch_pct": 0.32
+      },
+      {
+        "video_id": "Wh1L0rOaa88",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "March Madness Stereotypes",
+        "rating": 2,
+        "watch_pct": 0.61
+      },
+      {
+        "video_id": "nFmSepfF48o",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "LOGAN PAUL",
+        "rating": 3,
+        "watch_pct": 0.47
+      },
+      {
+        "video_id": "Hk5dxn5dj2M",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "Deep Sea Fishing Battle | Dude Perfect",
+        "rating": 3,
+        "watch_pct": 0.28
+      },
+      {
+        "video_id": "1J76wN0TPI4",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "Sanju | Official Trailer | Ranbir Kapoor | Rajkumar Hirani | Releasing",
+        "rating": 4,
+        "watch_pct": 0.59
+      },
+      {
+        "video_id": "xCwwxNbtK6Y",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "Official Cobra Kai Trailer - The Karate Kid saga continues",
+        "rating": 4,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "P3BMmJtbZUs",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "BHAD BHABIE feat. Lil Yachty - Gucci Flip Flops (Official Audio)",
+        "rating": 4,
+        "watch_pct": 0.55
+      },
+      {
+        "video_id": "v0RrsWK4GlY",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "THE DAY I SHOULD HAVE DIED... (Skydiving Accident)",
+        "rating": 3,
+        "watch_pct": 0.52
+      },
+      {
+        "video_id": "cSp1dM2Vj48",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "READY PLAYER ONE - Official Trailer 1 [HD]",
+        "rating": 4,
+        "watch_pct": 0.57
+      },
+      {
+        "video_id": "tJfDBSWYqU8",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "Robin Hood (2018 Movie) Teaser Trailer â- Taron Egerton, Jamie Foxx, J",
+        "rating": 4,
+        "watch_pct": 0.38
+      },
+      {
+        "video_id": "sXP6vliZIHI",
+        "genre": "Entertainment",
+        "language": "English",
+        "title": "Cardi B - Bartier Cardi (feat. 21 Savage) [Official Audio]",
+        "rating": 5,
+        "watch_pct": 0.48
+      },
+      {
+        "video_id": "Y99Wj-NStok",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Choco Mountain: The History of Mario Kart 64's Most Infamous Track",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "BtvRaMPJWLs",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Super Smash Bros - Trailer Analysis",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "RKyB6gqBMZM",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "HIT WITH A ROCKET IN MID AIR! - Fortnite Funny Fails and WTF Moments! ",
+        "rating": 2,
+        "watch_pct": 0.51
+      },
+      {
+        "video_id": "Jo-WKWlcPQ0",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "VISITING MY OLD SCHOOL AS SANTA CLAUS! (SURPRISING FANS IN CLASS)",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "234Y76_3YPE",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "World's Most Infamous Donkey Kong Player Caught Cheating!",
+        "rating": 3,
+        "watch_pct": 0.27
+      },
+      {
+        "video_id": "lHYWDkpT8cw",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "MY INSANE $30,000 HOTEL ROOM!! (BOWLING ALLEY IN THE ROOM)",
+        "rating": 2,
+        "watch_pct": 0.42
+      },
+      {
+        "video_id": "a_u7g5BlfiY",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "Nintendo Direct Mini 1.11.2018",
+        "rating": 2,
+        "watch_pct": 0.52
+      },
+      {
+        "video_id": "OB6_vByiBjo",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "SLOGOMAN REACTS TO GO GET GONE - KWEBBELKOP & SLOGOMAN DISS TRACK",
+        "rating": 3,
+        "watch_pct": 0.24
+      },
+      {
+        "video_id": "FQsrTuzahpI",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "THE SIMULACRA! | Simulacra - Part 5 (END)",
+        "rating": 4,
+        "watch_pct": 0.23
+      },
+      {
+        "video_id": "T4sDURQsUTI",
+        "genre": "Gaming",
+        "language": "English",
+        "title": "You guys get to FINALLY meet her.. (SPECIAL ANNOUNCEMENT)",
+        "rating": 3,
+        "watch_pct": 0.34
+      },
+      {
+        "video_id": "xmU0s2QtaEY",
+        "genre": "Music",
+        "language": "English",
+        "title": "Swag Se Swagat Song | Tiger Zinda Hai | Salman Khan | Katrina Kaif",
+        "rating": 2,
+        "watch_pct": 0.39
+      },
+      {
+        "video_id": "i3cN9elJWvk",
+        "genre": "Music",
+        "language": "English",
+        "title": "Play-N-Skillz - Cuidao (Official Video) ft. Yandel, Messiah",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "xYtsL9znopI",
+        "genre": "Music",
+        "language": "English",
+        "title": "Khalid & Normani - Love Lies (Official Video)",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "g4HDfqEWf6Y",
+        "genre": "Music",
+        "language": "English",
+        "title": "Oh Humsafar Song | Neha Kakkar Himansh Kohli | Tony Kakkar | Bhushan K",
+        "rating": 3,
+        "watch_pct": 0.22
+      },
+      {
+        "video_id": "DMl1YJyqEdo",
+        "genre": "Music",
+        "language": "English",
+        "title": "Shada (Full Video) | Parmish Verma | Desi Crew | Latest Punjabi Song 2",
+        "rating": 2,
+        "watch_pct": 0.22
+      },
+      {
+        "video_id": "S0nbOenwCLw",
+        "genre": "Music",
+        "language": "English",
+        "title": "Kodak Black - Roll In Peace feat. XXXTentacion [Official Music Video]",
+        "rating": 2,
+        "watch_pct": 0.2
+      },
+      {
+        "video_id": "64UX1npgRkI",
+        "genre": "Music",
+        "language": "English",
+        "title": "Sanju: Kar Har Maidaan Fateh | Ranbir Kapoor | Rajkumar Hirani | Sukhw",
+        "rating": 2,
+        "watch_pct": 0.2
+      }
+    ]
+  }
+]

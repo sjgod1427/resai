@@ -1,54 +1,332 @@
-# Responsible AI — Content-Type & Language Bias in Recommender Systems
+# Bias-Aware Video Recommender
 
-A full research pipeline that **injects**, **measures**, and **mitigates** algorithmic bias in a YouTube-style video recommender system. Built as a Responsible AI study to demonstrate how engagement-optimised platforms systematically suppress Educational, Documentary, Regional, and non-English content.
+A Responsible AI demo that **injects**, **detects**, and **corrects** algorithmic bias in a YouTube-style video recommender. Built on real YouTube trending data, a two-tower neural retrieval model, and an agentic LLM supervisor.
 
 ---
 
 ## Table of Contents
 
 1. [Overview](#overview)
-2. [Motivation & Research Question](#motivation--research-question)
-3. [Project Structure](#project-structure)
-4. [Pipeline Architecture](#pipeline-architecture)
-5. [Data Generation](#data-generation)
-6. [Recommender Systems](#recommender-systems)
-   - [BiasedRecommender](#biasedrecommender)
-   - [FairRecommender](#fairrecommender)
-7. [Bias Metrics](#bias-metrics)
-8. [Visualisations](#visualisations)
-9. [Gradio Web Interface](#gradio-web-interface)
-10. [Results Summary](#results-summary)
-11. [Installation & Usage](#installation--usage)
-12. [References](#references)
+2. [Motivation](#motivation)
+3. [System Architecture](#system-architecture)
+4. [Data Pipeline](#data-pipeline)
+5. [Two-Tower Recommender](#two-tower-recommender)
+6. [Agentic LLM Supervisor](#agentic-llm-supervisor)
+7. [User Personas](#user-personas)
+8. [Project Structure](#project-structure)
+9. [Installation & Usage](#installation--usage)
+10. [References](#references)
 
 ---
 
 ## Overview
 
-This project simulates the algorithmic pipeline of a large video platform and studies two variants of the same collaborative filtering model:
-
-| Model | Description |
+| Component | Description |
 |---|---|
-| **BiasedRecommender** | SVD-based CF with score suppression on Educational, Documentary, DIY, News/Analysis, Regional, and non-English content — mimicking real engagement-maximising systems |
-| **FairRecommender** | Same SVD base, but with a fairness-aware greedy re-ranking layer that enforces minimum representation quotas |
-
-Both models are evaluated against six quantitative fairness metrics and the differences are visualised across six chart types. A four-tab Gradio web app makes every step of the pipeline interactive.
+| **Dataset** | Real YouTube trending videos from 10 countries (~13K unique videos, 8 genres, 8 languages) |
+| **Biased Recommender** | Two-tower similarity model with realistic platform engagement bias |
+| **LLM Supervisor** | LangChain agentic loop (Groq `openai/gpt-oss-120b`) that detects bias and builds a corrected 10-video feed using 5 retrieval tools |
+| **UI** | Gradio web app — select one of 20 user personas, run test, compare biased vs corrected feed side-by-side |
 
 ---
 
-## Motivation & Research Question
+## Motivation
 
 > *"If a platform recommends what users click on, and users click on what they've been shown, who decides what gets shown first?"*
 
-Recommendation algorithms on platforms like YouTube optimise for engagement signals (clicks, watch time, likes). A side effect — well-documented in academic literature — is that content with high initial engagement (Entertainment, Music, Gaming) gets amplified, while content that is slower to attract clicks despite genuine user interest (Educational, Documentary, Regional-language) gets progressively de-ranked.
+Real platforms like YouTube optimise for engagement signals (clicks, watch time, likes). A documented side effect is that high-click content (Entertainment, Gaming, Music) gets amplified while slower-consumption content (Educational, Documentary, Regional-language) gets progressively de-ranked — not through explicit suppression, but through the compounding weight of engagement metrics.
 
-This creates a feedback loop:
-1. Suppressed content gets fewer impressions
-2. Fewer impressions → fewer clicks → lower engagement score
-3. Lower engagement score → even fewer recommendations
-4. Creators of suppressed content earn less → produce less
+This project makes that mechanism **explicit, measurable, and correctable**.
 
-This project makes that mechanism **explicit and measurable**.
+**Suppressed categories** (defined throughout the system):
+`Educational`, `Documentary`, `DIY`, `News/Analysis`, `Regional`
+
+---
+
+## System Architecture
+
+```
+                        ┌──────────────────────────────────┐
+                        │         Real YouTube Data         │
+                        │  10 countries · 8 genres          │
+                        │  8 languages · ~13K unique videos  │
+                        └────────────┬─────────────────────┘
+                                     │ dataset_builder.py
+                                     ▼
+                        ┌──────────────────────────────────┐
+                        │  master_dataset.csv              │
+                        │  + embeddings.npy                │
+                        │  (SentenceTransformer all-MiniLM) │
+                        └────────────┬─────────────────────┘
+                                     │
+              ┌──────────────────────┴────────────────────────┐
+              │                                               │
+              ▼                                               ▼
+ ┌─────────────────────────┐               ┌──────────────────────────────┐
+ │  20 User Personas        │               │  LLMSupervisor (app startup)  │
+ │  (users.json)            │               │  Deduplicates master_df       │
+ │  Each with watch history │               │  Aligns embeddings 1-to-1    │
+ └──────────┬──────────────┘               └──────────────┬───────────────┘
+            │                                              │
+            ▼                                              │
+ ┌──────────────────────────────────────────┐             │
+ │        get_biased_recs()  [app.py]        │             │
+ │                                           │             │
+ │  USER TOWER                               │             │
+ │  Rating-weighted avg of watched-video     │             │
+ │  embeddings → user_vec (384-dim)          │             │
+ │                                           │             │
+ │  ITEM TOWER                               │             │
+ │  Pre-computed embeddings.npy              │             │
+ │                                           │             │
+ │  SCORE                                    │             │
+ │  (0.38 × cosine_sim                       │             │
+ │   + 0.62 × virality_score)                │             │
+ │  × genre_engagement_mult  [0.61 – 1.00]   │             │
+ │  × language_mult  [0.78 English/non-Eng]  │             │
+ │                                           │             │
+ │  → Biased top-10                          │             │
+ └──────────────────┬───────────────────────┘             │
+                    │                                      │
+                    └─────────────────┬────────────────────┘
+                                      │
+                                      ▼
+                    ┌─────────────────────────────────────┐
+                    │      LLMSupervisor.fix()             │
+                    │                                     │
+                    │  ┌──────────────────────────────┐   │
+                    │  │  Step 1 — Judge              │   │
+                    │  │  Structured LLM call         │   │
+                    │  │  → BiasAssessment schema     │   │
+                    │  │    is_biased: bool           │   │
+                    │  │    genres_missing: [...]     │   │
+                    │  │    tier1/2/3/4 slot counts   │   │
+                    │  └──────────────┬───────────────┘   │
+                    │                 │ if biased          │
+                    │  ┌──────────────▼───────────────┐   │
+                    │  │  Step 2 — Agentic Correction │   │
+                    │  │                              │   │
+                    │  │  AGENT (gpt-oss-120b)        │   │
+                    │  │  + 5 tools:                  │   │
+                    │  │                              │   │
+                    │  │  search_similar_trending()   │   │
+                    │  │  ↳ Two-tower cosine sim      │   │
+                    │  │    in target genres          │   │
+                    │  │                              │   │
+                    │  │  search_by_genre()           │   │
+                    │  │  ↳ Top-viral within genre    │   │
+                    │  │                              │   │
+                    │  │  search_diverse()            │   │
+                    │  │  ↳ Outside user's bubble     │   │
+                    │  │                              │   │
+                    │  │  search_viral()              │   │
+                    │  │  ↳ Globally top-viral        │   │
+                    │  │                              │   │
+                    │  │  submit_final_list()  ←──────┼───┼── server-side
+                    │  │  ↳ Validates & locks 10 IDs  │   │   enforcement
+                    │  │    Rejects if < 10 valid IDs │   │
+                    │  └──────────────────────────────┘   │
+                    └─────────────────┬───────────────────┘
+                                      │
+                                      ▼
+                         Corrected top-10 (always exactly 10)
+                         ≥ 2 suppressed-category videos
+                         ≥ 2 non-English videos
+```
+
+---
+
+## Data Pipeline
+
+### Source Data
+
+Real YouTube trending video CSVs from **10 countries** via the `datasnaek/youtube-new` Kaggle dataset.
+
+| Country | Language |
+|---|---|
+| US, CA, GB | English |
+| IN | Hindi |
+| MX | Spanish |
+| FR | French |
+| DE | German |
+| JP | Japanese |
+| KR | Korean |
+| RU | Russian |
+
+### Processing (`dataset_builder.py`)
+
+1. Load all 10 country CSVs; keep peak-views row per video per country
+2. Deduplicate English countries globally (same video_id = same video)
+3. **Global dedup** across all countries — same video_id keeps highest-views row
+4. Map YouTube `category_id` → 8 project genres
+5. Non-English videos in lifestyle/vlog categories → `Regional`
+6. **Stratified cap**: top-300 videos per `(genre, language)` bucket → ~13K unique videos
+7. Compute virality score: `0.5 × views_n + 0.3 × likes_n + 0.2 × engagement_rate_n`
+8. Compute SentenceTransformer embeddings (`all-MiniLM-L6-v2`, 384-dim) on `title [genre] [language]`
+
+**Output:** `data/master_dataset.csv` + `data/embeddings.npy`
+
+### Genre Mapping
+
+| YouTube Category IDs | Project Genre | Suppressed? |
+|---|---|---|
+| 27, 28 | Educational | Yes |
+| 25 | News/Analysis | Yes |
+| 29, 35 | Documentary | Yes |
+| 26 | DIY | Yes |
+| 10 | Music | No |
+| 20 | Gaming | No |
+| 1, 2, 15, 17, 19, 21, 22, 23, 24 | Entertainment | No |
+| Non-English lifestyle categories | Regional | Yes |
+
+### Embeddings
+
+Each video's embedding is computed from `"{title} [{genre}] [{language}]"` using `all-MiniLM-L6-v2`. Embeddings are aligned row-by-row with `master_dataset.csv` and stored as a `(N, 384)` float32 numpy array.
+
+---
+
+## Two-Tower Recommender
+
+### Why Two-Tower?
+
+A two-tower architecture separates user and item representations into independent embedding spaces, then retrieves items by similarity. This produces **meaningful content-based matches** — the bias that emerges is structural (engagement weighting) rather than fabricated.
+
+### User Tower
+
+Built at query time from the user's watch history:
+
+```
+user_vec = Σᵢ (rating_i / Σ ratings) × embedding(watched_video_i)
+user_vec = user_vec / ‖user_vec‖₂
+```
+
+- Weights each watched video's embedding by the user's rating (1–5)
+- L2-normalised to unit sphere — compatible with cosine similarity
+- No separate user model to train; the tower is zero-shot from interaction history
+
+### Item Tower
+
+Pre-computed `embeddings.npy` — `SentenceTransformer` vectors computed once at build time.
+
+### Scoring (Biased Recommender)
+
+```
+score = (0.38 × cosine_sim(user_vec, item_vec)
+         + 0.62 × virality_score)
+        × genre_engagement_mult
+        × language_mult
+```
+
+**Genre engagement multipliers** (real platform signal proxies):
+
+| Genre | Multiplier | Effect |
+|---|---|---|
+| Entertainment | 1.00 | Baseline |
+| Music | 0.93 | −7% |
+| Gaming | 0.87 | −13% |
+| DIY | 0.76 | −24% |
+| News/Analysis | 0.72 | −28% |
+| Educational | 0.68 | −32% |
+| Documentary | 0.64 | −36% |
+| Regional | 0.61 | −39% |
+
+**Language multiplier:** non-English = `0.78` (−22%)
+
+The bias is proportionate and realistic: a user who loves documentaries still sees 1–2 documentaries (relevance pushes them up), but entertainment and viral content systematically edge past them because the platform weights its engagement signal at 62%.
+
+---
+
+## Agentic LLM Supervisor
+
+### Step 1 — Judge
+
+A structured LLM call using `with_structured_output(BiasAssessment)`:
+
+```python
+class BiasAssessment(BaseModel):
+    is_biased: bool
+    reasoning: str
+    genres_over_represented: List[str]
+    genres_missing: List[str]
+    tier1_slots: int   # similarity + trending
+    tier2_slots: int   # genre retrieval fallback
+    tier3_slots: int   # diversity outside bubble
+    tier4_slots: int   # global viral fill
+```
+
+Bias is flagged if the feed:
+- Suppresses genres that dominate the user's watch history
+- Has fewer than 2 suppressed-category videos
+- Has fewer than 2 non-English videos (when user prefers non-English)
+
+### Step 2 — Agentic Correction
+
+A LangChain tool-calling agent (`create_agent`) is initialised with 5 tools and a system prompt encoding the hard fairness constraints. The agent iteratively calls search tools and must satisfy `submit_final_list` before it can finish.
+
+#### Tools
+
+| Tool | Tier | Description |
+|---|---|---|
+| `search_similar_trending` | T1 | Two-tower cosine similarity to user history in target genres, scored by `0.65 × sim + 0.35 × virality` |
+| `search_by_genre` | T2 | Top-viral videos from specified genres, language-filtered to user's preferences |
+| `search_diverse` | T3 | Videos from genres outside the user's normal bubble (one per unseen genre) |
+| `search_viral` | T4 | Globally top-viral videos regardless of genre or language |
+| `submit_final_list` | — | Validates and locks in the final 10 IDs — **server-side enforcement** |
+
+#### `submit_final_list` Enforcement
+
+```python
+# Inside submit_final_list tool:
+if len(unique_valid) < 10:
+    return f"REJECTED: only {len(unique_valid)} unique valid IDs. "
+           f"Call search tools to get {10 - len(unique_valid)} more, then resubmit."
+```
+
+The agent physically cannot finish with fewer than 10 valid IDs. It loops until it satisfies the constraint or exhausts the context.
+
+#### Hard Constraints (encoded in system prompt)
+
+- Exactly 10 videos
+- ≥ 2 from suppressed categories
+- ≥ 2 non-English videos
+- No single genre > 5 slots
+- Tool priority: T1 → T2 → T3 → T4
+
+### Model & Fallback
+
+| Model | Use |
+|---|---|
+| `openai/gpt-oss-120b` | Primary |
+| `openai/gpt-oss-20b` | Auto-fallback on 429 rate limit |
+
+---
+
+## User Personas
+
+20 fixed personas covering diverse demographics, languages, and genre preferences. Each has ~35 pre-sampled interaction histories from real YouTube videos matching their profile.
+
+| ID | Name | Primary Genres | Languages |
+|---|---|---|---|
+| U01 | Priya | DIY, Documentary | English, Hindi |
+| U02 | Raj | Educational, News/Analysis | English |
+| U03 | Maria | Regional, Music | Spanish |
+| U04 | Ahmed | News/Analysis, Documentary | English |
+| U05 | Yuki | Gaming, Music, Regional | Japanese, Korean |
+| U06 | Emma | DIY, Educational | English |
+| U07 | Carlos | Music, Documentary | Spanish, English |
+| U08 | Fatima | Documentary, Educational | French, English |
+| U09 | James | Entertainment, Gaming | English |
+| U10 | Ananya | Regional, Music | Hindi |
+| U11 | Lukas | Regional, Educational | German |
+| U12 | Sophie | Educational, Documentary | French, English |
+| U13 | Marcus | Gaming | English |
+| U14 | Kenji | Music, Regional | Korean |
+| U15 | Amara | Documentary, Educational | English |
+| U16 | Ivan | News/Analysis, Regional | Russian |
+| U17 | David | News/Analysis, Documentary | English, French, Spanish |
+| U18 | Lin | Educational, Documentary | English, French |
+| U19 | Sara | Music, Documentary | English, Spanish, French, Korean, Japanese |
+| U20 | Tom | Entertainment, Gaming | English |
 
 ---
 
@@ -57,283 +335,18 @@ This project makes that mechanism **explicit and measurable**.
 ```
 bias_recommender/
 │
-├── data_generator.py     # Synthetic data: videos, users, interactions
-├── recommender.py        # BiasedRecommender & FairRecommender (SVD CF)
-├── bias_metrics.py       # Six quantitative fairness metrics
-├── visualize.py          # Six matplotlib plots (CLI output)
-├── main.py               # Full CLI pipeline runner
-├── app.py                # Interactive Gradio web app (4 tabs)
-├── requirements.txt      # Python dependencies
+├── app.py                  # Gradio UI + two-tower biased recommender
+├── llm_supervisor.py       # LangChain agentic supervisor (judge + correction)
+├── dataset_builder.py      # Kaggle → master_dataset.csv + embeddings.npy
+├── user_profiles.py        # 20 personas → data/users.json
+├── compute_embeddings.py   # Standalone embedding recomputation script
+├── requirements.txt
 │
-└── data/                 # Auto-generated CSVs (created on first run)
-    ├── creators.csv
-    ├── videos.csv
-    ├── users.csv
-    └── interactions.csv
+└── data/                   # Auto-generated on first run
+    ├── master_dataset.csv  # ~13K deduplicated videos with virality scores
+    ├── embeddings.npy      # (N, 384) float32 sentence-transformer vectors
+    └── users.json          # 20 user profiles with interaction histories
 ```
-
-Plots are saved to `../plots/bias_study/` relative to the module when running `main.py`.
-
----
-
-## Pipeline Architecture
-
-```
-┌─────────────────┐     ┌──────────────────┐     ┌───────────────────────┐
-│  Synthetic Data  │────▶│  SVD CF Training  │────▶│  BiasedRecommender    │
-│  500 videos      │     │  (k=40 factors)   │     │  Suppression x0.30–   │
-│  200 users       │     │  Truncated SVD    │     │  x0.50 per category   │──▶ Biased top-10
-│  ~7K interactions│     │  on rating matrix │     │  x0.40 non-English    │
-└─────────────────┘     └──────────────────┘     └───────────────────────┘
-                                  │
-                                  └──────────────▶ ┌───────────────────────┐
-                                                   │  FairRecommender      │
-                                                   │  Raw CF scores only   │
-                                                   │  + Quota re-ranking   │──▶ Fair top-10
-                                                   │  (FA*IR-inspired)     │
-                                                   └───────────────────────┘
-                                                              │
-                                              ┌───────────────▼───────────────┐
-                                              │   Bias Audit (6 metrics)      │
-                                              │   + 6 Visualisation Charts    │
-                                              └───────────────────────────────┘
-```
-
----
-
-## Data Generation
-
-`data_generator.py` produces a fully synthetic but realistic YouTube-like dataset. All random seeds are fixed (`numpy.random.seed(42)`) for reproducibility.
-
-### Video Library (500 videos)
-
-| Category | Library Share | Suppressed? |
-|---|---|---|
-| Educational | 20% | Yes |
-| Entertainment | 15% | No (Boosted) |
-| Music | 15% | No (Boosted) |
-| Gaming | 13% | No (Boosted) |
-| Regional | 12.5% | Yes |
-| Documentary | 11% | Yes |
-| DIY | 8% | Yes |
-| News/Analysis | 4% | Yes |
-
-**65.5% of the video library is from suppressed categories.**
-
-Each video carries: `video_id`, `title`, `category`, `language`, `creator_id`, `creator_size`, `views`, `likes`, `engagement_rate`, `avg_watch_pct`, `is_suppressed`, `is_english`.
-
-### Language Distribution
-
-Seven languages are represented with realistic per-category distributions:
-
-| Language | Library Share |
-|---|---|
-| English | ~47% |
-| Spanish | ~13% |
-| Hindi | ~13% |
-| Arabic | ~9% |
-| French | ~9% |
-| Portuguese | ~5% |
-| Korean | ~4% |
-
-Regional-category videos are weighted heavily toward non-English; Educational and Documentary videos have substantial non-English shares too.
-
-### Users (200 users)
-
-Six user profile types, each with a preference distribution over categories:
-
-| Profile | Primary Interest |
-|---|---|
-| `student` | Educational 35%, Gaming 25%, Entertainment 20% |
-| `professional` | News/Analysis 25%, Educational 25%, Documentary 20% |
-| `casual` | Entertainment 40%, Music 25%, Gaming 20% |
-| `regional` | Regional 40%, Music 20%, Entertainment 15% |
-| `creative` | DIY 30%, Documentary 20%, Educational 20% |
-| `news_junkie` | News/Analysis 40%, Documentary 25%, Regional 15% |
-
-### Interactions (~7,000 rows)
-
-Each interaction is sampled using the user's profile preference distribution to pick a category, then a random video from that category. Ratings (1–5) are scaled from preference strength plus Gaussian noise. Watch percentage is drawn from a Beta distribution, with Educational and Documentary content having higher completion rates.
-
----
-
-## Recommender Systems
-
-Both recommenders share the same `SVDCollaborativeFilter` base.
-
-### Base Model: SVD Collaborative Filtering
-
-1. Builds a sparse user-item rating matrix (200 × 500)
-2. Mean-centres each user's ratings
-3. Applies truncated SVD with `k=40` latent factors (`scipy.sparse.linalg.svds`)
-4. Reconstructs a dense predicted-score matrix: `U × Σ × Vᵀ + global_mean`
-
-The reconstructed matrix gives a score for every (user, video) pair, including unobserved ones.
-
----
-
-### BiasedRecommender
-
-After computing raw CF scores, a **score multiplier** is applied per video before ranking:
-
-**Suppression multipliers (applied to CF score):**
-
-| Category | Multiplier | Effect |
-|---|---|---|
-| Regional | ×0.30 | −70% score |
-| Educational | ×0.35 | −65% score |
-| News/Analysis | ×0.40 | −60% score |
-| Documentary | ×0.45 | −55% score |
-| DIY | ×0.50 | −50% score |
-
-**Boost multipliers:**
-
-| Category | Multiplier | Effect |
-|---|---|---|
-| Entertainment | ×1.40 | +40% score |
-| Music | ×1.30 | +30% score |
-| Gaming | ×1.20 | +20% score |
-
-**Non-English penalty:** ×0.40 stacked on top of any category multiplier.
-
-A non-English Educational video therefore receives: `score × 0.35 × 0.40 = score × 0.14` — an **86% score reduction**.
-
----
-
-### FairRecommender
-
-Uses the same SVD base but applies **no suppression**. Instead, it re-ranks candidates using a greedy quota algorithm:
-
-**Step 1 — Score all videos** with raw CF scores (no multipliers).
-
-**Step 2 — Build a candidate pool** of the top `3 × N` videos by raw score.
-
-**Step 3 — Fill quota slots first:**
-
-| Group | Minimum share of top-10 |
-|---|---|
-| Educational | ≥ 15% (≥ 2 slots) |
-| Regional | ≥ 10% (≥ 1 slot) |
-| DIY | ≥ 8% (≥ 1 slot) |
-| Documentary | ≥ 8% (≥ 1 slot) |
-| News/Analysis | ≥ 5% (≥ 1 slot) |
-| Non-English | ≥ 25% (≥ 3 slots) |
-
-Within each quota group, videos are selected in descending raw-score order (highest-quality first).
-
-**Step 4 — Fill remaining slots** with the highest-scored remaining candidates regardless of category.
-
-This is a greedy proportional quota approach inspired by the **FA\*IR algorithm** (Zehlike et al., 2017). It guarantees minimum representation without fully sacrificing relevance — quota slots are filled by the best-scored video of each required type.
-
----
-
-## Bias Metrics
-
-`bias_metrics.py` implements six fairness metrics.
-
-### 1. Exposure Ratio
-Percentage of total recommendation slots occupied by each category or language group.
-
-### 2. Representation Gap
-For each group: `gap = exposure_% − library_%`
-- Positive → over-represented vs the library
-- Negative → under-represented (suppressed)
-
-### 3. Demographic Parity Gap
-`|P(rec = Educational) − P(rec = Entertainment)|`
-Ranges from 0 (perfect parity) to 1 (total disparity). Measures inequality between the most-suppressed and most-boosted categories.
-
-### 4. Gini Coefficient
-Inequality of the exposure distribution across all categories, computed via the Lorenz curve formula.
-
-| Range | Interpretation |
-|---|---|
-| < 0.10 | Very fair |
-| 0.10 – 0.25 | Mild inequality |
-| 0.25 – 0.40 | Moderate inequality |
-| > 0.40 | Severe bias |
-
-### 5. Language Diversity Score
-Normalised Shannon entropy of the language distribution in recommendations:
-
-```
-H = -Σ pᵢ · log₂(pᵢ)
-score = H / log₂(n_languages)
-```
-
-1.0 = maximum diversity across all languages; 0.0 = all content in a single language.
-
-### 6. Intra-List Diversity
-Average number of **unique categories** per user's top-10 recommendation list. Higher values indicate the system exposes users to a wider range of content types.
-
----
-
-## Visualisations
-
-`visualize.py` generates six charts saved to `plots/bias_study/`:
-
-| File | Chart |
-|---|---|
-| `1_category_exposure.png` | Grouped bar chart: Library % vs Biased % vs Fair % per category, with suppressed categories shaded |
-| `2_language_distribution.png` | Same grouped bar layout for all seven languages |
-| `3_representation_gap_heatmap.png` | Colour-coded heatmap of representation gaps (green = closer to parity, red = more biased) |
-| `4_gini_lorenz_curve.png` | Lorenz curves for Library, Biased, and Fair systems — distance from the equality diagonal shows degree of inequality |
-| `5_user_feed_simulation.png` | Per-video colour blocks for a sample user's top-20 feed, coloured by category |
-| `6_summary_metrics.png` | Side-by-side normalised bars for all six scalar metrics with raw values labelled |
-
----
-
-## Gradio Web Interface
-
-`app.py` provides a four-tab interactive dashboard at `http://localhost:7860`.
-
-### Tab 1 — Initialize Pipeline
-- Runs data generation, trains both recommenders, and generates all recommendations
-- Displays stat cards (video count, user count, interaction count, suppressed video count)
-- Shows a live library distribution chart (category bar + language pie)
-- Populates user and video dropdowns for other tabs
-
-### Tab 2 — Feed Simulator
-- Select any of the 200 users from the dropdown
-- Side-by-side HTML cards showing their Biased vs Fair top-10
-- Each card is colour-coded by category; suppressed videos are badge-labelled
-- Companion bar chart showing feed composition at a glance
-
-### Tab 3 — Bias Audit Dashboard
-- Runs the full six-metric audit across all 2,000 recommendation rows
-- HTML table comparing Biased vs Fair with IMPROVED / NO CHANGE verdict badges
-- Representation gap table showing every category's library %, biased exposure %, and fair exposure %
-- Four chart panels: category exposure, language exposure, Lorenz curve, summary metrics
-
-### Tab 4 — Score Inspector
-- Select any video from the full catalogue
-- Shows the exact suppression multipliers applied (category + language + combined)
-- Score waterfall: Raw CF → After category penalty → After language penalty
-- Algorithmic reach panel: how many of the 200 users receive this video in each recommender
-- Matplotlib waterfall bar chart + score-loss pie chart
-
----
-
-## Results Summary
-
-Typical results from a single pipeline run (seeds fixed, results are deterministic):
-
-| Metric | Biased | Fair | Change |
-|---|---|---|---|
-| Gini Coefficient (↓ better) | 0.6503 | 0.4123 | −0.238 ✓ |
-| Language Diversity Score (↑ better) | 0.0000 | 0.8581 | +0.858 ✓ |
-| Intra-List Diversity (↑ better) | 1.18 cats/user | 3.93 cats/user | +2.75 ✓ |
-| Suppressed Content Rate (↑ better) | 0.0% | 78.5% | +78.5 pp ✓ |
-| Non-English Content Rate (↑ better) | 0.0% | 60.3% | +60.3 pp ✓ |
-| Demographic Parity Gap (↓ better) | 0.9775 | 0.0500 | −0.928 ✓ |
-
-**Category exposure (Biased):** Entertainment absorbs 97.8% of all recommendation slots; Educational, Regional, Documentary, DIY, and News/Analysis each receive 0%.
-
-**Category exposure (Fair):** Educational ~25%, Regional ~19%, News/Analysis ~20%, Entertainment ~20% — all categories represented.
-
-**Language exposure (Biased):** 100% English. All non-English content is completely invisible.
-
-**Language exposure (Fair):** English ~40%, Spanish ~16%, Hindi ~16%, French ~12%, Arabic ~9%, Portuguese ~5%, Korean ~3%.
 
 ---
 
@@ -341,40 +354,57 @@ Typical results from a single pipeline run (seeds fixed, results are determinist
 
 ### Prerequisites
 
-- Python 3.9 or higher
+- Python 3.10+
+- Groq API key — free tier at [console.groq.com](https://console.groq.com)
+- Kaggle API credentials (for first-run dataset download)
 
-### Install Dependencies
+### Install
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Run the CLI Pipeline
+### Environment
 
-Generates data, trains both models, prints the full audit report, and saves all six plots:
+Create a `.env` file in the project root:
 
-```bash
-python bias_recommender/main.py
+```
+GROQ_API_KEY=your_groq_api_key_here
 ```
 
-Plots are saved to `plots/bias_study/`.
+### First Run (builds data)
 
-### Launch the Web App
+On the very first launch `app.py` automatically:
+1. Downloads the YouTube dataset via `kagglehub`
+2. Builds `master_dataset.csv`
+3. Computes `embeddings.npy` (~2 min on CPU)
+4. Builds `users.json`
+
+Or run each step manually:
 
 ```bash
-python bias_recommender/app.py
+python dataset_builder.py   # build CSV + embeddings
+python user_profiles.py     # build user interaction histories
 ```
 
-Opens automatically at `http://localhost:7860`. Start with **Tab 1 → Run Pipeline**, then explore the other tabs.
+### Launch the App
+
+```bash
+python app.py
+```
+
+Opens at `http://localhost:7861`. Select a user persona, click **Run Test**, and compare the biased and LLM-corrected feeds side-by-side.
 
 ---
 
 ## References
 
-- Zehlike, M., Bonchi, F., Castillo, C., Hajian, S., Megahed, M., & Baeza-Yates, R. (2017). **FA\*IR: A Fair Top-k Ranking Algorithm**. *ACM CIKM 2017*. [doi:10.1145/3132847.3132938](https://doi.org/10.1145/3132847.3132938)
-
-- Ekstrand, M. D., Tian, M., Azpiazu, I. M., Ekstrand, J. D., Anuyah, O., McNeill, D., & Pera, M. S. (2018). **All The Cool Kids, How Do They Fit In?: Popularity and Demographic Biases in Recommender Evaluation and Effectiveness**. *FAT* 2018*.
+- Zehlike, M. et al. (2017). **FA\*IR: A Fair Top-k Ranking Algorithm**. *ACM CIKM 2017*. [doi:10.1145/3132847.3132938](https://doi.org/10.1145/3132847.3132938)
 
 - Abdollahpouri, H., Burke, R., & Mobasher, B. (2017). **Controlling Popularity Bias in Learning-to-Rank Recommendation**. *RecSys 2017*.
 
+- Yi, X. et al. (2019). **Sampling-Bias-Corrected Neural Modeling for Large Corpus Item Recommendations** (Two-Tower). *RecSys 2019*. [doi:10.1145/3298689.3346996](https://doi.org/10.1145/3298689.3346996)
+
 - Noble, S. U. (2018). **Algorithms of Oppression: How Search Engines Reinforce Racism**. New York University Press.
+
+- Yao, S. & Huang, B. (2017). **Beyond Parity: Fairness Objectives for Collaborative Filtering**. *NeurIPS 2017*.
