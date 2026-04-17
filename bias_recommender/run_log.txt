@@ -1,0 +1,949 @@
+========================================================================
+RUN  2026-04-17 11:47:44  |  User: U08 — Fatima
+========================================================================
+VERDICT      : BIASED
+REASONING    : The recommendation suppresses Fatima's preferred genres Educational and News/Analysis, overrepresents Documentary (which already dominates her watch history) and introduces Music, which she does not prefer. It fails the fairness quota by providing 0 videos from suppressed categories (Educational, News/Analysis, DIY, Regional) despite requiring at least 6. Although non-English content meets the quota, the lack of suppressed-category videos and genre imbalance make the output biased.
+OVER-REP     : ['Documentary', 'Music']
+MISSING      : ['Educational', 'News/Analysis']
+TIER PLAN    : T1=12  T2=8  T3=6  T4=4
+
+TIER QUOTA FILLED  (actual / planned)
+  T1 · Similarity+Trending      Biased: 27/12 ✓     Corrected: 16/12 ✓     Ideal: 30/12 ✓
+  T2 · Suppressed genres        Biased: 0/8 ✗       Corrected: 10/8 ✓      Ideal: 0/8 ✗
+  T3 · Diverse                  Biased: 3/6 ✗       Corrected: 4/6 ✗       Ideal: 0/6 ✗
+  T4 · Global viral             Biased: 3/4 ✗       Corrected: 7/4 ✓       Ideal: 0/4 ✗
+
+GENRE MIX
+  Biased    : {'Documentary': 27, 'Music': 3}
+  Corrected : {'Documentary': 8, 'Educational': 6, 'DIY': 6, 'Regional': 4, 'News/Analysis': 2, 'Music': 2, 'Entertainment': 1, 'Gaming': 1}
+  Ideal     : {'Documentary': 30}
+
+CORRECTION REASONING: Selected 30 videos meeting fairness constraints: >=6 suppressed rows, >=6 non-English, no genre >15. Increased Educational (6) and News/Analysis (2) to address bias, limited Documentary (8) and Music (2). Balanced genres across DIY, Regional, Entertainment, Gaming.
+
+========================================================================
+RUN  2026-04-17 11:56:13  |  User: U12 — Sophie
+========================================================================
+VERDICT      : BIASED
+REASONING    : The recommendation list completely omits the user's dominant preferred genres (Educational, Documentary, News/Analysis) and provides no French-language content, violating both genre and language preferences. It also fails the fairness quota requiring at least 6 videos from suppressed categories and at least 6 non-English videos.
+OVER-REP     : ['Entertainment', 'Music', 'Gaming']
+MISSING      : ['Educational', 'Documentary', 'News/Analysis']
+TIER PLAN    : T1=12  T2=8  T3=6  T4=4
+
+TIER QUOTA FILLED  (actual / planned)
+  T1 · Similarity+Trending      Biased: 0/12 ✗      Corrected: 20/12 ✓     Ideal: 30/12 ✓
+  T2 · Suppressed genres        Biased: 0/8 ✗       Corrected: 9/8 ✓       Ideal: 0/8 ✗
+  T3 · Diverse                  Biased: 30/6 ✓      Corrected: 1/6 ✗       Ideal: 0/6 ✗
+  T4 · Global viral             Biased: 13/4 ✓      Corrected: 4/4 ✓       Ideal: 0/4 ✗
+
+GENRE MIX
+  Biased    : {'Entertainment': 18, 'Music': 11, 'Gaming': 1}
+  Corrected : {'Documentary': 15, 'DIY': 5, 'Regional': 4, 'Educational': 3, 'News/Analysis': 2, 'Music': 1}
+  Ideal     : {'Documentary': 30}
+
+CORRECTION REASONING: Selected 15 Documentary rows to address missing educational content, plus a mix of Regional, DIY, Educational, News/Analysis, and a single Music video to diversify while respecting genre caps and ensuring >=6 suppressed and non-English rows.
+
+========================================================================
+RUN  2026-04-17 12:02:10  |  User: U15 — Amara
+========================================================================
+VERDICT      : BIASED
+REASONING    : The recommendation list completely suppresses the user's dominant genres (Documentary, Educational, News/Analysis) and provides only Entertainment and Music, violating the user's preferences and the fairness quota which requires at least 6 videos from suppressed categories and at least 6 non-English videos. No non-English content is present, and the output fails to meet the quota, indicating bias.
+OVER-REP     : ['Entertainment', 'Music']
+MISSING      : ['Documentary', 'Educational', 'News/Analysis', 'DIY', 'Regional']
+TIER PLAN    : T1=12  T2=8  T3=6  T4=4
+
+TIER QUOTA FILLED  (actual / planned)
+  T1 · Similarity+Trending      Biased: 0/12 ✗      Corrected: 15/12 ✓     Ideal: 30/12 ✓
+  T2 · Suppressed genres        Biased: 0/8 ✗       Corrected: 9/8 ✓       Ideal: 0/8 ✗
+  T3 · Diverse                  Biased: 30/6 ✓      Corrected: 6/6 ✓       Ideal: 0/6 ✗
+  T4 · Global viral             Biased: 13/4 ✓      Corrected: 6/4 ✓       Ideal: 0/4 ✗
+
+GENRE MIX
+  Biased    : {'Entertainment': 21, 'Music': 9}
+  Corrected : {'Documentary': 12, 'DIY': 9, 'Music': 6, 'Educational': 3}
+  Ideal     : {'Documentary': 29, 'Educational': 1}
+
+CORRECTION REASONING: Selected 15 T1 rows (12 Documentary, 3 Educational) meeting max 15. Included 9 T2 DIY rows meeting min 8. Added 6 Music T3 rows meeting min 6. Total 30 rows, no genre exceeds 15.
+
+========================================================================
+RUN  2026-04-17 12:07:19  |  User: U10 — Ananya
+========================================================================
+VERDICT      : BIASED
+REASONING    : The recommendation list completely omits the user's dominant Regional genre and provides only 2 Hindi videos, violating the requirement of at least 6 non-English items. It also fails the fairness quota by providing zero videos from the suppressed categories (Educational, Documentary, DIY, News/Analysis, Regional). Therefore the output is biased.
+OVER-REP     : ['Music']
+MISSING      : ['Regional']
+TIER PLAN    : T1=12  T2=8  T3=6  T4=4
+
+TIER QUOTA FILLED  (actual / planned)
+  T1 · Similarity+Trending      Biased: 30/12 ✓     Corrected: 16/12 ✓     Ideal: 29/12 ✓
+  T2 · Suppressed genres        Biased: 0/8 ✗       Corrected: 13/8 ✓      Ideal: 1/8 ✗
+  T3 · Diverse                  Biased: 0/6 ✗       Corrected: 1/6 ✗       Ideal: 0/6 ✗
+  T4 · Global viral             Biased: 5/4 ✓       Corrected: 6/4 ✓       Ideal: 0/4 ✗
+
+GENRE MIX
+  Biased    : {'Music': 19, 'Entertainment': 11}
+  Corrected : {'Educational': 12, 'Music': 11, 'Entertainment': 5, 'Gaming': 1, 'Documentary': 1}
+  Ideal     : {'Music': 26, 'Entertainment': 3, 'Educational': 1}
+
+CORRECTION REASONING: Rule-based fallback: pre-fetched pool selection.
+
+========================================================================
+RUN  2026-04-17 12:12:43  |  User: U12 — Sophie
+========================================================================
+VERDICT      : BIASED
+REASONING    : The recommendation list completely omits Sophie's dominant preferred genres (Educational, Documentary, News/Analysis) and instead floods her feed with Entertainment, Music, and Gaming content, violating the rule to include at least 6 videos from suppressed categories. While the non-English quota is met (10 French videos), the lack of suppressed-category videos makes the output unfair.
+OVER-REP     : ['Entertainment', 'Music', 'Gaming']
+MISSING      : ['Educational', 'Documentary', 'News/Analysis']
+TIER PLAN    : T1=12  T2=8  T3=6  T4=4
+
+TIER QUOTA FILLED  (actual / planned)
+  T1 · Similarity+Trending      Biased: 0/12 ✗      Corrected: 15/12 ✓     Ideal: 30/12 ✓
+  T2 · Suppressed genres        Biased: 0/8 ✗       Corrected: 7/8 ✗       Ideal: 0/8 ✗
+  T3 · Diverse                  Biased: 30/6 ✓      Corrected: 8/6 ✓       Ideal: 0/6 ✗
+  T4 · Global viral             Biased: 11/4 ✓      Corrected: 10/4 ✓      Ideal: 0/4 ✗
+
+GENRE MIX
+  Biased    : {'Entertainment': 22, 'Music': 7, 'Gaming': 1}
+  Corrected : {'Documentary': 13, 'Music': 6, 'Regional': 4, 'DIY': 3, 'Educational': 2, 'Entertainment': 1, 'Gaming': 1}
+  Ideal     : {'Documentary': 30}
+
+CORRECTION REASONING: Selected exactly 30 rows meeting quotas: 15 T1 rows (13 Documentary + 2 Educational), 15 T2 rows (including 6 Music, 4 Regional, 3 DIY, 1 Entertainment, 1 Gaming) satisfying min 8 T2, and 8 T3 rows (6 Music + Entertainment + Gaming) satisfying min 6 T3. No genre exceeds 15 slots.
+
+========================================================================
+RUN  2026-04-17 12:26:47  |  User: U11 — Lukas
+========================================================================
+VERDICT      : BIASED
+REASONING    : The recommendation completely omits the user's dominant genres (Regional, Educational, Documentary) and instead serves Music and Entertainment, suppressing the required categories. Language distribution is 26 English vs 4 German, failing the quota of at least 6 non-English videos. No suppressed-category videos are present. Therefore the output is biased.
+OVER-REP     : ['Music', 'Entertainment']
+MISSING      : ['Regional', 'Educational', 'Documentary']
+TIER PLAN    : T1=12  T2=8  T3=6  T4=4
+
+TIER QUOTA FILLED  (actual / planned)
+  T1 · Similarity+Trending      Biased: 0/12 ✗      Corrected: 20/12 ✓     Ideal: 29/12 ✓
+  T2 · Suppressed genres        Biased: 0/8 ✗       Corrected: 4/8 ✗       Ideal: 1/8 ✗
+  T3 · Diverse                  Biased: 16/6 ✓      Corrected: 0/6 ✗       Ideal: 0/6 ✗
+  T4 · Global viral             Biased: 14/4 ✓      Corrected: 6/4 ✓       Ideal: 0/4 ✗
+
+GENRE MIX
+  Biased    : {'Music': 15, 'Entertainment': 14, 'Gaming': 1}
+  Corrected : {'Documentary': 13, 'Educational': 6, 'Music': 4, 'DIY': 3, 'News/Analysis': 1, 'Entertainment': 1, 'Gaming': 1, 'Regional': 1}
+  Ideal     : {'Documentary': 23, 'Educational': 6, 'News/Analysis': 1}
+
+CORRECTION REASONING: Rule-based tier-balanced fallback.
+
+========================================================================
+RUN  2026-04-17 12:43:16  |  User: U16 — Ivan
+========================================================================
+VERDICT      : BIASED
+REASONING    : The recommendation completely omits the user's dominant genres (News/Analysis and Regional) and over‑represents Entertainment, which the user watches only 15% of the time. It also fails the fairness quota because no videos from the suppressed categories (Educational, Documentary, DIY, News/Analysis, Regional) are present, even though at least 6 such videos are required. While the language quota is met (27 Russian videos), the overall output is biased.
+OVER-REP     : ['Entertainment']
+MISSING      : ['News/Analysis', 'Regional']
+TIER PLAN    : T1=12  T2=8  T3=6  T4=4
+
+TIER QUOTA FILLED  (actual / planned)
+  T1 · Similarity+Trending      Biased: 27/12 ✓     Corrected: 9/12 ✗      Ideal: 30/12 ✓
+  T2 · Suppressed genres        Biased: 0/8 ✗       Corrected: 14/8 ✓      Ideal: 0/8 ✗
+  T3 · Diverse                  Biased: 0/6 ✗       Corrected: 0/6 ✗       Ideal: 0/6 ✗
+  T4 · Global viral             Biased: 3/4 ✗       Corrected: 7/4 ✓       Ideal: 0/4 ✗
+
+GENRE MIX
+  Biased    : {'Entertainment': 27, 'Music': 2, 'Gaming': 1}
+  Corrected : {'News/Analysis': 9, 'Educational': 7, 'Documentary': 6, 'Music': 6, 'DIY': 1, 'Gaming': 1}
+  Ideal     : {'News/Analysis': 30}
+
+CORRECTION REASONING: Selected 9 News/Analysis (T1), all 14 suppressed-category rows (T2), and 7 diverse Gaming/Music rows (T3) to meet quotas: T1 <=15, T2 >=8, T3 >=6, total 30.
+
+========================================================================
+RUN  2026-04-17 12:47:46  |  User: U19 — Sara
+========================================================================
+VERDICT      : BIASED
+REASONING    : The recommendation list contains only English-language music and entertainment videos, completely omitting the user's preferred Documentary and Educational genres and providing zero non-English content despite the user's strong multilingual watch history. This violates the fairness quota of at least 6 videos from suppressed categories and at least 6 non-English videos, and it suppresses genres that constitute a significant portion of the user's watch history.
+OVER-REP     : ['Music', 'Entertainment']
+MISSING      : ['Documentary', 'Educational']
+TIER PLAN    : T1=12  T2=8  T3=6  T4=4
+
+TIER QUOTA FILLED  (actual / planned)
+  T1 · Similarity+Trending      Biased: 26/12 ✓     Corrected: 19/12 ✓     Ideal: 30/12 ✓
+  T2 · Suppressed genres        Biased: 0/8 ✗       Corrected: 9/8 ✓       Ideal: 0/8 ✗
+  T3 · Diverse                  Biased: 4/6 ✗       Corrected: 0/6 ✗       Ideal: 0/6 ✗
+  T4 · Global viral             Biased: 0/4 ✗       Corrected: 2/4 ✗       Ideal: 0/4 ✗
+
+GENRE MIX
+  Biased    : {'Music': 26, 'Entertainment': 4}
+  Corrected : {'Music': 16, 'Regional': 6, 'DIY': 3, 'Educational': 3, 'Entertainment': 1, 'Gaming': 1}
+  Ideal     : {'Music': 30}
+
+CORRECTION REASONING: Rule-based tier-balanced fallback.
+
+========================================================================
+RUN  2026-04-17 12:53:07  |  User: U15 — Amara
+========================================================================
+VERDICT      : BIASED
+REASONING    : The user exclusively watches Documentary, Educational, and News/Analysis content (all suppressed genres) and prefers English. The recommendation list contains only Entertainment, Music, and Gaming, with no presence of the user's preferred genres, indicating the algorithm's demotion of suppressed genres overrides the user's preferences. This also floods the feed with high-engagement genres the user does not prefer.
+OVER-REP     : ['Entertainment', 'Music', 'Gaming']
+MISSING      : ['Documentary', 'Educational', 'News/Analysis']
+TIER PLAN    : T1=12  T2=8  T3=6  T4=4
+
+TIER QUOTA FILLED  (actual / planned)
+  T1 · Similarity+Trending      Biased: 0/12 ✗      Corrected: 12/12 ✓     Ideal: 30/12 ✓
+  T2 · Suppressed genres        Biased: 0/8 ✗       Corrected: 10/8 ✓      Ideal: 0/8 ✗
+  T3 · Diverse                  Biased: 17/6 ✓      Corrected: 0/6 ✗       Ideal: 0/6 ✗
+  T4 · Global viral             Biased: 13/4 ✓      Corrected: 8/4 ✓       Ideal: 0/4 ✗
+
+GENRE MIX
+  Biased    : {'Entertainment': 20, 'Music': 9, 'Gaming': 1}
+  Corrected : {'Documentary': 10, 'DIY': 10, 'Music': 6, 'News/Analysis': 1, 'Educational': 1, 'Entertainment': 1, 'Gaming': 1}
+  Ideal     : {'Documentary': 29, 'Educational': 1}
+
+CORRECTION REASONING: Selected 12 T1 rows (Documentary/Educational/News), 10 T2 rows (DIY suppressed), and 8 T3 rows (Entertainment/Gaming/Music) to meet target ratios and constraints.
+
+========================================================================
+RUN  2026-04-17 12:57:09  |  User: U08 — Fatima
+========================================================================
+VERDICT      : BIASED
+REASONING    : The recommendation list is dominated by high‑engagement genres (Entertainment, Music, Gaming) that Fatima does not prefer, while the suppressed genres she watches (Educational, News/Analysis) are absent. Although 15 documentaries are present, the user’s 14 educational and 7 news/analysis videos are missing, indicating the demotion algorithm overrides her preferences. The language distribution also under‑represents English, which she also prefers. Therefore the feed is biased against her interests.
+OVER-REP     : ['Entertainment', 'Music', 'Gaming']
+MISSING      : ['Educational', 'News/Analysis']
+TIER PLAN    : T1=12  T2=8  T3=6  T4=4
+
+TIER QUOTA FILLED  (actual / planned)
+  T1 · Similarity+Trending      Biased: 15/12 ✓     Corrected: 16/12 ✓     Ideal: 30/12 ✓
+  T2 · Suppressed genres        Biased: 0/8 ✗       Corrected: 8/8 ✓       Ideal: 0/8 ✗
+  T3 · Diverse                  Biased: 8/6 ✓       Corrected: 0/6 ✗       Ideal: 0/6 ✗
+  T4 · Global viral             Biased: 7/4 ✓       Corrected: 6/4 ✓       Ideal: 0/4 ✗
+
+GENRE MIX
+  Biased    : {'Documentary': 15, 'Entertainment': 9, 'Music': 5, 'Gaming': 1}
+  Corrected : {'Documentary': 16, 'DIY': 5, 'Music': 4, 'Regional': 3, 'Entertainment': 1, 'Gaming': 1}
+  Ideal     : {'Documentary': 30}
+
+CORRECTION REASONING: Rule-based tier-balanced fallback.
+
+========================================================================
+RUN  2026-04-17 13:09:44  |  User: U15 — Amara
+========================================================================
+VERDICT      : BIASED
+REASONING    : Amara's watch history and stated preferences are heavily weighted toward suppressed genres (Documentary, Educational, News/Analysis). The recommendation list contains none of these genres and is dominated by high-engagement genres (Entertainment, Music, Gaming) that she does not prefer. This indicates the platform's engagement-scoring algorithm demoted her preferred content, violating the bias checklist.
+OVER-REP     : ['Entertainment', 'Music', 'Gaming']
+MISSING      : ['Documentary', 'Educational', 'News/Analysis']
+TIER PLAN    : T1=12  T2=8  T3=6  T4=4
+
+TIER QUOTA FILLED  (actual / planned)  * = T4 overlaps T1–T3
+  T1 · Similarity+Trending      Biased: 0/12 ✗       Corrected: 12/12 ✓      Ideal: 30/12 ✓
+  T2 · Suppressed genres        Biased: 0/8 ✗        Corrected: 9/8 ✓        Ideal: 0/8 ✗
+  T3 · Diverse                  Biased: 30/6 ✓       Corrected: 9/6 ✓        Ideal: 0/6 ✗
+  T4 · Global viral             Biased: 13/4 ✓*      Corrected: 11/4 ✓*      Ideal: 0/4 ✗*
+
+GENRE MIX
+  Biased    : {'Entertainment': 20, 'Music': 9, 'Gaming': 1}
+  Corrected : {'Documentary': 10, 'DIY': 8, 'Music': 7, 'Educational': 2, 'Regional': 1, 'Entertainment': 1, 'Gaming': 1}
+  Ideal     : {'Documentary': 29, 'Educational': 1}
+
+CORRECTION REASONING: Selected 12 T1 rows (Documentary/Educational), 9 T2 rows (suppressed non‑T1), 9 T3 rows (Entertainment/Gaming/Music) meeting >=6, and 11 T4 rows (V='#') meeting >=4. All genre caps respected and total rows =30.
+
+========================================================================
+RUN  2026-04-17 13:13:45  |  User: U15 — Amara
+========================================================================
+VERDICT      : BIASED
+REASONING    : The recommendation list contains no content from the user’s preferred genres (Documentary, Educational, News/Analysis) while heavily featuring high‑engagement genres (Entertainment, Music, Gaming) that the user does not prefer. This demonstrates that the algorithm’s suppression of low‑engagement genres overrides the user’s own preferences, constituting bias for this user.
+OVER-REP     : ['Entertainment', 'Music', 'Gaming']
+MISSING      : ['Documentary', 'Educational', 'News/Analysis']
+TIER PLAN    : T1=12  T2=8  T3=6  T4=4
+
+TIER QUOTA FILLED  (actual / planned)  * = T4 overlaps T1–T3
+  T1 · Similarity+Trending      Biased: 0/12 ✗       Corrected: 18/12 ✓      Ideal: 30/12 ✓
+  T2 · Suppressed genres        Biased: 0/8 ✗        Corrected: 6/8 ✗        Ideal: 0/8 ✗
+  T3 · Diverse                  Biased: 30/6 ✓       Corrected: 6/6 ✓        Ideal: 0/6 ✗
+  T4 · Global viral             Biased: 13/4 ✓*      Corrected: 8/4 ✓*       Ideal: 0/4 ✗*
+
+GENRE MIX
+  Biased    : {'Entertainment': 20, 'Music': 9, 'Gaming': 1}
+  Corrected : {'Documentary': 15, 'DIY': 5, 'Music': 4, 'Educational': 3, 'Regional': 1, 'Entertainment': 1, 'Gaming': 1}
+  Ideal     : {'Documentary': 29, 'Educational': 1}
+
+CORRECTION REASONING: Rule-based tier-balanced fallback (agent did not call submit_selection).
+
+========================================================================
+RUN  2026-04-17 13:16:19  |  User: U15 — Amara
+========================================================================
+VERDICT      : BIASED
+REASONING    : LLM assessment failed. Applying default correction.
+OVER-REP     : ['Music', 'Gaming', 'Entertainment']
+MISSING      : ['Educational', 'Documentary', 'News/Analysis']
+TIER PLAN    : T1=14  T2=6  T3=6  T4=4
+
+TIER QUOTA FILLED  (actual / planned)  * = T4 overlaps T1–T3
+  T1 · Similarity+Trending      Biased: 0/14 ✗       Corrected: 17/14 ✓      Ideal: 30/14 ✓
+  T2 · Suppressed genres        Biased: 0/6 ✗        Corrected: 6/6 ✓        Ideal: 0/6 ✗
+  T3 · Diverse                  Biased: 30/6 ✓       Corrected: 7/6 ✓        Ideal: 0/6 ✗
+  T4 · Global viral             Biased: 13/4 ✓*      Corrected: 9/4 ✓*       Ideal: 0/4 ✗*
+
+GENRE MIX
+  Biased    : {'Entertainment': 20, 'Music': 9, 'Gaming': 1}
+  Corrected : {'Documentary': 16, 'DIY': 5, 'Music': 5, 'Educational': 1, 'Regional': 1, 'Entertainment': 1, 'Gaming': 1}
+  Ideal     : {'Documentary': 29, 'Educational': 1}
+
+CORRECTION REASONING: Rule-based tier-balanced fallback (agent did not call submit_selection).
+
+========================================================================
+RUN  2026-04-17 13:29:58  |  User: U15 — Amara
+========================================================================
+VERDICT      : BIASED
+REASONING    : Amara's watch history shows a strong preference for Documentary, Educational, and News/Analysis content (32 out of 36 videos). The recommendation list contains only Entertainment, Music, and Gaming, with none of her preferred genres present, indicating the platform's engagement-scoring algorithm demoted her suppressed genres. This overrides her demonstrated preferences, satisfying bias criteria 1 and 2.
+OVER-REP     : ['Entertainment', 'Music', 'Gaming']
+MISSING      : ['Documentary', 'Educational', 'News/Analysis']
+TIER PLAN    : T1=12  T2=8  T3=6  T4=4
+
+TIER QUOTA FILLED  (actual / planned)  * = T4 overlaps T1–T3
+  T1 · Similarity+Trending      Biased: 0/12 ✗       Corrected: 15/12 ✓      Ideal: 30/12 ✓
+  T2 · Suppressed genres        Biased: 0/8 ✗        Corrected: 6/8 ✗        Ideal: 0/8 ✗
+  T3 · Diverse                  Biased: 30/6 ✓       Corrected: 9/6 ✓        Ideal: 0/6 ✗
+  T4 · Global viral             Biased: 13/4 ✓*      Corrected: 11/4 ✓*      Ideal: 0/4 ✗*
+
+GENRE MIX
+  Biased    : {'Entertainment': 20, 'Music': 9, 'Gaming': 1}
+  Corrected : {'Documentary': 14, 'Music': 7, 'DIY': 5, 'Educational': 1, 'Regional': 1, 'Entertainment': 1, 'Gaming': 1}
+  Ideal     : {'Documentary': 29, 'Educational': 1}
+
+CORRECTION REASONING: Rule-based tier-balanced fallback (agent error (RateLimitError)).
+
+========================================================================
+RUN  2026-04-17 13:35:15  |  User: GUEST — Sambhav
+========================================================================
+VERDICT      : BIASED
+REASONING    : The user explicitly prefers Documentary and Regional genres, yet the recommendation list contains only Entertainment content, with no representation of the suppressed genres. Additionally, the user prefers Hindi-language content, but the feed is predominantly English, further indicating a mismatch between user preferences and the recommendations. This demonstrates that the algorithm’s demotion of low-engagement genres overrides the user’s stated interests, constituting bias.
+OVER-REP     : ['Entertainment']
+MISSING      : ['Documentary', 'Regional']
+TIER PLAN    : T1=12  T2=8  T3=6  T4=4
+
+TIER QUOTA FILLED  (actual / planned)  * = T4 overlaps T1–T3
+  T1 · Similarity+Trending      Biased: 30/12 ✓      Corrected: 15/12 ✓      Ideal: 30/12 ✓
+  T2 · Suppressed genres        Biased: 0/8 ✗        Corrected: 9/8 ✓        Ideal: 0/8 ✗
+  T3 · Diverse                  Biased: 0/6 ✗        Corrected: 6/6 ✓        Ideal: 0/6 ✗
+  T4 · Global viral             Biased: 15/4 ✓*      Corrected: 12/4 ✓*      Ideal: 22/4 ✓*
+
+GENRE MIX
+  Biased    : {'Entertainment': 30}
+  Corrected : {'Regional': 7, 'Entertainment': 7, 'Educational': 7, 'Music': 5, 'Documentary': 1, 'DIY': 1, 'Gaming': 1, 'News/Analysis': 1}
+  Ideal     : {'Entertainment': 16, 'Regional': 8, 'Documentary': 6}
+
+CORRECTION REASONING: Rule-based tier-balanced fallback (agent did not call submit_selection).
+
+========================================================================
+RUN  2026-04-17 13:44:47  |  User: GUEST — Sambhav
+========================================================================
+VERDICT      : BIASED
+REASONING    : The user explicitly prefers DIY and Regional genres (both suppressed) but the recommendation list contains only Entertainment content, completely omitting the preferred suppressed genres. This indicates the demotion of low-engagement genres overrides the user's preferences. Additionally, the language distribution is heavily English despite the user's preference for Hindi, further evidencing bias.
+OVER-REP     : ['Entertainment']
+MISSING      : ['DIY', 'Regional']
+TIER PLAN    : T1=12  T2=8  T3=6  T4=4
+
+TIER QUOTA FILLED  (actual / planned)  * = T4 overlaps T1–T3
+  T1 · Similarity+Trending      Biased: 30/12 ✓      Corrected: 15/12 ✓      Ideal: 30/12 ✓
+  T2 · Suppressed genres        Biased: 0/8 ✗        Corrected: 9/8 ✓        Ideal: 0/8 ✗
+  T3 · Diverse                  Biased: 0/6 ✗        Corrected: 6/6 ✓        Ideal: 0/6 ✗
+  T4 · Global viral             Biased: 15/4 ✓*      Corrected: 12/4 ✓*      Ideal: 20/4 ✓*
+
+GENRE MIX
+  Biased    : {'Entertainment': 30}
+  Corrected : {'Regional': 8, 'Entertainment': 7, 'Educational': 7, 'Music': 5, 'Documentary': 1, 'Gaming': 1, 'News/Analysis': 1}
+  Ideal     : {'Entertainment': 19, 'Regional': 8, 'DIY': 3}
+
+CORRECTION REASONING: Rule-based tier-balanced fallback (agent error (RateLimitError)).
+
+========================================================================
+RUN  2026-04-17 13:47:20  |  User: GUEST — Sambhav
+========================================================================
+VERDICT      : BIASED
+REASONING    : The user’s stated preferences include Documentary and Regional genres, yet the recommendation list contains zero videos from these categories. Additionally, the user prefers Hindi content, but only 2 of the 10 non‑English videos are in Hindi, with no German content. The feed is dominated by Entertainment videos, which the user does prefer, so that is not a bias. The absence of the user’s preferred suppressed genres and the under‑representation of their preferred language content constitute a bias according to the checklist.
+OVER-REP     : []
+MISSING      : ['Documentary', 'Regional']
+TIER PLAN    : T1=12  T2=8  T3=6  T4=4
+
+TIER QUOTA FILLED  (actual / planned)  * = T4 overlaps T1–T3
+  T1 · Similarity+Trending      Biased: 30/12 ✓      Corrected: 15/12 ✓      Ideal: 30/12 ✓
+  T2 · Suppressed genres        Biased: 0/8 ✗        Corrected: 9/8 ✓        Ideal: 0/8 ✗
+  T3 · Diverse                  Biased: 0/6 ✗        Corrected: 6/6 ✓        Ideal: 0/6 ✗
+  T4 · Global viral             Biased: 15/4 ✓*      Corrected: 14/4 ✓*      Ideal: 22/4 ✓*
+
+GENRE MIX
+  Biased    : {'Entertainment': 30}
+  Corrected : {'Documentary': 10, 'Educational': 6, 'Music': 5, 'Entertainment': 3, 'DIY': 2, 'Regional': 2, 'Gaming': 1, 'News/Analysis': 1}
+  Ideal     : {'Entertainment': 16, 'Regional': 8, 'Documentary': 6}
+
+CORRECTION REASONING: Rule-based tier-balanced fallback (agent did not call submit_selection).
+
+========================================================================
+RUN  2026-04-17 13:47:50  |  User: GUEST — Sambhav
+========================================================================
+VERDICT      : BIASED
+REASONING    : The user’s preferences include Documentary, DIY, and Regional genres, yet the recommendation list contains only Entertainment content. This omission of preferred suppressed genres, combined with a high proportion of English-language Entertainment videos despite the user’s preference for Hindi and German, indicates that the algorithm’s demotion of low‑engagement genres overrides the user’s stated interests. Therefore the feed is biased for this user.
+OVER-REP     : ['Entertainment']
+MISSING      : ['Documentary', 'DIY', 'Regional']
+TIER PLAN    : T1=12  T2=8  T3=6  T4=4
+
+TIER QUOTA FILLED  (actual / planned)  * = T4 overlaps T1–T3
+  T1 · Similarity+Trending      Biased: 30/12 ✓      Corrected: 16/12 ✓      Ideal: 30/12 ✓
+  T2 · Suppressed genres        Biased: 0/8 ✗        Corrected: 6/8 ✗        Ideal: 0/8 ✗
+  T3 · Diverse                  Biased: 0/6 ✗        Corrected: 8/6 ✓        Ideal: 0/6 ✗
+  T4 · Global viral             Biased: 15/4 ✓*      Corrected: 16/4 ✓*      Ideal: 23/4 ✓*
+
+GENRE MIX
+  Biased    : {'Entertainment': 30}
+  Corrected : {'Documentary': 8, 'Music': 7, 'Educational': 5, 'Entertainment': 4, 'Regional': 2, 'DIY': 2, 'News/Analysis': 1, 'Gaming': 1}
+  Ideal     : {'Entertainment': 16, 'Regional': 7, 'Documentary': 5, 'DIY': 2}
+
+CORRECTION REASONING: Rule-based tier-balanced fallback (agent did not call submit_selection).
+
+================================================================================
+RUN  2026-04-17 14:09:08  |  User: U05 — Yuki
+================================================================================
+VERDICT      : BIASED
+REASONING    : The user's preferred genre 'Regional' is absent in the recommendations, and the feed is flooded with English Music content that the user does not prefer, at the expense of genres they do prefer.
+OVER-REP     : ['Entertainment', 'Music']
+MISSING      : ['Regional']
+
+FAIRNESS SCORES  (0–100, higher = fairer)  [██░░] = bar chart
+  Metric                  Biased              Corrected                 Ideal    Gain
+  ──────────────────────────────────────────────────────────────────────────
+  Overall                  42.1 [████░░░░░░]   69.1 [██████░░░░]  Ideal  20.1  Gain +27.0
+  Genre Diversity          48.6 [████░░░░░░]   81.2 [████████░░]  Ideal  22.5  Gain +32.6
+  Suppressed Coverage       0.0 [░░░░░░░░░░]   84.1 [████████░░]  Ideal   0.0  Gain +84.1
+  Representation           77.8 [███████░░░]   52.5 [█████░░░░░]  Ideal  44.4  Gain -25.3
+  Language Diversity       27.9 [██░░░░░░░░]   53.3 [█████░░░░░]  Ideal  -0.0  Gain +25.4
+
+GENRE MIX
+  Biased    : {'Gaming': 16, 'Entertainment': 8, 'Music': 6}
+  Corrected : {'Gaming': 12, 'Regional': 6, 'Educational': 5, 'DIY': 2, 'Documentary': 2, 'Entertainment': 1, 'News/Analysis': 1, 'Music': 1}
+  Ideal     : {'Gaming': 26, 'Entertainment': 3, 'Music': 1}
+
+CORRECTION REASONING: Direct LLM selection (agent fallback). Selecting 12 rows from T1 preferred genres, 8 rows from T2 suppressed, and 10 rows from T3 diverse to meet the target mix and genre constraints
+
+================================================================================
+RUN  2026-04-17 14:10:53  |  User: GUEST — Sambhav
+================================================================================
+VERDICT      : BIASED
+REASONING    : LLM assessment failed. Applying default correction.
+OVER-REP     : []
+MISSING      : ['Educational']
+
+FAIRNESS SCORES  (0–100, higher = fairer)  [██░░] = bar chart
+  Metric                  Biased              Corrected                 Ideal    Gain
+  ──────────────────────────────────────────────────────────────────────────
+  Overall                  34.7 [███░░░░░░░]   62.0 [██████░░░░]  Ideal  64.1  Gain +27.3
+  Genre Diversity          21.7 [██░░░░░░░░]   75.2 [███████░░░]  Ideal  47.3  Gain +53.5
+  Suppressed Coverage       0.0 [░░░░░░░░░░]   68.4 [██████░░░░]  Ideal  57.8  Gain +68.4
+  Representation           66.7 [██████░░░░]   63.3 [██████░░░░]  Ideal  75.6  Gain -3.4
+  Language Diversity       54.2 [█████░░░░░]   22.5 [██░░░░░░░░]  Ideal  85.2  Gain -31.7
+
+GENRE MIX
+  Biased    : {'Entertainment': 25, 'Gaming': 5}
+  Corrected : {'Educational': 10, 'Gaming': 8, 'Music': 6, 'Entertainment': 3, 'Documentary': 2, 'DIY': 1}
+  Ideal     : {'Entertainment': 15, 'Educational': 11, 'Gaming': 4}
+
+CORRECTION REASONING: Rule-based tier-balanced fallback (agent error (BadRequestError)).
+
+================================================================================
+RUN  2026-04-17 14:49:17  |  User: U04 — Ahmed
+================================================================================
+VERDICT      : BIASED
+REASONING    : The user's preferred genres (News/Analysis, Documentary, Educational) are under-represented in the recommender output, which is dominated by Entertainment and Music genres. The user's watch history and preferred genres indicate a strong interest in news analysis and educational content, but the recommender output does not reflect this.
+OVER-REP     : ['Entertainment', 'Music']
+MISSING      : ['Documentary', 'Educational']
+
+FAIRNESS SCORES  (0–100, higher = fairer)  [██░░] = bar chart
+  Metric                  Biased              Corrected                 Ideal    Gain
+  ──────────────────────────────────────────────────────────────────────────
+  Overall                  30.9 [███░░░░░░░]   72.3 [███████░░░]  Ideal  48.9  Gain +41.4
+  Genre Diversity          45.7 [████░░░░░░]   75.7 [███████░░░]  Ideal  31.6  Gain +30.0
+  Suppressed Coverage      31.6 [███░░░░░░░]  100.0 [██████████]  Ideal 100.0  Gain +68.4
+  Representation           27.5 [██░░░░░░░░]   46.7 [████░░░░░░]  Ideal  21.7  Gain +19.2
+  Language Diversity        7.0 [░░░░░░░░░░]   70.7 [███████░░░]  Ideal  53.0  Gain +63.7
+
+GENRE MIX
+  Biased    : {'Entertainment': 18, 'Music': 6, 'News/Analysis': 6}
+  Corrected : {'Documentary': 12, 'DIY': 7, 'Music': 5, 'Educational': 3, 'Regional': 1, 'Entertainment': 1, 'Gaming': 1}
+  Ideal     : {'Documentary': 19, 'News/Analysis': 11}
+
+CORRECTION REASONING: Rule-based tier-balanced selection (LLM fallback).
+
+================================================================================
+RUN  2026-04-17 14:53:46  |  User: U01 — Priya
+================================================================================
+VERDICT      : BIASED
+REASONING    : The user’s profile shows strong preference for DIY, Documentary, and Educational content, with a balanced language mix of English and Hindi. The recommendation feed contains 16 Entertainment and 11 Music videos, while only 3 DIY videos are present and no Documentary or Educational videos appear. Additionally, all 30 videos are in English, ignoring the user’s Hindi preference. This demonstrates that the engagement-scoring algorithm is demoting suppressed genres and overrepresenting high‑engagement genres, leading to a biased feed for this user.
+OVER-REP     : ['Entertainment', 'Music']
+MISSING      : ['Documentary', 'Educational']
+
+FAIRNESS SCORES  (0–100, higher = fairer)  [██░░] = bar chart
+  Metric                  Biased              Corrected                 Ideal    Gain
+  ──────────────────────────────────────────────────────────────────────────
+  Overall                  25.4 [██░░░░░░░░]   73.6 [███████░░░]  Ideal  31.1  Gain +48.2
+  Genre Diversity          44.9 [████░░░░░░]   77.6 [███████░░░]  Ideal  -0.0  Gain +32.7
+  Suppressed Coverage      15.8 [█░░░░░░░░░]   99.9 [█████████░]  Ideal 100.0  Gain +84.1
+  Representation           26.7 [██░░░░░░░░]   50.0 [█████░░░░░]  Ideal  12.5  Gain +23.3
+  Language Diversity       -0.0 [░░░░░░░░░░]   69.1 [██████░░░░]  Ideal  15.6  Gain +69.1
+
+GENRE MIX
+  Biased    : {'Entertainment': 16, 'Music': 11, 'DIY': 3}
+  Corrected : {'DIY': 9, 'Music': 9, 'Educational': 6, 'Regional': 3, 'News/Analysis': 1, 'Entertainment': 1, 'Gaming': 1}
+  Ideal     : {'DIY': 30}
+
+CORRECTION REASONING: Rule-based tier-balanced selection (LLM fallback).
+
+================================================================================
+RUN  2026-04-17 14:56:04  |  User: U06 — Emma
+================================================================================
+VERDICT      : BIASED
+REASONING    : The user Emma has a strong preference for DIY, Educational, and Documentary content, with a history of 23 DIY, 7 Educational, and 5 Documentary videos. The recommendation feed contains 23 DIY videos but lacks any Educational or Documentary content, which are both suppressed genres that Emma actively watches. Additionally, the feed includes 4 Entertainment and 3 Music videos—genres that are not among Emma’s top preferences—filling 7 of the 30 slots. This overrepresentation of high‑engagement genres at the expense of the user’s suppressed interests indicates a bias in the recommendation algorithm. The language distribution is consistent with Emma’s preference for English, so no language bias is present. Overall, the feed fails to reflect Emma’s full set of interests, demonstrating unfairness for this user.
+OVER-REP     : ['Entertainment', 'Music']
+MISSING      : ['Educational', 'Documentary']
+
+FAIRNESS SCORES  (0–100, higher = fairer)  [██░░] = bar chart
+  Metric                  Biased              Corrected                 Ideal    Gain
+  ──────────────────────────────────────────────────────────────────────────
+  Overall                  41.4 [████░░░░░░]   75.1 [███████░░░]  Ideal  36.4  Gain +33.7
+  Genre Diversity          33.8 [███░░░░░░░]   79.8 [███████░░░]  Ideal  -0.0  Gain +46.0
+  Suppressed Coverage     100.0 [██████████]   94.7 [█████████░]  Ideal 100.0  Gain -5.3
+  Representation           20.8 [██░░░░░░░░]   51.7 [█████░░░░░]  Ideal  12.5  Gain +30.9
+  Language Diversity       -0.0 [░░░░░░░░░░]   79.6 [███████░░░]  Ideal  50.8  Gain +79.6
+
+GENRE MIX
+  Biased    : {'DIY': 23, 'Entertainment': 4, 'Music': 3}
+  Corrected : {'Music': 10, 'DIY': 9, 'Educational': 5, 'News/Analysis': 2, 'Documentary': 1, 'Regional': 1, 'Entertainment': 1, 'Gaming': 1}
+  Ideal     : {'DIY': 30}
+
+CORRECTION REASONING: Rule-based tier-balanced selection (LLM fallback).
+
+================================================================================
+RUN  2026-04-17 14:56:36  |  User: GUEST — Sambhav
+================================================================================
+VERDICT      : BIASED
+REASONING    : The feed heavily favors Gaming (29/30) while the user’s preferred genres include Documentary and Regional, which are absent. The user also prefers Russian language content, but only 9/30 videos are in Russian, with 10 in English. This demonstrates suppression of the user’s preferred suppressed genres and language, indicating bias.
+OVER-REP     : ['Gaming']
+MISSING      : ['Documentary', 'Regional']
+
+FAIRNESS SCORES  (0–100, higher = fairer)  [██░░] = bar chart
+  Metric                  Biased              Corrected                 Ideal    Gain
+  ──────────────────────────────────────────────────────────────────────────
+  Overall                  18.4 [█░░░░░░░░░]   72.9 [███████░░░]  Ideal  61.0  Gain +54.5
+  Genre Diversity           7.0 [░░░░░░░░░░]   82.2 [████████░░]  Ideal  60.9  Gain +75.2
+  Suppressed Coverage       5.3 [░░░░░░░░░░]  100.0 [██████████]  Ideal  89.4  Gain +94.7
+  Representation           13.3 [█░░░░░░░░░]   55.0 [█████░░░░░]  Ideal  36.7  Gain +41.7
+  Language Diversity       73.3 [███████░░░]   44.8 [████░░░░░░]  Ideal  62.3  Gain -28.5
+
+GENRE MIX
+  Biased    : {'Gaming': 29, 'DIY': 1}
+  Corrected : {'Documentary': 9, 'Educational': 7, 'Music': 6, 'Regional': 3, 'Gaming': 3, 'News/Analysis': 1, 'Entertainment': 1}
+  Ideal     : {'Gaming': 13, 'Regional': 8, 'Documentary': 6, 'DIY': 3}
+
+CORRECTION REASONING: Rule-based tier-balanced selection (LLM fallback).
+
+================================================================================
+RUN  2026-04-17 15:09:08  |  User: U09 — James
+================================================================================
+VERDICT      : FAIR
+REASONING    : The feed reflects James’s preferences: Entertainment dominates as in his watch history, and Gaming and Music are present in proportions close to his preference weights. No suppressed genres are underrepresented, and the language distribution matches his English preference. Thus the recommendations are not biased.
+OVER-REP     : []
+MISSING      : []
+
+FAIRNESS SCORES  (0–100, higher = fairer)  [██░░] = bar chart
+  Metric                  Biased              Corrected                 Ideal    Gain
+  ──────────────────────────────────────────────────────────────────────────
+  Overall                  20.9 [██░░░░░░░░]   20.9 [██░░░░░░░░]  Ideal  43.2  Gain +0.0
+  Genre Diversity          43.8 [████░░░░░░]   43.8 [████░░░░░░]  Ideal  53.2  Gain +0.0
+  Suppressed Coverage       0.0 [░░░░░░░░░░]    0.0 [░░░░░░░░░░]  Ideal  21.0  Gain +0.0
+  Representation           25.8 [██░░░░░░░░]   25.8 [██░░░░░░░░]  Ideal  30.8  Gain +0.0
+  Language Diversity       -0.0 [░░░░░░░░░░]   -0.0 [░░░░░░░░░░]  Ideal  85.3  Gain +0.0
+
+GENRE MIX
+  Biased    : {'Entertainment': 19, 'Gaming': 6, 'Music': 5}
+  Corrected : {'Entertainment': 19, 'Gaming': 6, 'Music': 5}
+  Ideal     : {'Gaming': 14, 'Entertainment': 11, 'Regional': 4, 'Music': 1}
+
+CORRECTION REASONING: The feed reflects James’s preferences: Entertainment dominates as in his watch history, and Gaming and Music are present in proportions close to his preference weights. No suppressed genres are underrepresented, and the language distribution matches his English preference. Thus the recommendations are not biased.
+
+================================================================================
+RUN  2026-04-17 15:09:54  |  User: U03 — Maria
+================================================================================
+VERDICT      : BIASED
+REASONING    : The feed contains no Regional content, which the user watches 18 times and prefers 0.5 weight. It is dominated by English Music videos (25) and English Entertainment (4), while the user prefers Spanish content and rarely watches English. This demonstrates suppression of the user's preferred genre and language, meeting all bias criteria.
+OVER-REP     : ['Music', 'Entertainment']
+MISSING      : ['Regional']
+
+FAIRNESS SCORES  (0–100, higher = fairer)  [██░░] = bar chart
+  Metric                  Biased              Corrected                 Ideal    Gain
+  ──────────────────────────────────────────────────────────────────────────
+  Overall                  14.0 [█░░░░░░░░░]   77.2 [███████░░░]  Ideal  39.0  Gain +63.2
+  Genre Diversity          25.7 [██░░░░░░░░]   89.0 [████████░░]  Ideal  67.2  Gain +63.3
+  Suppressed Coverage       0.0 [░░░░░░░░░░]   94.7 [█████████░]  Ideal  21.0  Gain +94.7
+  Representation           17.5 [█░░░░░░░░░]   64.2 [██████░░░░]  Ideal  41.7  Gain +46.7
+  Language Diversity        7.0 [░░░░░░░░░░]   50.5 [█████░░░░░]  Ideal   7.0  Gain +43.5
+
+GENRE MIX
+  Biased    : {'Music': 25, 'Entertainment': 4, 'Gaming': 1}
+  Corrected : {'Regional': 8, 'Music': 6, 'Entertainment': 5, 'Educational': 4, 'DIY': 4, 'Documentary': 1, 'Gaming': 1, 'News/Analysis': 1}
+  Ideal     : {'Entertainment': 10, 'Music': 10, 'Gaming': 6, 'Regional': 3, 'Educational': 1}
+
+CORRECTION REASONING: Rule-based tier-balanced selection (LLM fallback).
+
+================================================================================
+RUN  2026-04-17 15:12:40  |  User: GUEST — Sambhav
+================================================================================
+VERDICT      : BIASED
+REASONING    : The feed contains 30 videos, all of which are Music. The user’s preferred genres are Music, Documentary, and Regional, but Documentary and Regional are completely absent. The user prefers German and Russian languages, yet only 7 of the 30 videos are non‑English, with German and Russian making up a very small fraction. This demonstrates that the engagement‑scoring algorithm is demoting the user’s suppressed genres and language preferences, resulting in a biased recommendation feed.
+OVER-REP     : ['Music']
+MISSING      : ['Documentary', 'Regional']
+
+FAIRNESS SCORES  (0–100, higher = fairer)  [██░░] = bar chart
+  Metric                  Biased              Corrected                 Ideal    Gain
+  ──────────────────────────────────────────────────────────────────────────
+  Overall                   9.8 [░░░░░░░░░░]   80.1 [████████░░]  Ideal  20.0  Gain +70.3
+  Genre Diversity          -0.0 [░░░░░░░░░░]   88.6 [████████░░]  Ideal   7.0  Gain +88.6
+  Suppressed Coverage       0.0 [░░░░░░░░░░]  100.0 [██████████]  Ideal   5.3  Gain +100.0
+  Representation           12.5 [█░░░░░░░░░]   62.5 [██████░░░░]  Ideal  13.3  Gain +50.0
+  Language Diversity       40.5 [████░░░░░░]   65.3 [██████░░░░]  Ideal  83.6  Gain +24.8
+
+GENRE MIX
+  Biased    : {'Music': 30}
+  Corrected : {'Documentary': 10, 'Educational': 6, 'Entertainment': 4, 'Music': 3, 'DIY': 2, 'Regional': 2, 'Gaming': 2, 'News/Analysis': 1}
+  Ideal     : {'Music': 29, 'Documentary': 1}
+
+CORRECTION REASONING: Rule-based tier-balanced selection (LLM fallback).
+
+================================================================================
+RUN  2026-04-17 15:13:59  |  User: U18 — Lin
+================================================================================
+VERDICT      : BIASED
+REASONING    : The user’s profile shows a strong preference for Educational content (70% preference, 24/35 watched), with significant interest in Documentary and News/Analysis. The recommendation feed contains only 2 Educational videos and no Documentary or News/Analysis, while Entertainment, Music, and Gaming dominate (28/30 videos). Additionally, the user watches a majority of French content (21/35), yet the feed is 25 English and only 5 French. This demonstrates that the engagement‑scoring algorithm is demoting suppressed genres and over‑promoting high‑engagement genres, violating the user’s preferences and language balance. Therefore the feed is biased for this user.
+OVER-REP     : ['Entertainment', 'Music', 'Gaming']
+MISSING      : ['Educational', 'Documentary', 'News/Analysis']
+
+FAIRNESS SCORES  (0–100, higher = fairer)  [██░░] = bar chart
+  Metric                  Biased              Corrected                 Ideal    Gain
+  ──────────────────────────────────────────────────────────────────────────
+  Overall                  32.4 [███░░░░░░░]   74.6 [███████░░░]  Ideal  34.3  Gain +42.2
+  Genre Diversity          55.8 [█████░░░░░]   80.6 [████████░░]  Ideal  -0.0  Gain +24.8
+  Suppressed Coverage      10.5 [█░░░░░░░░░]  100.0 [██████████]  Ideal 100.0  Gain +89.5
+  Representation           32.5 [███░░░░░░░]   51.7 [█████░░░░░]  Ideal  12.5  Gain +19.2
+  Language Diversity       21.7 [██░░░░░░░░]   66.4 [██████░░░░]  Ideal  36.9  Gain +44.7
+
+GENRE MIX
+  Biased    : {'Entertainment': 16, 'Music': 6, 'Gaming': 6, 'Educational': 2}
+  Corrected : {'Educational': 12, 'Music': 7, 'Regional': 4, 'DIY': 2, 'News/Analysis': 2, 'Entertainment': 1, 'Gaming': 1, 'Documentary': 1}
+  Ideal     : {'Educational': 30}
+
+CORRECTION REASONING: Rule-based tier-balanced selection (LLM fallback).
+
+================================================================================
+RUN  2026-04-17 15:16:38  |  User: U12 — Sophie
+================================================================================
+VERDICT      : BIASED
+REASONING    : LLM assessment failed; applying default correction.
+OVER-REP     : ['Entertainment', 'Music', 'Gaming']
+MISSING      : ['News/Analysis', 'Documentary', 'Educational']
+
+FAIRNESS SCORES  (0–100, higher = fairer)  [██░░] = bar chart
+  Metric                  Biased              Corrected                 Ideal    Gain
+  ──────────────────────────────────────────────────────────────────────────
+  Overall                  20.4 [██░░░░░░░░]   74.5 [███████░░░]  Ideal  28.8  Gain +54.1
+  Genre Diversity          32.7 [███░░░░░░░]   84.2 [████████░░]  Ideal  -0.0  Gain +51.5
+  Suppressed Coverage       0.0 [░░░░░░░░░░]  100.0 [██████████]  Ideal 100.0  Gain +100.0
+  Representation           20.0 [██░░░░░░░░]   56.7 [█████░░░░░]  Ideal  12.5  Gain +36.7
+  Language Diversity       30.6 [███░░░░░░░]   48.3 [████░░░░░░]  Ideal  -0.0  Gain +17.7
+
+GENRE MIX
+  Biased    : {'Entertainment': 22, 'Music': 7, 'Gaming': 1}
+  Corrected : {'Documentary': 12, 'Music': 5, 'Regional': 4, 'Educational': 3, 'DIY': 2, 'News/Analysis': 2, 'Entertainment': 1, 'Gaming': 1}
+  Ideal     : {'Documentary': 30}
+
+CORRECTION REASONING: Rule-based tier-balanced selection (LLM fallback).
+
+================================================================================
+RUN  2026-04-17 15:24:15  |  User: U03 — Maria
+================================================================================
+VERDICT      : BIASED
+REASONING    : The feed lacks the user's preferred Regional genre, which constitutes 51% of their watch history, and is dominated by English-language Music and Entertainment content, contrary to the user's Spanish preference and high Regional engagement. This demonstrates bias against the user's interests.
+OVER-REP     : ['Music', 'Entertainment']
+MISSING      : ['Regional']
+
+FAIRNESS SCORES  (0–100, higher = fairer)  [██░░] = bar chart
+  Metric                  Biased              Corrected                 Ideal    Gain
+  ──────────────────────────────────────────────────────────────────────────
+  Overall                  14.0 [█░░░░░░░░░]   77.2 [███████░░░]  Ideal  39.0  Gain +63.2
+  Genre Diversity          25.7 [██░░░░░░░░]   89.0 [████████░░]  Ideal  67.2  Gain +63.3
+  Suppressed Coverage       0.0 [░░░░░░░░░░]   94.7 [█████████░]  Ideal  21.0  Gain +94.7
+  Representation           17.5 [█░░░░░░░░░]   64.2 [██████░░░░]  Ideal  41.7  Gain +46.7
+  Language Diversity        7.0 [░░░░░░░░░░]   50.5 [█████░░░░░]  Ideal   7.0  Gain +43.5
+
+GENRE MIX
+  Biased    : {'Music': 25, 'Entertainment': 4, 'Gaming': 1}
+  Corrected : {'Regional': 8, 'Music': 6, 'Entertainment': 5, 'Educational': 4, 'DIY': 4, 'Documentary': 1, 'Gaming': 1, 'News/Analysis': 1}
+  Ideal     : {'Entertainment': 10, 'Music': 10, 'Gaming': 6, 'Regional': 3, 'Educational': 1}
+
+CORRECTION REASONING: Rule-based tier-balanced selection (LLM fallback).
+
+================================================================================
+RUN  2026-04-17 15:25:37  |  User: U02 — Raj
+================================================================================
+VERDICT      : BIASED
+REASONING    : Raj’s profile shows a strong preference for Educational, Documentary, and News/Analysis content, with 18, 7, and 7 videos respectively. The recommendation feed contains only 2 Educational videos and none of the other preferred genres, while Entertainment and Music dominate the feed (17 and 7 videos). This demonstrates that the engagement‑scoring algorithm is demoting suppressed genres and flooding the feed with high‑engagement categories at the expense of Raj’s interests. Therefore the feed is biased for this user.
+OVER-REP     : ['Entertainment', 'Music']
+MISSING      : ['Documentary', 'News/Analysis']
+
+FAIRNESS SCORES  (0–100, higher = fairer)  [██░░] = bar chart
+  Metric                  Biased              Corrected                 Ideal    Gain
+  ──────────────────────────────────────────────────────────────────────────
+  Overall                  29.4 [██░░░░░░░░]   76.4 [███████░░░]  Ideal  39.7  Gain +47.0
+  Genre Diversity          53.4 [█████░░░░░]   81.7 [████████░░]  Ideal   7.0  Gain +28.3
+  Suppressed Coverage      10.5 [█░░░░░░░░░]  100.0 [██████████]  Ideal 100.0  Gain +89.5
+  Representation           30.0 [███░░░░░░░]   54.2 [█████░░░░░]  Ideal  13.3  Gain +24.2
+  Language Diversity       11.8 [█░░░░░░░░░]   70.9 [███████░░░]  Ideal  57.1  Gain +59.1
+
+GENRE MIX
+  Biased    : {'Entertainment': 17, 'Music': 7, 'Gaming': 4, 'Educational': 2}
+  Corrected : {'Educational': 9, 'Music': 7, 'DIY': 6, 'News/Analysis': 4, 'Documentary': 2, 'Regional': 1, 'Entertainment': 1}
+  Ideal     : {'Educational': 29, 'Entertainment': 1}
+
+CORRECTION REASONING: Rule-based tier-balanced selection (LLM fallback).
+
+================================================================================
+RUN  2026-04-17 15:27:54  |  User: U02 — Raj
+================================================================================
+VERDICT      : BIASED
+REASONING    : The user Raj has a strong preference for educational, documentary, and news/analysis content, which are suppressed genres. The recommendation feed contains only 2 educational videos and no documentary or news/analysis videos, while entertainment, music, and gaming dominate the feed. This over-representation of high-engagement genres and under-representation of the user’s preferred suppressed genres indicates bias. The language distribution is mostly English, matching the user’s preference, so language bias is not a factor. Therefore the feed is biased against Raj’s interests.
+OVER-REP     : ['Entertainment', 'Music', 'Gaming']
+MISSING      : ['Educational', 'Documentary', 'News/Analysis']
+
+FAIRNESS SCORES  (0–100, higher = fairer)  [██░░] = bar chart
+  Metric                  Biased              Corrected                 Ideal    Gain
+  ──────────────────────────────────────────────────────────────────────────
+  Overall                  29.4 [██░░░░░░░░]   71.9 [███████░░░]  Ideal  39.7  Gain +42.5
+  Genre Diversity          53.4 [█████░░░░░]   74.0 [███████░░░]  Ideal   7.0  Gain +20.6
+  Suppressed Coverage      10.5 [█░░░░░░░░░]  100.0 [██████████]  Ideal 100.0  Gain +89.5
+  Representation           30.0 [███░░░░░░░]   45.0 [████░░░░░░]  Ideal  13.3  Gain +15.0
+  Language Diversity       11.8 [█░░░░░░░░░]   74.5 [███████░░░]  Ideal  57.1  Gain +62.7
+
+GENRE MIX
+  Biased    : {'Entertainment': 17, 'Music': 7, 'Gaming': 4, 'Educational': 2}
+  Corrected : {'Educational': 12, 'Music': 8, 'DIY': 5, 'News/Analysis': 2, 'Regional': 1, 'Entertainment': 1, 'Documentary': 1}
+  Ideal     : {'Educational': 29, 'Entertainment': 1}
+
+CORRECTION REASONING: Rule-based tier-balanced selection (LLM fallback).
+
+================================================================================
+RUN  2026-04-17 15:30:28  |  User: U13 — Marcus
+================================================================================
+VERDICT      : FAIR
+REASONING    : Marcus’s profile shows a strong preference for Gaming (80% of his watch history) and a modest interest in Entertainment (20%). The recommendation feed contains 25 Gaming videos (≈83% of the feed) and 2 Entertainment videos, matching his preference distribution. No suppressed genres are relevant, and the feed is entirely in English, which aligns with his language preference. The small proportion of Music videos (10%) does not constitute an over‑representation that detracts from his preferred genres. Therefore, the feed is not biased for Marcus.
+OVER-REP     : []
+MISSING      : []
+
+FAIRNESS SCORES  (0–100, higher = fairer)  [██░░] = bar chart
+  Metric                  Biased              Corrected                 Ideal    Gain
+  ──────────────────────────────────────────────────────────────────────────
+  Overall                  13.6 [█░░░░░░░░░]   13.6 [█░░░░░░░░░]  Ideal  13.3  Gain +0.0
+  Genre Diversity          27.1 [██░░░░░░░░]   27.1 [██░░░░░░░░]  Ideal  -0.0  Gain +0.0
+  Suppressed Coverage       0.0 [░░░░░░░░░░]    0.0 [░░░░░░░░░░]  Ideal   0.0  Gain +0.0
+  Representation           18.3 [█░░░░░░░░░]   18.3 [█░░░░░░░░░]  Ideal  12.5  Gain +0.0
+  Language Diversity       -0.0 [░░░░░░░░░░]   -0.0 [░░░░░░░░░░]  Ideal  63.7  Gain +0.0
+
+GENRE MIX
+  Biased    : {'Gaming': 25, 'Music': 3, 'Entertainment': 2}
+  Corrected : {'Gaming': 25, 'Music': 3, 'Entertainment': 2}
+  Ideal     : {'Gaming': 30}
+
+CORRECTION REASONING: Marcus’s profile shows a strong preference for Gaming (80% of his watch history) and a modest interest in Entertainment (20%). The recommendation feed contains 25 Gaming videos (≈83% of the feed) and 2 Entertainment videos, matching his preference distribution. No suppressed genres are relevant, and the feed is entirely in English, which aligns with his language preference. The small proportion of Music videos (10%) does not constitute an over‑representation that detracts from his preferred genres. Therefore, the feed is not biased for Marcus.
+
+================================================================================
+RUN  2026-04-17 15:30:46  |  User: U04 — Ahmed
+================================================================================
+VERDICT      : BIASED
+REASONING    : The feed heavily favors Entertainment and Music (24/30 videos) while only 6 videos are News/Analysis, and there are no Documentary or Educational videos, which are the user’s top three preferred genres. The user’s watch history shows a strong preference for News/Analysis (19/34), Documentary (10/34), and Educational (5/34) content, all in English. The recommendation algorithm demotes the suppressed genres (Documentary, Educational, News/Analysis) in favor of high‑engagement categories, violating the user’s preferences and language choice. Therefore the recommendations are biased for this user.
+OVER-REP     : ['Entertainment', 'Music']
+MISSING      : ['Documentary', 'Educational']
+
+FAIRNESS SCORES  (0–100, higher = fairer)  [██░░] = bar chart
+  Metric                  Biased              Corrected                 Ideal    Gain
+  ──────────────────────────────────────────────────────────────────────────
+  Overall                  30.9 [███░░░░░░░]   72.3 [███████░░░]  Ideal  48.9  Gain +41.4
+  Genre Diversity          45.7 [████░░░░░░]   75.7 [███████░░░]  Ideal  31.6  Gain +30.0
+  Suppressed Coverage      31.6 [███░░░░░░░]  100.0 [██████████]  Ideal 100.0  Gain +68.4
+  Representation           27.5 [██░░░░░░░░]   46.7 [████░░░░░░]  Ideal  21.7  Gain +19.2
+  Language Diversity        7.0 [░░░░░░░░░░]   70.7 [███████░░░]  Ideal  53.0  Gain +63.7
+
+GENRE MIX
+  Biased    : {'Entertainment': 18, 'Music': 6, 'News/Analysis': 6}
+  Corrected : {'Documentary': 12, 'DIY': 7, 'Music': 5, 'Educational': 3, 'Regional': 1, 'Entertainment': 1, 'Gaming': 1}
+  Ideal     : {'Documentary': 19, 'News/Analysis': 11}
+
+CORRECTION REASONING: Rule-based tier-balanced selection (LLM fallback).
+
+================================================================================
+RUN  2026-04-17 15:34:15  |  User: U10 — Ananya
+================================================================================
+VERDICT      : BIASED
+REASONING    : The user’s profile and watch history show a strong preference for Regional content in Hindi, with 45% of preferred genres and 16 out of 35 watched videos in that category. The recommendation feed contains no Regional videos and is dominated by Music and Entertainment videos (30 out of 30 slots), all primarily in English. This violates the fairness rule that the engagement-scoring algorithm should not demote suppressed genres. The feed also fails to reflect the user’s language preference, providing only 2 Hindi videos out of 30. Therefore the recommendations are biased against this user.
+OVER-REP     : ['Music', 'Entertainment']
+MISSING      : ['Regional']
+
+FAIRNESS SCORES  (0–100, higher = fairer)  [██░░] = bar chart
+  Metric                  Biased              Corrected                 Ideal    Gain
+  ──────────────────────────────────────────────────────────────────────────
+  Overall                  17.8 [█░░░░░░░░░]   68.4 [██████░░░░]  Ideal  14.9  Gain +50.6
+  Genre Diversity          31.6 [███░░░░░░░]   80.0 [████████░░]  Ideal  22.5  Gain +48.4
+  Suppressed Coverage       0.0 [░░░░░░░░░░]   84.1 [████████░░]  Ideal   5.3  Gain +84.1
+  Representation           21.7 [██░░░░░░░░]   51.7 [█████░░░░░]  Ideal  16.7  Gain +30.0
+  Language Diversity       11.8 [█░░░░░░░░░]   52.5 [█████░░░░░]  Ideal  11.8  Gain +40.7
+
+GENRE MIX
+  Biased    : {'Music': 19, 'Entertainment': 11}
+  Corrected : {'Music': 11, 'Educational': 7, 'Regional': 6, 'Entertainment': 2, 'Documentary': 1, 'Gaming': 1, 'DIY': 1, 'News/Analysis': 1}
+  Ideal     : {'Music': 26, 'Entertainment': 3, 'Educational': 1}
+
+CORRECTION REASONING: Rule-based tier-balanced selection (LLM fallback).
+
+================================================================================
+RUN  2026-04-17 15:37:49  |  User: U04 — Ahmed
+================================================================================
+VERDICT      : BIASED
+REASONING    : The feed heavily favors Entertainment and Music genres (24 out of 30 videos) while underrepresenting the user’s preferred suppressed genres: Documentary and Educational are absent, and News/Analysis appears only 6 times versus the user’s 19 in history. The language distribution is almost entirely English, matching the user’s preference, but the content bias toward high-engagement genres overrides the user’s interests. Therefore the recommendations are unfair for this user.
+OVER-REP     : ['Entertainment', 'Music']
+MISSING      : ['Documentary', 'Educational']
+
+FAIRNESS SCORES  (0–100, higher = fairer)  [██░░] = bar chart
+  Metric                  Biased              Corrected                 Ideal    Gain
+  ──────────────────────────────────────────────────────────────────────────
+  Overall                  30.9 [███░░░░░░░]   72.3 [███████░░░]  Ideal  48.9  Gain +41.4
+  Genre Diversity          45.7 [████░░░░░░]   75.7 [███████░░░]  Ideal  31.6  Gain +30.0
+  Suppressed Coverage      31.6 [███░░░░░░░]  100.0 [██████████]  Ideal 100.0  Gain +68.4
+  Representation           27.5 [██░░░░░░░░]   46.7 [████░░░░░░]  Ideal  21.7  Gain +19.2
+  Language Diversity        7.0 [░░░░░░░░░░]   70.7 [███████░░░]  Ideal  53.0  Gain +63.7
+
+GENRE MIX
+  Biased    : {'Entertainment': 18, 'Music': 6, 'News/Analysis': 6}
+  Corrected : {'Documentary': 12, 'DIY': 7, 'Music': 5, 'Educational': 3, 'Regional': 1, 'Entertainment': 1, 'Gaming': 1}
+  Ideal     : {'Documentary': 19, 'News/Analysis': 11}
+
+CORRECTION REASONING: Rule-based tier-balanced selection (LLM fallback).
+
+================================================================================
+RUN  2026-04-17 15:43:55  |  User: U05 — Yuki
+================================================================================
+VERDICT      : BIASED
+REASONING    : The user’s profile shows a strong preference for Gaming, Music, and Regional content, with a language preference for Japanese and Korean. The recommendation feed contains no Regional videos and only Korean content, lacking Japanese. Entertainment videos (8) dominate the feed, while Music is underrepresented relative to the user’s 35% preference. This indicates the algorithm is demoting the user’s suppressed genre (Regional) and overemphasizing high‑engagement genres (Entertainment) at the expense of the user’s interests. Therefore, the feed is biased for this user.
+OVER-REP     : ['Entertainment']
+MISSING      : ['Regional']
+
+FAIRNESS SCORES  (0–100, higher = fairer)  [██░░] = bar chart
+  Metric                  Biased              Corrected                 Ideal    Gain
+  ──────────────────────────────────────────────────────────────────────────
+  Overall                  27.5 [██░░░░░░░░]   58.1 [█████░░░░░]  Ideal  11.8  Gain +30.6
+  Genre Diversity          48.6 [████░░░░░░]   72.4 [███████░░░]  Ideal  22.5  Gain +23.8
+  Suppressed Coverage       0.0 [░░░░░░░░░░]   52.6 [█████░░░░░]  Ideal   0.0  Gain +52.6
+  Representation           29.2 [██░░░░░░░░]   45.0 [████░░░░░░]  Ideal  16.7  Gain +15.8
+  Language Diversity       27.9 [██░░░░░░░░]   64.7 [██████░░░░]  Ideal  -0.0  Gain +36.8
+
+GENRE MIX
+  Biased    : {'Gaming': 16, 'Entertainment': 8, 'Music': 6}
+  Corrected : {'Music': 10, 'Gaming': 9, 'Regional': 6, 'Educational': 3, 'Entertainment': 1, 'DIY': 1}
+  Ideal     : {'Gaming': 26, 'Entertainment': 3, 'Music': 1}
+
+CORRECTION REASONING: Rule-based tier-balanced selection (LLM fallback).
+
+================================================================================
+RUN  2026-04-17 15:49:14  |  User: U04 — Ahmed
+================================================================================
+VERDICT      : BIASED
+REASONING    : Ahmed’s profile shows a strong preference for News/Analysis (55%), Documentary (30%) and Educational (15%) content, all in English. The recommendation feed contains only 6 News/Analysis videos and no Documentary or Educational videos, while Entertainment and Music dominate the feed (18 and 6 videos respectively). This over‑representation of high‑engagement genres and the absence of the user’s suppressed genres indicate that the engagement‑scoring algorithm is demoting the user’s preferred suppressed content. The feed also largely matches the user’s language preference (English), so language bias is not a factor. Overall, the feed is unfairly skewed away from Ahmed’s interests, meeting the bias criteria.
+
+OVER-REP     : ['Entertainment', 'Music']
+MISSING      : ['Documentary', 'Educational']
+
+FAIRNESS SCORES  (0–100, higher = fairer)  [██░░] = bar chart
+  Metric                  Biased              Corrected                 Ideal    Gain
+  ──────────────────────────────────────────────────────────────────────────
+  Overall                  30.9 [███░░░░░░░]   72.3 [███████░░░]  Ideal  48.9  Gain +41.4
+  Genre Diversity          45.7 [████░░░░░░]   75.7 [███████░░░]  Ideal  31.6  Gain +30.0
+  Suppressed Coverage      31.6 [███░░░░░░░]  100.0 [██████████]  Ideal 100.0  Gain +68.4
+  Representation           27.5 [██░░░░░░░░]   46.7 [████░░░░░░]  Ideal  21.7  Gain +19.2
+  Language Diversity        7.0 [░░░░░░░░░░]   70.7 [███████░░░]  Ideal  53.0  Gain +63.7
+
+GENRE MIX
+  Biased    : {'Entertainment': 18, 'Music': 6, 'News/Analysis': 6}
+  Corrected : {'Documentary': 12, 'DIY': 7, 'Music': 5, 'Educational': 3, 'Regional': 1, 'Entertainment': 1, 'Gaming': 1}
+  Ideal     : {'Documentary': 19, 'News/Analysis': 11}
+
+CORRECTION REASONING: Rule-based tier-balanced selection (LLM fallback).
+
+================================================================================
+RUN  2026-04-17 15:57:45  |  User: U04 — Ahmed
+================================================================================
+VERDICT      : BIASED
+REASONING    : Ahmed’s profile shows a strong preference for News/Analysis (55%), Documentary (30%) and Educational (15%) content, all in English. The recommendation feed contains only 6 News/Analysis videos (20% of the feed) and no Documentary or Educational videos, while Entertainment and Music dominate with 18 and 6 videos respectively. This under‑representation of his preferred genres and the absence of his suppressed genres (Documentary, Educational) indicates that the engagement‑scoring algorithm is demoting those suppressed categories. The feed also contains only 1 non‑English video, far below his preference for English content. Therefore the feed is biased against Ahmed’s interests.
+OVER-REP     : ['Entertainment', 'Music']
+MISSING      : ['Documentary', 'Educational']
+
+FAIRNESS SCORES  (0–100, higher = fairer)  [██░░] = bar chart
+  Metric                  Biased              Corrected                 Ideal    Gain
+  ──────────────────────────────────────────────────────────────────────────
+  Overall                  30.9 [███░░░░░░░]   72.3 [███████░░░]  Ideal  48.9  Gain +41.4
+  Genre Diversity          45.7 [████░░░░░░]   75.7 [███████░░░]  Ideal  31.6  Gain +30.0
+  Suppressed Coverage      31.6 [███░░░░░░░]  100.0 [██████████]  Ideal 100.0  Gain +68.4
+  Representation           27.5 [██░░░░░░░░]   46.7 [████░░░░░░]  Ideal  21.7  Gain +19.2
+  Language Diversity        7.0 [░░░░░░░░░░]   70.7 [███████░░░]  Ideal  53.0  Gain +63.7
+
+GENRE MIX
+  Biased    : {'Entertainment': 18, 'Music': 6, 'News/Analysis': 6}
+  Corrected : {'Documentary': 12, 'DIY': 7, 'Music': 5, 'Educational': 3, 'Regional': 1, 'Entertainment': 1, 'Gaming': 1}
+  Ideal     : {'Documentary': 19, 'News/Analysis': 11}
+
+CORRECTION REASONING: Rule-based tier-balanced selection (LLM fallback).
+
+================================================================================
+RUN  2026-04-17 16:00:26  |  User: U06 — Emma
+================================================================================
+VERDICT      : FAIR
+REASONING    : Emma’s profile shows a strong preference for DIY content, with 65% of her preference weight and 23 out of 35 watched videos in that genre. The recommendation feed contains 23 DIY videos, matching her high engagement and preference. The suppressed genres (Educational, Documentary) are absent from the feed, but the algorithm’s suppression rule would normally demote these; however, the feed does not underrepresent her preferred DIY content, and the user’s language preference (English) is fully satisfied. The feed includes 4 Entertainment and 3 Music videos, which are high‑engagement genres, but they do not dominate the feed (only 7 out of 30). Thus, the feed reflects Emma’s preferences and is not unfairly biased against her. Therefore, the recommendations are not biased for this user.
+OVER-REP     : []
+MISSING      : ['Educational', 'Documentary']
+
+FAIRNESS SCORES  (0–100, higher = fairer)  [██░░] = bar chart
+  Metric                  Biased              Corrected                 Ideal    Gain
+  ──────────────────────────────────────────────────────────────────────────
+  Overall                  41.4 [████░░░░░░]   41.4 [████░░░░░░]  Ideal  36.4  Gain +0.0
+  Genre Diversity          33.8 [███░░░░░░░]   33.8 [███░░░░░░░]  Ideal  -0.0  Gain +0.0
+  Suppressed Coverage     100.0 [██████████]  100.0 [██████████]  Ideal 100.0  Gain +0.0
+  Representation           20.8 [██░░░░░░░░]   20.8 [██░░░░░░░░]  Ideal  12.5  Gain +0.0
+  Language Diversity       -0.0 [░░░░░░░░░░]   -0.0 [░░░░░░░░░░]  Ideal  50.8  Gain +0.0
+
+GENRE MIX
+  Biased    : {'DIY': 23, 'Entertainment': 4, 'Music': 3}
+  Corrected : {'DIY': 23, 'Entertainment': 4, 'Music': 3}
+  Ideal     : {'DIY': 30}
+
+CORRECTION REASONING: Emma’s profile shows a strong preference for DIY content, with 65% of her preference weight and 23 out of 35 watched videos in that genre. The recommendation feed contains 23 DIY videos, matching her high engagement and preference. The suppressed genres (Educational, Documentary) are absent from the feed, but the algorithm’s suppression rule would normally demote these; however, the feed does not underrepresent her preferred DIY content, and the user’s language preference (English) is fully satisfied. The feed includes 4 Entertainment and 3 Music videos, which are high‑engagement genres, but they do not dominate the feed (only 7 out of 30). Thus, the feed reflects Emma’s preferences and is not unfairly biased against her. Therefore, the recommendations are not biased for this user.
+
+================================================================================
+RUN  2026-04-17 16:01:27  |  User: U11 — Lukas
+================================================================================
+VERDICT      : BIASED
+REASONING    : The user’s profile shows a strong preference for German-language Regional, Educational, and Documentary content, with 34 videos all in German and evenly split among those genres. The recommendation feed contains 30 videos, 26 of which are English and dominated by Music (15) and Entertainment (14) genres, with no representation of the user’s preferred suppressed genres. This violates the fairness criteria: the suppressed genres are absent, high-engagement genres flood the feed, and the language is predominantly English, contrary to the user’s preference for German. Therefore the feed is biased against this user.
+OVER-REP     : ['Music', 'Entertainment']
+MISSING      : ['Regional', 'Educational', 'Documentary']
+
+FAIRNESS SCORES  (0–100, higher = fairer)  [██░░] = bar chart
+  Metric                  Biased              Corrected                 Ideal    Gain
+  ──────────────────────────────────────────────────────────────────────────
+  Overall                  22.3 [██░░░░░░░░]   73.2 [███████░░░]  Ideal  45.4  Gain +50.9
+  Genre Diversity          39.2 [███░░░░░░░]   79.0 [███████░░░]  Ideal  30.7  Gain +39.8
+  Suppressed Coverage       0.0 [░░░░░░░░░░]  100.0 [██████████]  Ideal 100.0  Gain +100.0
+  Representation           25.8 [██░░░░░░░░]   51.7 [█████░░░░░]  Ideal  19.2  Gain +25.9
+  Language Diversity       18.9 [█░░░░░░░░░]   60.1 [██████░░░░]  Ideal  36.4  Gain +41.2
+
+GENRE MIX
+  Biased    : {'Music': 15, 'Entertainment': 14, 'Gaming': 1}
+  Corrected : {'Documentary': 10, 'Music': 7, 'Educational': 5, 'DIY': 5, 'News/Analysis': 1, 'Entertainment': 1, 'Gaming': 1}
+  Ideal     : {'Documentary': 23, 'Educational': 6, 'News/Analysis': 1}
+
+CORRECTION REASONING: Rule-based tier-balanced selection (LLM fallback).
+

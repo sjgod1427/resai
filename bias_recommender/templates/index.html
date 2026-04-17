@@ -42,13 +42,9 @@
       background-attachment: fixed;
     }
 
-    /* Background decorative blobs */
     body::before, body::after {
-      content: '';
-      position: fixed;
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 0;
+      content: ''; position: fixed; border-radius: 50%;
+      pointer-events: none; z-index: 0;
     }
     body::before {
       width: 700px; height: 700px;
@@ -65,17 +61,17 @@
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 4px; }
 
-    /* ── Shell ───────────────────────────────────────────── */
+    /* ── Shell ─────────────────────────────────────────────── */
     .shell {
       position: relative; z-index: 1;
       display: grid;
-      grid-template-rows: 60px 1fr;
-      grid-template-columns: 276px 1fr;
+      grid-template-rows: 62px 1fr;
+      grid-template-columns: 400px 1fr;
       height: 100vh;
       overflow: hidden;
     }
 
-    /* ── Header ──────────────────────────────────────────── */
+    /* ── Header ────────────────────────────────────────────── */
     header {
       grid-column: 1 / -1;
       display: flex; align-items: center; gap: 14px;
@@ -94,100 +90,78 @@
       font-size: 16px; flex-shrink: 0;
       box-shadow: 0 4px 14px rgba(99,102,241,0.30);
     }
-    .hdr-title { font-size: 16.5px; font-weight: 800; letter-spacing: -.4px; color: var(--text); }
+    .hdr-title { font-size: 16.5px; font-weight: 800; letter-spacing: -.4px; }
     .hdr-sep   { width: 1px; height: 20px; background: var(--border); margin: 0 4px; }
     .hdr-sub   { font-size: 12px; color: var(--text3); font-weight: 400; }
     .hdr-pills { margin-left: auto; display: flex; gap: 7px; }
     .pill {
       font-size: 10.5px; padding: 3px 11px; border-radius: 20px;
       font-weight: 500; white-space: nowrap;
-      background: rgba(99,102,241,0.09);
-      color: var(--accent);
+      background: rgba(99,102,241,0.09); color: var(--accent);
       border: 1px solid rgba(99,102,241,0.18);
     }
-    .pill.em { background: rgba(16,185,129,0.08); color: #059669; border-color: rgba(16,185,129,0.18); }
-    .pill.am { background: rgba(245,158,11,0.08); color: #d97706; border-color: rgba(245,158,11,0.18); }
+    .pill.em { background: rgba(16,185,129,0.08);  color: #059669; border-color: rgba(16,185,129,0.18); }
+    .pill.am { background: rgba(245,158,11,0.08);  color: #d97706; border-color: rgba(245,158,11,0.18); }
 
-    /* ── Sidebar ─────────────────────────────────────────── */
-    aside {
+    /* ── User dropdown (in header) ─────────────────────────── */
+    .user-select-wrap {
+      display: flex; align-items: center; gap: 9px; flex-shrink: 0;
+    }
+    .user-select-lbl {
+      font-size: 11.5px; font-weight: 600; color: var(--text2); white-space: nowrap;
+    }
+    .user-select {
+      appearance: none; -webkit-appearance: none;
+      padding: 7px 34px 7px 13px;
+      background: var(--glass2)
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E")
+        no-repeat right 10px center;
+      background-size: auto, 14px;
+      border: 1px solid var(--border2);
+      border-radius: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12.5px; font-weight: 500;
+      color: var(--text);
+      cursor: pointer;
+      outline: none;
+      min-width: 230px;
+      box-shadow: var(--sh);
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .user-select:focus {
+      border-color: rgba(99,102,241,0.35);
+      box-shadow: 0 0 0 3px rgba(99,102,241,0.10);
+    }
+    .user-select option { background: #fff; color: var(--text); }
+
+    /* ── Left panel (profile — fixed, non-scroll) ──────────── */
+    .left-panel {
+      grid-row: 2; grid-column: 1;
       background: var(--glass3);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-right: 1px solid var(--border);
-      overflow-y: auto;
-      display: flex; flex-direction: column;
-    }
-    .sb-hdr {
-      padding: 15px 16px 11px;
-      font-size: 10px; font-weight: 700; letter-spacing: 1.1px;
-      text-transform: uppercase; color: var(--text3);
-      border-bottom: 1px solid var(--border);
-      flex-shrink: 0;
-      background: rgba(255,255,255,0.4);
-    }
-    .user-row {
-      display: flex; align-items: center; gap: 11px;
-      padding: 10px 14px;
-      cursor: pointer;
-      border-bottom: 1px solid rgba(0,0,0,0.04);
-      transition: background .13s;
-      position: relative;
-    }
-    .user-row:hover { background: rgba(255,255,255,0.55); }
-    .user-row.active {
-      background: rgba(255,255,255,0.80);
-      border-left: 2.5px solid var(--accent);
-      padding-left: 11.5px;
-      box-shadow: inset 0 0 0 1px rgba(99,102,241,0.08);
-    }
-    .u-photo {
-      width: 38px; height: 38px; border-radius: 50%;
-      object-fit: cover; flex-shrink: 0;
-      border: 2px solid rgba(255,255,255,0.9);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-      background: var(--bg-a);
-    }
-    .u-initials {
-      width: 38px; height: 38px; border-radius: 50%;
-      display: none; align-items: center; justify-content: center;
-      font-size: 15px; font-weight: 700; color: #fff; flex-shrink: 0;
-      border: 2px solid rgba(255,255,255,0.9);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-    }
-    .u-name { font-size: 12.5px; font-weight: 600; color: var(--text); }
-    .u-id   { font-size: 10px; color: var(--text3); margin-left: 4px; }
-    .u-desc {
-      font-size: 11px; color: var(--text2);
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-      max-width: 178px; margin-top: 1px;
+      padding: 22px 20px;
+      display: flex; flex-direction: column; gap: 0;
+      overflow: hidden;           /* profile never scrolls — it stays put */
     }
 
-    /* ── Main ────────────────────────────────────────────── */
-    main {
-      overflow-y: auto; padding: 22px;
-      display: flex; flex-direction: column; gap: 16px;
-    }
-
-    /* ── Welcome ─────────────────────────────────────────── */
-    #welcome {
+    /* ── Empty state in left panel ─────────────────────────── */
+    .lp-empty {
       flex: 1; display: flex; flex-direction: column;
       align-items: center; justify-content: center;
-      text-align: center; gap: 16px; padding-bottom: 60px;
+      text-align: center; gap: 12px; color: var(--text3);
     }
-    .wlc-icon {
-      width: 78px; height: 78px;
-      background: var(--glass2);
-      backdrop-filter: blur(16px);
-      border: 1px solid var(--border2);
-      border-radius: 22px;
+    .lp-empty-icon {
+      width: 60px; height: 60px; border-radius: 16px;
+      background: var(--glass2); border: 1px solid var(--border2);
       display: flex; align-items: center; justify-content: center;
-      font-size: 36px;
-      box-shadow: var(--sh2);
+      font-size: 26px; box-shadow: var(--sh);
     }
-    #welcome h2 { font-size: 21px; font-weight: 700; color: var(--text2); }
-    #welcome p  { font-size: 13px; color: var(--text3); max-width: 300px; line-height: 1.75; }
+    .lp-empty h3 { font-size: 14px; font-weight: 700; color: var(--text2); }
+    .lp-empty p  { font-size: 12px; line-height: 1.7; max-width: 220px; }
 
-    /* ── Glass card ──────────────────────────────────────── */
+    /* ── Glass card ────────────────────────────────────────── */
     .card {
       background: var(--glass);
       backdrop-filter: blur(22px);
@@ -198,69 +172,94 @@
       overflow: hidden;
     }
     .card-hdr {
-      padding: 13px 18px;
+      padding: 12px 16px;
       border-bottom: 1px solid rgba(0,0,0,0.05);
       display: flex; align-items: center; gap: 10px;
       background: rgba(255,255,255,0.30);
     }
-    .card-title { font-size: 13px; font-weight: 600; color: var(--text); }
-    .card-body  { padding: 16px 18px; }
+    .card-title { font-size: 12.5px; font-weight: 700; color: var(--text); }
+    .card-body  { padding: 15px 16px; }
 
-    /* ── Profile card ────────────────────────────────────── */
-    .prof-top { display: flex; gap: 18px; align-items: flex-start; }
+    /* ── Profile card ──────────────────────────────────────── */
+    .prof-top {
+      display: flex; gap: 14px; align-items: flex-start;
+    }
     .prof-photo {
-      width: 70px; height: 70px; border-radius: 18px;
+      width: 62px; height: 62px; border-radius: 15px;
       object-fit: cover; flex-shrink: 0;
       border: 3px solid rgba(255,255,255,0.95);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+      box-shadow: 0 4px 18px rgba(0,0,0,0.12);
       background: var(--bg-a);
     }
     .prof-initials {
-      width: 70px; height: 70px; border-radius: 18px;
+      width: 62px; height: 62px; border-radius: 15px;
       display: none; align-items: center; justify-content: center;
-      font-size: 26px; font-weight: 800; color: #fff; flex-shrink: 0;
+      font-size: 23px; font-weight: 800; color: #fff; flex-shrink: 0;
       border: 3px solid rgba(255,255,255,0.95);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+      box-shadow: 0 4px 18px rgba(0,0,0,0.12);
     }
-    .prof-name { font-size: 20px; font-weight: 800; letter-spacing: -.4px; }
+    .prof-name { font-size: 17px; font-weight: 800; letter-spacing: -.3px; }
     .prof-uid  { font-size: 11px; color: var(--text3); margin-top: 2px; }
-    .prof-desc { font-size: 12.5px; color: var(--text2); margin-top: 7px; line-height: 1.7; }
-    .prof-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 18px; }
+    .prof-desc {
+      font-size: 11.5px; color: var(--text2); margin-top: 6px; line-height: 1.65;
+    }
     .sec-lbl {
-      font-size: 10px; font-weight: 700; letter-spacing: 1px;
-      text-transform: uppercase; color: var(--text3); margin-bottom: 10px;
+      font-size: 9.5px; font-weight: 700; letter-spacing: 1.1px;
+      text-transform: uppercase; color: var(--text3); margin-bottom: 8px; margin-top: 16px;
     }
     .lang-chip {
-      display: inline-block; font-size: 10.5px; padding: 2px 10px;
+      display: inline-block; font-size: 10.5px; padding: 2px 9px;
       background: rgba(99,102,241,0.08); color: var(--accent);
       border: 1px solid rgba(99,102,241,0.16); border-radius: 20px;
       margin: 2px; font-weight: 500;
     }
-    .gbar { display: flex; align-items: center; gap: 8px; margin-bottom: 7px; }
-    .gbar-lbl  { font-size: 11px; color: var(--text2); width: 100px; flex-shrink: 0; }
+    .gbar { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+    .gbar-lbl  { font-size: 11px; color: var(--text2); width: 96px; flex-shrink: 0; }
     .gbar-trk  { flex: 1; height: 5px; background: rgba(0,0,0,0.07); border-radius: 3px; overflow: hidden; }
     .gbar-fill { height: 100%; border-radius: 3px; opacity: 0.85; }
-    .gbar-pct  { font-size: 10.5px; color: var(--text3); width: 28px; text-align: right; }
+    .gbar-pct  { font-size: 10px; color: var(--text3); width: 26px; text-align: right; }
     .hist-item {
-      display: flex; align-items: center; gap: 9px;
-      padding: 5px 0; border-bottom: 1px solid rgba(0,0,0,0.05);
+      display: flex; align-items: center; gap: 8px;
+      padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.05);
     }
     .hist-item:last-child { border-bottom: none; }
     .hist-dot  { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; opacity: .8; }
-    .hist-ttl  { font-size: 11.5px; color: var(--text2); flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .hist-flg  { font-size: 12px; }
+    .hist-ttl  { font-size: 11px; color: var(--text2); flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .hist-flg  { font-size: 11px; }
 
-    /* ── Run button ──────────────────────────────────────── */
+    /* ── Right panel (scrollable results area) ─────────────── */
+    main {
+      grid-row: 2; grid-column: 2;
+      overflow-y: auto;
+      padding: 22px;
+      display: flex; flex-direction: column; gap: 16px;
+    }
+
+    /* ── Right panel empty state ───────────────────────────── */
+    .rp-empty {
+      flex: 1; display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center; gap: 14px; padding-bottom: 40px;
+    }
+    .rp-empty-icon {
+      width: 72px; height: 72px; border-radius: 20px;
+      background: var(--glass2); border: 1px solid var(--border2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 32px; box-shadow: var(--sh2);
+    }
+    .rp-empty h2 { font-size: 18px; font-weight: 700; color: var(--text2); }
+    .rp-empty p  { font-size: 12.5px; color: var(--text3); max-width: 280px; line-height: 1.8; }
+
+    /* ── Run button ────────────────────────────────────────── */
     #run-btn {
-      display: none;
-      align-items: center; gap: 9px;
-      padding: 11px 26px;
+      display: none; align-items: center; justify-content: center; gap: 9px;
+      width: 100%; padding: 11px 20px; margin-top: 14px;
       background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
       color: #fff; border: none; border-radius: var(--r);
       font-size: 13.5px; font-weight: 600; cursor: pointer;
-      align-self: flex-start;
       transition: opacity .18s, transform .1s, box-shadow .18s;
       box-shadow: 0 4px 20px rgba(99,102,241,0.28);
+      flex-shrink: 0;
     }
     #run-btn:hover:not(:disabled) { opacity: .9; box-shadow: 0 6px 28px rgba(99,102,241,0.38); }
     #run-btn:active:not(:disabled){ transform: scale(.98); }
@@ -274,7 +273,7 @@
     #run-btn.loading .ico  { display: none; }
     @keyframes spin { to { transform: rotate(360deg); } }
 
-    /* ── Tabs ────────────────────────────────────────────── */
+    /* ── Tabs ──────────────────────────────────────────────── */
     .tabs {
       display: inline-flex; gap: 3px;
       background: var(--glass2);
@@ -290,74 +289,82 @@
       transition: all .14s;
     }
     .tab.active {
-      background: white;
-      color: var(--text);
+      background: white; color: var(--text);
       box-shadow: 0 1px 6px rgba(0,0,0,0.08);
     }
     .tab-panel { display: none; }
     .tab-panel.active { display: block; }
 
-    /* ── Feed layout ─────────────────────────────────────── */
+    /* ── Feed layout ───────────────────────────────────────── */
     .feeds { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
 
     .feed-hdr {
       display: flex; align-items: center; gap: 9px;
-      padding: 12px 16px; border-bottom: 1px solid rgba(0,0,0,0.05);
+      padding: 11px 15px; border-bottom: 1px solid rgba(0,0,0,0.05);
       background: rgba(255,255,255,0.30);
     }
-    .feed-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
-    .feed-ttl { font-size: 12.5px; font-weight: 600; }
-    .feed-stat { font-size: 11px; color: var(--text3); margin-left: auto; }
+    .feed-dot  { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+    .feed-ttl  { font-size: 12.5px; font-weight: 600; }
+    .feed-stat { font-size: 10.5px; color: var(--text3); margin-left: auto; }
 
     /* Video card */
     .vcard {
-      display: flex; align-items: center; gap: 11px;
-      padding: 9px 14px; border-bottom: 1px solid rgba(0,0,0,0.04);
+      display: flex; align-items: center; gap: 10px;
+      padding: 8px 13px; border-bottom: 1px solid rgba(0,0,0,0.04);
       transition: background .11s;
     }
     .vcard:last-child { border-bottom: none; }
     .vcard:hover { background: rgba(255,255,255,0.55); }
-    .vrank { font-size: 10.5px; font-weight: 700; color: var(--text4); width: 18px; text-align: center; flex-shrink: 0; }
-    .vbar  { width: 3px; height: 34px; border-radius: 2px; flex-shrink: 0; opacity: .75; }
+    .vrank { font-size: 10px; font-weight: 700; color: var(--text4); width: 17px; text-align: center; flex-shrink: 0; }
+    .vbar  { width: 3px; height: 32px; border-radius: 2px; flex-shrink: 0; opacity: .75; }
     .vinfo { flex: 1; min-width: 0; }
-    .vttl  { font-size: 12px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--text); }
-    .vmeta { display: flex; align-items: center; gap: 6px; margin-top: 3px; }
-    .gtag  {
-      padding: 1px 8px; border-radius: 20px;
-      font-size: 10px; font-weight: 600; color: #fff; opacity: .88;
-    }
-    .stag  {
-      font-size: 9.5px; padding: 1px 6px; border-radius: 4px;
-      background: rgba(0,0,0,0.06); color: var(--text3);
-    }
-    .vlang { font-size: 11px; color: var(--text2); }
-    .vvir  { font-size: 10.5px; color: var(--text3); flex-shrink: 0; display: flex; align-items: center; gap: 5px; }
-    .vvir-bar  { width: 28px; height: 3px; background: rgba(0,0,0,0.08); border-radius: 2px; overflow: hidden; }
+    .vttl  { font-size: 11.5px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--text); }
+    .vmeta { display: flex; align-items: center; gap: 5px; margin-top: 3px; }
+    .gtag  { padding: 1px 7px; border-radius: 20px; font-size: 9.5px; font-weight: 600; color: #fff; opacity: .88; }
+    .stag  { font-size: 9px; padding: 1px 5px; border-radius: 4px; background: rgba(0,0,0,0.06); color: var(--text3); }
+    .vlang { font-size: 10.5px; color: var(--text2); }
+    .vvir  { font-size: 10px; color: var(--text3); flex-shrink: 0; display: flex; align-items: center; gap: 4px; }
+    .vvir-bar  { width: 26px; height: 3px; background: rgba(0,0,0,0.08); border-radius: 2px; overflow: hidden; }
     .vvir-fill { height: 100%; background: var(--accent); border-radius: 2px; opacity: .55; }
 
     .legend {
       display: flex; flex-wrap: wrap; gap: 6px;
-      padding: 10px 14px; border-top: 1px solid rgba(0,0,0,0.04);
+      padding: 9px 13px; border-top: 1px solid rgba(0,0,0,0.04);
       background: rgba(255,255,255,0.18);
     }
     .leg-it { display: flex; align-items: center; gap: 5px; font-size: 10px; color: var(--text3); }
     .leg-d  { width: 7px; height: 7px; border-radius: 50%; opacity: .75; }
 
-    /* ── Verdict ─────────────────────────────────────────── */
-    .vbadge {
-      padding: 2px 12px; border-radius: 20px;
-      font-size: 11px; font-weight: 700;
+    /* ── Verdict ───────────────────────────────────────────── */
+    /* ── Quota tracker ────────────────────────────────────────── */
+    .quota-row { display: contents; }
+    .quota-cell {
+      display: flex; align-items: center; gap: 7px;
+      font-size: 13px; font-weight: 700;
     }
-    .vbadge.biased { background: rgba(239,68,68,.08);  color: #dc2626; border: 1px solid rgba(239,68,68,.20); }
-    .vbadge.fair   { background: rgba(16,185,129,.08); color: #059669; border: 1px solid rgba(16,185,129,.20); }
+    .quota-cell.met  { color: var(--green); }
+    .quota-cell.miss { color: var(--red); }
+    .quota-icon { font-size: 14px; line-height: 1; }
+    .quota-req {
+      font-size: 9.5px; font-weight: 600; padding: 1px 6px;
+      border-radius: 20px; background: rgba(0,0,0,0.06);
+      color: var(--text3); margin-left: 4px;
+    }
+
+    .vbadge {
+      padding: 2px 11px; border-radius: 20px; font-size: 11px; font-weight: 700;
+    }
+    .vbadge.biased       { background: rgba(239,68,68,.08);   color: #dc2626; border: 1px solid rgba(239,68,68,.20); }
+    .vbadge.fair         { background: rgba(16,185,129,.08);  color: #059669; border: 1px solid rgba(16,185,129,.20); }
+    .vbadge.needs-fixing { background: rgba(245,158,11,.09);  color: #d97706; border: 1px solid rgba(245,158,11,.28); }
     .reason-txt { font-size: 12.5px; color: var(--text2); line-height: 1.75; }
     .tier-row   { display: flex; gap: 7px; flex-wrap: wrap; margin-top: 12px; }
-    .ttag { padding: 3px 12px; border-radius: var(--r-sm); font-size: 11px; font-weight: 600; }
+    .ttag { padding: 3px 11px; border-radius: var(--r-sm); font-size: 11px; font-weight: 600; }
     .corr-block { margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(0,0,0,0.06); }
     .corr-lbl { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; color: var(--text3); margin-bottom: 6px; }
     .corr-txt { font-size: 12px; color: var(--text2); line-height: 1.75; }
 
-    /* ── Metrics ─────────────────────────────────────────── */
+    /* ── Metrics ───────────────────────────────────────────── */
     .m2 { display: grid; grid-template-columns: 155px 1fr 1fr;     gap: 10px 16px; align-items: center; }
     .m3 { display: grid; grid-template-columns: 155px 1fr 1fr 1fr; gap: 10px 16px; align-items: center; }
     .mhdr { text-align: center; font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; padding: 2px 0; }
@@ -365,34 +372,157 @@
     .mbar { display: flex; align-items: center; gap: 8px; }
     .mtrk { flex: 1; height: 8px; background: rgba(0,0,0,0.07); border-radius: 4px; overflow: hidden; }
     .mfill { height: 100%; border-radius: 4px; transition: width .9s cubic-bezier(.4,0,.2,1); opacity: .80; }
-    .mval { font-size: 11px; color: var(--text2); min-width: 36px; text-align: right; }
+    .mval { font-size: 11px; color: var(--text2); min-width: 42px; text-align: right; }
     .gw   { display: flex; flex-wrap: wrap; gap: 4px; padding: 4px 0; }
 
-    /* ── Ideal ───────────────────────────────────────────── */
+    /* ── Ideal tab ─────────────────────────────────────────── */
     .ideal-desc {
-      padding: 13px 18px; border-bottom: 1px solid rgba(0,0,0,0.05);
+      padding: 12px 15px; border-bottom: 1px solid rgba(0,0,0,0.05);
       font-size: 12px; color: var(--text2); line-height: 1.8;
       background: rgba(59,130,246,.04);
     }
     .ideal-desc code {
       font-family: 'Courier New', monospace;
       background: rgba(59,130,246,.09); color: #2563eb;
-      padding: 1px 6px; border-radius: 4px; font-size: 11px;
+      padding: 1px 5px; border-radius: 4px; font-size: 11px;
     }
 
     .mt16 { margin-top: 16px; }
+
+    /* ── New-user form ─────────────────────────────────────────── */
+    .nu-input {
+      width: 100%; padding: 7px 10px;
+      border: 1px solid var(--border2); border-radius: var(--r-sm);
+      font-family: 'Inter', sans-serif; font-size: 12.5px;
+      background: var(--glass2); color: var(--text); outline: none;
+      transition: border-color .15s;
+    }
+    .nu-input:focus { border-color: rgba(99,102,241,.4); }
+    .nu-toggle {
+      padding: 5px 13px; border-radius: 20px; cursor: pointer;
+      border: 1.5px solid var(--border2); background: transparent;
+      font-size: 11.5px; font-weight: 500; color: var(--text3);
+      font-family: inherit; transition: all .13s; flex-shrink: 0;
+    }
+    .nu-toggle.on {
+      background: rgba(99,102,241,0.12); border-color: rgba(99,102,241,0.45);
+      color: var(--accent);
+    }
+    .nu-toggle.on-lang {
+      background: rgba(16,185,129,0.10); border-color: rgba(16,185,129,0.45);
+      color: #059669;
+    }
+    .nu-weight-row {
+      display: flex; align-items: center; gap: 8px;
+      width: 100%; margin-bottom: 6px;
+    }
+    .nu-slider-wrap {
+      flex: 1; display: none; align-items: center; gap: 7px;
+    }
+    .nu-slider {
+      flex: 1; accent-color: var(--accent); cursor: pointer; height: 4px;
+    }
+    .nu-pct {
+      font-size: 11px; font-weight: 600; color: var(--accent);
+      min-width: 34px; text-align: right;
+    }
+
+    /* ── Feedback section ──────────────────────────────────────── */
+    .fb-entry {
+      padding: 8px 12px; margin-bottom: 8px;
+      background: rgba(99,102,241,0.07); border-radius: var(--r-sm);
+      border-left: 3px solid var(--accent2);
+    }
+    .fb-entry-lbl {
+      font-size: 9.5px; font-weight: 700; color: var(--accent2);
+      text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 4px;
+    }
+    .fb-entry-txt { font-size: 12px; color: var(--text2); line-height: 1.6; }
+    .fb-textarea {
+      width: 100%; padding: 9px 12px; border: 1px solid var(--border2);
+      border-radius: var(--r-sm); font-family: inherit; font-size: 12.5px;
+      background: var(--glass2); color: var(--text); outline: none;
+      resize: vertical; line-height: 1.65; min-height: 70px;
+      transition: border-color .15s;
+    }
+    .fb-textarea:focus { border-color: rgba(99,102,241,.4); }
+    .fb-btn {
+      margin-top: 10px; padding: 9px 22px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff; border: none; border-radius: var(--r-sm);
+      font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit;
+      transition: opacity .15s, transform .1s;
+    }
+    .fb-btn:hover:not(:disabled) { opacity: .88; }
+    .fb-btn:active:not(:disabled) { transform: scale(.97); }
+    .fb-btn:disabled { opacity: .45; cursor: not-allowed; }
+
+    /* ── Feedback section highlight ─────────────────────────────── */
+    #feedback-section {
+      border-top: 3px solid var(--accent);
+      transition: box-shadow .3s;
+    }
+    #feedback-section.fresh {
+      box-shadow: 0 0 0 3px rgba(99,102,241,0.18), var(--sh2);
+      animation: pulseRing .9s ease-out 2;
+    }
+    @keyframes pulseRing {
+      0%   { box-shadow: 0 0 0 3px rgba(99,102,241,0.30), var(--sh2); }
+      100% { box-shadow: 0 0 0 8px rgba(99,102,241,0.00), var(--sh2); }
+    }
+
+    /* ── Profile update notice ───────────────────────────────────── */
+    .profile-notice {
+      display: none; margin-top: 10px;
+      padding: 8px 11px; border-radius: var(--r-sm);
+      background: rgba(16,185,129,0.09);
+      border: 1px solid rgba(16,185,129,0.22);
+      font-size: 11.5px; font-weight: 500; color: #059669;
+      line-height: 1.55;
+      animation: fadeSlide .35s ease;
+    }
+    .profile-notice.has-minus {
+      background: rgba(99,102,241,0.07);
+      border-color: rgba(99,102,241,0.22);
+      color: var(--accent);
+    }
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(-5px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .notice-tag {
+      display: inline-block; padding: 1px 7px; border-radius: 20px;
+      font-size: 10px; font-weight: 700; margin: 2px 2px 0;
+      background: rgba(16,185,129,0.14); color: #059669;
+    }
+    .notice-tag.minus {
+      background: rgba(239,68,68,0.10); color: #dc2626;
+    }
   </style>
 </head>
 <body>
 
 <div class="shell">
 
-  <!-- ── Header ──────────────────────────────────────────── -->
+  <!-- ── Header ─────────────────────────────────────────────── -->
   <header>
     <div class="hdr-mark">⚖</div>
     <span class="hdr-title">ResBias</span>
     <div class="hdr-sep"></div>
-    <span class="hdr-sub">Algorithmic Bias Analyzer for Video Recommendation Systems</span>
+    <span class="hdr-sub">Algorithmic Bias Analyzer</span>
+
+    <!-- User dropdown -->
+    <div class="user-select-wrap" style="margin-left:24px">
+      <span class="user-select-lbl">User persona</span>
+      <select class="user-select" id="user-select" onchange="if(this.value) selectUser(this.value)">
+        <option value="">— select a persona —</option>
+        <option value="__new__">✦ New User (Cold Start)</option>
+        {% for u in users %}
+        <option value="{{ u.user_id }}">{{ u.user_id }} · {{ u.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
     <div class="hdr-pills">
       <span class="pill">Two-Tower</span>
       <span class="pill em">Agentic LLM</span>
@@ -400,77 +530,99 @@
     </div>
   </header>
 
-  <!-- ── Sidebar ──────────────────────────────────────────── -->
-  <aside>
-    <div class="sb-hdr">20 User Personas</div>
-    {% for u in users %}
-    <div class="user-row" id="ur-{{ u.user_id }}" onclick="selectUser('{{ u.user_id }}')">
-      <img  class="u-photo"
-            src="{{ u.avatar }}"
-            alt="{{ u.name }}"
-            onerror="this.style.display='none';this.nextElementSibling.style.cssText='display:flex;background:{{ genre_colors.get(u.top_genre,'#6366f1') }}'">
-      <div  class="u-initials"
-            style="background:{{ genre_colors.get(u.top_genre,'#6366f1') }}">{{ u.name[0] }}</div>
-      <div style="min-width:0">
-        <div style="display:flex;align-items:center">
-          <span class="u-name">{{ u.name }}</span>
-          <span class="u-id">{{ u.user_id }}</span>
-        </div>
-        <div class="u-desc">{{ u.description }}</div>
+  <!-- ── Left panel — profile (stays fixed, never scrolls) ──── -->
+  <div class="left-panel">
+
+    <!-- Empty state -->
+    <div class="lp-empty" id="lp-empty">
+      <div class="lp-empty-icon">👤</div>
+      <h3>No user selected</h3>
+      <p>Pick a persona from the dropdown above to see their profile.</p>
+    </div>
+
+    <!-- New-user cold-start form -->
+    <div class="card" id="new-user-panel" style="display:none;overflow-y:auto;max-height:calc(100vh - 112px)">
+      <div class="card-hdr">
+        <span style="font-size:16px">✦</span>
+        <span class="card-title" style="margin-left:4px">New User Setup</span>
+      </div>
+      <div class="card-body">
+        <div class="sec-lbl" style="margin-top:0">Your Name <span style="font-weight:400;color:var(--text4)">(optional)</span></div>
+        <input type="text" id="nu-name" class="nu-input" placeholder="e.g. Alex" style="margin-bottom:2px">
+
+        <div class="sec-lbl">Content You Enjoy <span style="font-weight:400;color:var(--text4)">(select &amp; set weight)</span></div>
+        <div id="nu-genres" style="display:flex;flex-direction:column;gap:0"></div>
+
+        <div class="sec-lbl">Preferred Languages <span style="font-weight:400;color:var(--text4)">(default: English)</span></div>
+        <div id="nu-langs" style="display:flex;flex-wrap:wrap;gap:6px"></div>
       </div>
     </div>
-    {% endfor %}
-  </aside>
 
-  <!-- ── Main ─────────────────────────────────────────────── -->
-  <main>
-
-    <!-- Welcome -->
-    <div id="welcome">
-      <div class="wlc-icon">⚖️</div>
-      <h2>Select a User Persona</h2>
-      <p>Pick one of 20 profiles from the sidebar. We'll run their recommendations through the biased algorithm, the LLM supervisor, and the ideal retriever — then compare all three.</p>
-    </div>
-
-    <!-- Profile card -->
+    <!-- Profile card (shown after selection) -->
     <div class="card" id="profile-card" style="display:none">
       <div class="card-hdr">
         <span class="card-title">User Profile</span>
         <div id="lang-pills" style="margin-left:auto;display:flex;gap:5px;flex-wrap:wrap"></div>
       </div>
       <div class="card-body">
+
+        <!-- Photo + name -->
         <div class="prof-top">
-          <img  id="p-photo"
-                class="prof-photo"
-                src="" alt=""
+          <img  id="p-photo" class="prof-photo" src="" alt=""
                 onerror="this.style.display='none';document.getElementById('p-initials').style.display='flex'">
           <div  id="p-initials" class="prof-initials"></div>
-          <div style="flex:1">
+          <div style="flex:1;min-width:0">
             <div class="prof-name" id="p-name"></div>
             <div class="prof-uid"  id="p-uid"></div>
-            <div class="prof-desc" id="p-desc"></div>
           </div>
         </div>
-        <div class="prof-grid">
-          <div>
-            <div class="sec-lbl">Genre Preferences</div>
-            <div id="p-genres"></div>
-          </div>
-          <div>
-            <div class="sec-lbl">Watch History Sample</div>
-            <div id="p-history"></div>
-            <div id="p-more" style="font-size:10.5px;color:var(--text3);margin-top:7px"></div>
-          </div>
+
+        <!-- Description -->
+        <div class="prof-desc" id="p-desc"></div>
+
+        <!-- Genre preferences -->
+        <div class="sec-lbl">Genre Preferences</div>
+        <div id="p-genres"></div>
+
+        <!-- Profile update notice (guest feedback) -->
+        <div class="profile-notice" id="profile-notice"></div>
+
+        <!-- Watch history -->
+        <div class="sec-lbl">Watch History Sample</div>
+        <div id="p-history"></div>
+        <div id="p-more" style="font-size:10.5px;color:var(--text3);margin-top:6px"></div>
+
+        <!-- Modify prefs link (guest users only) -->
+        <div id="modify-prefs-row" style="display:none;margin-top:14px;padding-top:12px;border-top:1px solid rgba(0,0,0,0.06)">
+          <button onclick="resetNewUserForm()"
+                  style="background:none;border:1px solid var(--border2);border-radius:var(--r-sm);padding:6px 13px;font-family:inherit;font-size:11.5px;font-weight:500;color:var(--text2);cursor:pointer;transition:background .13s"
+                  onmouseover="this.style.background='rgba(0,0,0,0.04)'"
+                  onmouseout="this.style.background='none'">
+            ← Modify Preferences
+          </button>
         </div>
+
       </div>
     </div>
 
-    <!-- Run -->
+    <!-- Run button (shown once user is selected) — lives in left panel -->
     <button id="run-btn" onclick="runTest()">
       <span class="ico">▶&nbsp;</span>
       <div class="spin"></div>
       <span id="btn-lbl">Run Bias Analysis</span>
     </button>
+
+  </div><!-- /left-panel -->
+
+  <!-- ── Right panel — results (scrollable) ────────────────────── -->
+  <main>
+
+    <!-- Empty state (before any user selected) -->
+    <div class="rp-empty" id="rp-empty">
+      <div class="rp-empty-icon">⚖️</div>
+      <h2>Select a User Persona</h2>
+      <p>Pick one of 20 profiles from the dropdown. We'll run their recommendations through the biased algorithm, the LLM supervisor, and the ideal retriever — then compare all three.</p>
+    </div>
 
     <!-- Results -->
     <div id="results" style="display:none">
@@ -480,14 +632,13 @@
         <button class="tab"        id="t-ideal" onclick="switchTab('ideal')">Ideal Recommender</button>
       </div>
 
-      <!-- Tab 1 -->
+      <!-- Tab 1: Bias Analysis -->
       <div class="tab-panel active" id="tp-bias">
         <div class="feeds">
           <div class="card">
             <div class="feed-hdr">
               <div class="feed-dot" style="background:var(--red)"></div>
               <span class="feed-ttl">Biased Recommender</span>
-              <span class="feed-stat" id="b-stat"></span>
             </div>
             <div id="biased-feed"></div>
             <div class="legend" id="legend"></div>
@@ -496,7 +647,6 @@
             <div class="feed-hdr">
               <div class="feed-dot" style="background:var(--green)"></div>
               <span class="feed-ttl">LLM-Corrected Feed</span>
-              <span class="feed-stat" id="f-stat"></span>
             </div>
             <div id="corrected-feed"></div>
           </div>
@@ -527,13 +677,12 @@
         </div>
       </div><!-- /tp-bias -->
 
-      <!-- Tab 2 -->
+      <!-- Tab 2: Ideal -->
       <div class="tab-panel" id="tp-ideal">
         <div class="card mt16">
           <div class="feed-hdr">
             <div class="feed-dot" style="background:var(--blue)"></div>
             <span class="feed-ttl">Ideal Recommender — Zero Bias</span>
-            <span class="feed-stat" id="u-stat"></span>
           </div>
           <div class="ideal-desc">
             Score&nbsp;=&nbsp;<code>cosine_similarity(user_vec,&nbsp;item_vec)</code>&nbsp;only.
@@ -554,21 +703,135 @@
       </div><!-- /tp-ideal -->
 
     </div><!-- /results -->
+
+    <!-- Feedback refinement section (shown after any run) -->
+    <div class="card mt16" id="feedback-section" style="display:none">
+      <div class="card-hdr">
+        <span style="font-size:15px">💬</span>
+        <span class="card-title" style="margin-left:5px">Refine Recommendations</span>
+        <span id="round-badge" class="pill am" style="margin-left:auto">Round 1</span>
+      </div>
+      <div class="card-body">
+        <div id="feedback-history"></div>
+        <div class="sec-lbl" style="margin-top:0">Tell the LLM what to change</div>
+        <textarea id="feedback-input" class="fb-textarea"
+          placeholder="e.g. I want more gaming and educational videos, less music. Show me Korean content too."></textarea>
+        <button id="feedback-btn" class="fb-btn" onclick="submitFeedback()">Apply Feedback</button>
+      </div>
+    </div>
+
   </main>
+
 </div><!-- /shell -->
 
 <script>
   const GC = {{ genre_colors | tojson }};
-  let activeUser = null;
+  const ALL_GENRES = ['Entertainment','Music','Gaming','Educational','Documentary','DIY','News/Analysis','Regional'];
+  const ALL_LANGS  = ['English','Hindi','Spanish','French','German','Japanese','Korean','Russian'];
+  const LANG_FLAGS = {English:'🇬🇧',Hindi:'🇮🇳',Spanish:'🇪🇸',French:'🇫🇷',German:'🇩🇪',Japanese:'🇯🇵',Korean:'🇰🇷',Russian:'🇷🇺'};
 
-  /* ── User select ───────────────────────────────────────── */
+  let activeUser       = null;
+  let isNewUser        = false;
+  let currentSessionId = null;
+  let lastNewUserPrefs = null;   // saved after each guest run
+
+  /* ── New-user form init ───────────────────────────────────── */
+  function initNewUserForm() {
+    document.getElementById('nu-genres').innerHTML = ALL_GENRES.map(g => {
+      const safeId = g.replace(/\//g, '_');
+      return `<div class="nu-weight-row">
+        <button class="nu-toggle" data-val="${g}" onclick="toggleGenreWeight(this)">${g}</button>
+        <div class="nu-slider-wrap" id="nu-sw-${safeId}">
+          <input type="range" class="nu-slider" data-val="${g}" min="1" max="100" value="50"
+                 oninput="document.getElementById('nu-pct-${safeId}').textContent=this.value+'%'">
+          <span class="nu-pct" id="nu-pct-${safeId}">50%</span>
+        </div>
+      </div>`;
+    }).join('');
+    document.getElementById('nu-langs').innerHTML = ALL_LANGS.map(l =>
+      `<button class="nu-toggle" data-val="${l}" onclick="this.classList.toggle('on-lang')">${LANG_FLAGS[l]||''} ${l}</button>`
+    ).join('');
+  }
+
+  function toggleGenreWeight(btn) {
+    btn.classList.toggle('on');
+    const safeId = btn.dataset.val.replace(/\//g, '_');
+    const wrap = document.getElementById('nu-sw-' + safeId);
+    wrap.style.display = btn.classList.contains('on') ? 'flex' : 'none';
+  }
+
+  function collectNewUserPrefs() {
+    const name   = document.getElementById('nu-name').value.trim();
+    const raw    = {};
+    document.querySelectorAll('#nu-genres .nu-toggle.on').forEach(btn => {
+      const safeId = btn.dataset.val.replace(/\//g, '_');
+      const slider = document.querySelector(`#nu-sw-${safeId} .nu-slider`);
+      raw[btn.dataset.val] = slider ? parseInt(slider.value) : 50;
+    });
+    if (!Object.keys(raw).length) { alert('Please select at least one genre you enjoy.'); return null; }
+    const total = Object.values(raw).reduce((s, v) => s + v, 0);
+    const genres = {};
+    Object.keys(raw).forEach(k => { genres[k] = parseFloat((raw[k] / total).toFixed(4)); });
+    const languages = [...document.querySelectorAll('#nu-langs .nu-toggle.on-lang')].map(b => b.dataset.val);
+    if (!languages.length) languages.push('English');
+    return { name: name || 'New User', genres, languages };
+  }
+
+  /* ── Guest profile helpers ───────────────────────────────── */
+  function renderGuestProfile(prefs) {
+    // Reuse the existing profile-card by faking a user object
+    const guestUser = {
+      preferred_genres:    prefs.genres,
+      preferred_languages: prefs.languages,
+      name:                prefs.name || 'New User',
+      user_id:             'GUEST',
+      avatar:              '',
+      description:         `Cold-start profile. Genres: ${Object.keys(prefs.genres).join(', ')}.`,
+      interactions:        [],
+      total_interactions:  0,
+    };
+    renderProfile(guestUser);
+    // Override history line for cold-start
+    document.getElementById('p-more').textContent = 'No watch history — cold start';
+    // Show "Modify Preferences" back-link
+    document.getElementById('modify-prefs-row').style.display = 'block';
+  }
+
+  function resetNewUserForm() {
+    document.getElementById('profile-card').style.display   = 'none';
+    document.getElementById('new-user-panel').style.display = 'block';
+    document.getElementById('results').style.display        = 'none';
+    document.getElementById('feedback-section').style.display = 'none';
+    currentSessionId = null;
+  }
+
+  /* ── User select ─────────────────────────────────────────── */
   function selectUser(id) {
-    activeUser = id;
-    document.querySelectorAll('.user-row').forEach(el =>
-      el.classList.toggle('active', el.id === 'ur-' + id)
-    );
-    document.getElementById('welcome').style.display  = 'none';
-    document.getElementById('results').style.display  = 'none';
+    activeUser       = id;
+    isNewUser        = (id === '__new__');
+    currentSessionId = null;
+    lastNewUserPrefs = null;
+
+    // Reset right panel
+    document.getElementById('rp-empty').style.display         = 'none';
+    document.getElementById('results').style.display          = 'none';
+    document.getElementById('run-btn').style.display          = 'none';
+    document.getElementById('feedback-section').style.display = 'none';
+
+    // Reset left panel
+    document.getElementById('lp-empty').style.display          = 'none';
+    document.getElementById('profile-card').style.display      = 'none';
+    document.getElementById('new-user-panel').style.display    = 'none';
+    document.getElementById('modify-prefs-row').style.display  = 'none';
+
+    if (isNewUser) {
+      document.getElementById('new-user-panel').style.display = 'block';
+      document.getElementById('run-btn').style.display        = 'flex';
+      document.getElementById('btn-lbl').textContent          = 'Generate My Feed';
+      return;
+    }
+
+    document.getElementById('btn-lbl').textContent = 'Run Bias Analysis';
 
     fetch('/api/user/' + id).then(r => r.json()).then(u => {
       renderProfile(u);
@@ -578,10 +841,9 @@
   }
 
   function renderProfile(u) {
-    const topG   = Object.entries(u.preferred_genres).sort((a,b)=>b[1]-a[1])[0][0];
+    const topG    = Object.entries(u.preferred_genres).sort((a,b)=>b[1]-a[1])[0][0];
     const accentC = GC[topG] || '#6366f1';
 
-    /* photo */
     const photo = document.getElementById('p-photo');
     const ini   = document.getElementById('p-initials');
     photo.src   = u.avatar || '';
@@ -615,36 +877,170 @@
       </div>`).join('');
 
     document.getElementById('p-more').textContent =
-      `+${u.total_interactions - u.interactions.length} more interactions`;
+      u.total_interactions > u.interactions.length
+        ? `+${u.total_interactions - u.interactions.length} more interactions`
+        : '';
   }
 
-  /* ── Run ───────────────────────────────────────────────── */
+  /* ── Run ─────────────────────────────────────────────────── */
   function runTest() {
     if (!activeUser) return;
-    const btn = document.getElementById('run-btn');
+
+    let payload;
+    if (isNewUser) {
+      const prefs = collectNewUserPrefs();
+      if (!prefs) return;
+      lastNewUserPrefs = prefs;
+      payload = { new_user: prefs };
+    } else {
+      payload = { user_id: activeUser };
+    }
+
+    const btn       = document.getElementById('run-btn');
+    const doneLabel = isNewUser ? 'Generate My Feed' : 'Run Bias Analysis';
     btn.disabled = true; btn.classList.add('loading');
-    document.getElementById('btn-lbl').textContent = 'Analysing…';
-    document.getElementById('results').style.display = 'none';
+    document.getElementById('btn-lbl').textContent         = isNewUser ? 'Generating…' : 'Analysing…';
+    document.getElementById('results').style.display        = 'none';
+    document.getElementById('feedback-section').style.display = 'none';
 
     fetch('/api/run', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ user_id: activeUser })
+      body: JSON.stringify(payload)
     })
-    .then(r => r.json())
-    .then(data => {
+    .then(r => r.json().then(data => ({ ok: r.ok, data })))
+    .then(({ ok, data }) => {
+      btn.disabled = false; btn.classList.remove('loading');
+      document.getElementById('btn-lbl').textContent = doneLabel;
+      if (!ok || data.error) {
+        alert('Analysis error: ' + (data.error || 'Unknown error. Check server logs.'));
+        return;
+      }
+      currentSessionId = data.session_id;
+
+      // For new users: swap preference form → guest profile card in left panel
+      if (isNewUser && lastNewUserPrefs) {
+        document.getElementById('new-user-panel').style.display = 'none';
+        renderGuestProfile(lastNewUserPrefs);
+        document.getElementById('profile-card').style.display   = 'block';
+      }
+
       render(data);
-      btn.disabled = false; btn.classList.remove('loading');
-      document.getElementById('btn-lbl').textContent = 'Run Bias Analysis';
       document.getElementById('results').style.display = 'block';
+      showFeedbackSection(data.feedback_history || []);
+
+      // Always scroll the feedback section into view after a run
+      setTimeout(() => {
+        document.getElementById('feedback-section')
+          .scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 300);
     })
-    .catch(() => {
+    .catch(err => {
       btn.disabled = false; btn.classList.remove('loading');
-      document.getElementById('btn-lbl').textContent = 'Run Bias Analysis';
+      document.getElementById('btn-lbl').textContent = doneLabel;
+      alert('Network error: ' + err.message);
     });
   }
 
-  /* ── Render ────────────────────────────────────────────── */
+  /* ── Guest profile updater ───────────────────────────────── */
+  function updateGuestProfile(profile) {
+    if (!profile) return;
+
+    // Refresh genre preference bars
+    const gs = Object.entries(profile.preferred_genres).sort((a,b) => b[1]-a[1]);
+    document.getElementById('p-genres').innerHTML = gs.map(([g,w]) => `
+      <div class="gbar">
+        <span class="gbar-lbl">${g}</span>
+        <div class="gbar-trk"><div class="gbar-fill" style="width:${w*100}%;background:${GC[g]||'#888'}"></div></div>
+        <span class="gbar-pct">${Math.round(w*100)}%</span>
+      </div>`).join('');
+
+    // Refresh watch history (now includes synthetic interactions)
+    if (profile.recent_interactions && profile.recent_interactions.length) {
+      document.getElementById('p-history').innerHTML = profile.recent_interactions.map(i => `
+        <div class="hist-item">
+          <div class="hist-dot" style="background:${i.color}"></div>
+          <span class="hist-ttl" title="${i.title}">${i.title}</span>
+          <span class="hist-flg">${i.flag}</span>
+        </div>`).join('');
+      const total = profile.total_interactions || 0;
+      const shown = profile.recent_interactions.length;
+      document.getElementById('p-more').textContent =
+        total > shown ? `+${total - shown} more interactions` : '';
+    }
+
+    // Show change notice
+    const boosted = profile.genres_boosted || [];
+    const reduced = profile.genres_reduced || [];
+    if (!boosted.length && !reduced.length) return;
+
+    const notice = document.getElementById('profile-notice');
+    const tags = [
+      ...boosted.map(g => `<span class="notice-tag">+${g}</span>`),
+      ...reduced.map(g => `<span class="notice-tag minus">−${g}</span>`),
+    ].join('');
+    notice.innerHTML = '&#x27F3; Preferences updated: ' + tags;
+    notice.className = 'profile-notice' + (reduced.length ? ' has-minus' : '');
+    notice.style.display = 'block';
+    // Auto-hide after 6 s
+    clearTimeout(notice._timer);
+    notice._timer = setTimeout(() => { notice.style.display = 'none'; }, 6000);
+  }
+
+  /* ── Feedback ────────────────────────────────────────────── */
+  function submitFeedback() {
+    if (!currentSessionId) { alert('No active session — please run an analysis first.'); return; }
+    const text = document.getElementById('feedback-input').value.trim();
+    if (!text) { alert('Please enter your feedback before applying.'); return; }
+
+    const btn = document.getElementById('feedback-btn');
+    btn.disabled = true; btn.textContent = 'Applying…';
+
+    fetch('/api/feedback', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ session_id: currentSessionId, feedback: text })
+    })
+    .then(r => r.json().then(d => ({ ok: r.ok, data: d })))
+    .then(({ ok, data }) => {
+      btn.disabled = false; btn.textContent = 'Apply Feedback';
+      if (!ok || data.error) { alert('Error: ' + (data.error || 'Unknown')); return; }
+      document.getElementById('feedback-input').value = '';
+      render(data);
+      showFeedbackSection(data.feedback_history || []);
+      if (data.updated_profile) updateGuestProfile(data.updated_profile);
+      document.getElementById('feedback-section').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    })
+    .catch(err => {
+      btn.disabled = false; btn.textContent = 'Apply Feedback';
+      alert('Network error: ' + err.message);
+    });
+  }
+
+  function showFeedbackSection(history) {
+    const sec = document.getElementById('feedback-section');
+    sec.style.display = 'block';
+    sec.classList.remove('fresh');
+    void sec.offsetWidth;            // force reflow so animation re-triggers
+    sec.classList.add('fresh');
+    setTimeout(() => sec.classList.remove('fresh'), 2000);
+    document.getElementById('round-badge').textContent = 'Round ' + (history.length + 1);
+    const hEl = document.getElementById('feedback-history');
+    hEl.innerHTML = history.length
+      ? '<div class="sec-lbl" style="margin-top:0;margin-bottom:8px">Previous Feedback</div>' +
+        history.map((f, i) =>
+          `<div class="fb-entry">
+             <div class="fb-entry-lbl">Round ${i + 1}</div>
+             <div class="fb-entry-txt">${escHtml(f)}</div>
+           </div>`).join('')
+      : '';
+  }
+
+  function escHtml(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+
+  /* ── Render ──────────────────────────────────────────────── */
   function renderFeed(cid, videos) {
     document.getElementById(cid).innerHTML = videos.map((v,i) => `
       <div class="vcard">
@@ -654,8 +1050,6 @@
           <div class="vttl" title="${v.title}">${v.title}</div>
           <div class="vmeta">
             <span class="gtag" style="background:${v.color}">${v.genre}</span>
-            <span class="vlang">${v.flag} ${v.language}</span>
-            ${v.is_suppressed?'<span class="stag">suppressed</span>':''}
           </div>
         </div>
         <div class="vvir" title="Virality ${v.virality}">
@@ -663,12 +1057,6 @@
           ${v.virality.toFixed(2)}
         </div>
       </div>`).join('');
-  }
-
-  function feedStat(vs) {
-    const s = vs.filter(v=>v.is_suppressed).length;
-    const n = vs.filter(v=>v.language!=='English').length;
-    return `${s}/10 suppressed &nbsp;·&nbsp; ${n}/10 non-English`;
   }
 
   function renderLegend(id) {
@@ -686,9 +1074,18 @@
 
   function renderVerdict(a, reasoning) {
     const ib = a.is_biased;
+    const nf = a.needs_fixing;
     const b  = document.getElementById('vbadge');
-    b.textContent = ib ? 'BIASED' : 'FAIR';
-    b.className   = 'vbadge ' + (ib ? 'biased' : 'fair');
+    if (ib) {
+      b.textContent = 'BIASED';
+      b.className   = 'vbadge biased';
+    } else if (nf) {
+      b.textContent = 'NEEDS FIXING';
+      b.className   = 'vbadge needs-fixing';
+    } else {
+      b.textContent = 'FAIR';
+      b.className   = 'vbadge fair';
+    }
     document.getElementById('v-reason').textContent = a.reasoning;
 
     const tr = document.getElementById('tier-row');
@@ -706,70 +1103,81 @@
     } else { tr.style.display = 'none'; }
 
     const cb = document.getElementById('corr-block');
-    if (ib && reasoning) {
+    if ((ib || nf) && reasoning) {
       cb.style.display = 'block';
       document.getElementById('corr-txt').textContent = reasoning;
     } else { cb.style.display = 'none'; }
   }
 
+  const SCORE_KEYS = [
+    ['Overall Fairness',    'overall'],
+    ['Genre Diversity',     'diversity'],
+    ['Suppressed Coverage', 'suppressed_coverage'],
+    ['Representation',      'representation'],
+    ['Language Diversity',  'language_diversity'],
+  ];
+
+  function scoreBar(score) {
+    const pct = Math.round(score);
+    const color = pct >= 70 ? 'var(--green)' : pct >= 40 ? '#f59e0b' : 'var(--red)';
+    return `<div class="mbar">
+      <div class="mtrk"><div class="mfill" style="width:${pct}%;background:${color}"></div></div>
+      <div class="mval" style="color:${color};font-weight:600">${pct}</div>
+    </div>`;
+  }
+
   function renderM2(m) {
-    const { biased:b, corrected:f } = m;
-    const bar = (v,c) => `
-      <div class="mbar">
-        <div class="mtrk"><div class="mfill" style="width:${v/10*100}%;background:${c}"></div></div>
-        <span class="mval">${v}/10</span>
-      </div>`;
+    const bf = m.biased.fairness, ff = m.corrected.fairness;
+    const rows = SCORE_KEYS.map(([lbl, key]) =>
+      `<div class="mlbl">${lbl}</div>${scoreBar(bf[key])}${scoreBar(ff[key])}`
+    ).join('');
     document.getElementById('m2').innerHTML = `
       <div></div>
       <div class="mhdr" style="color:var(--red)">Biased</div>
       <div class="mhdr" style="color:var(--green)">LLM Corrected</div>
-      <div class="mlbl">Suppressed content</div>${bar(b.suppressed,'var(--red)')}${bar(f.suppressed,'var(--green)')}
-      <div class="mlbl">Non-English content</div>${bar(b.non_english,'var(--red)')}${bar(f.non_english,'var(--green)')}
+      ${rows}
       <div class="mlbl" style="padding-top:12px;align-self:start">Genre mix</div>
-      <div class="gw" style="padding-top:12px">${gTags(b.genres)}</div>
-      <div class="gw" style="padding-top:12px">${gTags(f.genres)}</div>`;
+      <div class="gw" style="padding-top:12px">${gTags(m.biased.genres)}</div>
+      <div class="gw" style="padding-top:12px">${gTags(m.corrected.genres)}</div>`;
   }
 
   function renderM3(m) {
-    const { biased:b, corrected:f, unbiased:u } = m;
-    const bar = (v,c) => `
-      <div class="mbar">
-        <div class="mtrk"><div class="mfill" style="width:${v/10*100}%;background:${c}"></div></div>
-        <span class="mval">${v}/10</span>
-      </div>`;
+    const bf = m.biased.fairness, ff = m.corrected.fairness, uf = m.unbiased.fairness;
+    const rows = SCORE_KEYS.map(([lbl, key]) =>
+      `<div class="mlbl">${lbl}</div>${scoreBar(bf[key])}${scoreBar(ff[key])}${scoreBar(uf[key])}`
+    ).join('');
     document.getElementById('m3').innerHTML = `
       <div></div>
       <div class="mhdr" style="color:var(--red)">Biased</div>
       <div class="mhdr" style="color:var(--green)">LLM Corrected</div>
       <div class="mhdr" style="color:var(--blue)">Ideal</div>
-      <div class="mlbl">Suppressed content</div>${bar(b.suppressed,'var(--red)')}${bar(f.suppressed,'var(--green)')}${bar(u.suppressed,'var(--blue)')}
-      <div class="mlbl">Non-English content</div>${bar(b.non_english,'var(--red)')}${bar(f.non_english,'var(--green)')}${bar(u.non_english,'var(--blue)')}
+      ${rows}
       <div class="mlbl" style="padding-top:12px;align-self:start">Genre mix</div>
-      <div class="gw" style="padding-top:12px">${gTags(b.genres)}</div>
-      <div class="gw" style="padding-top:12px">${gTags(f.genres)}</div>
-      <div class="gw" style="padding-top:12px">${gTags(u.genres)}</div>`;
+      <div class="gw" style="padding-top:12px">${gTags(m.biased.genres)}</div>
+      <div class="gw" style="padding-top:12px">${gTags(m.corrected.genres)}</div>
+      <div class="gw" style="padding-top:12px">${gTags(m.unbiased.genres)}</div>`;
   }
 
   function render(data) {
     renderFeed('biased-feed',    data.biased);
     renderFeed('corrected-feed', data.corrected);
     renderFeed('unbiased-feed',  data.unbiased);
-    document.getElementById('b-stat').innerHTML = feedStat(data.biased);
-    document.getElementById('f-stat').innerHTML = feedStat(data.corrected);
-    document.getElementById('u-stat').innerHTML = feedStat(data.unbiased);
     renderLegend('legend'); renderLegend('legend2');
     renderVerdict(data.assessment, data.reasoning);
     renderM2(data.metrics);
     renderM3(data.metrics);
   }
 
-  /* ── Tabs ──────────────────────────────────────────────── */
+  /* ── Tabs ────────────────────────────────────────────────── */
   function switchTab(name) {
     ['bias','ideal'].forEach(n => {
       document.getElementById('t-' +n).classList.toggle('active', n===name);
       document.getElementById('tp-'+n).classList.toggle('active', n===name);
     });
   }
+
+  /* ── Init ────────────────────────────────────────────────── */
+  document.addEventListener('DOMContentLoaded', initNewUserForm);
 </script>
 </body>
 </html>
