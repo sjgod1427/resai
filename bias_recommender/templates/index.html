@@ -945,12 +945,23 @@
 
     let payload;
     if (isNewUser) {
-      const prefs = collectNewUserPrefs();
-      if (!prefs) return;
-      lastNewUserPrefs = prefs;
-      payload = { new_user: prefs };
+      // If a session already exists (feedback was applied), re-run against
+      // the mutated user stored server-side — don't re-read the original
+      // form which would wipe all feedback changes.
+      if (currentSessionId) {
+        payload = { session_id: currentSessionId };
+      } else {
+        const prefs = collectNewUserPrefs();
+        if (!prefs) return;
+        lastNewUserPrefs = prefs;
+        payload = { new_user: prefs };
+      }
     } else {
-      payload = { user_id: activeUser };
+      // For known users, carry the session forward if it exists so feedback
+      // mutations on their profile survive re-runs too.
+      payload = currentSessionId
+        ? { session_id: currentSessionId }
+        : { user_id: activeUser };
     }
 
     const btn = document.getElementById('run-btn');
@@ -979,17 +990,23 @@
 
       currentSessionId = data.session_id;
 
-      // For new users: swap the pref form for a rendered profile card
-      if (isNewUser && data.user_profile) {
-        document.getElementById('new-user-panel').style.display = 'none';
+      // Show/update profile card
+      if (data.user_profile) {
+        if (isNewUser) {
+          document.getElementById('new-user-panel').style.display = 'none';
+          document.getElementById('profile-card').style.display   = 'block';
+          document.getElementById('modify-prefs-row').style.display = 'block';
+        }
         renderProfile(data.user_profile);
-        document.getElementById('profile-card').style.display   = 'block';
-        document.getElementById('modify-prefs-row').style.display = 'block';
       }
 
       renderResults(data);
       document.getElementById('results').style.display = 'block';
-      showFeedbackSection(data.feedback_history || [], data.is_guest || isNewUser, null);
+      if (isNewUser) {
+        showFeedbackSection(data.feedback_history || [], true, null);
+      } else {
+        document.getElementById('feedback-section').style.display = 'none';
+      }
 
       // Smooth scroll to feedback
       setTimeout(() => {
@@ -1038,6 +1055,7 @@
     .then(({ ok, data }) => {
       btn.disabled = false;
       btn.classList.remove('loading');
+      btn.querySelector('.fb-spin').style.display = 'none';
 
       if (!ok || data.error) {
         // Restore text so user doesn't lose their input
@@ -1069,6 +1087,7 @@
     .catch(err => {
       btn.disabled = false;
       btn.classList.remove('loading');
+      btn.querySelector('.fb-spin').style.display = 'none';
       document.getElementById('fb-textarea').value = savedText;
       alert('Network error: ' + err.message);
     });

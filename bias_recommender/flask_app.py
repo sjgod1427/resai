@@ -2,21 +2,15 @@
 flask_app.py
 ────────────
 Flask backend for the Bias-Aware Video Recommender.
+Serves a single-page app and exposes three JSON endpoints.
 
-Changes in this version:
-  - /api/run stores is_guest + original new_user prefs in session
-  - /api/run returns user_profile dict so UI can hydrate guest card without
-    a second fetch
-  - /api/feedback correctly rebuilds guest user from session on every round
-    (mutations accumulate: feedback_history + interaction history carry forward)
-  - updated_profile always returned so UI preference bars refresh live
+Run:  python flask_app.py
 """
 
 import os
 import copy
 import json
 import uuid
-import time
 import warnings
 import datetime
 warnings.filterwarnings("ignore")
@@ -58,27 +52,28 @@ SUPERVISOR = LLMSupervisor(master_df, embeddings)
 
 # ── Constants ──────────────────────────────────────────────────────────────────
 
+# ── Avatar photos (randomuser.me — real portraits, indexed by persona) ─────────
 AVATARS = {
-    "U01": "https://randomuser.me/api/portraits/women/44.jpg",
-    "U02": "https://randomuser.me/api/portraits/men/32.jpg",
-    "U03": "https://randomuser.me/api/portraits/women/28.jpg",
-    "U04": "https://randomuser.me/api/portraits/men/67.jpg",
-    "U05": "https://randomuser.me/api/portraits/women/15.jpg",
-    "U06": "https://randomuser.me/api/portraits/women/55.jpg",
-    "U07": "https://randomuser.me/api/portraits/men/41.jpg",
-    "U08": "https://randomuser.me/api/portraits/women/63.jpg",
-    "U09": "https://randomuser.me/api/portraits/men/22.jpg",
-    "U10": "https://randomuser.me/api/portraits/women/38.jpg",
-    "U11": "https://randomuser.me/api/portraits/men/71.jpg",
-    "U12": "https://randomuser.me/api/portraits/women/47.jpg",
-    "U13": "https://randomuser.me/api/portraits/men/18.jpg",
-    "U14": "https://randomuser.me/api/portraits/men/25.jpg",
-    "U15": "https://randomuser.me/api/portraits/women/72.jpg",
-    "U16": "https://randomuser.me/api/portraits/men/56.jpg",
-    "U17": "https://randomuser.me/api/portraits/men/83.jpg",
-    "U18": "https://randomuser.me/api/portraits/women/31.jpg",
-    "U19": "https://randomuser.me/api/portraits/women/59.jpg",
-    "U20": "https://randomuser.me/api/portraits/men/12.jpg",
+    "U01": "https://randomuser.me/api/portraits/women/44.jpg",   # Priya
+    "U02": "https://randomuser.me/api/portraits/men/32.jpg",     # Raj
+    "U03": "https://randomuser.me/api/portraits/women/28.jpg",   # Maria
+    "U04": "https://randomuser.me/api/portraits/men/67.jpg",     # Ahmed
+    "U05": "https://randomuser.me/api/portraits/women/15.jpg",   # Yuki
+    "U06": "https://randomuser.me/api/portraits/women/55.jpg",   # Emma
+    "U07": "https://randomuser.me/api/portraits/men/41.jpg",     # Carlos
+    "U08": "https://randomuser.me/api/portraits/women/63.jpg",   # Fatima
+    "U09": "https://randomuser.me/api/portraits/men/22.jpg",     # James
+    "U10": "https://randomuser.me/api/portraits/women/38.jpg",   # Ananya
+    "U11": "https://randomuser.me/api/portraits/men/71.jpg",     # Lukas
+    "U12": "https://randomuser.me/api/portraits/women/47.jpg",   # Sophie
+    "U13": "https://randomuser.me/api/portraits/men/18.jpg",     # Marcus
+    "U14": "https://randomuser.me/api/portraits/men/25.jpg",     # Kenji
+    "U15": "https://randomuser.me/api/portraits/women/72.jpg",   # Amara
+    "U16": "https://randomuser.me/api/portraits/men/56.jpg",     # Ivan
+    "U17": "https://randomuser.me/api/portraits/men/83.jpg",     # David
+    "U18": "https://randomuser.me/api/portraits/women/31.jpg",   # Lin
+    "U19": "https://randomuser.me/api/portraits/women/59.jpg",   # Sara
+    "U20": "https://randomuser.me/api/portraits/men/12.jpg",     # Tom
 }
 
 GENRE_ENGAGEMENT = {
@@ -88,16 +83,6 @@ GENRE_ENGAGEMENT = {
 }
 NON_ENGLISH_MULT  = 0.55
 SUPPRESSED_GENRES = {"Educational", "Documentary", "DIY", "News/Analysis", "Regional"}
-
-_LIBRARY_GENRE_SHARE: dict = {}
-
-def _get_library_genre_share() -> dict:
-    global _LIBRARY_GENRE_SHARE
-    if not _LIBRARY_GENRE_SHARE:
-        counts = master_df["genre"].value_counts()
-        total  = len(master_df)
-        _LIBRARY_GENRE_SHARE = {g: counts.get(g, 0) / total for g in counts.index}
-    return _LIBRARY_GENRE_SHARE
 
 GENRE_KEYWORDS = {
     "entertainment": "Entertainment",
@@ -124,13 +109,8 @@ _NEG_WORDS = frozenset([
     "too many", "too much", "don't", "dont", "dislike", "hate",
 ])
 
-LANG_KEYWORDS = {
-    "english": "English", "hindi": "Hindi", "spanish": "Spanish",
-    "french": "French", "german": "German", "japanese": "Japanese",
-    "korean": "Korean", "russian": "Russian",
-}
-
 def _parse_feedback_genres(text: str):
+    """Returns (want_more, want_less) — lists of canonical genre names."""
     t = text.lower()
     want_more, want_less = [], []
     for kw, genre in GENRE_KEYWORDS.items():
@@ -145,34 +125,24 @@ def _parse_feedback_genres(text: str):
     return want_more, want_less
 
 
-def _parse_feedback_languages(text: str):
-    """Extract any language preferences from feedback text."""
-    t = text.lower()
-    want_langs = []
-    for kw, lang in LANG_KEYWORDS.items():
-        if kw in t:
-            idx     = t.find(kw)
-            context = t[max(0, idx - 30): idx + len(kw) + 15]
-            is_neg  = any(neg in context for neg in _NEG_WORDS)
-            if not is_neg and lang not in want_langs:
-                want_langs.append(lang)
-    return want_langs
-
-
 def _update_user_from_feedback(user: dict, feedback_text: str):
+    """Mutates in-session user copy: boosts/reduces preferred_genres & injects
+    synthetic watch interactions so the user embedding shifts accordingly.
+    Returns (genres_boosted, genres_reduced)."""
     want_more, want_less = _parse_feedback_genres(feedback_text)
-    want_langs           = _parse_feedback_languages(feedback_text)
+    if not want_more and not want_less:
+        return [], []
 
     prefs    = user.setdefault("preferred_genres", {})
     history  = user.setdefault("interactions", [])
     seen_ids = {i["video_id"] for i in history}
 
     for genre in want_more:
-        prefs[genre] = round(min(1.0, prefs.get(genre, 0.0) + 0.25), 2)
-        pool  = master_df[master_df["genre"] == genre].nlargest(8, "virality_score")
+        prefs[genre] = round(min(1.0, prefs.get(genre, 0.0) + 0.30), 2)
+        pool  = master_df[master_df["genre"] == genre].nlargest(15, "virality_score")
         added = 0
         for _, row in pool.iterrows():
-            if added >= 3:
+            if added >= 6:
                 break
             if row["video_id"] in seen_ids:
                 continue
@@ -181,7 +151,7 @@ def _update_user_from_feedback(user: dict, feedback_text: str):
                 "title":    str(row["title"])[:55],
                 "genre":    row["genre"],
                 "language": row["language"],
-                "rating":   4.5,
+                "rating":   5.0,
             })
             seen_ids.add(row["video_id"])
             added += 1
@@ -193,18 +163,6 @@ def _update_user_from_feedback(user: dict, feedback_text: str):
                 del prefs[genre]
             else:
                 prefs[genre] = new_w
-
-    # Update language preferences if user explicitly mentioned languages
-    if want_langs:
-        existing = user.get("preferred_languages", [])
-        merged   = list(dict.fromkeys(want_langs + existing))  # new langs first, deduped
-        user["preferred_languages"] = merged[:5]
-
-    # Re-normalise weights so they sum to 1.0
-    total = sum(prefs.values())
-    if total > 0:
-        for g in prefs:
-            prefs[g] = round(prefs[g] / total, 4)
 
     return want_more, want_less
 
@@ -218,22 +176,6 @@ LANG_FLAG = {
     "English": "🇬🇧", "Hindi": "🇮🇳", "Spanish": "🇪🇸", "French": "🇫🇷",
     "German": "🇩🇪", "Japanese": "🇯🇵", "Korean": "🇰🇷", "Russian": "🇷🇺",
 }
-
-# ── Session store with TTL ─────────────────────────────────────────────────────
-
-SESSIONS: dict = {}
-SESSION_TTL    = 3600  # 1 hour
-
-
-def _prune_sessions():
-    now     = time.time()
-    expired = [k for k, v in SESSIONS.items()
-               if now - v.get("created_at", now) > SESSION_TTL]
-    for k in expired:
-        del SESSIONS[k]
-    if expired:
-        print(f"[session] pruned {len(expired)} expired session(s).", flush=True)
-
 
 # ── Towers ─────────────────────────────────────────────────────────────────────
 
@@ -268,6 +210,7 @@ def get_biased_recs(user: dict, top_n: int = 30) -> pd.DataFrame:
     user_vec = _user_embedding(user)
 
     if np.linalg.norm(user_vec) == 0:
+        # Cold-start: rank within preferred genres by biased virality score only.
         pref_genres          = list(user.get("preferred_genres", {}).keys())
         pool                 = df[df["genre"].isin(pref_genres)].copy() if pref_genres else df
         pool["eng_mult"]     = pool["genre"].map(GENRE_ENGAGEMENT).fillna(0.45)
@@ -280,6 +223,8 @@ def get_biased_recs(user: dict, top_n: int = 30) -> pd.DataFrame:
     sims                 = _cos_sim([user_vec], embeddings[df.index])[0]
     df["eng_mult"]       = df["genre"].map(GENRE_ENGAGEMENT).fillna(0.45)
     df["lang_mult"]      = df["language"].apply(lambda l: 1.0 if l == "English" else NON_ENGLISH_MULT)
+    # Soft penalty: floor at 0.5 so preferred suppressed content still appears
+    # (mimics real platforms that demote but never fully suppress user preferences).
     soft_mult            = 0.5 + 0.5 * df["eng_mult"].values * df["lang_mult"].values
     penalized            = sims * soft_mult
     pr_max               = penalized.max()
@@ -294,14 +239,11 @@ def get_biased_recs(user: dict, top_n: int = 30) -> pd.DataFrame:
 
 
 def get_unbiased_recs(user: dict, top_n: int = 30) -> pd.DataFrame:
-    watched   = _watched_ids(user)
-    df        = master_df[~master_df["video_id"].isin(watched)].copy()
-    user_vec  = _user_embedding(user)
-    lib_share = _get_library_genre_share()
+    watched  = _watched_ids(user)
+    df       = master_df[~master_df["video_id"].isin(watched)].copy()
+    user_vec = _user_embedding(user)
 
-    def genre_cap(genre: str) -> int:
-        share = lib_share.get(genre, 0.10)
-        return max(3, int(share * top_n * 1.8))
+    genre_cap = max(top_n // 3, 5)   # no single genre > 1/3 of feed
 
     if np.linalg.norm(user_vec) == 0:
         pref_genres = list(user.get("preferred_genres", {}).keys())
@@ -309,11 +251,9 @@ def get_unbiased_recs(user: dict, top_n: int = 30) -> pd.DataFrame:
         pool        = pool.sort_values("virality_score", ascending=False)
         rows, gcnt  = [], {}
         for _, row in pool.iterrows():
-            g   = row["genre"]
-            cap = genre_cap(g)
-            if gcnt.get(g, 0) < cap:
-                rows.append(row)
-                gcnt[g] = gcnt.get(g, 0) + 1
+            g = row["genre"]
+            if gcnt.get(g, 0) < genre_cap:
+                rows.append(row); gcnt[g] = gcnt.get(g, 0) + 1
             if len(rows) >= top_n:
                 break
         return pd.DataFrame(rows)
@@ -323,20 +263,17 @@ def get_unbiased_recs(user: dict, top_n: int = 30) -> pd.DataFrame:
     df_sorted   = df.sort_values("score", ascending=False)
     rows, gcnt  = [], {}
     for _, row in df_sorted.iterrows():
-        g   = row["genre"]
-        cap = genre_cap(g)
-        if gcnt.get(g, 0) < cap:
-            rows.append(row)
-            gcnt[g] = gcnt.get(g, 0) + 1
+        g = row["genre"]
+        if gcnt.get(g, 0) < genre_cap:
+            rows.append(row); gcnt[g] = gcnt.get(g, 0) + 1
         if len(rows) >= top_n:
             break
     return pd.DataFrame(rows).drop(columns=["score"])
 
 
 def _df_to_list(df: pd.DataFrame) -> list:
-    records = []
-    for _, row in df.iterrows():
-        rec = {
+    return [
+        {
             "video_id":     row["video_id"],
             "title":        str(row["title"])[:65],
             "genre":        row["genre"],
@@ -345,12 +282,9 @@ def _df_to_list(df: pd.DataFrame) -> list:
             "is_suppressed": bool(row["is_suppressed"]),
             "color":        GENRE_COLORS.get(row["genre"], "#95a5a6"),
             "flag":         LANG_FLAG.get(row["language"], "🌐"),
-            "tier":         row.get("tier", ""),
-            "tier_reason":  row.get("tier_reason", ""),
-            "is_viral":     bool(row.get("is_viral", False)),
         }
-        records.append(rec)
-    return records
+        for _, row in df.iterrows()
+    ]
 
 
 _TOP_VIRAL_IDS = None
@@ -366,6 +300,8 @@ def _tier_counts(user: dict, df: pd.DataFrame) -> dict:
     pref   = {g.strip() for g in user.get("preferred_genres", {}).keys()}
     supp   = {g.strip() for g in SUPPRESSED_GENRES}
     genres = df["genre"].str.strip()
+    # T1/T2/T3 are mutually exclusive and always sum to 30.
+    # T4 (viral overlay) may overlap with T1–T3 and is shown separately.
     t1 = int(genres.isin(pref).sum())
     t2 = int((genres.isin(supp) & ~genres.isin(pref)).sum())
     t3 = int((~genres.isin(pref) & ~genres.isin(supp)).sum())
@@ -374,6 +310,7 @@ def _tier_counts(user: dict, df: pd.DataFrame) -> dict:
 
 
 def _fairness_scores(df: pd.DataFrame, user: dict = None) -> dict:
+    """Compute 5 fairness scores (0–100, higher = fairer) for one rec list."""
     n = len(df)
     if n == 0:
         return {"overall": 0.0, "diversity": 0.0, "suppressed_coverage": 0.0,
@@ -381,12 +318,15 @@ def _fairness_scores(df: pd.DataFrame, user: dict = None) -> dict:
 
     genres = df["genre"].str.strip()
 
+    # Genre Diversity — normalized Shannon entropy across all genres
     gc    = genres.value_counts().values.astype(float)
     probs = gc / gc.sum()
     entropy  = float(-np.sum(probs * np.log2(probs + 1e-12)))
     n_genres = master_df["genre"].nunique()
     diversity = round(min(100.0, entropy / np.log2(max(n_genres, 2)) * 100), 1)
 
+    # Suppressed Coverage — user-aware: if user has preferred suppressed genres,
+    # measure recall of those specific genres; otherwise fall back to library rate.
     user_pref_supp = set()
     if user:
         pref = set(user.get("preferred_genres", {}).keys())
@@ -399,6 +339,9 @@ def _fairness_scores(df: pd.DataFrame, user: dict = None) -> dict:
         rec_supp = float(genres.isin(SUPPRESSED_GENRES).mean())
         supp_cov = round(min(100.0, rec_supp / max(lib_supp, 0.01) * 100), 1)
 
+    # Representation — 1 minus Gini coefficient.
+    # Compute over ALL library genres (fill 0 for absent ones) so a single-genre
+    # feed scores near 0, not 100 (Gini of a single non-zero value is always 0).
     all_genres  = master_df["genre"].unique()
     full_counts = genres.value_counts().reindex(all_genres, fill_value=0).values.astype(float)
     counts   = np.sort(full_counts)
@@ -407,12 +350,14 @@ def _fairness_scores(df: pd.DataFrame, user: dict = None) -> dict:
     gini_val = max(0.0, float((2 * (idx * counts).sum()) / (m * counts.sum()) - (m + 1) / m))
     representation = round((1.0 - gini_val) * 100, 1)
 
+    # Language Diversity — normalized Shannon entropy across languages
     lc       = df["language"].value_counts().values.astype(float)
     lp       = lc / lc.sum()
     l_ent    = float(-np.sum(lp * np.log2(lp + 1e-12)))
     n_langs  = master_df["language"].nunique()
     lang_div = round(min(100.0, l_ent / np.log2(max(n_langs, 2)) * 100), 1)
 
+    # Overall — weighted composite
     overall = round(
         0.30 * diversity + 0.30 * representation +
         0.25 * supp_cov  + 0.15 * lang_div,
@@ -432,31 +377,6 @@ def _metrics(user: dict, df: pd.DataFrame) -> dict:
         "genres":   df["genre"].value_counts().to_dict(),
         "tiers":    _tier_counts(user, df),
         "fairness": _fairness_scores(df, user),
-    }
-
-
-def _user_profile_dict(user: dict) -> dict:
-    """Serialise a user dict for the frontend profile card."""
-    interactions = user.get("interactions", [])
-    return {
-        "user_id":             user.get("user_id", "GUEST"),
-        "name":                user.get("name", "New User"),
-        "description":         user.get("description", ""),
-        "preferred_genres":    user.get("preferred_genres", {}),
-        "preferred_languages": user.get("preferred_languages", ["English"]),
-        "avatar":              AVATARS.get(user.get("user_id", ""), ""),
-        "interactions": [
-            {
-                "title":    str(i["title"])[:55],
-                "genre":    i["genre"],
-                "language": i["language"],
-                "rating":   i.get("rating", 3.5),
-                "color":    GENRE_COLORS.get(i["genre"], "#95a5a6"),
-                "flag":     LANG_FLAG.get(i["language"], "🌐"),
-            }
-            for i in interactions[:8]
-        ],
-        "total_interactions": len(interactions),
     }
 
 
@@ -513,31 +433,54 @@ def _log_run(user: dict, assessment, metrics: dict, reasoning: str):
     print("\n".join(lines), flush=True)
 
 
-# ── Guest user builder ─────────────────────────────────────────────────────────
+# ── Session store (in-memory, per-process) ─────────────────────────────────────
+# keyed by session UUID; value: {user, feedback_history}
+SESSIONS: dict = {}
+
+
+def _user_profile_dict(user: dict) -> dict:
+    return {
+        "user_id":             user.get("user_id", "GUEST"),
+        "name":                user.get("name", "New User"),
+        "description":         user.get("description", ""),
+        "avatar":              user.get("avatar", ""),
+        "preferred_genres":    user["preferred_genres"],
+        "preferred_languages": user.get("preferred_languages", ["English"]),
+        "interactions": [
+            {
+                "title":    str(i["title"])[:55],
+                "genre":    i["genre"],
+                "language": i["language"],
+                "color":    GENRE_COLORS.get(i["genre"], "#95a5a6"),
+                "flag":     LANG_FLAG.get(i["language"], "🌐"),
+            }
+            for i in user["interactions"][-8:]
+        ],
+        "total_interactions": len(user["interactions"]),
+    }
+
 
 def _build_guest_user(prefs: dict) -> dict:
-    genres    = {g: float(w) for g, w in prefs.get("genres", {}).items() if float(w) > 0}
+    genres = {g: float(w) for g, w in prefs.get("genres", {}).items() if float(w) > 0}
     languages = prefs.get("languages", ["English"]) or ["English"]
-    name      = str(prefs.get("name", "New User"))[:40].strip() or "New User"
+    name = str(prefs.get("name", "New User"))[:40].strip() or "New User"
     top_genres = list(genres.keys())[:3]
     return {
         "user_id": "GUEST",
-        "name":    name,
+        "name": name,
         "description": (
             f"New user exploring {', '.join(top_genres)}" if top_genres
             else "New user with no genre preferences yet"
         ),
-        "preferred_genres":    genres,
+        "preferred_genres": genres,
         "preferred_languages": languages,
-        "interactions":        [],
+        "interactions": [],
     }
 
 
 # ── Flask ──────────────────────────────────────────────────────────────────────
 
-import os as _os
-_TEMPLATE_DIR = _os.path.join(_os.path.dirname(__file__), "templates")
-app = Flask(__name__, template_folder=_TEMPLATE_DIR)
+app = Flask(__name__)
 
 
 @app.route("/")
@@ -585,34 +528,29 @@ def get_user(user_id):
 
 @app.route("/api/run", methods=["POST"])
 def run():
-    _prune_sessions()
+    data        = request.get_json(force=True) or {}
+    user_id     = data.get("user_id")
+    new_user    = data.get("new_user")   # cold-start guest preferences
+    session_id  = data.get("session_id")
 
-    data     = request.get_json(force=True) or {}
-    user_id  = data.get("user_id")
-    new_user = data.get("new_user")
-
-    if new_user:
-        user     = _build_guest_user(new_user)
-        is_guest = True
-    elif user_id:
-        base = USER_MAP.get(user_id)
-        if not base:
-            return jsonify({"error": "User not found"}), 404
-        user     = copy.deepcopy(base)
-        is_guest = False
+    if session_id and session_id in SESSIONS:
+        # Re-run using existing session (feedback mutations already applied)
+        user = SESSIONS[session_id]["user"]
+        feedback_history = SESSIONS[session_id]["feedback_history"]
     else:
-        return jsonify({"error": "No user specified"}), 400
+        if new_user:
+            user = _build_guest_user(new_user)
+        elif user_id:
+            base = USER_MAP.get(user_id)
+            if not base:
+                return jsonify({"error": "User not found"}), 404
+            user = copy.deepcopy(base)   # isolate session mutations from global state
+        else:
+            return jsonify({"error": "No user specified"}), 400
 
-    session_id = str(uuid.uuid4())
-    SESSIONS[session_id] = {
-        "user":             user,
-        "feedback_history": [],
-        "created_at":       time.time(),
-        "is_guest":         is_guest,
-        # For guest users keep original prefs so we can rebuild description
-        # after genre mutations; for known users this is unused.
-        "original_prefs":   copy.deepcopy(new_user) if is_guest else None,
-    }
+        session_id = str(uuid.uuid4())
+        SESSIONS[session_id] = {"user": user, "feedback_history": []}
+        feedback_history = []
 
     try:
         biased_df   = get_biased_recs(user)
@@ -648,9 +586,7 @@ def run():
         "reasoning":        reasoning,
         "metrics":          run_metrics,
         "session_id":       session_id,
-        "feedback_history": [],
-        "is_guest":         is_guest,
-        # Always return the live user profile so UI can render without a 2nd fetch
+        "feedback_history": feedback_history,
         "user_profile":     _user_profile_dict(user),
     })
 
@@ -670,7 +606,8 @@ def feedback():
     user    = session["user"]
     session["feedback_history"].append(feedback_text)
 
-    # Mutate user preferences + history based on the new feedback round
+    # Update interaction history + preference weights for ALL users.
+    # The session user is already a deep-copy, so this never mutates global state.
     genres_boosted, genres_reduced = _update_user_from_feedback(user, feedback_text)
 
     try:
@@ -692,13 +629,10 @@ def feedback():
     }
     _log_run(user, assessment, run_metrics, reasoning)
 
-    # Build updated profile summary for left-panel refresh
-    interactions = user.get("interactions", [])
     updated_profile = {
-        "preferred_genres":    user["preferred_genres"],
-        "preferred_languages": user.get("preferred_languages", ["English"]),
-        "genres_boosted":      genres_boosted,
-        "genres_reduced":      genres_reduced,
+        "preferred_genres": user["preferred_genres"],
+        "genres_boosted":   genres_boosted,
+        "genres_reduced":   genres_reduced,
         "recent_interactions": [
             {
                 "title":    i["title"],
@@ -707,9 +641,9 @@ def feedback():
                 "color":    GENRE_COLORS.get(i["genre"], "#95a5a6"),
                 "flag":     LANG_FLAG.get(i["language"], "🌐"),
             }
-            for i in interactions[-8:]
+            for i in user["interactions"][-8:]
         ],
-        "total_interactions": len(interactions),
+        "total_interactions": len(user["interactions"]),
     }
 
     return jsonify({
@@ -727,64 +661,12 @@ def feedback():
             "tier3":          assessment.tier3_slots,
             "tier4":          assessment.tier4_slots,
         },
-        "reasoning":         reasoning,
-        "metrics":           run_metrics,
-        "session_id":        session_id,
-        "feedback_history":  session["feedback_history"],
-        "updated_profile":   updated_profile,
-        "is_guest":          session.get("is_guest", False),
-        "user_profile":      _user_profile_dict(user),
-    })
-
-
-@app.route("/api/watch", methods=["POST"])
-def watch():
-    data       = request.get_json(force=True) or {}
-    session_id = data.get("session_id", "")
-    video_id   = str(data.get("video_id", "")).strip()
-
-    if session_id not in SESSIONS:
-        return jsonify({"ok": False, "error": "session_not_found"}), 400
-    if not video_id:
-        return jsonify({"ok": False, "error": "video_id required"}), 400
-
-    session = SESSIONS[session_id]
-    user    = session["user"]
-
-    existing_ids = {i["video_id"] for i in user.get("interactions", [])}
-    if video_id in existing_ids:
-        return jsonify({"ok": True, "skipped": True})
-
-    row = master_df[master_df["video_id"] == video_id]
-    if row.empty:
-        return jsonify({"ok": False, "error": "video not found"}), 404
-
-    row = row.iloc[0]
-    interaction = {
-        "video_id":  video_id,
-        "title":     str(row["title"])[:70],
-        "genre":     row["genre"],
-        "language":  row["language"],
-        "rating":    3.5,
-        "watch_pct": 0.6,
-    }
-    user.setdefault("interactions", []).append(interaction)
-
-    prefs = user.setdefault("preferred_genres", {})
-    genre = row["genre"]
-    prefs[genre] = round(min(1.0, prefs.get(genre, 0.0) + 0.05), 2)
-
-    total = sum(prefs.values())
-    if total > 1.0:
-        factor = 1.0 / total
-        for g in prefs:
-            prefs[g] = round(prefs[g] * factor, 2)
-
-    return jsonify({
-        "ok":   True,
-        "genre": genre,
-        "updated_genres": prefs,
-        "total_interactions": len(user["interactions"]),
+        "reasoning":        reasoning,
+        "metrics":          run_metrics,
+        "session_id":       session_id,
+        "feedback_history": session["feedback_history"],
+        "updated_profile":  updated_profile,
+        "user_profile":     _user_profile_dict(user),
     })
 
 

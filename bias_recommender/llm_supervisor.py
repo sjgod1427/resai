@@ -4,14 +4,8 @@ llm_supervisor.py
 Two-step bias correction — no agent loop, no tool calls.
 
 Step 1  JUDGE  : single structured LLM call → BiasAssessment
-Step 2  SELECT : pre-fetch ~150 candidates in pure Python, then rule-based
+Step 2  SELECT : pre-fetch ~50 candidates in pure Python, then rule-based
                  tier-balanced selection using the judge's slot allocations.
-
-Changes from v1:
-  - Candidate pool increased from 50 → 150 (fixes T2/T3 slot shortfalls)
-  - _RowSelection.reasoning coercion made more robust (model_validator)
-  - fix() now annotates each corrected video with tier + tier_reason
-  - Session TTL pruning helper added
 """
 
 import os
@@ -22,10 +16,12 @@ import time
 import logging
 import numpy as np
 import pandas as pd
-from typing import List, Dict, Tuple, Optional
+from typing import List
 from collections import Counter
 from dotenv import load_dotenv
 
+# Force line-buffered stdout so logs appear immediately in the terminal
+# (Python buffers stdout when not run in a TTY, e.g. on Windows)
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(line_buffering=True)
 
@@ -47,6 +43,7 @@ logger.handlers.clear()
 fmt = logging.Formatter("%(asctime)s  %(levelname)-8s  %(message)s",
                         datefmt="%Y-%m-%d %H:%M:%S")
 
+# StreamHandler that flushes after every record so logs appear immediately
 class _FlushingStreamHandler(logging.StreamHandler):
     def emit(self, record):
         super().emit(record)
@@ -56,6 +53,7 @@ ch = _FlushingStreamHandler(sys.stdout)
 ch.setFormatter(fmt)
 logger.addHandler(ch)
 
+# FileHandler so logs are also written to supervisor.log
 _log_path = os.path.join(os.path.dirname(__file__), "supervisor.log")
 fh = logging.FileHandler(_log_path, encoding="utf-8")
 fh.setFormatter(fmt)
@@ -69,17 +67,50 @@ GROQ_MODELS = [
 ]
 SUPPRESSED_GENRES = {"Educational", "Documentary", "DIY", "News/Analysis", "Regional"}
 
-# Pool size — large enough that T2/T3 slots are never starved
-CANDIDATE_POOL_SIZE = 150
-
-# ── Tier explanations shown in the UI ───────────────────────────────────────────
-
-TIER_REASONS = {
-    "T1": "Matches your preferences",
-    "T2": "Restored — algorithmically suppressed",
-    "T3": "Added for diversity",
-    "T4": "Trending globally",
+# Keyword → canonical genre name (mirrors flask_app.py GENRE_KEYWORDS)
+_FEEDBACK_GENRE_KEYWORDS = {
+    "entertainment": "Entertainment",
+    "music":         "Music",
+    "gaming":        "Gaming",
+    "game":          "Gaming",
+    "games":         "Gaming",
+    "educational":   "Educational",
+    "education":     "Educational",
+    "learn":         "Educational",
+    "learning":      "Educational",
+    "documentary":   "Documentary",
+    "documentaries": "Documentary",
+    "diy":           "DIY",
+    "do it yourself":"DIY",
+    "craft":         "DIY",
+    "news":          "News/Analysis",
+    "analysis":      "News/Analysis",
+    "regional":      "Regional",
+    "local":         "Regional",
 }
+_NEG_WORDS = frozenset([
+    "less", "fewer", "no", "not", "remove", "stop", "avoid",
+    "too many", "too much", "don't", "dont", "dislike", "hate",
+])
+
+def _extract_feedback_genres(feedback_history: list):
+    """Return (want_more, want_less) genre sets parsed from all feedback rounds."""
+    want_more, want_less = set(), set()
+    for text in (feedback_history or []):
+        t = text.lower()
+        for kw, genre in _FEEDBACK_GENRE_KEYWORDS.items():
+            if kw not in t:
+                continue
+            idx     = t.find(kw)
+            context = t[max(0, idx - 40): idx + len(kw) + 15]
+            is_neg  = any(neg in context for neg in _NEG_WORDS)
+            if is_neg:
+                want_less.add(genre)
+            else:
+                want_more.add(genre)
+    # A genre can't be in both; want_more wins on conflict
+    want_less -= want_more
+    return list(want_more), list(want_less)
 
 # ── Pydantic schemas ─────────────────────────────────────────────────────────────
 
@@ -87,20 +118,22 @@ class BiasAssessment(BaseModel):
     is_biased:    bool = Field(description="True if algorithmic suppression is hurting this user")
     needs_fixing: bool = Field(default=False, description="True if a highly-weighted preferred genre is absent but no algorithmic suppression is detected")
     reasoning: str  = Field(default="", description="Why the output is or is not biased / needs fixing")
-    genres_over_represented: List[str] = Field(default_factory=list)
-    genres_missing: List[str]          = Field(default_factory=list)
-    tier1_slots: int = Field(default=12, ge=0, le=30)
-    tier2_slots: int = Field(default=8,  ge=0, le=30)
-    tier3_slots: int = Field(default=6,  ge=0, le=30)
-    tier4_slots: int = Field(default=4,  ge=0, le=30)
+    genres_over_represented: List[str] = Field(default_factory=list, description="Genres appearing too many times")
+    genres_missing: List[str]          = Field(default_factory=list, description="Genres that should appear but don't")
+    tier1_slots: int = Field(default=12, description="Slots for T1 (user's preferred genres)", ge=0, le=30)
+    tier2_slots: int = Field(default=8,  description="Slots for T2 (suppressed genres user watches)", ge=0, le=30)
+    tier3_slots: int = Field(default=6,  description="Slots for T3 (diversity)", ge=0, le=30)
+    tier4_slots: int = Field(default=4,  description="Slots for T4 (global viral overlay)", ge=0, le=30)
 
     @model_validator(mode="before")
     @classmethod
     def _normalise_fields(cls, data):
         if not isinstance(data, dict):
             return data
+        # LLM sometimes uses 'biased' instead of 'is_biased'
         if "biased" in data and "is_biased" not in data:
             data["is_biased"] = data.pop("biased")
+        # LLM sometimes nests slots as {"tier_slots": {"T1": n, ...}}
         if "tier_slots" in data and isinstance(data["tier_slots"], dict):
             ts = data.pop("tier_slots")
             data.setdefault("tier1_slots", ts.get("T1", 12))
@@ -114,26 +147,14 @@ class _RowSelection(BaseModel):
     row_numbers: List[int] = Field(
         description="Exactly 30 unique 1-based row numbers from the candidate table"
     )
-    reasoning: str = Field(default="", description="Brief explanation")
+    reasoning: str = Field(description="Brief explanation: 'X T1 + Y T2 + Z T3 = 30'")
 
-    @model_validator(mode="before")
+    @field_validator("reasoning", mode="before")
     @classmethod
-    def _coerce_all(cls, data):
-        """Aggressively coerce both fields so JSON quirks never cause parse failure."""
-        if not isinstance(data, dict):
-            return data
-        # Coerce reasoning: dict → JSON string, anything else → str
-        r = data.get("reasoning", "")
-        if not isinstance(r, str):
-            data["reasoning"] = json.dumps(r) if r else ""
-        # Coerce row_numbers: string of comma-separated ints → list
-        rn = data.get("row_numbers", [])
-        if isinstance(rn, str):
-            try:
-                data["row_numbers"] = [int(x.strip()) for x in rn.split(",") if x.strip().isdigit()]
-            except Exception:
-                data["row_numbers"] = []
-        return data
+    def _coerce_reasoning(cls, v):
+        if isinstance(v, dict):
+            return json.dumps(v)
+        return str(v) if v is not None else ""
 
 
 # ── Supervisor ───────────────────────────────────────────────────────────────────
@@ -173,6 +194,7 @@ class LLMSupervisor:
                         model, schema_name, idx + 1)
             try:
                 if structured_schema:
+                    # Use json_mode — more reliable on Groq than tool_use
                     result = llm.with_structured_output(
                         structured_schema, method="json_mode"
                     ).invoke(messages)
@@ -203,55 +225,18 @@ class LLMSupervisor:
                     logger.error("LLM error on %s: %s: %s", model, type(e).__name__, err[:300])
                     raise
 
-    # ── Tier annotation helper ────────────────────────────────────────────────────
-
-    def _annotate_tiers(
-        self,
-        corrected_df: pd.DataFrame,
-        pref_genres: set,
-        viral_ids: set,
-    ) -> pd.DataFrame:
-        """
-        Add 'tier' and 'tier_reason' columns to the corrected DataFrame so the
-        UI can show why each video was included.
-
-        Priority:
-          T1 — genre is in user's preferred genres
-          T2 — genre is suppressed AND not in T1
-          T3 — everything else
-          T4 badge — video is in global top-100 viral (can overlap T1/T2/T3)
-        """
-        df = corrected_df.copy()
-        genres = df["genre"].str.strip()
-
-        def _tier(row):
-            g = row["genre"].strip()
-            if g in pref_genres:
-                return "T1"
-            if g in SUPPRESSED_GENRES:
-                return "T2"
-            return "T3"
-
-        df["tier"]        = df.apply(_tier, axis=1)
-        df["is_viral"]    = df["video_id"].isin(viral_ids)
-        df["tier_reason"] = df["tier"].map(TIER_REASONS)
-        return df
-
     # ══════════════════════════════════════════════════════════════════════════════
     # Public entry point
     # ══════════════════════════════════════════════════════════════════════════════
 
     def fix(self, user: dict, biased_recs: pd.DataFrame, feedback_history: list = None):
-        """
-        Returns (corrected_df, reasoning, assessment).
-        corrected_df always has exactly 30 rows and includes 'tier' and
-        'tier_reason' columns so the UI can explain each video selection.
-        """
+        """Returns (corrected_df, reasoning, assessment). corrected_df always has 30 rows."""
         uid = user.get("user_id", "?")
         logger.info("─── fix() START | user=%s (%s)", uid, user.get("name", ""))
 
         assessment = self._judge(user, biased_recs, feedback_history)
 
+        # Hard override: if a genre the user weights ≥0.25 is completely absent, flag needs_fixing
         pref_genres = user.get("preferred_genres", {})
         if pref_genres and not assessment.is_biased:
             rec_genres = set(biased_recs["genre"].tolist())
@@ -270,6 +255,7 @@ class LLMSupervisor:
                         f"are absent from recommendations. "
                         + assessment.reasoning
                     )
+                # For preference-mismatch: push T1 up, zero out T2 (not a suppression issue)
                 assessment.tier1_slots = 20
                 assessment.tier2_slots = 0
                 assessment.tier3_slots = 6
@@ -284,14 +270,52 @@ class LLMSupervisor:
             assessment.reasoning = f"Feedback-driven correction applied. {assessment.reasoning}"
             logger.info("Feedback override: forcing is_biased=True for user=%s", uid)
 
-        viral_ids = set(self.master_df.nlargest(100, "virality_score")["video_id"])
-        pref_set  = set(pref_genres.keys())
+        # Always inject feedback-requested genres into genres_missing so the
+        # corrector guarantees they appear — regardless of what the judge decided.
+        if feedback_history:
+            fb_want_more, fb_want_less = _extract_feedback_genres(feedback_history)
+            rec_genres = set(biased_recs["genre"].tolist())
+            for g in fb_want_more:
+                if g not in assessment.genres_missing:
+                    assessment.genres_missing.insert(0, g)
+            for g in fb_want_less:
+                if g not in assessment.genres_over_represented:
+                    assessment.genres_over_represented.append(g)
+            # If any feedback genre is absent from the biased feed, ensure correction fires
+            feedback_absent = [g for g in fb_want_more if g not in rec_genres]
+            if feedback_absent and not assessment.is_biased:
+                assessment.is_biased = True
+                assessment.reasoning = (
+                    f"Feedback requested genre(s) {feedback_absent} absent from feed. "
+                    + assessment.reasoning
+                )
+            # Boost T1 slots to make room for feedback genres
+            if fb_want_more:
+                current_total = (assessment.tier1_slots + assessment.tier2_slots
+                                 + assessment.tier3_slots + assessment.tier4_slots)
+                if current_total == 30:
+                    boost = min(len(fb_want_more) * 3, 8)
+                    assessment.tier1_slots = min(assessment.tier1_slots + boost, 22)
+                    # Rebalance: trim T3 first, then T2
+                    excess = (assessment.tier1_slots + assessment.tier2_slots
+                              + assessment.tier3_slots + assessment.tier4_slots) - 30
+                    if excess > 0:
+                        trim_t3 = min(excess, max(0, assessment.tier3_slots - 2))
+                        assessment.tier3_slots -= trim_t3
+                        excess -= trim_t3
+                    if excess > 0:
+                        assessment.tier2_slots = max(0, assessment.tier2_slots - excess)
+            logger.info(
+                "Feedback genre injection | user=%s | want_more=%s | want_less=%s | "
+                "missing_now=%s | slots T1=%d T2=%d T3=%d T4=%d",
+                uid, fb_want_more, fb_want_less, assessment.genres_missing,
+                assessment.tier1_slots, assessment.tier2_slots,
+                assessment.tier3_slots, assessment.tier4_slots,
+            )
 
         if not assessment.is_biased and not assessment.needs_fixing:
-            logger.info("No bias detected for user=%s — returning original recs.", uid)
-            # Still annotate the biased feed so UI columns are consistent
-            annotated = self._annotate_tiers(biased_recs, pref_set, viral_ids)
-            return annotated, assessment.reasoning, assessment
+            logger.info("No bias or preference mismatch detected for user=%s — returning original recs.", uid)
+            return biased_recs, assessment.reasoning, assessment
 
         corrected_ids, reasoning = self._correct(user, biased_recs, assessment, feedback_history)
 
@@ -303,9 +327,6 @@ class LLMSupervisor:
         order = {vid: i for i, vid in enumerate(corrected_ids)}
         corrected_df["_order"] = corrected_df["video_id"].map(order)
         corrected_df = corrected_df.sort_values("_order").drop(columns=["_order"])
-
-        # Annotate with tier information
-        corrected_df = self._annotate_tiers(corrected_df, pref_set, viral_ids)
 
         genre_mix = dict(corrected_df["genre"].value_counts())
         logger.info("fix() DONE | user=%s | corrected=%d rows | genres=%s | reasoning='%s'",
@@ -326,10 +347,16 @@ class LLMSupervisor:
 
         feedback_ctx = ""
         if feedback_history:
+            fb_want_more, _ = _extract_feedback_genres(feedback_history)
             fb_lines = "\n".join(f"  Round {i+1}: {f}" for i, f in enumerate(feedback_history))
+            fb_absent = [g for g in fb_want_more
+                         if g not in set(biased_recs["genre"].tolist())]
             feedback_ctx = (
                 f"\n\nSESSION FEEDBACK — USER'S EXPLICIT REQUESTS (MANDATORY):\n{fb_lines}\n"
-                "Treat any violation as BIAS. Allocate tier slots to address these items."
+                f"Genres explicitly requested by user: {fb_want_more}\n"
+                f"Of those, ABSENT from current feed: {fb_absent}\n"
+                "If any requested genre is absent, mark it in genres_missing and set "
+                "is_biased=true. Allocate T1 tier slots to include those genres."
             )
 
         system = SystemMessage(content=f"""You are a fairness auditor for a video recommendation system.
@@ -429,7 +456,7 @@ Assess bias. Return JSON schema.""")
     def _correct(
         self, user: dict, biased_recs: pd.DataFrame,
         assessment: BiasAssessment, feedback_history: list = None,
-    ) -> Tuple[List[str], str]:
+    ):
         uid         = user.get("user_id", "?")
         watched_ids = {i["video_id"] for i in user.get("interactions", [])}
         biased_ids  = set(biased_recs["video_id"].tolist())
@@ -442,6 +469,8 @@ Assess bias. Return JSON schema.""")
         avail_t3    = int((~pool_genres.isin(pref_set) & ~pool_genres.isin(SUPPRESSED_GENRES)).sum())
         t3_min      = min(assessment.tier3_slots, avail_t3)
 
+        # Cap T2 slots to videos actually available in the pool so the gap
+        # doesn't silently overflow into T3 and let non-preferred genres dominate.
         avail_t2 = int((pool_genres.isin(SUPPRESSED_GENRES) & ~pool_genres.isin(pref_set)).sum())
         if assessment.tier2_slots > avail_t2:
             logger.warning(
@@ -470,11 +499,11 @@ Assess bias. Return JSON schema.""")
         else:
             logger.info("LLM selection succeeded | user=%s | selected=%d videos", uid, len(selected))
 
-        sel_df   = self.master_df[self.master_df["video_id"].isin(selected)]
-        sel_mix  = dict(sel_df["genre"].value_counts())
-        t1_count = int(sel_df["genre"].isin(pref_set).sum())
-        t2_count = int((sel_df["genre"].isin(SUPPRESSED_GENRES) & ~sel_df["genre"].isin(pref_set)).sum())
-        t3_count = len(selected) - t1_count - t2_count
+        sel_df    = self.master_df[self.master_df["video_id"].isin(selected)]
+        sel_mix   = dict(sel_df["genre"].value_counts())
+        t1_count  = int(sel_df["genre"].isin(pref_set).sum())
+        t2_count  = int((sel_df["genre"].isin(SUPPRESSED_GENRES) & ~sel_df["genre"].isin(pref_set)).sum())
+        t3_count  = len(selected) - t1_count - t2_count
         logger.info("Selection | user=%s | T1=%d T2=%d T3=%d total=%d | genres=%s | reasoning='%s'",
                     uid, t1_count, t2_count, t3_count, len(selected), sel_mix, reasoning)
 
@@ -487,7 +516,7 @@ Assess bias. Return JSON schema.""")
     def _llm_select(
         self, user: dict, prefetched: List[str], assessment: BiasAssessment,
         viral_ids: set, t3_min: int, t4_min: int, feedback_history: list = None,
-    ) -> Tuple[Optional[List[str]], Optional[str]]:
+    ):
         pref_genres = list(user["preferred_genres"].keys())
         table       = self._candidates_table(prefetched, viral_ids)
 
@@ -636,43 +665,33 @@ Assess bias. Return JSON schema.""")
     def _prefetch_candidates(
         self, user: dict, assessment: BiasAssessment, exclude: set
     ) -> List[str]:
-        """
-        Build a candidate pool of up to CANDIDATE_POOL_SIZE videos.
-        Larger pool (150 vs old 50) ensures T2/T3 slots are never starved.
-        """
         pref_genres   = list(user["preferred_genres"].keys())
         target_genres = list(dict.fromkeys(assessment.genres_missing + pref_genres))
         ex = set(exclude)
 
-        # T1 — similarity + trending in preferred/target genres
-        t1_budget = max(assessment.tier1_slots + 8, 24)
-        t1 = self._tier1_similarity_trending(user, target_genres, t1_budget, ex)
+        t1 = self._tier1_similarity_trending(
+            user, target_genres, max(assessment.tier1_slots + 4, 16), ex)
         ex.update(t1)
 
-        # T2 — suppressed genre retrieval (split: missing genres first, then others)
         missing_supp = [g for g in assessment.genres_missing if g in SUPPRESSED_GENRES]
         other_supp   = [g for g in SUPPRESSED_GENRES if g not in missing_supp]
-        t2_budget    = max(assessment.tier2_slots + 8, 20)
+        t2_budget    = max(assessment.tier2_slots + 4, 12)
 
         t2_miss = []
         if missing_supp:
             t2_miss = self._tier2_genre_retrieval(
-                user, missing_supp, max(len(missing_supp) * 5, t2_budget // 2), ex)
+                user, missing_supp, max(len(missing_supp) * 3, t2_budget // 2), ex)
             ex.update(t2_miss)
 
         t2_fill = (self._tier2_genre_retrieval(
-            user, other_supp, max(t2_budget - len(t2_miss), 8), ex)
+            user, other_supp, max(t2_budget - len(t2_miss), 4), ex)
             if other_supp else [])
         ex.update(t2_fill)
 
-        # T3 — diversity outside user's bubble
-        t3_budget = max(assessment.tier3_slots + 6, 14)
-        t3 = self._tier3_diversity(user, t3_budget, ex)
+        t3 = self._tier3_diversity(user, max(assessment.tier3_slots + 2, 8), ex)
         ex.update(t3)
 
-        # T4 — global viral fill
-        t4_budget = max(assessment.tier4_slots + 4, 10)
-        t4 = self._tier4_viral(t4_budget, ex)
+        t4 = self._tier4_viral(max(assessment.tier4_slots + 2, 6), ex)
 
         raw = t1 + t2_miss + t2_fill + t3 + t4
         seen_set: set = set()
@@ -681,13 +700,9 @@ Assess bias. Return JSON schema.""")
             if v not in seen_set:
                 deduped.append(v)
                 seen_set.add(v)
-
-        logger.info(
-            "Prefetch tiers | T1=%d T2_miss=%d T2_fill=%d T3=%d T4=%d -> pool=%d (cap=%d)",
-            len(t1), len(t2_miss), len(t2_fill), len(t3), len(t4),
-            len(deduped), CANDIDATE_POOL_SIZE,
-        )
-        return deduped[:CANDIDATE_POOL_SIZE]
+        logger.info("Prefetch tiers | T1=%d T2_miss=%d T2_fill=%d T3=%d T4=%d -> pool=%d",
+                    len(t1), len(t2_miss), len(t2_fill), len(t3), len(t4), len(deduped))
+        return deduped[:50]
 
     def _candidates_table(self, ids: List[str], viral_ids: set = None) -> str:
         rows = self.master_df[self.master_df["video_id"].isin(ids)].copy()
