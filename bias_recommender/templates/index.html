@@ -103,13 +103,9 @@
     .pill.em { background: rgba(16,185,129,0.08);  color: #059669; border-color: rgba(16,185,129,0.18); }
     .pill.am { background: rgba(245,158,11,0.08);  color: #d97706; border-color: rgba(245,158,11,0.18); }
 
-    /* ── User dropdown (in header) ─────────────────────────── */
-    .user-select-wrap {
-      display: flex; align-items: center; gap: 9px; flex-shrink: 0;
-    }
-    .user-select-lbl {
-      font-size: 11.5px; font-weight: 600; color: var(--text2); white-space: nowrap;
-    }
+    /* ── User dropdown ─────────────────────────────────────── */
+    .user-select-wrap { display: flex; align-items: center; gap: 9px; flex-shrink: 0; }
+    .user-select-lbl  { font-size: 11.5px; font-weight: 600; color: var(--text2); white-space: nowrap; }
     .user-select {
       appearance: none; -webkit-appearance: none;
       padding: 7px 34px 7px 13px;
@@ -117,24 +113,15 @@
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E")
         no-repeat right 10px center;
       background-size: auto, 14px;
-      border: 1px solid var(--border2);
-      border-radius: 10px;
-      font-family: 'Inter', sans-serif;
-      font-size: 12.5px; font-weight: 500;
-      color: var(--text);
-      cursor: pointer;
-      outline: none;
-      min-width: 230px;
-      box-shadow: var(--sh);
-      transition: border-color .15s, box-shadow .15s;
+      border: 1px solid var(--border2); border-radius: 10px;
+      font-family: 'Inter', sans-serif; font-size: 12.5px; font-weight: 500;
+      color: var(--text); cursor: pointer; outline: none; min-width: 230px;
+      box-shadow: var(--sh); transition: border-color .15s, box-shadow .15s;
     }
-    .user-select:focus {
-      border-color: rgba(99,102,241,0.35);
-      box-shadow: 0 0 0 3px rgba(99,102,241,0.10);
-    }
+    .user-select:focus { border-color: rgba(99,102,241,0.35); box-shadow: 0 0 0 3px rgba(99,102,241,0.10); }
     .user-select option { background: #fff; color: var(--text); }
 
-    /* ── Left panel (profile — fixed, non-scroll) ──────────── */
+    /* ── Left panel ────────────────────────────────────────── */
     .left-panel {
       grid-row: 2; grid-column: 1;
       background: var(--glass3);
@@ -143,10 +130,9 @@
       border-right: 1px solid var(--border);
       padding: 22px 20px;
       display: flex; flex-direction: column; gap: 0;
-      overflow: hidden;           /* profile never scrolls — it stays put */
+      overflow: hidden;
     }
 
-    /* ── Empty state in left panel ─────────────────────────── */
     .lp-empty {
       flex: 1; display: flex; flex-direction: column;
       align-items: center; justify-content: center;
@@ -172,8 +158,7 @@
       overflow: hidden;
     }
     .card-hdr {
-      padding: 12px 16px;
-      border-bottom: 1px solid rgba(0,0,0,0.05);
+      padding: 12px 16px; border-bottom: 1px solid rgba(0,0,0,0.05);
       display: flex; align-items: center; gap: 10px;
       background: rgba(255,255,255,0.30);
     }
@@ -181,15 +166,12 @@
     .card-body  { padding: 15px 16px; }
 
     /* ── Profile card ──────────────────────────────────────── */
-    .prof-top {
-      display: flex; gap: 14px; align-items: flex-start;
-    }
+    .prof-top { display: flex; gap: 14px; align-items: flex-start; }
     .prof-photo {
       width: 62px; height: 62px; border-radius: 15px;
       object-fit: cover; flex-shrink: 0;
       border: 3px solid rgba(255,255,255,0.95);
-      box-shadow: 0 4px 18px rgba(0,0,0,0.12);
-      background: var(--bg-a);
+      box-shadow: 0 4px 18px rgba(0,0,0,0.12); background: var(--bg-a);
     }
     .prof-initials {
       width: 62px; height: 62px; border-radius: 15px;
@@ -200,9 +182,7 @@
     }
     .prof-name { font-size: 17px; font-weight: 800; letter-spacing: -.3px; }
     .prof-uid  { font-size: 11px; color: var(--text3); margin-top: 2px; }
-    .prof-desc {
-      font-size: 11.5px; color: var(--text2); margin-top: 6px; line-height: 1.65;
-    }
+    .prof-desc { font-size: 11.5px; color: var(--text2); margin-top: 6px; line-height: 1.65; }
     .sec-lbl {
       font-size: 9.5px; font-weight: 700; letter-spacing: 1.1px;
       text-transform: uppercase; color: var(--text3); margin-bottom: 8px; margin-top: 16px;
@@ -216,7 +196,7 @@
     .gbar { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
     .gbar-lbl  { font-size: 11px; color: var(--text2); width: 96px; flex-shrink: 0; }
     .gbar-trk  { flex: 1; height: 5px; background: rgba(0,0,0,0.07); border-radius: 3px; overflow: hidden; }
-    .gbar-fill { height: 100%; border-radius: 3px; opacity: 0.85; }
+    .gbar-fill { height: 100%; border-radius: 3px; opacity: 0.85; transition: width .6s ease; }
     .gbar-pct  { font-size: 10px; color: var(--text3); width: 26px; text-align: right; }
     .hist-item {
       display: flex; align-items: center; gap: 8px;
@@ -227,15 +207,16 @@
     .hist-ttl  { font-size: 11px; color: var(--text2); flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .hist-flg  { font-size: 11px; }
 
-    /* ── Right panel (scrollable results area) ─────────────── */
+    /* ── Right panel ───────────────────────────────────────── */
     main {
       grid-row: 2; grid-column: 2;
-      overflow-y: auto;
-      padding: 22px;
+      overflow-y: auto; padding: 22px;
       display: flex; flex-direction: column; gap: 16px;
+      min-height: 0; /* required for grid child to scroll correctly */
     }
+    /* Prevent flex from squashing cards — each child keeps its natural height */
+    main > * { flex-shrink: 0; }
 
-    /* ── Right panel empty state ───────────────────────────── */
     .rp-empty {
       flex: 1; display: flex; flex-direction: column;
       align-items: center; justify-content: center;
@@ -258,8 +239,7 @@
       color: #fff; border: none; border-radius: var(--r);
       font-size: 13.5px; font-weight: 600; cursor: pointer;
       transition: opacity .18s, transform .1s, box-shadow .18s;
-      box-shadow: 0 4px 20px rgba(99,102,241,0.28);
-      flex-shrink: 0;
+      box-shadow: 0 4px 20px rgba(99,102,241,0.28); flex-shrink: 0;
     }
     #run-btn:hover:not(:disabled) { opacity: .9; box-shadow: 0 6px 28px rgba(99,102,241,0.38); }
     #run-btn:active:not(:disabled){ transform: scale(.98); }
@@ -276,28 +256,21 @@
     /* ── Tabs ──────────────────────────────────────────────── */
     .tabs {
       display: inline-flex; gap: 3px;
-      background: var(--glass2);
-      backdrop-filter: blur(16px);
-      border: 1px solid var(--border2);
-      border-radius: var(--r); padding: 4px;
-      box-shadow: var(--sh);
+      background: var(--glass2); backdrop-filter: blur(16px);
+      border: 1px solid var(--border2); border-radius: var(--r);
+      padding: 4px; box-shadow: var(--sh);
     }
     .tab {
       padding: 7px 20px; border-radius: var(--r-sm);
       font-size: 12.5px; font-weight: 500; cursor: pointer;
-      color: var(--text2); border: none; background: transparent;
-      transition: all .14s;
+      color: var(--text2); border: none; background: transparent; transition: all .14s;
     }
-    .tab.active {
-      background: white; color: var(--text);
-      box-shadow: 0 1px 6px rgba(0,0,0,0.08);
-    }
+    .tab.active { background: white; color: var(--text); box-shadow: 0 1px 6px rgba(0,0,0,0.08); }
     .tab-panel { display: none; }
     .tab-panel.active { display: block; }
 
     /* ── Feed layout ───────────────────────────────────────── */
     .feeds { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
-
     .feed-hdr {
       display: flex; align-items: center; gap: 9px;
       padding: 11px 15px; border-bottom: 1px solid rgba(0,0,0,0.05);
@@ -307,11 +280,9 @@
     .feed-ttl  { font-size: 12.5px; font-weight: 600; }
     .feed-stat { font-size: 10.5px; color: var(--text3); margin-left: auto; }
 
-    /* Video card */
     .vcard {
       display: flex; align-items: center; gap: 10px;
-      padding: 8px 13px; border-bottom: 1px solid rgba(0,0,0,0.04);
-      transition: background .11s;
+      padding: 8px 13px; border-bottom: 1px solid rgba(0,0,0,0.04); transition: background .11s;
     }
     .vcard:last-child { border-bottom: none; }
     .vcard:hover { background: rgba(255,255,255,0.55); }
@@ -336,21 +307,6 @@
     .leg-d  { width: 7px; height: 7px; border-radius: 50%; opacity: .75; }
 
     /* ── Verdict ───────────────────────────────────────────── */
-    /* ── Quota tracker ────────────────────────────────────────── */
-    .quota-row { display: contents; }
-    .quota-cell {
-      display: flex; align-items: center; gap: 7px;
-      font-size: 13px; font-weight: 700;
-    }
-    .quota-cell.met  { color: var(--green); }
-    .quota-cell.miss { color: var(--red); }
-    .quota-icon { font-size: 14px; line-height: 1; }
-    .quota-req {
-      font-size: 9.5px; font-weight: 600; padding: 1px 6px;
-      border-radius: 20px; background: rgba(0,0,0,0.06);
-      color: var(--text3); margin-left: 4px;
-    }
-
     .vbadge {
       padding: 2px 11px; border-radius: 20px; font-size: 11px; font-weight: 700;
     }
@@ -389,13 +345,12 @@
 
     .mt16 { margin-top: 16px; }
 
-    /* ── New-user form ─────────────────────────────────────────── */
+    /* ── New-user form ─────────────────────────────────────── */
     .nu-input {
       width: 100%; padding: 7px 10px;
       border: 1px solid var(--border2); border-radius: var(--r-sm);
       font-family: 'Inter', sans-serif; font-size: 12.5px;
-      background: var(--glass2); color: var(--text); outline: none;
-      transition: border-color .15s;
+      background: var(--glass2); color: var(--text); outline: none; transition: border-color .15s;
     }
     .nu-input:focus { border-color: rgba(99,102,241,.4); }
     .nu-toggle {
@@ -405,99 +360,169 @@
       font-family: inherit; transition: all .13s; flex-shrink: 0;
     }
     .nu-toggle.on {
-      background: rgba(99,102,241,0.12); border-color: rgba(99,102,241,0.45);
-      color: var(--accent);
+      background: rgba(99,102,241,0.12); border-color: rgba(99,102,241,0.45); color: var(--accent);
     }
     .nu-toggle.on-lang {
-      background: rgba(16,185,129,0.10); border-color: rgba(16,185,129,0.45);
-      color: #059669;
+      background: rgba(16,185,129,0.10); border-color: rgba(16,185,129,0.45); color: #059669;
     }
-    .nu-weight-row {
-      display: flex; align-items: center; gap: 8px;
-      width: 100%; margin-bottom: 6px;
-    }
-    .nu-slider-wrap {
-      flex: 1; display: none; align-items: center; gap: 7px;
-    }
-    .nu-slider {
-      flex: 1; accent-color: var(--accent); cursor: pointer; height: 4px;
-    }
-    .nu-pct {
-      font-size: 11px; font-weight: 600; color: var(--accent);
-      min-width: 34px; text-align: right;
-    }
+    .nu-weight-row { display: flex; align-items: center; gap: 8px; width: 100%; margin-bottom: 6px; }
+    .nu-slider-wrap { flex: 1; display: none; align-items: center; gap: 7px; }
+    .nu-slider { flex: 1; accent-color: var(--accent); cursor: pointer; height: 4px; }
+    .nu-pct { font-size: 11px; font-weight: 600; color: var(--accent); min-width: 34px; text-align: right; }
 
-    /* ── Feedback section ──────────────────────────────────────── */
-    .fb-entry {
-      padding: 8px 12px; margin-bottom: 8px;
-      background: rgba(99,102,241,0.07); border-radius: var(--r-sm);
-      border-left: 3px solid var(--accent2);
-    }
-    .fb-entry-lbl {
-      font-size: 9.5px; font-weight: 700; color: var(--accent2);
-      text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 4px;
-    }
-    .fb-entry-txt { font-size: 12px; color: var(--text2); line-height: 1.6; }
-    .fb-textarea {
-      width: 100%; padding: 9px 12px; border: 1px solid var(--border2);
-      border-radius: var(--r-sm); font-family: inherit; font-size: 12.5px;
-      background: var(--glass2); color: var(--text); outline: none;
-      resize: vertical; line-height: 1.65; min-height: 70px;
-      transition: border-color .15s;
-    }
-    .fb-textarea:focus { border-color: rgba(99,102,241,.4); }
-    .fb-btn {
-      margin-top: 10px; padding: 9px 22px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #fff; border: none; border-radius: var(--r-sm);
-      font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit;
-      transition: opacity .15s, transform .1s;
-    }
-    .fb-btn:hover:not(:disabled) { opacity: .88; }
-    .fb-btn:active:not(:disabled) { transform: scale(.97); }
-    .fb-btn:disabled { opacity: .45; cursor: not-allowed; }
-
-    /* ── Feedback section highlight ─────────────────────────────── */
+    /* ── ═══════════════════════════════════════════════════════
+         FEEDBACK SECTION  — the main addition
+         ═══════════════════════════════════════════════════════ */
     #feedback-section {
       border-top: 3px solid var(--accent);
-      transition: box-shadow .3s;
+      animation: slideUp .35s ease;
+      overflow: visible; /* override .card overflow:hidden so textarea is never clipped */
     }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Pulsing highlight after results appear */
     #feedback-section.fresh {
       box-shadow: 0 0 0 3px rgba(99,102,241,0.18), var(--sh2);
-      animation: pulseRing .9s ease-out 2;
+      animation: slideUp .35s ease, pulseRing .9s ease-out 2;
     }
     @keyframes pulseRing {
       0%   { box-shadow: 0 0 0 3px rgba(99,102,241,0.30), var(--sh2); }
-      100% { box-shadow: 0 0 0 8px rgba(99,102,241,0.00), var(--sh2); }
+      100% { box-shadow: 0 0 0 9px rgba(99,102,241,0.00), var(--sh2); }
     }
 
-    /* ── Profile update notice ───────────────────────────────────── */
-    .profile-notice {
-      display: none; margin-top: 10px;
-      padding: 8px 11px; border-radius: var(--r-sm);
-      background: rgba(16,185,129,0.09);
-      border: 1px solid rgba(16,185,129,0.22);
-      font-size: 11.5px; font-weight: 500; color: #059669;
-      line-height: 1.55;
-      animation: fadeSlide .35s ease;
+    /* Guest-only callout that explains what the box does */
+    .fb-intro {
+      margin: 0 16px 12px;
+      padding: 10px 14px;
+      background: linear-gradient(135deg, rgba(99,102,241,0.07), rgba(129,140,248,0.05));
+      border: 1px solid rgba(99,102,241,0.18);
+      border-radius: var(--r-sm);
+      font-size: 12px; color: var(--text2); line-height: 1.7;
     }
-    .profile-notice.has-minus {
+    .fb-intro strong { color: var(--accent); }
+    .fb-intro .hint-chips {
+      display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px;
+    }
+    .hint-chip {
+      padding: 2px 10px; border-radius: 20px;
+      font-size: 10.5px; font-weight: 500;
+      background: rgba(99,102,241,0.08); color: var(--accent);
+      border: 1px solid rgba(99,102,241,0.16);
+      cursor: pointer; transition: background .12s;
+      user-select: none;
+    }
+    .hint-chip:hover { background: rgba(99,102,241,0.16); }
+
+    /* History of previous rounds */
+    .fb-history { padding: 0 16px 12px; display: flex; flex-direction: column; gap: 8px; }
+    .fb-round {
+      padding: 9px 12px; border-radius: var(--r-sm);
+      background: rgba(99,102,241,0.06);
+      border-left: 3px solid var(--accent2);
+    }
+    .fb-round-lbl {
+      font-size: 9px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--accent2); margin-bottom: 4px;
+    }
+    .fb-round-txt { font-size: 12px; color: var(--text2); line-height: 1.6; }
+
+    /* Effect summary: what changed this round */
+    .fb-effect {
+      margin: 0 16px 12px;
+      padding: 9px 13px; border-radius: var(--r-sm);
+      background: rgba(16,185,129,0.08);
+      border: 1px solid rgba(16,185,129,0.22);
+      font-size: 11.5px; color: #059669; line-height: 1.6;
+      display: none;
+      animation: fadeIn .3s ease;
+    }
+    .fb-effect.minus {
       background: rgba(99,102,241,0.07);
       border-color: rgba(99,102,241,0.22);
       color: var(--accent);
     }
-    @keyframes fadeSlide {
-      from { opacity: 0; transform: translateY(-5px); }
-      to   { opacity: 1; transform: translateY(0); }
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    .effect-tag {
+      display: inline-block; padding: 1px 8px; border-radius: 20px;
+      font-size: 10px; font-weight: 700; margin: 2px 2px 0;
+      background: rgba(16,185,129,0.14); color: #059669;
+    }
+    .effect-tag.minus { background: rgba(239,68,68,0.10); color: #dc2626; }
+
+    /* Textarea + button */
+    .fb-input-wrap { padding: 0 16px 16px; display: flex; flex-direction: column; gap: 10px; }
+    .fb-textarea {
+      width: 100%; padding: 10px 13px;
+      border: 1.5px solid var(--border2);
+      border-radius: var(--r-sm);
+      font-family: inherit; font-size: 12.5px;
+      background: var(--glass2); color: var(--text); outline: none;
+      resize: vertical; line-height: 1.7; min-height: 72px;
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .fb-textarea:focus {
+      border-color: rgba(99,102,241,.40);
+      box-shadow: 0 0 0 3px rgba(99,102,241,0.08);
+    }
+    .fb-textarea::placeholder { color: var(--text4); }
+    .fb-row { display: flex; align-items: center; gap: 10px; }
+    .fb-btn {
+      padding: 9px 22px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff; border: none; border-radius: var(--r-sm);
+      font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit;
+      transition: opacity .15s, transform .1s; white-space: nowrap; flex-shrink: 0;
+    }
+    .fb-btn:hover:not(:disabled) { opacity: .88; }
+    .fb-btn:active:not(:disabled) { transform: scale(.97); }
+    .fb-btn:disabled { opacity: .45; cursor: not-allowed; }
+    .fb-btn .fb-spin {
+      width: 13px; height: 13px; display: none;
+      border: 2px solid rgba(255,255,255,.3); border-top-color: #fff;
+      border-radius: 50%; animation: spin .65s linear infinite;
+      vertical-align: middle; margin-right: 5px;
+    }
+    .fb-btn.loading .fb-spin { display: inline-block; }
+    .fb-round-badge {
+      font-size: 10.5px; padding: 3px 11px; border-radius: 20px;
+      background: rgba(245,158,11,0.08); color: #d97706;
+      border: 1px solid rgba(245,158,11,0.22); font-weight: 600;
+    }
+
+    /* ── Profile update notice (left panel) ────────────────── */
+    .profile-notice {
+      display: none; margin-top: 10px; padding: 8px 11px;
+      border-radius: var(--r-sm);
+      background: rgba(16,185,129,0.09);
+      border: 1px solid rgba(16,185,129,0.22);
+      font-size: 11.5px; font-weight: 500; color: #059669; line-height: 1.55;
+      animation: fadeIn .35s ease;
+    }
+    .profile-notice.has-minus {
+      background: rgba(99,102,241,0.07); border-color: rgba(99,102,241,0.22); color: var(--accent);
     }
     .notice-tag {
       display: inline-block; padding: 1px 7px; border-radius: 20px;
       font-size: 10px; font-weight: 700; margin: 2px 2px 0;
       background: rgba(16,185,129,0.14); color: #059669;
     }
-    .notice-tag.minus {
-      background: rgba(239,68,68,0.10); color: #dc2626;
+    .notice-tag.minus { background: rgba(239,68,68,0.10); color: #dc2626; }
+
+    /* ── Modify preferences back-link ──────────────────────── */
+    #modify-prefs-row {
+      display: none; margin-top: 14px; padding-top: 12px;
+      border-top: 1px solid rgba(0,0,0,0.06);
     }
+    .back-btn {
+      background: none; border: 1px solid var(--border2);
+      border-radius: var(--r-sm); padding: 6px 13px;
+      font-family: inherit; font-size: 11.5px; font-weight: 500;
+      color: var(--text2); cursor: pointer; transition: background .13s;
+    }
+    .back-btn:hover { background: rgba(0,0,0,0.04); }
   </style>
 </head>
 <body>
@@ -511,7 +536,6 @@
     <div class="hdr-sep"></div>
     <span class="hdr-sub">Algorithmic Bias Analyzer</span>
 
-    <!-- User dropdown -->
     <div class="user-select-wrap" style="margin-left:24px">
       <span class="user-select-lbl">User persona</span>
       <select class="user-select" id="user-select" onchange="if(this.value) selectUser(this.value)">
@@ -530,10 +554,9 @@
     </div>
   </header>
 
-  <!-- ── Left panel — profile (stays fixed, never scrolls) ──── -->
+  <!-- ── Left panel ──────────────────────────────────────────── -->
   <div class="left-panel">
 
-    <!-- Empty state -->
     <div class="lp-empty" id="lp-empty">
       <div class="lp-empty-icon">👤</div>
       <h3>No user selected</h3>
@@ -541,32 +564,37 @@
     </div>
 
     <!-- New-user cold-start form -->
-    <div class="card" id="new-user-panel" style="display:none;overflow-y:auto;max-height:calc(100vh - 112px)">
+    <div class="card" id="new-user-panel"
+         style="display:none;overflow-y:auto;max-height:calc(100vh - 112px)">
       <div class="card-hdr">
         <span style="font-size:16px">✦</span>
         <span class="card-title" style="margin-left:4px">New User Setup</span>
       </div>
       <div class="card-body">
-        <div class="sec-lbl" style="margin-top:0">Your Name <span style="font-weight:400;color:var(--text4)">(optional)</span></div>
+        <div class="sec-lbl" style="margin-top:0">
+          Your Name <span style="font-weight:400;color:var(--text4)">(optional)</span>
+        </div>
         <input type="text" id="nu-name" class="nu-input" placeholder="e.g. Alex" style="margin-bottom:2px">
 
-        <div class="sec-lbl">Content You Enjoy <span style="font-weight:400;color:var(--text4)">(select &amp; set weight)</span></div>
+        <div class="sec-lbl">
+          Content You Enjoy <span style="font-weight:400;color:var(--text4)">(select &amp; set weight)</span>
+        </div>
         <div id="nu-genres" style="display:flex;flex-direction:column;gap:0"></div>
 
-        <div class="sec-lbl">Preferred Languages <span style="font-weight:400;color:var(--text4)">(default: English)</span></div>
+        <div class="sec-lbl">
+          Preferred Languages <span style="font-weight:400;color:var(--text4)">(default: English)</span>
+        </div>
         <div id="nu-langs" style="display:flex;flex-wrap:wrap;gap:6px"></div>
       </div>
     </div>
 
-    <!-- Profile card (shown after selection) -->
+    <!-- Profile card -->
     <div class="card" id="profile-card" style="display:none">
       <div class="card-hdr">
         <span class="card-title">User Profile</span>
         <div id="lang-pills" style="margin-left:auto;display:flex;gap:5px;flex-wrap:wrap"></div>
       </div>
       <div class="card-body">
-
-        <!-- Photo + name -->
         <div class="prof-top">
           <img  id="p-photo" class="prof-photo" src="" alt=""
                 onerror="this.style.display='none';document.getElementById('p-initials').style.display='flex'">
@@ -577,35 +605,23 @@
           </div>
         </div>
 
-        <!-- Description -->
         <div class="prof-desc" id="p-desc"></div>
 
-        <!-- Genre preferences -->
         <div class="sec-lbl">Genre Preferences</div>
         <div id="p-genres"></div>
 
-        <!-- Profile update notice (guest feedback) -->
         <div class="profile-notice" id="profile-notice"></div>
 
-        <!-- Watch history -->
         <div class="sec-lbl">Watch History Sample</div>
         <div id="p-history"></div>
         <div id="p-more" style="font-size:10.5px;color:var(--text3);margin-top:6px"></div>
 
-        <!-- Modify prefs link (guest users only) -->
-        <div id="modify-prefs-row" style="display:none;margin-top:14px;padding-top:12px;border-top:1px solid rgba(0,0,0,0.06)">
-          <button onclick="resetNewUserForm()"
-                  style="background:none;border:1px solid var(--border2);border-radius:var(--r-sm);padding:6px 13px;font-family:inherit;font-size:11.5px;font-weight:500;color:var(--text2);cursor:pointer;transition:background .13s"
-                  onmouseover="this.style.background='rgba(0,0,0,0.04)'"
-                  onmouseout="this.style.background='none'">
-            ← Modify Preferences
-          </button>
+        <div id="modify-prefs-row">
+          <button class="back-btn" onclick="resetNewUserForm()">← Modify Preferences</button>
         </div>
-
       </div>
     </div>
 
-    <!-- Run button (shown once user is selected) — lives in left panel -->
     <button id="run-btn" onclick="runTest()">
       <span class="ico">▶&nbsp;</span>
       <div class="spin"></div>
@@ -614,14 +630,13 @@
 
   </div><!-- /left-panel -->
 
-  <!-- ── Right panel — results (scrollable) ────────────────────── -->
+  <!-- ── Right panel ─────────────────────────────────────────── -->
   <main>
 
-    <!-- Empty state (before any user selected) -->
     <div class="rp-empty" id="rp-empty">
       <div class="rp-empty-icon">⚖️</div>
       <h2>Select a User Persona</h2>
-      <p>Pick one of 20 profiles from the dropdown. We'll run their recommendations through the biased algorithm, the LLM supervisor, and the ideal retriever — then compare all three.</p>
+      <p>Pick one of 20 profiles from the dropdown, or create a new user. We'll run recommendations through the biased algorithm, the LLM supervisor, and the ideal retriever — then compare all three.</p>
     </div>
 
     <!-- Results -->
@@ -652,7 +667,6 @@
           </div>
         </div>
 
-        <!-- Verdict -->
         <div class="card mt16">
           <div class="card-hdr">
             <span class="card-title">LLM Verdict</span>
@@ -668,14 +682,13 @@
           </div>
         </div>
 
-        <!-- 2-way metrics -->
         <div class="card mt16">
           <div class="card-hdr"><span class="card-title">Metrics Comparison</span></div>
           <div class="card-body">
             <div class="m2" id="m2"></div>
           </div>
         </div>
-      </div><!-- /tp-bias -->
+      </div>
 
       <!-- Tab 2: Ideal -->
       <div class="tab-panel" id="tp-ideal">
@@ -693,36 +706,59 @@
           <div class="legend" id="legend2"></div>
         </div>
 
-        <!-- 3-way metrics -->
         <div class="card mt16">
           <div class="card-hdr"><span class="card-title">Three-Way Comparison</span></div>
           <div class="card-body">
             <div class="m3" id="m3"></div>
           </div>
         </div>
-      </div><!-- /tp-ideal -->
+      </div>
 
     </div><!-- /results -->
 
-    <!-- Feedback refinement section (shown after any run) -->
+    <!-- ══════════════════════════════════════════════════════════
+         FEEDBACK SECTION — shown after first run for all users,
+         but particularly rich for guest/new users
+         ══════════════════════════════════════════════════════════ -->
     <div class="card mt16" id="feedback-section" style="display:none">
       <div class="card-hdr">
         <span style="font-size:15px">💬</span>
         <span class="card-title" style="margin-left:5px">Refine Recommendations</span>
-        <span id="round-badge" class="pill am" style="margin-left:auto">Round 1</span>
+        <span id="fb-round-badge" class="fb-round-badge" style="margin-left:auto">Round 1</span>
       </div>
-      <div class="card-body">
-        <div id="feedback-history"></div>
-        <div class="sec-lbl" style="margin-top:0">Tell the LLM what to change</div>
-        <textarea id="feedback-input" class="fb-textarea"
-          placeholder="e.g. I want more gaming and educational videos, less music. Show me Korean content too."></textarea>
-        <button id="feedback-btn" class="fb-btn" onclick="submitFeedback()">Apply Feedback</button>
+
+      <!-- Guest-only intro explaining the feature -->
+      <div class="fb-intro" id="fb-intro" style="display:none;margin-top:14px">
+        <strong>Tell the LLM exactly what you want.</strong> Your message is treated as a
+        high-priority override — it re-runs the full pipeline (biased recommender → LLM
+        supervisor) with your request included as a mandatory constraint alongside your
+        preference history.
+        <div class="hint-chips" id="hint-chips"></div>
+      </div>
+
+      <!-- Accumulated round history -->
+      <div class="fb-history" id="fb-history" style="display:none"></div>
+
+      <!-- Effect summary (appears after each feedback round) -->
+      <div class="fb-effect" id="fb-effect"></div>
+
+      <!-- Input -->
+      <div class="fb-input-wrap">
+        <textarea id="fb-textarea" class="fb-textarea"
+          placeholder="e.g. I want more documentary and educational content, less gaming. Show me Korean videos too."></textarea>
+        <div class="fb-row">
+          <button id="fb-btn" class="fb-btn" onclick="submitFeedback()">
+            <span class="fb-spin"></span>Apply Feedback
+          </button>
+          <span id="fb-char-hint" style="font-size:11px;color:var(--text4)">
+            Be specific — genre, language, mood, anything goes.
+          </span>
+        </div>
       </div>
     </div>
 
   </main>
-
-</div><!-- /shell -->
+</div>
 
 <script>
   const GC = {{ genre_colors | tojson }};
@@ -730,99 +766,108 @@
   const ALL_LANGS  = ['English','Hindi','Spanish','French','German','Japanese','Korean','Russian'];
   const LANG_FLAGS = {English:'🇬🇧',Hindi:'🇮🇳',Spanish:'🇪🇸',French:'🇫🇷',German:'🇩🇪',Japanese:'🇯🇵',Korean:'🇰🇷',Russian:'🇷🇺'};
 
+  // Hint chips for the feedback intro (new-user only)
+  const HINT_CHIPS = [
+    'More documentaries',
+    'Less gaming',
+    'Show Korean content',
+    'More educational',
+    'More regional Hindi',
+    'Less music',
+    'Include news analysis',
+    'More variety',
+  ];
+
   let activeUser       = null;
   let isNewUser        = false;
   let currentSessionId = null;
-  let lastNewUserPrefs = null;   // saved after each guest run
+  let lastNewUserPrefs = null;
 
-  /* ── New-user form init ───────────────────────────────────── */
+  /* ══════════════════════════════════════════════════════════
+     NEW-USER FORM
+     ══════════════════════════════════════════════════════════ */
   function initNewUserForm() {
     document.getElementById('nu-genres').innerHTML = ALL_GENRES.map(g => {
-      const safeId = g.replace(/\//g, '_');
+      const sid = g.replace(/\//g, '_');
       return `<div class="nu-weight-row">
         <button class="nu-toggle" data-val="${g}" onclick="toggleGenreWeight(this)">${g}</button>
-        <div class="nu-slider-wrap" id="nu-sw-${safeId}">
+        <div class="nu-slider-wrap" id="nu-sw-${sid}">
           <input type="range" class="nu-slider" data-val="${g}" min="1" max="100" value="50"
-                 oninput="document.getElementById('nu-pct-${safeId}').textContent=this.value+'%'">
-          <span class="nu-pct" id="nu-pct-${safeId}">50%</span>
+                 oninput="document.getElementById('nu-pct-${sid}').textContent=this.value+'%'">
+          <span class="nu-pct" id="nu-pct-${sid}">50%</span>
         </div>
       </div>`;
     }).join('');
+
     document.getElementById('nu-langs').innerHTML = ALL_LANGS.map(l =>
-      `<button class="nu-toggle" data-val="${l}" onclick="this.classList.toggle('on-lang')">${LANG_FLAGS[l]||''} ${l}</button>`
+      `<button class="nu-toggle" data-val="${l}" onclick="this.classList.toggle('on-lang')">
+        ${LANG_FLAGS[l]||''} ${l}
+      </button>`
+    ).join('');
+
+    // Build hint chips
+    document.getElementById('hint-chips').innerHTML = HINT_CHIPS.map(h =>
+      `<span class="hint-chip" onclick="insertHint(this)">${h}</span>`
     ).join('');
   }
 
   function toggleGenreWeight(btn) {
     btn.classList.toggle('on');
-    const safeId = btn.dataset.val.replace(/\//g, '_');
-    const wrap = document.getElementById('nu-sw-' + safeId);
+    const sid  = btn.dataset.val.replace(/\//g, '_');
+    const wrap = document.getElementById('nu-sw-' + sid);
     wrap.style.display = btn.classList.contains('on') ? 'flex' : 'none';
   }
 
   function collectNewUserPrefs() {
-    const name   = document.getElementById('nu-name').value.trim();
-    const raw    = {};
+    const name = document.getElementById('nu-name').value.trim();
+    const raw  = {};
     document.querySelectorAll('#nu-genres .nu-toggle.on').forEach(btn => {
-      const safeId = btn.dataset.val.replace(/\//g, '_');
-      const slider = document.querySelector(`#nu-sw-${safeId} .nu-slider`);
+      const sid    = btn.dataset.val.replace(/\//g, '_');
+      const slider = document.querySelector(`#nu-sw-${sid} .nu-slider`);
       raw[btn.dataset.val] = slider ? parseInt(slider.value) : 50;
     });
-    if (!Object.keys(raw).length) { alert('Please select at least one genre you enjoy.'); return null; }
-    const total = Object.values(raw).reduce((s, v) => s + v, 0);
+    if (!Object.keys(raw).length) {
+      alert('Please select at least one genre you enjoy.');
+      return null;
+    }
+    const total  = Object.values(raw).reduce((s, v) => s + v, 0);
     const genres = {};
     Object.keys(raw).forEach(k => { genres[k] = parseFloat((raw[k] / total).toFixed(4)); });
-    const languages = [...document.querySelectorAll('#nu-langs .nu-toggle.on-lang')].map(b => b.dataset.val);
+    const languages = [...document.querySelectorAll('#nu-langs .nu-toggle.on-lang')]
+                      .map(b => b.dataset.val);
     if (!languages.length) languages.push('English');
     return { name: name || 'New User', genres, languages };
   }
 
-  /* ── Guest profile helpers ───────────────────────────────── */
-  function renderGuestProfile(prefs) {
-    // Reuse the existing profile-card by faking a user object
-    const guestUser = {
-      preferred_genres:    prefs.genres,
-      preferred_languages: prefs.languages,
-      name:                prefs.name || 'New User',
-      user_id:             'GUEST',
-      avatar:              '',
-      description:         `Cold-start profile. Genres: ${Object.keys(prefs.genres).join(', ')}.`,
-      interactions:        [],
-      total_interactions:  0,
-    };
-    renderProfile(guestUser);
-    // Override history line for cold-start
-    document.getElementById('p-more').textContent = 'No watch history — cold start';
-    // Show "Modify Preferences" back-link
-    document.getElementById('modify-prefs-row').style.display = 'block';
-  }
-
   function resetNewUserForm() {
-    document.getElementById('profile-card').style.display   = 'none';
-    document.getElementById('new-user-panel').style.display = 'block';
-    document.getElementById('results').style.display        = 'none';
+    // Go back from profile card → preference form
+    document.getElementById('profile-card').style.display    = 'none';
+    document.getElementById('new-user-panel').style.display  = 'block';
+    document.getElementById('results').style.display         = 'none';
     document.getElementById('feedback-section').style.display = 'none';
     currentSessionId = null;
+    lastNewUserPrefs = null;
   }
 
-  /* ── User select ─────────────────────────────────────────── */
+  /* ══════════════════════════════════════════════════════════
+     USER SELECTION (dropdown)
+     ══════════════════════════════════════════════════════════ */
   function selectUser(id) {
     activeUser       = id;
     isNewUser        = (id === '__new__');
     currentSessionId = null;
     lastNewUserPrefs = null;
 
-    // Reset right panel
+    // Hide everything first
     document.getElementById('rp-empty').style.display         = 'none';
     document.getElementById('results').style.display          = 'none';
     document.getElementById('run-btn').style.display          = 'none';
     document.getElementById('feedback-section').style.display = 'none';
-
-    // Reset left panel
-    document.getElementById('lp-empty').style.display          = 'none';
-    document.getElementById('profile-card').style.display      = 'none';
-    document.getElementById('new-user-panel').style.display    = 'none';
-    document.getElementById('modify-prefs-row').style.display  = 'none';
+    document.getElementById('lp-empty').style.display         = 'none';
+    document.getElementById('profile-card').style.display     = 'none';
+    document.getElementById('new-user-panel').style.display   = 'none';
+    document.getElementById('modify-prefs-row').style.display = 'none';
+    hideProfileNotice();
 
     if (isNewUser) {
       document.getElementById('new-user-panel').style.display = 'block';
@@ -832,7 +877,6 @@
     }
 
     document.getElementById('btn-lbl').textContent = 'Run Bias Analysis';
-
     fetch('/api/user/' + id).then(r => r.json()).then(u => {
       renderProfile(u);
       document.getElementById('profile-card').style.display = 'block';
@@ -840,49 +884,62 @@
     });
   }
 
+  /* ══════════════════════════════════════════════════════════
+     PROFILE RENDERING
+     ══════════════════════════════════════════════════════════ */
   function renderProfile(u) {
-    const topG    = Object.entries(u.preferred_genres).sort((a,b)=>b[1]-a[1])[0][0];
+    const topG    = Object.entries(u.preferred_genres || {}).sort((a,b)=>b[1]-a[1])[0]?.[0] || 'Entertainment';
     const accentC = GC[topG] || '#6366f1';
 
     const photo = document.getElementById('p-photo');
     const ini   = document.getElementById('p-initials');
-    photo.src   = u.avatar || '';
-    photo.style.display = 'block';
-    ini.style.display   = 'none';
-    ini.textContent     = u.name[0];
+    photo.src            = u.avatar || '';
+    photo.style.display  = 'block';
+    ini.style.display    = 'none';
+    ini.textContent      = (u.name || '?')[0];
     ini.style.background = accentC;
 
-    document.getElementById('p-name').textContent = u.name;
-    document.getElementById('p-uid').textContent  = u.user_id;
-    document.getElementById('p-desc').textContent = u.description;
+    document.getElementById('p-name').textContent = u.name    || 'New User';
+    document.getElementById('p-uid').textContent  = u.user_id || 'GUEST';
+    document.getElementById('p-desc').textContent = u.description || '';
 
     document.getElementById('lang-pills').innerHTML =
-      u.preferred_languages.map(l =>
+      (u.preferred_languages || ['English']).map(l =>
         `<span class="lang-chip">${l}</span>`
       ).join('');
 
-    const gs = Object.entries(u.preferred_genres).sort((a,b)=>b[1]-a[1]);
+    renderGenreBars(u.preferred_genres || {});
+
+    document.getElementById('p-history').innerHTML =
+      (u.interactions || []).map(i => `
+        <div class="hist-item">
+          <div class="hist-dot" style="background:${i.color}"></div>
+          <span class="hist-ttl" title="${escHtml(i.title)}">${escHtml(i.title)}</span>
+          <span class="hist-flg">${i.flag}</span>
+        </div>`).join('') ||
+      '<div style="font-size:11px;color:var(--text4);padding:4px 0">No watch history yet — cold start</div>';
+
+    const total = u.total_interactions || 0;
+    const shown = (u.interactions || []).length;
+    document.getElementById('p-more').textContent =
+      total > shown ? `+${total - shown} more interactions` : '';
+  }
+
+  function renderGenreBars(prefs) {
+    const gs = Object.entries(prefs).sort((a,b)=>b[1]-a[1]);
     document.getElementById('p-genres').innerHTML = gs.map(([g,w]) => `
       <div class="gbar">
         <span class="gbar-lbl">${g}</span>
-        <div class="gbar-trk"><div class="gbar-fill" style="width:${w*100}%;background:${GC[g]||'#888'}"></div></div>
+        <div class="gbar-trk">
+          <div class="gbar-fill" style="width:${w*100}%;background:${GC[g]||'#888'}"></div>
+        </div>
         <span class="gbar-pct">${Math.round(w*100)}%</span>
       </div>`).join('');
-
-    document.getElementById('p-history').innerHTML = u.interactions.map(i => `
-      <div class="hist-item">
-        <div class="hist-dot" style="background:${i.color}"></div>
-        <span class="hist-ttl" title="${i.title}">${i.title}</span>
-        <span class="hist-flg">${i.flag}</span>
-      </div>`).join('');
-
-    document.getElementById('p-more').textContent =
-      u.total_interactions > u.interactions.length
-        ? `+${u.total_interactions - u.interactions.length} more interactions`
-        : '';
   }
 
-  /* ── Run ─────────────────────────────────────────────────── */
+  /* ══════════════════════════════════════════════════════════
+     MAIN RUN
+     ══════════════════════════════════════════════════════════ */
   function runTest() {
     if (!activeUser) return;
 
@@ -896,160 +953,254 @@
       payload = { user_id: activeUser };
     }
 
-    const btn       = document.getElementById('run-btn');
-    const doneLabel = isNewUser ? 'Generate My Feed' : 'Run Bias Analysis';
-    btn.disabled = true; btn.classList.add('loading');
-    document.getElementById('btn-lbl').textContent         = isNewUser ? 'Generating…' : 'Analysing…';
+    const btn = document.getElementById('run-btn');
+    btn.disabled = true;
+    btn.classList.add('loading');
+    document.getElementById('btn-lbl').textContent          = isNewUser ? 'Generating…' : 'Analysing…';
     document.getElementById('results').style.display        = 'none';
     document.getElementById('feedback-section').style.display = 'none';
 
     fetch('/api/run', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
+      body: JSON.stringify(payload),
     })
-    .then(r => r.json().then(data => ({ ok: r.ok, data })))
+    .then(r => r.json().then(d => ({ ok: r.ok, data: d })))
     .then(({ ok, data }) => {
-      btn.disabled = false; btn.classList.remove('loading');
-      document.getElementById('btn-lbl').textContent = doneLabel;
+      btn.disabled = false;
+      btn.classList.remove('loading');
+      document.getElementById('btn-lbl').textContent =
+        isNewUser ? 'Generate My Feed' : 'Run Bias Analysis';
+
       if (!ok || data.error) {
         alert('Analysis error: ' + (data.error || 'Unknown error. Check server logs.'));
         return;
       }
+
       currentSessionId = data.session_id;
 
-      // For new users: swap preference form → guest profile card in left panel
-      if (isNewUser && lastNewUserPrefs) {
+      // For new users: swap the pref form for a rendered profile card
+      if (isNewUser && data.user_profile) {
         document.getElementById('new-user-panel').style.display = 'none';
-        renderGuestProfile(lastNewUserPrefs);
+        renderProfile(data.user_profile);
         document.getElementById('profile-card').style.display   = 'block';
+        document.getElementById('modify-prefs-row').style.display = 'block';
       }
 
-      render(data);
+      renderResults(data);
       document.getElementById('results').style.display = 'block';
-      showFeedbackSection(data.feedback_history || []);
+      showFeedbackSection(data.feedback_history || [], data.is_guest || isNewUser, null);
 
-      // Always scroll the feedback section into view after a run
+      // Smooth scroll to feedback
       setTimeout(() => {
         document.getElementById('feedback-section')
           .scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }, 300);
+      }, 400);
     })
     .catch(err => {
-      btn.disabled = false; btn.classList.remove('loading');
-      document.getElementById('btn-lbl').textContent = doneLabel;
+      btn.disabled = false;
+      btn.classList.remove('loading');
+      document.getElementById('btn-lbl').textContent =
+        isNewUser ? 'Generate My Feed' : 'Run Bias Analysis';
       alert('Network error: ' + err.message);
     });
   }
 
-  /* ── Guest profile updater ───────────────────────────────── */
-  function updateGuestProfile(profile) {
-    if (!profile) return;
-
-    // Refresh genre preference bars
-    const gs = Object.entries(profile.preferred_genres).sort((a,b) => b[1]-a[1]);
-    document.getElementById('p-genres').innerHTML = gs.map(([g,w]) => `
-      <div class="gbar">
-        <span class="gbar-lbl">${g}</span>
-        <div class="gbar-trk"><div class="gbar-fill" style="width:${w*100}%;background:${GC[g]||'#888'}"></div></div>
-        <span class="gbar-pct">${Math.round(w*100)}%</span>
-      </div>`).join('');
-
-    // Refresh watch history (now includes synthetic interactions)
-    if (profile.recent_interactions && profile.recent_interactions.length) {
-      document.getElementById('p-history').innerHTML = profile.recent_interactions.map(i => `
-        <div class="hist-item">
-          <div class="hist-dot" style="background:${i.color}"></div>
-          <span class="hist-ttl" title="${i.title}">${i.title}</span>
-          <span class="hist-flg">${i.flag}</span>
-        </div>`).join('');
-      const total = profile.total_interactions || 0;
-      const shown = profile.recent_interactions.length;
-      document.getElementById('p-more').textContent =
-        total > shown ? `+${total - shown} more interactions` : '';
+  /* ══════════════════════════════════════════════════════════
+     FEEDBACK SUBMISSION
+     ══════════════════════════════════════════════════════════ */
+  function submitFeedback() {
+    if (!currentSessionId) {
+      alert('No active session — please run an analysis first.');
+      return;
+    }
+    const text = document.getElementById('fb-textarea').value.trim();
+    if (!text) {
+      alert('Please describe what you want changed before applying.');
+      return;
     }
 
-    // Show change notice
-    const boosted = profile.genres_boosted || [];
-    const reduced = profile.genres_reduced || [];
-    if (!boosted.length && !reduced.length) return;
+    const btn = document.getElementById('fb-btn');
+    btn.disabled = true;
+    btn.classList.add('loading');
+    btn.querySelector('.fb-spin').style.display = 'inline-block';
 
-    const notice = document.getElementById('profile-notice');
-    const tags = [
-      ...boosted.map(g => `<span class="notice-tag">+${g}</span>`),
-      ...reduced.map(g => `<span class="notice-tag minus">−${g}</span>`),
-    ].join('');
-    notice.innerHTML = '&#x27F3; Preferences updated: ' + tags;
-    notice.className = 'profile-notice' + (reduced.length ? ' has-minus' : '');
-    notice.style.display = 'block';
-    // Auto-hide after 6 s
-    clearTimeout(notice._timer);
-    notice._timer = setTimeout(() => { notice.style.display = 'none'; }, 6000);
-  }
-
-  /* ── Feedback ────────────────────────────────────────────── */
-  function submitFeedback() {
-    if (!currentSessionId) { alert('No active session — please run an analysis first.'); return; }
-    const text = document.getElementById('feedback-input').value.trim();
-    if (!text) { alert('Please enter your feedback before applying.'); return; }
-
-    const btn = document.getElementById('feedback-btn');
-    btn.disabled = true; btn.textContent = 'Applying…';
+    // Optimistically clear textarea
+    const savedText = text;
+    document.getElementById('fb-textarea').value = '';
 
     fetch('/api/feedback', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ session_id: currentSessionId, feedback: text })
+      body: JSON.stringify({ session_id: currentSessionId, feedback: savedText }),
     })
     .then(r => r.json().then(d => ({ ok: r.ok, data: d })))
     .then(({ ok, data }) => {
-      btn.disabled = false; btn.textContent = 'Apply Feedback';
-      if (!ok || data.error) { alert('Error: ' + (data.error || 'Unknown')); return; }
-      document.getElementById('feedback-input').value = '';
-      render(data);
-      showFeedbackSection(data.feedback_history || []);
-      if (data.updated_profile) updateGuestProfile(data.updated_profile);
-      document.getElementById('feedback-section').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      btn.disabled = false;
+      btn.classList.remove('loading');
+
+      if (!ok || data.error) {
+        // Restore text so user doesn't lose their input
+        document.getElementById('fb-textarea').value = savedText;
+        alert('Error: ' + (data.error || 'Unknown'));
+        return;
+      }
+
+      renderResults(data);
+      document.getElementById('results').style.display = 'block';
+
+      // Update left-panel profile with new prefs + history
+      if (data.user_profile) {
+        renderProfile(data.user_profile);
+        if (isNewUser) {
+          document.getElementById('modify-prefs-row').style.display = 'block';
+        }
+      }
+
+      showFeedbackSection(
+        data.feedback_history || [],
+        data.is_guest || isNewUser,
+        data.updated_profile
+      );
+
+      document.getElementById('feedback-section')
+        .scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     })
     .catch(err => {
-      btn.disabled = false; btn.textContent = 'Apply Feedback';
+      btn.disabled = false;
+      btn.classList.remove('loading');
+      document.getElementById('fb-textarea').value = savedText;
       alert('Network error: ' + err.message);
     });
   }
 
-  function showFeedbackSection(history) {
+  /* ══════════════════════════════════════════════════════════
+     FEEDBACK SECTION UI
+     ══════════════════════════════════════════════════════════ */
+  function showFeedbackSection(history, showIntro, updatedProfile) {
     const sec = document.getElementById('feedback-section');
     sec.style.display = 'block';
+
+    // Pulse animation
     sec.classList.remove('fresh');
-    void sec.offsetWidth;            // force reflow so animation re-triggers
+    void sec.offsetWidth;
     sec.classList.add('fresh');
     setTimeout(() => sec.classList.remove('fresh'), 2000);
-    document.getElementById('round-badge').textContent = 'Round ' + (history.length + 1);
-    const hEl = document.getElementById('feedback-history');
-    hEl.innerHTML = history.length
-      ? '<div class="sec-lbl" style="margin-top:0;margin-bottom:8px">Previous Feedback</div>' +
-        history.map((f, i) =>
-          `<div class="fb-entry">
-             <div class="fb-entry-lbl">Round ${i + 1}</div>
-             <div class="fb-entry-txt">${escHtml(f)}</div>
-           </div>`).join('')
-      : '';
+
+    // Round badge
+    const round = history.length + 1;
+    document.getElementById('fb-round-badge').textContent = `Round ${round}`;
+
+    // Guest intro (shown only if no history yet = first run)
+    const intro = document.getElementById('fb-intro');
+    if (showIntro && history.length === 0) {
+      intro.style.display = 'block';
+    } else {
+      intro.style.display = 'none';
+    }
+
+    // History of previous rounds
+    const histEl = document.getElementById('fb-history');
+    if (history.length > 0) {
+      histEl.style.display = 'flex';
+      histEl.innerHTML = history.map((f, i) => `
+        <div class="fb-round">
+          <div class="fb-round-lbl">Round ${i + 1}</div>
+          <div class="fb-round-txt">${escHtml(f)}</div>
+        </div>`).join('');
+    } else {
+      histEl.style.display = 'none';
+      histEl.innerHTML = '';
+    }
+
+    // Effect summary (what changed this round)
+    if (updatedProfile && history.length > 0) {
+      showFeedbackEffect(updatedProfile);
+    } else {
+      document.getElementById('fb-effect').style.display = 'none';
+    }
   }
 
-  function escHtml(s) {
-    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  function showFeedbackEffect(profile) {
+    const el      = document.getElementById('fb-effect');
+    const boosted = profile.genres_boosted || [];
+    const reduced = profile.genres_reduced || [];
+    const langs   = profile.preferred_languages || [];
+
+    if (!boosted.length && !reduced.length) {
+      el.style.display = 'none';
+      return;
+    }
+
+    const bTags = boosted.map(g =>
+      `<span class="effect-tag">+${g}</span>`).join('');
+    const rTags = reduced.map(g =>
+      `<span class="effect-tag minus">−${g}</span>`).join('');
+
+    let msg = '✓ Preferences updated this round: ' + bTags + rTags;
+    if (langs.length > 1) {
+      msg += `&nbsp; &nbsp; Languages: ${langs.join(', ')}`;
+    }
+
+    el.innerHTML = msg;
+    el.className = 'fb-effect' + (reduced.length && !boosted.length ? ' minus' : '');
+    el.style.display = 'block';
+
+    // Also update the left-panel notice
+    showProfileNotice(boosted, reduced);
   }
 
-  /* ── Render ──────────────────────────────────────────────── */
+  function showProfileNotice(boosted, reduced) {
+    if (!boosted.length && !reduced.length) return;
+    const notice = document.getElementById('profile-notice');
+    const tags   = [
+      ...boosted.map(g => `<span class="notice-tag">+${g}</span>`),
+      ...reduced.map(g => `<span class="notice-tag minus">−${g}</span>`),
+    ].join('');
+    notice.innerHTML = '↻ Preferences updated: ' + tags;
+    notice.className = 'profile-notice' + (reduced.length ? ' has-minus' : '');
+    notice.style.display = 'block';
+    clearTimeout(notice._timer);
+    notice._timer = setTimeout(hideProfileNotice, 8000);
+  }
+
+  function hideProfileNotice() {
+    const n = document.getElementById('profile-notice');
+    n.style.display = 'none';
+  }
+
+  /* Chip click → insert text into textarea */
+  function insertHint(chip) {
+    const ta = document.getElementById('fb-textarea');
+    const cur = ta.value.trim();
+    ta.value = cur ? cur + '. ' + chip.textContent : chip.textContent;
+    ta.focus();
+  }
+
+  /* ══════════════════════════════════════════════════════════
+     RESULTS RENDERING
+     ══════════════════════════════════════════════════════════ */
+  function renderResults(data) {
+    renderFeed('biased-feed',    data.biased);
+    renderFeed('corrected-feed', data.corrected);
+    renderFeed('unbiased-feed',  data.unbiased);
+    renderLegend('legend');
+    renderLegend('legend2');
+    renderVerdict(data.assessment, data.reasoning);
+    renderM2(data.metrics);
+    renderM3(data.metrics);
+  }
+
   function renderFeed(cid, videos) {
-    document.getElementById(cid).innerHTML = videos.map((v,i) => `
+    document.getElementById(cid).innerHTML = (videos || []).map((v, i) => `
       <div class="vcard">
-        <span class="vrank">${i+1}</span>
+        <span class="vrank">${i + 1}</span>
         <div class="vbar" style="background:${v.color}"></div>
         <div class="vinfo">
-          <div class="vttl" title="${v.title}">${v.title}</div>
+          <div class="vttl" title="${escHtml(v.title)}">${escHtml(v.title)}</div>
           <div class="vmeta">
             <span class="gtag" style="background:${v.color}">${v.genre}</span>
+            <span class="vlang">${v.flag} ${v.language}</span>
           </div>
         </div>
         <div class="vvir" title="Virality ${v.virality}">
@@ -1061,31 +1212,19 @@
 
   function renderLegend(id) {
     document.getElementById(id).innerHTML =
-      Object.entries(GC).map(([g,c]) =>
+      Object.entries(GC).map(([g, c]) =>
         `<div class="leg-it"><div class="leg-d" style="background:${c}"></div>${g}</div>`
       ).join('');
-  }
-
-  function gTags(genres) {
-    return Object.entries(genres).sort((a,b)=>b[1]-a[1]).map(([g,n]) =>
-      `<span class="gtag" style="background:${GC[g]||'#888'}">${g}&nbsp;${n}</span>`
-    ).join('');
   }
 
   function renderVerdict(a, reasoning) {
     const ib = a.is_biased;
     const nf = a.needs_fixing;
     const b  = document.getElementById('vbadge');
-    if (ib) {
-      b.textContent = 'BIASED';
-      b.className   = 'vbadge biased';
-    } else if (nf) {
-      b.textContent = 'NEEDS FIXING';
-      b.className   = 'vbadge needs-fixing';
-    } else {
-      b.textContent = 'FAIR';
-      b.className   = 'vbadge fair';
-    }
+    if (ib)      { b.textContent = 'BIASED';       b.className = 'vbadge biased'; }
+    else if (nf) { b.textContent = 'NEEDS FIXING'; b.className = 'vbadge needs-fixing'; }
+    else         { b.textContent = 'FAIR';          b.className = 'vbadge fair'; }
+
     document.getElementById('v-reason').textContent = a.reasoning;
 
     const tr = document.getElementById('tier-row');
@@ -1097,8 +1236,10 @@
         ['T2: Genre Retrieval',     a.tier2],
         ['T3: Diversity',           a.tier3],
         ['T4: Global Viral',        a.tier4],
-      ].map(([lbl,n],i) =>
-        `<span class="ttag" style="background:${cls[i]}12;color:${cls[i]};border:1px solid ${cls[i]}35">${lbl}: ${n}</span>`
+      ].map(([lbl, n], i) =>
+        `<span class="ttag" style="background:${cls[i]}12;color:${cls[i]};border:1px solid ${cls[i]}35">
+          ${lbl}: ${n}
+        </span>`
       ).join('');
     } else { tr.style.display = 'none'; }
 
@@ -1118,12 +1259,20 @@
   ];
 
   function scoreBar(score) {
-    const pct = Math.round(score);
+    const pct   = Math.round(score);
     const color = pct >= 70 ? 'var(--green)' : pct >= 40 ? '#f59e0b' : 'var(--red)';
     return `<div class="mbar">
-      <div class="mtrk"><div class="mfill" style="width:${pct}%;background:${color}"></div></div>
+      <div class="mtrk">
+        <div class="mfill" style="width:${pct}%;background:${color}"></div>
+      </div>
       <div class="mval" style="color:${color};font-weight:600">${pct}</div>
     </div>`;
+  }
+
+  function gTags(genres) {
+    return Object.entries(genres).sort((a,b)=>b[1]-a[1]).map(([g,n]) =>
+      `<span class="gtag" style="background:${GC[g]||'#888'}">${g}&nbsp;${n}</span>`
+    ).join('');
   }
 
   function renderM2(m) {
@@ -1158,17 +1307,9 @@
       <div class="gw" style="padding-top:12px">${gTags(m.unbiased.genres)}</div>`;
   }
 
-  function render(data) {
-    renderFeed('biased-feed',    data.biased);
-    renderFeed('corrected-feed', data.corrected);
-    renderFeed('unbiased-feed',  data.unbiased);
-    renderLegend('legend'); renderLegend('legend2');
-    renderVerdict(data.assessment, data.reasoning);
-    renderM2(data.metrics);
-    renderM3(data.metrics);
-  }
-
-  /* ── Tabs ────────────────────────────────────────────────── */
+  /* ══════════════════════════════════════════════════════════
+     TABS
+     ══════════════════════════════════════════════════════════ */
   function switchTab(name) {
     ['bias','ideal'].forEach(n => {
       document.getElementById('t-' +n).classList.toggle('active', n===name);
@@ -1176,7 +1317,18 @@
     });
   }
 
-  /* ── Init ────────────────────────────────────────────────── */
+  /* ══════════════════════════════════════════════════════════
+     UTILITIES
+     ══════════════════════════════════════════════════════════ */
+  function escHtml(s) {
+    return String(s)
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  /* ══════════════════════════════════════════════════════════
+     INIT
+     ══════════════════════════════════════════════════════════ */
   document.addEventListener('DOMContentLoaded', initNewUserForm);
 </script>
 </body>
