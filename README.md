@@ -772,3 +772,181 @@ Found a bug or have suggestions?
 **Last Updated:** April 21, 2026  
 **Status:** ✅ All systems operational
 
+
+
+  1. The User Dict — What Inputs Are Expected                                                                                                      
+                                                                                                                                                   
+  The entire system revolves around a plain Python dict passed as user. For a new user it looks like:
+
+  {
+      "user_id": "u42",
+      "name": "Alice",
+      "description": "Casual viewer who likes gaming...",
+      "preferred_genres": {"Gaming": 0.5, "Music": 0.3, "Entertainment": 0.2},
+      "preferred_languages": ["English", "Hindi"],
+      "interactions": []   # ← empty for a new user
+  }
+
+  preferred_genres is a weighted dict (weights 0–1), and preferred_languages is a list. These are declared nowhere in llm_supervisor.py itself —   
+  the supervisor just consumes them. They're formed upstream (in flask_app.py) when a user profile is created.
+
+  ---
+  2. Public Entry Point — fix() (lines 232–334)
+
+  Everything starts here. The call signature is:
+
+  corrected_df, reasoning, assessment = supervisor.fix(user, biased_recs, feedback_history)
+
+  - biased_recs — 30-row DataFrame the vanilla recommender produced
+  - feedback_history — list of plain-text strings, one per feedback round (e.g. ["show me more gaming", "less music"])
+
+  The method orchestrates three phases:
+
+  fix()
+   ├─ _judge()          ← Step 1: LLM decides if/how feed is biased
+   ├─ hard overrides    ← pure Python rules that can override the LLM verdict
+   └─ _correct()        ← Step 2: build a corrected 30-video list
+        ├─ _prefetch_candidates()   ← retrieve ~50 candidates (no LLM)
+        └─ _llm_select()            ← LLM picks 30 from those 50
+             └─ _rule_based_select() (fallback if LLM fails)
+
+  ---
+  3. Genre & Language Inputs Through the Pipeline
+
+  In _judge() (lines 340–450)
+
+  pref_genre_set = set(user.get("preferred_genres", {}).keys())   # {"Gaming","Music","Entertainment"}
+  history_genres = Counter(i["genre"] for i in user.get("interactions", []))
+
+  For a new user, history_genres is an empty Counter. The judge still works — it uses preferred_genres to build the prompt and detect missing      
+  genres.
+
+  The LLM is given:
+  - preferred_genres as JSON
+  - preferred_languages as a list
+  - A text summary of watch history (empty for new users, via _summarise_history())
+  - The biased recommender output summary
+
+  It returns a BiasAssessment — a Pydantic model (lines 117–143) with:
+
+  is_biased / needs_fixing   # verdict
+  genres_missing             # e.g. ["Gaming"]
+  genres_over_represented    # e.g. ["Entertainment"]
+  tier1_slots / tier2_slots / tier3_slots / tier4_slots  # how many slots per tier (must sum to 30)
+
+  Hard Override (lines 240–266)
+
+  After the LLM judge, pure Python checks: if a genre weighted ≥ 0.25 is completely absent from biased_recs, it forces needs_fixing=True regardless
+   of what the LLM said. For a new user whose preferences are entirely absent from the feed, this catches it:
+
+  absent_high_weight = [
+      g for g, w in pref_genres.items()
+      if float(w) >= 0.25 and g not in rec_genres
+  ]
+
+  ---
+  4. Feedback History — How It's Maintained and Processed
+
+  feedback_history is just a Python list of raw strings accumulated across rounds — the supervisor doesn't store it; the caller (flask route)      
+  appends to it each round and passes it in fresh each time.
+
+  Parsing — _extract_feedback_genres() (lines 96–113)
+
+  Each feedback string is scanned for genre keywords:
+
+  _FEEDBACK_GENRE_KEYWORDS = {
+      "gaming": "Gaming", "music": "Music", "educational": "Educational", ...
+  }
+  _NEG_WORDS = {"less", "fewer", "no", "not", "remove", "stop", ...}
+
+  For each keyword found, it checks 40 chars of context before the keyword for negative words → classifies into want_more or want_less. Conflict   
+  resolution: want_more wins.
+
+  Feedback Injection into the Assessment (lines 275–314)
+
+  After the judge runs, feedback genres are forced into the assessment:
+
+  for g in fb_want_more:
+      if g not in assessment.genres_missing:
+          assessment.genres_missing.insert(0, g)   # prepend → highest priority
+  for g in fb_want_less:
+      assessment.genres_over_represented.append(g)
+
+  T1 slots are also boosted proportional to how many genres were requested:
+
+  boost = min(len(fb_want_more) * 3, 8)
+  assessment.tier1_slots = min(assessment.tier1_slots + boost, 22)
+  # excess trimmed from T3 first, then T2
+
+  ---
+  5. Candidate Pre-fetching — _prefetch_candidates() (lines 665–705)
+
+  No LLM involved here. Pulls ~50 candidates from master_df across four tiers:
+
+  ┌─────────┬──────────────────────────────┬─────────────────────────────────────────────────────────────────────────────────────┐
+  │  Tier   │            Method            │                                   What it fetches                                   │
+  ├─────────┼──────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────┤
+  │ T1      │ _tier1_similarity_trending() │ Genres in target_genres ∪ preferred_genres, ranked by 65% cosine-sim + 35% virality │
+  ├─────────┼──────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────┤
+  │ T2-miss │ _tier2_genre_retrieval()     │ Suppressed genres that are missing from the feed                                    │
+  ├─────────┼──────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────┤
+  │ T2-fill │ _tier2_genre_retrieval()     │ Other suppressed genres                                                             │
+  ├─────────┼──────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────┤
+  │ T3      │ _tier3_diversity()           │ One video per genre outside user's bubble                                           │
+  ├─────────┼──────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────┤
+  │ T4      │ _tier4_viral()               │ Globally top-virality videos                                                        │
+  └─────────┴──────────────────────────────┴─────────────────────────────────────────────────────────────────────────────────────┘
+
+  New user edge case (lines 729–745 in _user_tower_embedding()):
+
+  if not interactions:
+      return np.zeros(self.embeddings.shape[1])
+
+  And in _tier1_similarity_trending() (line 754):
+
+  if np.linalg.norm(user_vec) == 0:
+      return self._tier2_genre_retrieval(user, genres_to_use, n, exclude)
+
+  So a new user with no watch history falls back to virality-ranked retrieval for T1 instead of cosine similarity — cold start is handled
+  gracefully.
+
+  ---
+  6. LLM Selection — _llm_select() (lines 516–575)
+
+  The 50 candidates are formatted as a compact table:
+
+  #   genre           language   S  V  title
+  ────────────────────────────────────────────
+  1   Gaming          English    *  #  How to beat Dark Souls...
+
+  S='*' = suppressed category, V='#' = globally viral. The LLM is asked to return exactly 30 row numbers respecting tier constraints derived from  
+  the assessment's slot counts. The response is validated as _RowSelection (lines 146–158) and row numbers are mapped back to video IDs.
+
+  If the LLM returns < 30 valid rows or throws, _rule_based_select() (lines 581–659) runs as deterministic fallback — it greedily fills T1 → T2 →  
+  T3 → T4 in order, respecting a 12-video-per-genre cap.
+
+  ---
+  Summary Flow for a New User
+
+  New user dict (genres + languages, no history)
+          │
+          ▼
+  fix() ──► _judge()  [LLM: assess bias from preferred_genres vs biased_recs]
+          │
+          ├── hard override: any genre ≥0.25 weight missing? → needs_fixing=True
+          ├── feedback injection: want_more genres → genres_missing (priority)
+          │
+          ▼
+  _correct() ──► _prefetch_candidates()
+                    T1: cosine-sim ranking → FALLS BACK to virality for new user
+                    T2: suppressed genre retrieval
+                    T3: diversity
+                    T4: viral overlay
+                ──► _llm_select()  [LLM: pick 30 from 50 candidates by row#]
+                    └── _rule_based_select()  [fallback if LLM fails]
+          │
+          ▼
+  corrected_df (30 rows), reasoning string, BiasAssessment object
+
+  The key design decision for new users: since there's no interaction history, the embedding tower produces a zero vector, and the system
+  gracefully degrades to virality + genre-preference matching instead of personalized similarity.
