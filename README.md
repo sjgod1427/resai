@@ -2,6 +2,8 @@
 
 A comprehensive **Responsible AI demonstration** that injects, detects, and corrects algorithmic bias in a YouTube-style video recommendation system. Built on real YouTube trending data, embedding-based retrieval, and an agentic LLM supervisor.
 
+**🚀 Live Demo:** [sjgod1247-bias-aware-recommender.hf.space](https://sjgod1247-bias-aware-recommender.hf.space/)
+
 **Status:** ✅ All systems functional and tested  
 **Latest Test:** April 21, 2026
 
