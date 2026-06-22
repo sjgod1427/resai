@@ -450,7 +450,7 @@ def _user_profile_dict(user: dict) -> dict:
         "user_id":             user.get("user_id", "GUEST"),
         "name":                user.get("name", "New User"),
         "description":         user.get("description", ""),
-        "avatar":              user.get("avatar", ""),
+        "avatar":              user.get("avatar") or AVATARS.get(user.get("user_id", ""), ""),
         "preferred_genres":    user["preferred_genres"],
         "preferred_languages": user.get("preferred_languages", ["English"]),
         "interactions": [
@@ -491,6 +491,11 @@ app = Flask(__name__)
 
 
 @app.route("/")
+def landing():
+    return render_template("landing.html")
+
+
+@app.route("/app")
 def index():
     users = [
         {
