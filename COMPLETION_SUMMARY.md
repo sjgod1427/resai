@@ -332,6 +332,4 @@ All in **README.md:**
 
 ---
 
-**Completed:** April 21, 2026, 04:35 UTC  
-**By:** GitHub Copilot  
-**For:** Responsible AI Research Project
+**Completed:** April 21, 2026, 04:35 UTC

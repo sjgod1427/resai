@@ -8,12 +8,19 @@ Run:  python flask_app.py
 """
 
 import os
+import sys
 import copy
 import json
 import uuid
 import warnings
 import datetime
 warnings.filterwarnings("ignore")
+
+# Windows consoles default to cp1252, which can't encode the box-drawing
+# characters used in console log output (e.g. _log_run's bar charts).
+for _stream in (sys.stdout, sys.stderr):
+    if hasattr(_stream, "reconfigure"):
+        _stream.reconfigure(encoding="utf-8")
 
 import numpy as np
 import pandas as pd
